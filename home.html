@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K. Patel Chemopharma — Mobile Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile_style.css" />
+  <script>
+    if (window.innerWidth > 768) {
+      window.location.replace("index.html");
+    }
+  </script>
+</head>
+<body>
+  <nav class="nav nav--hero is-scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="home.html" class="nav__logo">
+        <img src="img/logo.png" alt="K. Patel Logo" class="nav-logo" />
+        K. Patel<span>.</span>
+      </a>
+      <button class="nav__toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobile-nav">
+    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
+    <a href="home.html">Home</a>
+    <a href="products.html">Product Catalog</a>
+    <a href="industries.html">Industries</a>
+    <a href="infrastructure.html">Infrastructure</a>
+    <a href="company.html">Company Legacy</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <main style="padding-top: 72px;">
+    <!-- ========== HERO — Full-screen background image ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__image-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80"
+        alt="Research scientist working in modern laboratory facility"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+
+      <h1 class="hero__title">
+        Global Colorants & <span class="accent">Dye Chemistry</span>
+      </h1>
+      <p class="hero__text">
+        K. Patel Chemopharma Private Limited is an established global manufacturer and supplier of Basic Dyes, Solvent Dyes, and Pigments, delivering cost-effective colorant solutions to industry leaders worldwide since 1974.
+      </p>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="50" data-suffix="+">50+</div>
+          <div class="hero__stat-label">Years of Experience</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="80" data-suffix="%">80%</div>
+          <div class="hero__stat-label">Production Exported</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="100" data-suffix="+">100+</div>
+          <div class="hero__stat-label">Dyes & Pigments</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="4" data-suffix="R">4R</div>
+          <div class="hero__stat-label">ETP Water Recycle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MOBILE DASHBOARD PORTAL ========== -->
+  <section class="mobile-portal">
+    <div class="mobile-portal__grid">
+      
+      <a href="products.html" class="portal-card">
+        <div class="portal-card__content">
+          <span class="portal-card__title">Product Catalog</span>
+          <span class="portal-card__subtitle">Dyes, Pigments & Extracts</span>
+          <span class="portal-card__explore">Click to explore &rarr;</span>
+        </div>
+        <div class="portal-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        </div>
+      </a>
+
+      <a href="industries.html" class="portal-card">
+        <div class="portal-card__content">
+          <span class="portal-card__title">Industries Served</span>
+          <span class="portal-card__subtitle">Applications & Solutions</span>
+          <span class="portal-card__explore">Click to explore &rarr;</span>
+        </div>
+        <div class="portal-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7-5V2H2v18z"></path><path d="M12 16h4"></path><path d="M12 12h4"></path><path d="M12 8h4"></path><path d="M6 16h.01"></path><path d="M6 12h.01"></path><path d="M6 8h.01"></path></svg>
+        </div>
+      </a>
+
+      <a href="infrastructure.html" class="portal-card">
+        <div class="portal-card__content">
+          <span class="portal-card__title">Infrastructure</span>
+          <span class="portal-card__subtitle">Facilities & Certifications</span>
+          <span class="portal-card__explore">Click to explore &rarr;</span>
+        </div>
+        <div class="portal-card__icon">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 17 22 12"></polyline></svg>
+        </div>
+      </a>
+
+      <a href="company.html" class="portal-card">
+        <div class="portal-card__content">
+          <span class="portal-card__title">Company Legacy</span>
+          <span class="portal-card__subtitle">Heritage & Global Alliance</span>
+          <span class="portal-card__explore">Click to explore &rarr;</span>
+        </div>
+        <div class="portal-card__icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        </div>
+      </a>
+
+      <!-- Direct B2B Contact Form -->
+      <div class="b2b-form-card" style="margin-top: 16px; border: 1px solid var(--color-border); border-radius: var(--r-md); box-shadow: var(--shadow-sm);">
+          <div style="margin-bottom: 24px;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-heading-primary); margin-bottom: 8px;">Contact Us</h3>
+            <p style="font-size: 14px; color: var(--color-body-muted);">Request B2B Consultation &amp; Quotes</p>
+          </div>
+
+          <!-- Form Element -->
+          <form id="b2b-form">
+            <div class="b2b-grid">
+              <div class="b2b-group">
+                <label for="contact-name" class="b2b-label">Your Name *</label>
+                <input type="text" id="contact-name" class="b2b-input" placeholder="Enter full name" required />
+              </div>
+              <div class="b2b-group">
+                <label for="contact-email" class="b2b-label">Business Email *</label>
+                <input type="email" id="contact-email" class="b2b-input" placeholder="name@company.com" required />
+              </div>
+              <div class="b2b-group">
+                <label for="contact-company" class="b2b-label">Company / Organization *</label>
+                <input type="text" id="contact-company" class="b2b-input" placeholder="e.g. Acme Corp" required />
+              </div>
+              <div class="b2b-group b2b-group--full">
+                <label for="contact-specs" class="b2b-label">Requirements</label>
+                <textarea id="contact-specs" class="b2b-textarea" rows="4" placeholder="Provide compound requirements or questions..."></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="b2b-submit">
+              <span id="submit-btn-text">Submit Request</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+      </div>
+
+    </div>
+  </section>
+
+<!-- ========== TRUST STRIP ========== -->
+  <section class="trust" id="trust">
+    <p class="trust__heading">Established Manufacturer of Dyes, Pigments & Dispersions</p>
+    <div class="trust__track">
+      <div class="trust__set">
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          Basic Dyes
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg></div>
+          Solvent Dyes
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+          Rinsable Dyes
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="6"/></svg></div>
+          Pigments
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 17,14 19,22 12,17 5,22 7,14 2,9 9,9"/></svg></div>
+          Pigment Dispersions
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 12h16M12 4v16"/></svg></div>
+          Acid Dyes
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></div>
+          Direct Dyes
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div>
+          <img src="img/logo.png" alt="K. Patel Logo" class="footer-logo" />
+          <div class="footer__brand-name">K. Patel<span>.</span></div>
+          <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 16px; line-height: 1.6;">
+            <strong>Corporate Office:</strong><br />
+            504, Eureka Tower, Mindspace,<br />
+            Off Link Road, Malad West,<br />
+            Mumbai – 400 064. Maharashtra, India.
+          </p>
+        </div>
+
+        <div>
+          <p class="footer__links-title">Contact Works</p>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-bottom: 16px; line-height: 1.6;">
+            <strong>Ankleshwar Works:</strong><br />
+            155 GIDC, Ankleshwar – 393 002.<br />
+            Gujarat, India.
+          </p>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+            +91-22-4882 2900 / 5062 2900
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            sales@kpateldyes.com
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__badges">
+          <span class="footer__badge">Government Recognized Export House</span>
+          <span class="footer__badge">ISO 9001:2015 & 14001:2015</span>
+        </div>
+        <p class="footer__copyright">&copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="mobile_script.js"></script>
+</body>
+</html>

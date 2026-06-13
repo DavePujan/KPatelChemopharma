@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K. Patel Chemopharma — Global Colorants & Dye Chemistry</title>
+  <meta name="description" content="Est. 1974. Established local as well as global supplier of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments. Delivering cost-effective colorants for customer applications worldwide." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Device Routing Logic -->
+  <script>
+    if (window.innerWidth <= 768) {
+      window.location.replace("home.html");
+    }
+    
+    // Add event listener to catch window resizing
+    window.addEventListener('resize', function() {
+      if (window.innerWidth <= 768) {
+        window.location.replace("home.html");
+      }
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav nav--hero" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="img/logo.png" alt="K. Patel Logo" class="nav-logo" />
+        K. Patel<span>.</span>
+      </a>
+      <div class="nav__links">
+        <a href="#solutions" class="nav__link">Products</a>
+        <a href="#industries" class="nav__link">Industries</a>
+        <a href="#operations" class="nav__link">Infrastructure</a>
+        <a href="#global" class="nav__link">Global Alliance</a>
+      </div>
+      <a href="#contact-section" class="nav__cta">Contact</a>
+      <button class="nav__toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav__mobile" id="mobile-nav">
+    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
+    <a href="#solutions">Product Catalog</a>
+    <a href="#industries">Industries</a>
+    <a href="#operations">Infrastructure</a>
+    <a href="#global">Global Alliance</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact-section">Contact</a>
+  </div>
+
+  <!-- ========== HERO — Full-screen background image ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__image-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80"
+        alt="Research scientist working in modern laboratory facility"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Government Recognized Export House · ISO 9001:2015 & ISO 14001:2015
+      </div>
+      <h1 class="hero__title">
+        Global Colorants & <span class="accent">Dye Chemistry</span>
+      </h1>
+      <p class="hero__text">
+        K. Patel Chemopharma Private Limited is an established global manufacturer and supplier of Basic Dyes, Solvent Dyes, and Pigments, delivering cost-effective colorant solutions to industry leaders worldwide since 1974.
+      </p>
+      <div class="hero__actions">
+        <a href="#solutions" class="btn btn--white">
+          Explore Products
+          <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--outline-light">Request Consultation</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="50" data-suffix="+">0</div>
+          <div class="hero__stat-label">Years of Experience</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="80" data-suffix="%">0</div>
+          <div class="hero__stat-label">Production Exported</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="100" data-suffix="+">0</div>
+          <div class="hero__stat-label">Dyes & Pigments</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="4" data-suffix="R">0</div>
+          <div class="hero__stat-label">ETP Water Recycle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST STRIP ========== -->
+  <section class="trust" id="trust">
+    <p class="trust__heading">Established Manufacturer of Dyes, Pigments & Dispersions</p>
+    <div class="trust__track">
+      <div class="trust__set">
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          Basic Dyes
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg></div>
+          Solvent Dyes
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+          Rinsable Dyes
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="6"/></svg></div>
+          Pigments
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 17,14 19,22 12,17 5,22 7,14 2,9 9,9"/></svg></div>
+          Pigment Dispersions
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 12h16M12 4v16"/></svg></div>
+          Acid Dyes
+        </div>
+        <div class="trust__item">
+          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></div>
+          Direct Dyes
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS — Visual Dyes Grid & Modal Explorer ========== -->
+  <section class="section solutions" id="solutions">
+    <div class="container">
+      <div class="solutions__header reveal">
+        <span class="eyebrow">Product Range</span>
+        <h2 class="section-title">Our Colorant Portfolio</h2>
+        <p class="section-body">
+          We manufacture high-grade dyes, pigments, and related dispersions as colorants for varied customer applications, conforming to international standards and quality compliance.
+        </p>
+      </div>
+
+      <div class="dyes-grid reveal reveal-delay-1">
+        <!-- 1. Basic Dyes -->
+        <div class="dye-card" data-category="basic">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80" alt="Basic Dyes Chemistry" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Basic Dyes</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 2. Solvent Dyes -->
+        <div class="dye-card" data-category="solvent">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80" alt="Solvent Dyes Chemistry" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Solvent Dyes</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 3. Rinsable Dyes -->
+        <div class="dye-card" data-category="rinsable">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80" alt="Rinsable Colors Chemistry" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Rinsable Dyes</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 4. Pigments -->
+        <div class="dye-card" data-category="pigments">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80" alt="Pigment Powders" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Pigments</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 5. Pigment Dispersions -->
+        <div class="dye-card" data-category="dispersions">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Liquid Pigment Dispersions" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Pigment Dispersions</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 6. Acid Dyes -->
+        <div class="dye-card" data-category="acid">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=800&q=80" alt="Acid Dyes" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Acid Dyes</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 7. Direct Dyes -->
+        <div class="dye-card" data-category="direct">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1502691876148-a84978e59af8?auto=format&fit=crop&w=800&q=80" alt="Direct Dyes" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Direct Dyes</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL: Category Dyes List -->
+  <div class="modal" id="catalog-modal">
+    <div class="modal__backdrop"></div>
+    <div class="modal__dialog">
+      <div class="modal__header">
+        <div class="modal__info-area">
+          <h3 class="modal__category-name">Basic Dyes</h3>
+          <p class="modal__category-desc">Colorants information.</p>
+        </div>
+        <button class="modal__close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal__search-bar">
+        <div class="catalog__search-wrapper" style="width: 100%; max-width: 450px;">
+          <input type="text" class="modal__search-input" placeholder="Search this category by name, C.I. or CAS..." style="width: 100%;" />
+          <svg class="catalog__search-icon" viewBox="0 0 24 24" style="right: 16px;">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+      </div>
+      <div class="modal__body">
+        <div class="product-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Technical Specification Sheet -->
+  <div class="modal" id="spec-modal" style="z-index: 1300;">
+    <div class="modal__backdrop spec-modal-backdrop"></div>
+    <div class="modal__dialog" style="max-width: 700px;">
+      <div class="modal__header" style="padding: 24px 32px;">
+        <h3 class="spec-modal__title" style="margin: 0; border: none; padding: 0;">Technical Specifications</h3>
+        <button class="modal__close spec-modal-close" aria-label="Close technical specs modal" style="align-self: center;">&times;</button>
+      </div>
+      <div class="modal__body spec-modal__body" style="padding: 32px;">
+        <div class="spec-modal__body-content">
+          <!-- Dynamic details content -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== INDUSTRIES — Full-bleed image cards ========== -->
+  <section class="section section--divider industries" id="industries">
+    <div class="container">
+      <div class="industries__header reveal">
+        <span class="eyebrow">Who We Serve</span>
+        <h2 class="section-title">Colorants Tailored For Diverse Sectors</h2>
+      </div>
+
+      <div class="industries__grid">
+        <div class="industry-card reveal reveal-delay-1">
+          <div class="industry-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Modern corporate architecture and construction" loading="lazy" />
+          </div>
+          <div class="industry-card__overlay"></div>
+          <div class="industry-card__content">
+            <h3 class="industry-card__title">Paper & Pulp</h3>
+            <p class="industry-card__text">Optimized Basic and Direct Dyes together with pigment dispersions for commercial paper coloring.</p>
+          </div>
+        </div>
+
+        <div class="industry-card reveal reveal-delay-2">
+          <div class="industry-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Pharmaceutical and biotech research laboratory" loading="lazy" />
+          </div>
+          <div class="industry-card__overlay"></div>
+          <div class="industry-card__content">
+            <h3 class="industry-card__title">Writing Instruments</h3>
+            <p class="industry-card__text">Custom-grade ballpoint pen inks, marker inks, ribbon inks, and child-safe EN-71 compliant solutions.</p>
+          </div>
+        </div>
+
+        <div class="industry-card reveal reveal-delay-3">
+          <div class="industry-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Advanced technology and electronics manufacturing" loading="lazy" />
+          </div>
+          <div class="industry-card__overlay"></div>
+          <div class="industry-card__content">
+            <h3 class="industry-card__title">Printing Inks & Art Supplies</h3>
+            <p class="industry-card__text">High-performance violet and blue toners alongside rinsable dyes for consumer arts and crafts.</p>
+          </div>
+        </div>
+
+        <div class="industry-card reveal reveal-delay-4">
+          <div class="industry-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1605289982774-9a6fef564df8?auto=format&fit=crop&w=800&q=80" alt="Various fabrics and textiles" loading="lazy" />
+          </div>
+          <div class="industry-card__overlay"></div>
+          <div class="industry-card__content">
+            <h3 class="industry-card__title">Textiles, Leather & Wool</h3>
+            <p class="industry-card__text">Vibrant, high-affinity Acid and Direct Dyes engineered for silk, nylon, wool, and leather treatments.</p>
+          </div>
+        </div>
+
+        <div class="industry-card reveal reveal-delay-5">
+          <div class="industry-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?auto=format&fit=crop&w=800&q=80" alt="Treated wood panels and lush green turf" loading="lazy" />
+          </div>
+          <div class="industry-card__overlay"></div>
+          <div class="industry-card__content">
+            <h3 class="industry-card__title">Wood & Turf Coloring</h3>
+            <p class="industry-card__text">Robust colorants designed to withstand environmental conditions for MDF, treated wood, and lawn turf coloring.</p>
+          </div>
+        </div>
+
+        <div class="industry-card reveal reveal-delay-6">
+          <div class="industry-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80" alt="Energy infrastructure and power generation" loading="lazy" />
+          </div>
+          <div class="industry-card__overlay"></div>
+          <div class="industry-card__content">
+            <h3 class="industry-card__title">Digital Ink & Coatings</h3>
+            <p class="industry-card__text">Advanced organic and inorganic pigment dispersions engineered for conventional and digital inkjet printer applications.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OPERATIONAL EXCELLENCE — 50/50 editorial ========== -->
+  <section class="section section--divider operations" id="operations">
+    <div class="container">
+      <div class="operations__grid">
+        <div class="operations__content">
+          <span class="eyebrow reveal">Infrastructure</span>
+          <h2 class="section-title reveal reveal-delay-1">State-Of-The-Art Manufacturing Facilities</h2>
+          <p class="section-body reveal reveal-delay-2">
+            Operating multiple manufacturing facilities at Ankleshwar GIDC (Gujarat), India's premier chemical zone. Our facility optimizes costs, quality, and environmental preservation.
+          </p>
+          <div class="operations__highlights reveal reveal-delay-3">
+            <div class="operations__highlight">
+              <div class="operations__highlight-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+              </div>
+              <span class="operations__highlight-text">Ankleshwar GIDC Chemical Zone Location</span>
+            </div>
+            <div class="operations__highlight">
+              <div class="operations__highlight-icon">
+                <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3l3-1M15 21v-3.34c0-.78-.1-1.57-.44-2.28l-.37-.75c-.34-.71-.44-1.5-.44-2.28V9c0-3-1.5-5-4-5S6 6 6 9v4.34c0 .78-.1 1.57-.44 2.28l-.37.75c-.34.71-.44 1.5-.44 2.28V21"/></svg>
+              </div>
+              <span class="operations__highlight-text">State-Of-Art Testing & QA Laboratory</span>
+            </div>
+            <div class="operations__highlight">
+              <div class="operations__highlight-icon">
+                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+              </div>
+              <span class="operations__highlight-text">4R Effluent Treatment (Recover, Reduce, Reuse, Recycle)</span>
+            </div>
+            <div class="operations__highlight">
+              <div class="operations__highlight-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              </div>
+              <span class="operations__highlight-text">Reverse Osmosis used-water purification</span>
+            </div>
+            <div class="operations__highlight">
+              <div class="operations__highlight-icon">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              </div>
+              <span class="operations__highlight-text">Semi-Automated Delivery & Filling</span>
+            </div>
+            <div class="operations__highlight">
+              <div class="operations__highlight-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <span class="operations__highlight-text">Custom Packaging (IBC, Jumbo Bags, Drums, Pallets)</span>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-4">
+            <a href="#contact" class="btn btn--outline">
+              Request Technical Details
+              <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="operations__image-wrap reveal">
+          <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=960&q=80" alt="Quality control and precision manufacturing operations" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMPANY LEGACY — Full-width image banner ========== -->
+  <section class="legacy" id="legacy">
+    <div class="legacy__image-wrap">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" alt="Corporate headquarters and modern architectural facility" loading="lazy" />
+    </div>
+    <div class="legacy__overlay"></div>
+    <div class="legacy__bg-year" aria-hidden="true">1974</div>
+    <div class="container legacy__inner">
+      <div class="legacy__layout">
+        <div class="legacy__content">
+          <span class="eyebrow eyebrow--light reveal">Since 1974</span>
+          <h2 class="legacy__title reveal reveal-delay-1">A Legacy Of Entrepreneurial Vision</h2>
+          <p class="legacy__text reveal reveal-delay-2">
+            From Mr. M. K. Patel's early vision in 1956, K. Patel Chemopharma was established as our chemical manufacturing division in 1974. Today, we are built on process excellence, high ethical standards, and global supply consistency.
+          </p>
+          <div class="legacy__values reveal reveal-delay-3">
+            <span class="legacy__value">Quality Integrity</span>
+            <span class="legacy__value">Process Safety</span>
+            <span class="legacy__value">Sustainable Production</span>
+            <span class="legacy__value">Long-Term Alliances</span>
+          </div>
+        </div>
+
+        <div class="legacy__companies reveal reveal-delay-4">
+          <h3 class="legacy__companies-title">K. Patel Group Companies</h3>
+          
+          <div class="legacy__companies-list">
+            <div class="company-item">
+              <div class="company-item__content">
+                <div class="company-item__category">Chemical Division</div>
+                <div class="company-item__name">K. Patel Dyechem Industries Pvt Ltd</div>
+                <div class="company-item__desc">Manufactures & Exporters of Dyes & Chemicals</div>
+              </div>
+              <a href="#" class="company-item__link">Visit Website <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <div class="company-item">
+              <div class="company-item__content">
+                <div class="company-item__category">Chemical Division</div>
+                <div class="company-item__name">Devanshi Dyestuff</div>
+                <div class="company-item__desc">Manufactures & Exporters of Pigment & Chemicals</div>
+              </div>
+              <a href="#" class="company-item__link">Visit Website <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <div class="company-item">
+              <div class="company-item__content">
+                <div class="company-item__category">Chemical Division</div>
+                <div class="company-item__name">K. Patel International</div>
+                <div class="company-item__desc">Manufactures of Lab Chemicals & Metal Salts</div>
+              </div>
+              <a href="#" class="company-item__link">Visit Website <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <div class="company-item">
+              <div class="company-item__content">
+                <div class="company-item__category">Phytochemicals & Extracts</div>
+                <div class="company-item__name">K. Patel Phyto Extractions Pvt Ltd</div>
+                <div class="company-item__desc">Manufactures & Exporters of Herbal Extracts & Phytochemicals</div>
+              </div>
+              <a href="#" class="company-item__link">Visit Website <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <div class="company-item">
+              <div class="company-item__content">
+                <div class="company-item__category">Copper Wires & Strips</div>
+                <div class="company-item__name">K. Patel Metal Industries Pvt Ltd</div>
+                <div class="company-item__desc">Manufactures & Exporters of Enamelled Copper Wires & Strips</div>
+              </div>
+              <a href="#" class="company-item__link">Visit Website <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+
+            <div class="company-item">
+              <div class="company-item__content">
+                <div class="company-item__category">Construction</div>
+                <div class="company-item__name">K. Patel & Co. Pvt Ltd</div>
+                <div class="company-item__desc">Construction House</div>
+              </div>
+              <a href="#" class="company-item__link">Visit Website <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GLOBAL ALLIANCE ========== -->
+  <section class="section section--divider global" id="global">
+    <div class="container">
+      <div class="global__grid">
+        <div class="global__content">
+          <span class="eyebrow reveal">Global Alliance</span>
+          <h2 class="section-title reveal reveal-delay-1">Exclusive Western Hemisphere Partnership</h2>
+          <p class="section-body reveal reveal-delay-2">
+            Since 1998, K. Patel has partnered exclusively with <strong>Spectra Colors Corporation (SCC)</strong> in North & South America. Together, we develop pure, specialty dyes for marker inks, children's markers (EN-71 compliant), ballpoint pens, and inkjet applications.
+          </p>
+          <div class="global__stats reveal reveal-delay-3">
+            <div class="global__stat">
+              <div class="global__stat-number" data-count="45" data-suffix="+">0</div>
+              <div class="global__stat-label">Export Markets</div>
+            </div>
+            <div class="global__stat">
+              <div class="global__stat-number" data-count="28" data-suffix="Y">0</div>
+              <div class="global__stat-label">SCC USA Alliance</div>
+            </div>
+            <div class="global__stat">
+              <div class="global__stat-number" data-count="80" data-suffix="%">0</div>
+              <div class="global__stat-label">Export Production</div>
+            </div>
+            <div class="global__stat">
+              <div class="global__stat-number">OEM</div>
+              <div class="global__stat-label">Sanford, Crayola & others</div>
+            </div>
+          </div>
+        </div>
+        <div class="global__visual reveal">
+          <canvas class="globe-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS ========== -->
+  <section class="section section--divider certifications" id="certifications">
+    <div class="container">
+      <div class="certifications__header reveal">
+        <span class="eyebrow">Standards & Compliance</span>
+        <h2 class="section-title">International Certifications. Quality Assurance.</h2>
+        <p class="section-body">
+          We maintain rigorous manufacturing and testing standards to fulfill quality requirements across America, Europe, Japan, and Australia.
+        </p>
+      </div>
+
+      <div class="certifications__grid">
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-card__icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="cert-card__title">ISO 9001:2015</h3>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 8px;">Upgraded Quality Management compliance across production processes.</p>
+        </div>
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-card__icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+          <h3 class="cert-card__title">ISO 14001:2015</h3>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 8px;">Environmental Management System certification for green chemistry.</p>
+        </div>
+        <div class="cert-card reveal reveal-delay-3">
+          <div class="cert-card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.11"/></svg></div>
+          <h3 class="cert-card__title">EN-71 Compliance</h3>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 8px;">EN-71 Part 3 and Part 9 child-safe compliance for rinsable craft dyes.</p>
+        </div>
+        <div class="cert-card reveal reveal-delay-4">
+          <div class="cert-card__icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8"/></svg></div>
+          <h3 class="cert-card__title">Equipped R&D Lab</h3>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 8px;">Equipped with HPLC, GC, Atomic Absorbance (AAS), and UV-Vis spectrophotometers.</p>
+        </div>
+        <div class="cert-card reveal reveal-delay-5">
+          <div class="cert-card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h3 class="cert-card__title">Export House Status</h3>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 8px;">Government recognized Export House with numerous export performance awards.</p>
+        </div>
+        <div class="cert-card reveal reveal-delay-6">
+          <div class="cert-card__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <h3 class="cert-card__title">Industrial Relations</h3>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 8px;">Valued workforce members treated with respect, dignity, and learning opportunities.</p>
+        </div>
+      </div>
+
+      <!-- Sustainability Block -->
+      <div class="sustainability reveal">
+        <div class="sustainability__content">
+          <div>
+            <span class="eyebrow">Sustainability</span>
+            <h3 class="sustainability__title">Environmental Preservation</h3>
+            <p class="sustainability__text">
+              Preservation and protection of the environment is our corporate responsibility. We comply with all GIDC and national pollution control regulations through our large in-house Effluent Treatment Plant (ETP) and state-of-the-art RO plant, enabling us to recycle potable-grade water for re-use in our chemical manufacturing process.
+            </p>
+          </div>
+          <div class="sustainability__highlights">
+            <div class="sustainability__highlight">
+              <span class="sustainability__highlight-dot"></span>
+              <span class="sustainability__highlight-text">Recover Materials</span>
+            </div>
+            <div class="sustainability__highlight">
+              <span class="sustainability__highlight-dot"></span>
+              <span class="sustainability__highlight-text">Reduce Effluents</span>
+            </div>
+            <div class="sustainability__highlight">
+              <span class="sustainability__highlight-dot"></span>
+              <span class="sustainability__highlight-text">Reuse Water</span>
+            </div>
+            <div class="sustainability__highlight">
+              <span class="sustainability__highlight-dot"></span>
+              <span class="sustainability__highlight-text">Recycle Resources</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA — Full-width background image ========== -->
+  <section class="cta">
+    <div class="cta__image-wrap">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" alt="Modern corporate workspace and professional environment" loading="lazy" />
+    </div>
+    <div class="cta__overlay"></div>
+    <div class="container cta__inner">
+      <div class="cta__content">
+        <span class="eyebrow eyebrow--light reveal" style="justify-content:center">Get Started</span>
+        <h2 class="section-title reveal reveal-delay-1">Connect With K. Patel Dyes</h2>
+        <p class="cta__text reveal reveal-delay-2">
+          Partner with an experienced supplier for Basic Dyes, Solvent Dyes, Pigments, and specialty rinsable craft solutions.
+        </p>
+        <div class="cta__actions">
+          <a href="#contact-section" class="btn btn--white">
+            Contact Our Team
+            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT GLOBAL SALES & LABS ========== -->
+  <section class="contact-section" id="contact-section" style="background: linear-gradient(rgba(245, 245, 242, 0.85), rgba(245, 245, 242, 0.95)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80') top center/cover no-repeat; position: relative;">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="contact-layout animate-on-scroll">
+        
+        <!-- Left Column: Contact Cards & Map -->
+        <div class="contact-info">
+          <div>
+            <span class="eyebrow">Contact Us</span>
+            <h2 class="section-title" style="margin-bottom: 12px;">Global Sales &amp; Labs</h2>
+            <p class="section-body" style="font-size: 15px; line-height: 1.6; margin-bottom: 24px;">
+              Get in touch with our commercial sales team or request certificate documentation and technical spec data sheets directly from our laboratory teams.
+            </p>
+          </div>
+
+          <!-- HQ Details Card -->
+          <div class="contact-card">
+            <div class="contact-card__icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="contact-card__details">
+              <span class="contact-card__label">Corporate Headquarters</span>
+              <span class="contact-card__value">
+                504, Eureka Tower, Mindspace,<br />
+                Off Link Road, Malad West,<br />
+                Mumbai – 400 064. Maharashtra, India.
+              </span>
+            </div>
+          </div>
+
+          <!-- Hotline / Phone Card -->
+          <div class="contact-card">
+            <div class="contact-card__icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-card__details">
+              <span class="contact-card__label">Sales &amp; Business Hotline</span>
+              <span class="contact-card__value">
+                <a href="tel:+912248822900">+91-22-4882 2900</a><br />
+                <a href="tel:+912250622900">+91-22-5062 2900</a>
+              </span>
+            </div>
+          </div>
+
+          <!-- Email Sales Card -->
+          <div class="contact-card">
+            <div class="contact-card__icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-card__details">
+              <span class="contact-card__label">Sales &amp; Technical Support</span>
+              <span class="contact-card__value">
+                <a href="mailto:sales@kpateldyes.com">sales@kpateldyes.com</a>
+              </span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Right Column: Interactive B2B Form -->
+        <div class="b2b-form-card">
+          <!-- Form Tabs -->
+          <div class="b2b-tabs">
+            <button type="button" class="b2b-tab-btn is-active" id="tab-quote">Bulk Sales Quotation</button>
+            <button type="button" class="b2b-tab-btn" id="tab-sample">Technical Sample &amp; CoA</button>
+          </div>
+
+          <!-- Prefill Banner -->
+          <div class="b2b-prefill-banner is-hidden">
+            <span>Prefilled Compound: <strong id="prefill-dye-name"></strong></span>
+            <button type="button" class="b2b-prefill-clear">Clear prefill</button>
+          </div>
+
+          <!-- Form Element -->
+          <form id="b2b-form">
+            <div class="b2b-grid">
+              
+              <div class="b2b-group">
+                <label for="contact-name" class="b2b-label">Your Name *</label>
+                <input type="text" id="contact-name" class="b2b-input" placeholder="Enter full name" required />
+              </div>
+
+              <div class="b2b-group">
+                <label for="contact-email" class="b2b-label">Business Email *</label>
+                <input type="email" id="contact-email" class="b2b-input" placeholder="name@company.com" required />
+              </div>
+
+              <div class="b2b-group">
+                <label for="contact-company" class="b2b-label">Company / Organization *</label>
+                <input type="text" id="contact-company" class="b2b-input" placeholder="e.g. Acme Corp" required />
+              </div>
+
+              <div class="b2b-group">
+                <label for="contact-phone" class="b2b-label">Phone Number</label>
+                <input type="tel" id="contact-phone" class="b2b-input" placeholder="e.g. +91 98765 43210" />
+              </div>
+
+              <div class="b2b-group b2b-group--full">
+                <label for="target-compound" class="b2b-label" id="label-compound">Target Compound Name / CAS</label>
+                <input type="text" id="target-compound" class="b2b-input" placeholder="e.g. Methyl Violet (Basic Violet 1)" />
+              </div>
+
+              <div class="b2b-group b2b-group--full">
+                <label for="contact-specs" class="b2b-label">Physical Form &amp; Spec Requirements</label>
+                <textarea id="contact-specs" class="b2b-textarea" rows="4" placeholder="Provide specific physical form requirements, purity targets, or packaging configurations (e.g. powder, liquid 50%, 25kg drum, etc.)..."></textarea>
+              </div>
+
+            </div>
+
+            <!-- MSDS Request Checkbox -->
+            <div class="b2b-checkbox-group">
+              <input type="checkbox" id="contact-msds" class="b2b-checkbox" />
+              <label for="contact-msds" class="b2b-checkbox-label">
+                Include Material Safety Data Sheet (MSDS) &amp; CoA in response
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="b2b-submit">
+              <span id="submit-btn-text">Initiate Bulk Sales Quote Request</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <p class="b2b-footer-notice">
+              Our sales team responds to accredited business inquiries under priority SLAs (typically within 12 hours).
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div>
+          <img src="img/logo.png" alt="K. Patel Logo" class="footer-logo" />
+          <div class="footer__brand-name">K. Patel<span>.</span></div>
+          <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 16px; line-height: 1.6;">
+            <strong>Corporate Office:</strong><br />
+            504, Eureka Tower, Mindspace,<br />
+            Off Link Road, Malad West,<br />
+            Mumbai – 400 064. Maharashtra, India.
+          </p>
+        </div>
+        <div>
+          <p class="footer__links-title">Group Companies</p>
+          <div style="font-size: 13px; color: var(--color-body); line-height: 1.8;">
+            <strong>Chemical Division:</strong>
+            <ul style="margin-bottom: 12px; opacity: 0.85;">
+              <li>K. Patel Dyechem Industries Pvt. Ltd.</li>
+              <li>Devanshi Dyestuff (Pigments & Chemicals)</li>
+              <li>K. Patel International (Lab Chemicals & Salts)</li>
+            </ul>
+            <strong>Other Divisions:</strong>
+            <ul style="opacity: 0.85;">
+              <li>K. Patel Phyto Extractions Pvt. Ltd.</li>
+              <li>K. Patel Metal Industries Pvt. Ltd.</li>
+              <li>K. Patel & Co. Pvt. Ltd. (Construction)</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <p class="footer__links-title">Contact Works</p>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-bottom: 16px; line-height: 1.6;">
+            <strong>Ankleshwar Works:</strong><br />
+            155 GIDC, Ankleshwar – 393 002.<br />
+            Gujarat, India.
+          </p>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+            +91-22-4882 2900 / 5062 2900
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            sales@kpateldyes.com
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__badges">
+          <span class="footer__badge">Government Recognized Export House</span>
+          <span class="footer__badge">ISO 9001:2015 & 14001:2015</span>
+        </div>
+        <p class="footer__copyright">&copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

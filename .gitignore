@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+npm-debug.log
+
+# Mac / Windows OS files
+.DS_Store
+Thumbs.db
+
+# Vercel & Environment
+.vercel/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE Files
+.vscode/
+.idea/

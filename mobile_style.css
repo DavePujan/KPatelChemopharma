@@ -1,0 +1,241 @@
+/* ============================================
+   MOBILE-FIRST DEDICATED STYLESHEET
+   Overrides desktop layouts to force single-column,
+   mobile-optimized designs on the mobile HTML pages.
+   ============================================ */
+
+:root {
+  --section-py-d: 60px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Typography Scaling */
+.hero__title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.legacy__title {
+  font-size: 2rem;
+}
+
+/* Stack all grids to 1 column */
+.hero__stats,
+.solutions__grid,
+.solutions__bottom-row,
+.industries__grid,
+.certifications__grid,
+.operations__grid,
+.operations__highlights,
+.legacy__layout,
+.global__grid,
+.global__stats,
+.contact-layout,
+.b2b-grid,
+.b2b-tabs,
+.product-grid,
+.spec-modal__grid {
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* Adjust padding for small screens */
+.operations__content {
+  padding: 32px 20px;
+}
+
+.legacy__companies,
+.b2b-form-card,
+.modal__header,
+.modal__search-bar,
+.modal__body {
+  padding: 24px;
+}
+
+/* Form specific stacking */
+.b2b-checkbox-group {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Element adjustments */
+.hero__actions {
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 40px;
+}
+
+.hero__actions .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.company-item {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.company-item__link {
+  width: 100%;
+  justify-content: center;
+}
+
+.operations__image-wrap {
+  min-height: 250px;
+}
+
+/* Hide desktop-specific performance heavy elements */
+.global__visual,
+.legacy__bg-year {
+  display: none;
+}
+
+/* Mobile Header / Navigation Overrides */
+.nav__links,
+.nav__cta {
+  display: none;
+}
+.nav__toggle {
+  display: flex;
+}
+.footer__main {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+/* ============================================
+   MOBILE DASHBOARD PORTAL
+   ============================================ */
+.hero {
+  min-height: 60vh !important;
+  padding-bottom: 60px;
+}
+
+.mobile-portal {
+  padding: 20px 20px 60px 20px;
+  background: var(--color-bg);
+  position: relative;
+  z-index: 10;
+  margin-top: -20px;
+  border-radius: 24px 24px 0 0;
+}
+
+.mobile-portal__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.portal-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-md);
+  text-decoration: none;
+  color: var(--color-heading-primary);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--dur-norm);
+}
+
+.portal-card:active {
+  transform: scale(0.98);
+  box-shadow: none;
+  background: rgba(47, 79, 79, 0.02);
+}
+
+.portal-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.portal-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.portal-card__subtitle {
+  font-size: 0.85rem;
+  color: var(--color-body-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.portal-card__explore {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.portal-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(47, 79, 79, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+}
+
+.portal-card__icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* ============================================
+   COMPANY PAGE FIXES
+   ============================================ */
+.legacy {
+  min-height: auto !important;
+  height: auto !important;
+  padding-bottom: 0 !important; /* Removes the extra image bleed below the white box */
+}
+
+.legacy__content {
+  padding-top: 40px;
+}
+
+.legacy__image-wrap {
+  top: 0 !important;
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.legacy__companies {
+  background: #ffffff;
+  border-radius: var(--r-md);
+  position: relative;
+  z-index: 2;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+.legacy__values {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.global {
+  padding-top: 60px !important;
+}

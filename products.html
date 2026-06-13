@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K. Patel Chemopharma — Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile_style.css" />
+  <script>
+    if (window.innerWidth > 768) {
+      window.location.replace("index.html");
+    }
+  </script>
+</head>
+<body>
+  <nav class="nav nav--hero is-scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="home.html" class="nav__logo">K. Patel<span>.</span></a>
+      <button class="nav__toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobile-nav">
+    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
+    <a href="home.html">Home</a>
+    <a href="products.html">Product Catalog</a>
+    <a href="industries.html">Industries</a>
+    <a href="infrastructure.html">Infrastructure</a>
+    <a href="company.html">Company Legacy</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <main style="padding-top: 72px;">
+    <!-- ========== PRODUCTS — Visual Dyes Grid & Modal Explorer ========== -->
+  <section class="section solutions" id="solutions">
+    <div class="container">
+      <div class="solutions__header reveal">
+        <span class="eyebrow">Product Range</span>
+        <h2 class="section-title">Our Colorant Portfolio</h2>
+        <p class="section-body">
+          We manufacture high-grade dyes, pigments, and related dispersions as colorants for varied customer applications, conforming to international standards and quality compliance.
+        </p>
+      </div>
+
+      <div class="dyes-grid reveal reveal-delay-1">
+        <!-- 1. Basic Dyes -->
+        <div class="dye-card" data-category="basic">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80" alt="Basic Dyes Chemistry" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Basic Dyes</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 2. Solvent Dyes -->
+        <div class="dye-card" data-category="solvent">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80" alt="Solvent Dyes Chemistry" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Solvent Dyes</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 3. Rinsable Dyes -->
+        <div class="dye-card" data-category="rinsable">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80" alt="Rinsable Colors Chemistry" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Rinsable Dyes</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 4. Pigments -->
+        <div class="dye-card" data-category="pigments">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80" alt="Pigment Powders" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Pigments</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 5. Pigment Dispersions -->
+        <div class="dye-card" data-category="dispersions">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Liquid Pigment Dispersions" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Pigment Dispersions</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 6. Acid Dyes -->
+        <div class="dye-card" data-category="acid">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=800&q=80" alt="Acid Dyes" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Acid Dyes</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+
+        <!-- 7. Direct Dyes -->
+        <div class="dye-card" data-category="direct">
+          <div class="dye-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1502691876148-a84978e59af8?auto=format&fit=crop&w=800&q=80" alt="Direct Dyes" loading="lazy" />
+          </div>
+          <div class="dye-card__overlay">
+            <span class="dye-card__explore-btn">Explore Range</span>
+          </div>
+          <div class="dye-card__bar">
+            <h3 class="dye-card__title">Direct Dyes</h3>
+            <span class="dye-card__chevron">▸</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL: Category Dyes List -->
+  <div class="modal" id="catalog-modal">
+    <div class="modal__backdrop"></div>
+    <div class="modal__dialog">
+      <div class="modal__header">
+        <div class="modal__info-area">
+          <h3 class="modal__category-name">Basic Dyes</h3>
+          <p class="modal__category-desc">Colorants information.</p>
+        </div>
+        <button class="modal__close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal__search-bar">
+        <div class="catalog__search-wrapper" style="width: 100%; max-width: 450px;">
+          <input type="text" class="modal__search-input" placeholder="Search this category by name, C.I. or CAS..." style="width: 100%;" />
+          <svg class="catalog__search-icon" viewBox="0 0 24 24" style="right: 16px;">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+      </div>
+      <div class="modal__body">
+        <div class="product-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Technical Specification Sheet -->
+  <div class="modal" id="spec-modal" style="z-index: 1300;">
+    <div class="modal__backdrop spec-modal-backdrop"></div>
+    <div class="modal__dialog" style="max-width: 700px;">
+      <div class="modal__header" style="padding: 24px 32px;">
+        <h3 class="spec-modal__title" style="margin: 0; border: none; padding: 0;">Technical Specifications</h3>
+        <button class="modal__close spec-modal-close" aria-label="Close technical specs modal" style="align-self: center;">&times;</button>
+      </div>
+      <div class="modal__body spec-modal__body" style="padding: 32px;">
+        <div class="spec-modal__body-content">
+          <!-- Dynamic details content -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div>
+          <div class="footer__brand-name">K. Patel<span>.</span></div>
+          <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 16px; line-height: 1.6;">
+            <strong>Corporate Office:</strong><br />
+            504, Eureka Tower, Mindspace,<br />
+            Off Link Road, Malad West,<br />
+            Mumbai – 400 064. Maharashtra, India.
+          </p>
+        </div>
+        <div>
+          <p class="footer__links-title">Group Companies</p>
+          <div style="font-size: 13px; color: var(--color-body); line-height: 1.8;">
+            <strong>Chemical Division:</strong>
+            <ul style="margin-bottom: 12px; opacity: 0.85;">
+              <li>K. Patel Dyechem Industries Pvt. Ltd.</li>
+              <li>Devanshi Dyestuff (Pigments & Chemicals)</li>
+              <li>K. Patel International (Lab Chemicals & Salts)</li>
+            </ul>
+            <strong>Other Divisions:</strong>
+            <ul style="opacity: 0.85;">
+              <li>K. Patel Phyto Extractions Pvt. Ltd.</li>
+              <li>K. Patel Metal Industries Pvt. Ltd.</li>
+              <li>K. Patel & Co. Pvt. Ltd. (Construction)</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <p class="footer__links-title">Contact Works</p>
+          <p style="font-size: 13px; color: var(--color-body-muted); margin-bottom: 16px; line-height: 1.6;">
+            <strong>Ankleshwar Works:</strong><br />
+            155 GIDC, Ankleshwar – 393 002.<br />
+            Gujarat, India.
+          </p>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+            +91-22-4882 2900 / 5062 2900
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            sales@kpateldyes.com
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__badges">
+          <span class="footer__badge">Government Recognized Export House</span>
+          <span class="footer__badge">ISO 9001:2015 & 14001:2015</span>
+        </div>
+        <p class="footer__copyright">&copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="mobile_script.js"></script>
+</body>
+</html>
