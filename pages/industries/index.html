@@ -21,18 +21,16 @@
   <meta property="twitter:description" content="Discover how our high-performance colorants and dye chemistry serve industries like paper, textiles, ink, and wood coloring." />
   <meta property="twitter:image" content="https://www.kpateldyes.com/img/logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mobile_style.css" />
-  <script>
-    if (window.innerWidth > 768) {
-      window.location.replace("index.html");
-    }
-  </script>
+  <link rel="stylesheet" href="/assets/css/components/navbar.css" />
+  <link rel="stylesheet" href="/assets/css/components/footer.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/responsive.css" />
+  
 </head>
 <body>
   <nav class="nav nav--hero is-scrolled" id="nav">
     <div class="nav__inner">
-      <a href="home.html" class="nav__logo">K. Patel<span>.</span></a>
+      <a href="/" class="nav__logo">K. Patel<span>.</span></a>
       <button class="nav__toggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -41,12 +39,13 @@
 
   <div class="nav__mobile" id="mobile-nav">
     <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
-    <a href="home.html">Home</a>
-    <a href="products.html">Product Catalog</a>
-    <a href="industries.html">Industries</a>
-    <a href="infrastructure.html">Infrastructure</a>
-    <a href="company.html">Company Legacy</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="/">Home</a>
+    <a href="/pages/products/">Product Catalog</a>
+    <a href="/pages/industries/">Industries</a>
+    <a href="/pages/infrastructure/">Infrastructure</a>
+    <a href="/pages/about/">About Us</a>
+    <a href="/pages/company/">Company Legacy</a>
+    <a href="/pages/contact/">Contact Us</a>
   </div>
 
   <main style="padding-top: 72px;">
@@ -151,13 +150,13 @@
             <ul style="margin-bottom: 12px; opacity: 0.85;">
               <li>K. Patel Dyechem Industries Pvt. Ltd.</li>
               <li>Devanshi Dyestuff (Pigments & Chemicals)</li>
-              <li>K. Patel International (Lab Chemicals & Salts)</li>
+              <li><a href="https://www.lab-reagents.com/" target="_blank" style="color: inherit; text-decoration: none;">K. Patel International (Lab Chemicals & Salts)</a></li>
             </ul>
             <strong>Other Divisions:</strong>
             <ul style="opacity: 0.85;">
-              <li>K. Patel Phyto Extractions Pvt. Ltd.</li>
+              <li><a href="https://phytoextractskp.com/" target="_blank" style="color: inherit; text-decoration: none;">K. Patel Phyto Extractions Pvt. Ltd.</a></li>
               <li>K. Patel Metal Industries Pvt. Ltd.</li>
-              <li>K. Patel & Co. Pvt. Ltd. (Construction)</li>
+              <li><a href="https://www.kpatelrealty.com/" target="_blank" style="color: inherit; text-decoration: none;">K. Patel & Co. Pvt. Ltd. (Construction)</a></li>
             </ul>
           </div>
         </div>
@@ -188,6 +187,6 @@
     </div>
   </footer>
 
-  <script src="mobile_script.js"></script>
+  <script src="/assets/js/mobile.js"></script>
 </body>
 </html>

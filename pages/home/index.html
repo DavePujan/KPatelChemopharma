@@ -38,18 +38,16 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mobile_style.css" />
-  <script>
-    if (window.innerWidth > 768) {
-      window.location.replace("index.html");
-    }
-  </script>
+  <link rel="stylesheet" href="/assets/css/components/navbar.css" />
+  <link rel="stylesheet" href="/assets/css/components/footer.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/responsive.css" />
+  
 </head>
 <body>
   <nav class="nav nav--hero is-scrolled" id="nav">
     <div class="nav__inner">
-      <a href="home.html" class="nav__logo">
+      <a href="/" class="nav__logo">
         K. Patel<span>.</span>
       </a>
       <button class="nav__toggle" aria-label="Open menu">
@@ -60,12 +58,13 @@
 
   <div class="nav__mobile" id="mobile-nav">
     <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
-    <a href="home.html">Home</a>
-    <a href="products.html">Product Catalog</a>
-    <a href="industries.html">Industries</a>
-    <a href="infrastructure.html">Infrastructure</a>
-    <a href="company.html">Company Legacy</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="/">Home</a>
+    <a href="/pages/products/">Product Catalog</a>
+    <a href="/pages/industries/">Industries</a>
+    <a href="/pages/infrastructure/">Infrastructure</a>
+    <a href="/pages/about/">About Us</a>
+    <a href="/pages/company/">Company Legacy</a>
+    <a href="/pages/contact/">Contact Us</a>
   </div>
 
   <main style="padding-top: 72px;">
@@ -113,7 +112,7 @@
   <section class="mobile-portal">
     <div class="mobile-portal__grid">
       
-      <a href="products.html" class="portal-card">
+      <a href="/pages/products/" class="portal-card">
         <div class="portal-card__content">
           <span class="portal-card__title">Product Catalog</span>
           <span class="portal-card__subtitle">Dyes, Pigments & Extracts</span>
@@ -124,7 +123,7 @@
         </div>
       </a>
 
-      <a href="industries.html" class="portal-card">
+      <a href="/pages/industries/" class="portal-card">
         <div class="portal-card__content">
           <span class="portal-card__title">Industries Served</span>
           <span class="portal-card__subtitle">Applications & Solutions</span>
@@ -135,7 +134,7 @@
         </div>
       </a>
 
-      <a href="infrastructure.html" class="portal-card">
+      <a href="/pages/infrastructure/" class="portal-card">
         <div class="portal-card__content">
           <span class="portal-card__title">Infrastructure</span>
           <span class="portal-card__subtitle">Facilities & Certifications</span>
@@ -146,7 +145,7 @@
         </div>
       </a>
 
-      <a href="company.html" class="portal-card">
+      <a href="/pages/company/" class="portal-card">
         <div class="portal-card__content">
           <span class="portal-card__title">Company Legacy</span>
           <span class="portal-card__subtitle">Heritage & Global Alliance</span>
@@ -240,7 +239,7 @@
     <div class="container">
       <div class="footer__main">
         <div>
-          <img src="img/logo.png" alt="K. Patel Logo" class="footer-logo" />
+          <img src="/assets/images/logo.png" alt="K. Patel Logo" class="footer-logo" />
           <div class="footer__brand-name">K. Patel<span>.</span></div>
           <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
           <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 16px; line-height: 1.6;">
@@ -278,6 +277,6 @@
     </div>
   </footer>
 
-  <script src="mobile_script.js"></script>
+  <script src="/assets/js/mobile.js"></script>
 </body>
 </html>

@@ -1,23 +1,33 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
+  "rewrites": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
+      "source": "/about",
+      "destination": "/pages/about/index.html"
+    },
+    {
+      "source": "/company",
+      "destination": "/pages/company/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/pages/contact/index.html"
+    },
+    {
+      "source": "/products",
+      "destination": "/pages/products/index.html"
+    },
+    {
+      "source": "/industries",
+      "destination": "/pages/industries/index.html"
+    },
+    {
+      "source": "/infrastructure",
+      "destination": "/pages/infrastructure/index.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/pages/home/index.html"
     }
   ]
 }
