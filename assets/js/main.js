@@ -904,23 +904,55 @@ function initContactForm() {
 
   // Handle Form Submission
   if (b2bForm) {
-    b2bForm.addEventListener('submit', (e) => {
+    b2bForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
-      const name = document.getElementById('contact-name')?.value;
-      const email = document.getElementById('contact-email')?.value;
-      const company = document.getElementById('contact-company')?.value;
+      const nameEl = document.getElementById('contact-name');
+      const emailEl = document.getElementById('contact-email');
+      const companyEl = document.getElementById('contact-company');
       const compound = targetCompoundInput?.value;
 
-      if (!name || !email || !company || (activeFormTab === 'sample' && !compound)) {
+      if ((nameEl && !nameEl.value) || 
+          (emailEl && !emailEl.value) || 
+          (companyEl && !companyEl.value) || 
+          (activeFormTab === 'sample' && !compound)) {
         alert("Please fill in all required fields.");
         return;
       }
 
-      alert(`Thank you, ${name}! Your ${activeFormTab === 'quote' ? 'bulk quote' : 'trial sample'} request has been successfully recorded. K. Patel Sales team will contact you within 12 hours under our priority SLA guidelines.`);
-      b2bForm.reset();
-      if (prefillBanner) prefillBanner.classList.add('is-hidden');
-      switchFormTab('quote');
+      const submitBtn = b2bForm.querySelector('.b2b-submit');
+      const originalText = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) submitBtn.innerHTML = 'Sending...';
+
+      try {
+        const formData = new FormData(b2bForm);
+        const dataObj = Object.fromEntries(formData.entries());
+        
+        const response = await fetch(b2bForm.action, {
+          method: b2bForm.method,
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(dataObj)
+        });
+
+        if (response.ok) {
+          const name = nameEl?.value || 'there';
+          alert(`Thank you, ${name}! Your request has been successfully received.`);
+          b2bForm.reset();
+          if (prefillBanner) prefillBanner.classList.add('is-hidden');
+          switchFormTab('quote');
+        } else {
+          const errData = await response.json();
+          console.error("API Error:", errData);
+          alert("Oops! There was a problem submitting your form. Please try again.");
+        }
+      } catch (error) {
+        console.error("Fetch Error:", error);
+        alert("Oops! There was a problem submitting your form. Please try again.");
+      } finally {
+        if (submitBtn) submitBtn.innerHTML = originalText;
+      }
     });
   }
 }
