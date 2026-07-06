@@ -164,23 +164,23 @@
           </div>
 
           <!-- Form Element -->
-          <form id="b2b-form">
+          <form id="b2b-form" action="/api/contact" method="POST">
             <div class="b2b-grid">
               <div class="b2b-group">
-                <label for="contact-name" class="b2b-label">Your Name *</label>
-                <input type="text" id="contact-name" class="b2b-input" placeholder="Enter full name" required />
+                <label for="contact-phone" class="b2b-label">Phone Number</label>
+                <input type="tel" id="contact-phone" name="phone" class="b2b-input" placeholder="e.g. +91 98765 43210" />
               </div>
               <div class="b2b-group">
                 <label for="contact-email" class="b2b-label">Business Email *</label>
-                <input type="email" id="contact-email" class="b2b-input" placeholder="name@company.com" required />
-              </div>
-              <div class="b2b-group">
-                <label for="contact-company" class="b2b-label">Company / Organization *</label>
-                <input type="text" id="contact-company" class="b2b-input" placeholder="e.g. Acme Corp" required />
+                <input type="email" id="contact-email" name="email" class="b2b-input" placeholder="name@company.com" required />
               </div>
               <div class="b2b-group b2b-group--full">
-                <label for="contact-specs" class="b2b-label">Requirements</label>
-                <textarea id="contact-specs" class="b2b-textarea" rows="4" placeholder="Provide compound requirements or questions..."></textarea>
+                <label for="target-compound" class="b2b-label" id="label-compound">Target Compound Name / CAS</label>
+                <input type="text" id="target-compound" name="compound" class="b2b-input" placeholder="e.g. Methyl Violet (Basic Violet 1)" />
+              </div>
+              <div class="b2b-group b2b-group--full">
+                <label for="contact-specs" class="b2b-label">Physical Form &amp; Spec Requirements</label>
+                <textarea id="contact-specs" name="specs" class="b2b-textarea" rows="4" placeholder="Provide specific physical form requirements, purity targets, or packaging configurations (e.g. powder, liquid 50%, 25kg drum, etc.)..."></textarea>
               </div>
             </div>
 
