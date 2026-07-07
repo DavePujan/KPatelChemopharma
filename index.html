@@ -849,37 +849,56 @@
           </div>
 
           <!-- Form Element -->
-          <form id="b2b-form" action="/api/contact" method="POST">
+          <form id="b2b-form" action="/api/contact" method="POST" novalidate>
+            <!-- Honeypot -->
+            <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;" />
+
             <div class="b2b-grid">
               
               <div class="b2b-group">
                 <label for="contact-name" class="b2b-label">Your Name *</label>
                 <input type="text" id="contact-name" name="name" class="b2b-input" placeholder="Enter full name" required />
+                <span class="error-msg" id="error-name"></span>
               </div>
 
               <div class="b2b-group">
                 <label for="contact-email" class="b2b-label">Business Email *</label>
                 <input type="email" id="contact-email" name="email" class="b2b-input" placeholder="name@company.com" required />
+                <span class="error-msg" id="error-email"></span>
               </div>
 
               <div class="b2b-group">
                 <label for="contact-company" class="b2b-label">Company / Organization *</label>
                 <input type="text" id="contact-company" name="company" class="b2b-input" placeholder="e.g. Acme Corp" required />
+                <span class="error-msg" id="error-company"></span>
               </div>
 
               <div class="b2b-group">
                 <label for="contact-phone" class="b2b-label">Phone Number</label>
                 <input type="tel" id="contact-phone" name="phone" class="b2b-input" placeholder="e.g. +91 98765 43210" />
+                <span class="error-msg" id="error-phone"></span>
+              </div>
+
+              <div class="b2b-group b2b-group--full autocomplete-wrapper">
+                <label for="target-compound" class="b2b-label" id="label-compound">Product Name / C.I. No. *</label>
+                <input type="text" id="target-compound" name="compound" class="b2b-input" placeholder="e.g. Methyl Violet (Basic Violet 1)" required autocomplete="off" />
+                <div class="autocomplete-dropdown" id="compound-dropdown"></div>
+                <span class="error-msg" id="error-compound"></span>
+              </div>
+
+              <div class="b2b-group b2b-group--full" id="sample-quantity-group" style="display: none;">
+                <label for="sample-quantity" class="b2b-label">Required Sample Quantity *</label>
+                <input type="text" id="sample-quantity" name="sample_quantity" class="b2b-input" placeholder="e.g. 100g, 500g" />
+                <span class="error-msg" id="error-quantity"></span>
               </div>
 
               <div class="b2b-group b2b-group--full">
-                <label for="target-compound" class="b2b-label" id="label-compound">Target Compound Name / CAS</label>
-                <input type="text" id="target-compound" name="compound" class="b2b-input" placeholder="e.g. Methyl Violet (Basic Violet 1)" />
-              </div>
-
-              <div class="b2b-group b2b-group--full">
-                <label for="contact-specs" class="b2b-label">Physical Form &amp; Spec Requirements</label>
-                <textarea id="contact-specs" name="specs" class="b2b-textarea" rows="4" placeholder="Provide specific physical form requirements, purity targets, or packaging configurations (e.g. powder, liquid 50%, 25kg drum, etc.)..."></textarea>
+                <div class="b2b-label-wrapper" style="display: flex; justify-content: space-between; align-items: baseline;">
+                  <label for="contact-specs" class="b2b-label">Physical Form &amp; Spec Requirements *</label>
+                  <span class="char-counter" id="char-counter-specs">0 / 1000</span>
+                </div>
+                <textarea id="contact-specs" name="specs" class="b2b-textarea" rows="5" placeholder="Example:&#10;• Product: Methyl Violet (Basic Violet 1)&#10;• Form: Liquid 50%&#10;• Quantity: 500 kg&#10;• Packaging: 25 kg drums&#10;• End Application: Paper Coating" required></textarea>
+                <span class="error-msg" id="error-specs"></span>
               </div>
 
             </div>
@@ -966,5 +985,6 @@
   </footer>
 
   <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/form.js"></script>
 </body>
 </html>
