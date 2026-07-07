@@ -413,177 +413,188 @@ const PRODUCTS_DATA = {
     title: "Basic Dyes",
     badge: "Basic Dyes",
     desc: "Water-soluble cationic dyes offering outstanding brightness and tinctorial strength. Extensively utilized in paper coloring, acrylic fibers, stationery inks, wood stains, and turf coloring.",
-    fallbackCas: "83968-28-9",
     industries: ["Paper & Board Industrial", "Stationery Writing Inks", "Biological Research Stains"],
     features: ["High Tinctorial Strength", "Excellent Liquid Mix Solubility"],
     items: [
-      { name: "Methyl Violet Liquid 50%", ci: "Basic Violet 1", cas: "8004-87-3" },
-      { name: "Methyl Violet", ci: "Basic Violet 1", cas: "8004-87-3" },
-      { name: "Crystal Violet Liquid 50%", ci: "Basic Violet 3", cas: "548-62-9" },
-      { name: "Crystal Violet", ci: "Basic Violet 3", cas: "548-62-9" },
-      { name: "Ethyl Violet Liquid 50%", ci: "Basic Violet 4", cas: "2390-59-2" },
-      { name: "Ethyl Violet", ci: "Basic Violet 4", cas: "2390-59-2" },
-      { name: "Rhodamine B Liquid 40%", ci: "Basic Violet 10", cas: "81-88-9" },
-      { name: "Rhodamine B 540%", ci: "Basic Violet 10", cas: "81-88-9" },
-      { name: "Magenta", ci: "Basic Violet 14", cas: "632-99-5" },
-      { name: "Basic Violet 16 Liquid", ci: "Basic Violet 16", cas: "6359-45-1" },
-      { name: "Brilliant Green Liquid 50%", ci: "Basic Green 1", cas: "633-03-4" },
-      { name: "Brilliant Green Crystals", ci: "Basic Green 1", cas: "633-03-4" },
-      { name: "Malachite Green Liquid 50%", ci: "Basic Green 4", cas: "569-64-2" },
-      { name: "Malachite Green Crystals / Powder", ci: "Basic Green 4", cas: "569-64-2" },
-      { name: "Victoria Blue BO", ci: "Basic Blue 7", cas: "2390-60-5" },
-      { name: "Methylene Blue 2B", ci: "Basic Blue 9", cas: "61-73-4" },
-      { name: "Victoria Blue B Liquid 40%", ci: "Basic Blue 26", cas: "2580-56-5" },
-      { name: "Victoria Blue B", ci: "Basic Blue 26", cas: "2580-56-5" },
-      { name: "Basic Blue 140 Liquid", ci: "Basic Blue 140", cas: "61902-19-2" }
+      { name: "Methyl Violet Liquid 50%", ci: "Basic Violet 1" },
+      { name: "Methyl Violet", ci: "Basic Violet 1" },
+      { name: "Crystal Violet Liquid 50%", ci: "Basic Violet 3" },
+      { name: "Crystal Violet", ci: "Basic Violet 3" },
+      { name: "Ethyl Violet Liquid 50%", ci: "Basic Violet 4" },
+      { name: "Ethyl Violet", ci: "Basic Violet 4" },
+      { name: "Rhodamine B Liquid 40%", ci: "Basic Violet 10" },
+      { name: "Rhodamine B 540%", ci: "Basic Violet 10" },
+      { name: "Magenta", ci: "Basic Violet 14" },
+      { name: "Basic Violet 16 Liquid", ci: "Basic Violet 16" },
+      { name: "Brilliant Green Liquid 50%", ci: "Basic Green 1" },
+      { name: "Brilliant Green Crystals", ci: "Basic Green 1" },
+      { name: "Malachite Green Liquid 50%", ci: "Basic Green 4" },
+      { name: "Malachite Green Crystals / Powder", ci: "Basic Green 4" },
+      { name: "Victoria Blue BO", ci: "Basic Blue 7" },
+      { name: "Methylene Blue 2B", ci: "Basic Blue 9" },
+      { name: "Victoria Blue B Liquid 40%", ci: "Basic Blue 26" },
+      { name: "Victoria Blue B", ci: "Basic Blue 26" },
+      { name: "Basic Blue 140 Liquid", ci: "Basic Blue 140" },
+      { name: "Chrysodine Y Liquid 35%", ci: "Basic Orange 2" },
+      { name: "Chrysodine Y", ci: "Basic Orange 2" },
+      { name: "Basic Orange 60 Liquid", ci: "Basic Orange 60" },
+      { name: "Auramine O", ci: "Basic Yellow 2" },
+      { name: "Auramine OF (Spirit Soluble)", ci: "Basic Yellow 2" },
+      { name: "Basic Yellow 28 Liquid", ci: "Basic Yellow 28" },
+      { name: "Basic Yellow 29 Liquid", ci: "Basic Yellow 29" },
+      { name: "Ethyl Auramine", ci: "Basic Yellow 37" },
+      { name: "Basic Yellow 40 Liquid", ci: "Basic Yellow 40" },
+      { name: "Basic Yellow 90 Liquid", ci: "Basic Yellow 90" },
+      { name: "Basic Yellow 96 Liquid", ci: "Basic Yellow 96" },
+      { name: "Bismark Brown G Liquid 50%", ci: "Basic Brown 1" },
+      { name: "Bismark Brown G", ci: "Basic Brown 1" },
+      { name: "Rhodamine 6GDN", ci: "Basic Red 1" },
+      { name: "Basic Red 12 Liquid", ci: "Basic Red 12" },
+      { name: "Basic Red 14 Liquid", ci: "Basic Red 14" },
+      { name: "Basic Red 49 Liquid", ci: "Basic Red 49" },
+      { name: "Basic Black MX", ci: "—" }
     ]
   },
   solvent: {
     title: "Solvent Dyes",
     badge: "Solvent Dyes",
     desc: "High-purity organosoluble colorants possessing excellent solubility in polar and non-polar organic solvents. Widely used in writing instrument inks, stationery, lacquers, wood coatings, and industrial markers.",
-    fallbackCas: "12226-78-7",
     industries: ["Stationery Writing Inks", "Plastics & Lacquers", "Industrial Wood Finishes"],
     features: ["Superior Heat Stability", "Excellent Organic Solvent Solubility"],
     items: [
-      { name: "Methyl Violet B Base", ci: "Solvent Violet 8", cas: "52080-58-7" },
-      { name: "Crystal Violet Base", ci: "Solvent Violet 9", cas: "467-63-0" },
-      { name: "Ethyl Violet Base", ci: "Solvent Violet 4 Base", cas: "6786-83-0" },
-      { name: "Victoria Blue B Base", ci: "Solvent Blue 4", cas: "6786-83-0" },
-      { name: "Solvent Blue KPP", ci: "Solvent Blue 38", cas: "1328-51-4" },
-      { name: "Solvent Blue KPT", ci: "Solvent Blue 38", cas: "1328-51-4" },
-      { name: "Solvent Blue KPV", ci: "Solvent Blue 43", cas: "12226-78-7" },
-      { name: "Solvent Blue KPM", ci: "Solvent Blue 43", cas: "12226-78-7" },
-      { name: "Solvent Black KPC", ci: "Solvent Black 46", cas: "65113-55-5" },
-      { name: "Brilliant Red DDY", ci: "Solvent Red 39", cas: "6406-53-7" },
-      { name: "Rhodamine B Base", ci: "Solvent Red 49", cas: "509-34-2" },
-      { name: "Chrysodine Y Base", ci: "Solvent Orange 3", cas: "495-54-5" },
-      { name: "Brilliant Yellow DDY", ci: "Solvent Yellow 47", cas: "12226-77-6" },
-      { name: "Solvent Blue 44", ci: "Solvent Blue 44", cas: "61968-60-3" },
-      { name: "Solvent Blue 98", ci: "Solvent Blue 98", cas: "71819-51-7" },
-      { name: "Bismark Brown G Base W/C", ci: "Solvent Brown 41", cas: "12226-40-3" },
-      { name: "Solvent Black 27", ci: "Solvent Black 27", cas: "12237-22-8" },
-      { name: "Solvent Black 29", ci: "Solvent Black 29", cas: "61901-87-1" }
+      { name: "Methyl Violet B Base", ci: "Solvent Violet 8" },
+      { name: "Crystal Violet Base", ci: "Solvent Violet 9" },
+      { name: "Ethyl Violet Base", ci: "Solvent Violet 4 Base" },
+      { name: "Victoria Blue B Base", ci: "Solvent Blue 4" },
+      { name: "Solvent Blue KPP", ci: "Solvent Blue 38" },
+      { name: "Solvent Blue KPT", ci: "Solvent Blue 38" },
+      { name: "Solvent Blue KPV", ci: "Solvent Blue 43" },
+      { name: "Solvent Blue KPM", ci: "Solvent Blue 43" },
+      { name: "Solvent Black KPC", ci: "Solvent Black 46" },
+      { name: "Brilliant Red DDY", ci: "Solvent Red 39" },
+      { name: "Rhodamine B Base", ci: "Solvent Red 49" },
+      { name: "Chrysodine Y Base", ci: "Solvent Orange 3" },
+      { name: "Brilliant Yellow DDY", ci: "Solvent Yellow 47" },
+      { name: "Solvent Blue 44", ci: "Solvent Blue 44" },
+      { name: "Solvent Blue 98", ci: "Solvent Blue 98" },
+      { name: "Bismark Brown G Base W/C", ci: "Solvent Brown 41" },
+      { name: "Solvent Black 27", ci: "Solvent Black 27" },
+      { name: "Solvent Black 29", ci: "Solvent Black 29" }
     ]
   },
   rinsable: {
     title: "Rinsable Dyes",
     badge: "Spectra Rinse",
     desc: "Specially formulated non-staining colorants easily washed from skin and household fabrics. Fully EN-71 certified for safety, making them ideal for children's toys, school marker inks, and household cleaners.",
-    fallbackCas: "2353-45-9",
     industries: ["Children's Markers & Crafts", "School & Educational Toys", "Household Cleaners"],
     features: ["EN-71 Parts 3 & 9 Safe Certification", "Zero-Staining Rinsable Washability"],
     items: [
-      { name: "Spectra Rinse Yellow GXV LQ", ci: "Rinsable Yellow", cas: "2783-94-0" },
-      { name: "Spectra Rinse Yellow R12XV LQ", ci: "Rinsable Yellow 12", cas: "1934-21-0" },
-      { name: "Spectra Rinse Yellow VG LV LQ", ci: "Rinsable Yellow VG", cas: "6359-98-4" },
-      { name: "Spectra Rinse Orange RX-LV LQ", ci: "Rinsable Orange", cas: "2783-94-0" },
-      { name: "Spectra Rinse Red RV LQ", ci: "Rinsable Red RV", cas: "3567-69-9" },
-      { name: "Spectra Rinse Magenta LVS LQ", ci: "Rinsable Magenta", cas: "3567-69-9" },
-      { name: "Spectra Rinse Blue T14XV LQ", ci: "Rinsable Blue T14", cas: "3844-45-9" },
-      { name: "Spectra Rinse Green AU767 LQ", ci: "Rinsable Green", cas: "518-47-8" },
-      { name: "Spectra Rinse Violet BV LQ", ci: "Rinsable Violet", cas: "4430-18-6" },
-      { name: "Spectra Rinse Black AV115 LIQ", ci: "Rinsable Black", cas: "2519-30-4" }
+      { name: "Spectra Rinse Yellow GXV LQ", ci: "" },
+      { name: "Spectra Rinse Yellow R12XV LQ", ci: "" },
+      { name: "Spectra Rinse Yellow VG LV LQ", ci: "" },
+      { name: "Spectra Rinse Orange RX-LV LQ", ci: "" },
+      { name: "Spectra Rinse Red RV LQ", ci: "" },
+      { name: "Spectra Rinse Magenta LVS LQ", ci: "" },
+      { name: "Spectra Rinse Blue T14XV LQ", ci: "" },
+      { name: "Spectra Rinse Green AU767 LQ", ci: "" },
+      { name: "Spectra Rinse Violet BV LQ", ci: "" },
+      { name: "Spectra Rinse Black AV115 LIQ", ci: "" }
     ]
   },
   pigments: {
     title: "Pigments",
     badge: "Pigment Toners",
     desc: "High-affinity organic and inorganic pigments yielding deep color strength and outstanding dispersion properties. Ideal for sheet-fed and web-offset packaging printing inks and coatings.",
-    fallbackCas: "1325-82-2",
     industries: ["Offset & Flexo Printing Inks", "Commercial Packaging", "Industrial Coatings"],
     features: ["Excellent Light & Acid Fastness", "Optimal Dispersion Flow Performance"],
     items: [
-      { name: "Violet Toner DD 7", ci: "Pigment Violet 27", cas: "12237-62-6" },
-      { name: "Violet Toner DD 2", ci: "Pigment Violet 3:1", cas: "68989-19-5" },
-      { name: "Violet Toner DD 3", ci: "Pigment Violet 3", cas: "1325-82-2" },
-      { name: "Violet Toner DD 4", ci: "Pigment Violet 3", cas: "1325-82-2" },
-      { name: "Blue Toner DD 62", ci: "Pigment Blue 62", cas: "57486-09-6" },
-      { name: "Blue Toner DD 14", ci: "Pigment Blue 14", cas: "1325-88-8" },
-      { name: "Red Toner DD 169", ci: "Pigment Red 169", cas: "12237-63-7" },
-      { name: "Red Toner DD 81", ci: "Pigment Red 81", cas: "12224-98-5" }
+      { name: "Violet Toner DD 7", ci: "Pigment Violet 27" },
+      { name: "Violet Toner DD 2", ci: "Pigment Violet 3:1" },
+      { name: "Violet Toner DD 3", ci: "Pigment Violet 3" },
+      { name: "Violet Toner DD 4", ci: "Pigment Violet 3" },
+      { name: "Blue Toner DD 62", ci: "Pigment Blue 62" },
+      { name: "Blue Toner DD 14", ci: "Pigment Blue 14" },
+      { name: "Red Toner DD 169", ci: "Pigment Red 169" },
+      { name: "Red Toner DD 81", ci: "Pigment Red 81" }
     ]
   },
   dispersions: {
     title: "Pigment Dispersions",
     badge: "KP Sperse",
     desc: "Stable aqueous pre-dispersions of organic pigments, exhibiting optimal flow properties and sedimentation resistance. Specifically engineered for pulp and paper coloring and water-based coatings.",
-    fallbackCas: "1324-58-1",
     industries: ["Pulp & Paper Coloring", "Aqueous Inkjet & Digital Inks", "Water-Based Wall Coatings"],
     features: ["Sedimentation & Crusting Resistance", "Uniform Sub-Micron Particle Size"],
     items: [
-      { name: "KP Sperse Violet 101", ci: "Pigment Violet 3 Dispersion", cas: "1325-82-2" },
-      { name: "KP Sperse Violet 103", ci: "Pigment Violet 23 Dispersion", cas: "6358-30-1" },
-      { name: "KP Sperse Violet 104", ci: "Pigment Violet 27 Dispersion", cas: "12237-62-6" },
-      { name: "KP Sperse Violet 105", ci: "Pigment Violet 27 Dispersion", cas: "12237-62-6" },
-      { name: "KP Sperse Blue 101", ci: "Pigment Blue 14 Dispersion", cas: "1325-88-8" },
-      { name: "KP Sperse Blue 103", ci: "Pigment Blue 15 Dispersion", cas: "147-14-8" },
-      { name: "KP Sperse Red 101", ci: "Pigment Red 81 Dispersion", cas: "12224-98-5" },
-      { name: "KP Sperse Red 104", ci: "Pigment Red 169 Dispersion", cas: "12237-63-7" },
-      { name: "KP Sperse Yellow 103", ci: "Pigment Yellow 83 Dispersion", cas: "5567-15-7" },
-      { name: "KP Sperse Yellow 106", ci: "Pigment Yellow 14 Dispersion", cas: "5468-75-7" },
-      { name: "KP Sperse Green 103", ci: "Pigment Green 7 Dispersion", cas: "1328-53-6" },
-      { name: "KP Sperse Black 103", ci: "Pigment Black 7 Dispersion", cas: "1333-86-4" }
+      { name: "KP Sperse Violet 101", ci: "Pigment Violet 3" },
+      { name: "KP Sperse Violet 103", ci: "Pigment Violet 23" },
+      { name: "KP Sperse Violet 104", ci: "Pigment Violet 27" },
+      { name: "KP Sperse Violet 105", ci: "Pigment Violet 27" },
+      { name: "KP Sperse Blue 101", ci: "Pigment Blue 14" },
+      { name: "KP Sperse Blue 103", ci: "Pigment Blue 15" },
+      { name: "KP Sperse Red 101", ci: "Pigment Red 81" },
+      { name: "KP Sperse Red 104", ci: "Pigment Red 169" },
+      { name: "KP Sperse Yellow 103", ci: "Pigment Yellow 83" },
+      { name: "KP Sperse Yellow 106", ci: "Pigment Yellow 14" },
+      { name: "KP Sperse Green 103", ci: "Pigment Green 7" },
+      { name: "KP Sperse Black 103", ci: "Pigment Black 7" }
     ]
   },
   acid: {
     title: "Acid Dyes",
     badge: "Acid Dyes",
     desc: "Highly soluble anionic colorants designed for excellent dye exhaustion and levelling. Extensively used in textile coloring (wool, silk, nylon), printing inks, wood stains, and premium leather dressing.",
-    fallbackCas: "1934-21-0",
     industries: ["Textile Wool, Silk & Nylon", "Leather Drum Dyeing", "Wood Stains & Industrial Ink"],
     features: ["Exceptional Levelling & Migration", "High Wash, Light & Rub Fastness"],
     items: [
-      { name: "Acid Yellow 6 Powder", ci: "Acid Yellow 6", cas: "1934-21-0" },
-      { name: "Acid Yellow 23 Powder", ci: "Acid Yellow 23", cas: "1934-21-0" },
-      { name: "Acid Yellow 36 Powder", ci: "Acid Yellow 36", cas: "587-98-4" },
-      { name: "Acid Yellow 42 Powder", ci: "Acid Yellow 42", cas: "6375-55-9" },
-      { name: "Acid Yellow 73 Powder", ci: "Acid Yellow 73", cas: "518-47-8" },
-      { name: "Acid Orange 7 Powder", ci: "Acid Orange 7", cas: "633-96-5" },
-      { name: "Acid Orange 7 Liquid", ci: "Acid Orange 7", cas: "633-96-5" },
-      { name: "Acid Red 14 Powder", ci: "Acid Red 14", cas: "3567-69-9" },
-      { name: "Acid Red 52 Powder", ci: "Acid Red 52", cas: "3520-42-1" },
-      { name: "Acid Red 87 Powder", ci: "Acid Red 87", cas: "548-26-5" },
-      { name: "Acid Red 92 Powder", ci: "Acid Red 92", cas: "18472-87-2" },
-      { name: "Acid Blue 15 Powder", ci: "Acid Blue 15", cas: "58586-30-0" },
-      { name: "Acid Blue 15 Liquid", ci: "Acid Blue 15", cas: "58586-30-0" },
-      { name: "Acid Blue 9 Powder", ci: "Acid Blue 9", cas: "3844-45-9" },
-      { name: "Acid Blue 9 Liquid", ci: "Acid Blue 9", cas: "3844-45-9" },
-      { name: "Acid Blue 80 Powder", ci: "Acid Blue 80", cas: "4474-24-2" },
-      { name: "Acid Blue 93 Powder", ci: "Acid Blue 93", cas: "28983-56-4" },
-      { name: "Acid Violet 17 Liquid", ci: "Acid Violet 17", cas: "4129-84-0" },
-      { name: "Acid Violet 17 Powder", ci: "Acid Violet 17", cas: "4129-84-0" },
-      { name: "Acid Violet 49 Powder", ci: "Acid Violet 49", cas: "1694-09-3" },
-      { name: "Acid Violet 49 Liquid", ci: "Acid Violet 49", cas: "1694-09-3" },
-      { name: "Acid Black 2 Powder", ci: "Acid Black 2", cas: "8005-03-6" },
-      { name: "Acid Black 194 Powder", ci: "Acid Black 194", cas: "61931-04-2" }
+      { name: "Acid Yellow 6 Powder", ci: "Acid Yellow 6" },
+      { name: "Acid Yellow 23 Powder", ci: "Acid Yellow 23" },
+      { name: "Acid Yellow 36 Powder", ci: "Acid Yellow 36" },
+      { name: "Acid Yellow 42 Powder", ci: "Acid Yellow 42" },
+      { name: "Acid Yellow 73 Powder", ci: "Acid Yellow 73" },
+      { name: "Acid Orange 7 Powder", ci: "Acid Orange 7" },
+      { name: "Acid Orange 7 Liquid", ci: "Acid Orange 7" },
+      { name: "Acid Red 14 Powder", ci: "Acid Red 14" },
+      { name: "Acid Red 52 Powder", ci: "Acid Red 52" },
+      { name: "Acid Red 87 Powder", ci: "Acid Red 87" },
+      { name: "Acid Red 92 Powder", ci: "Acid Red 92" },
+      { name: "Acid Blue 15 Powder", ci: "Acid Blue 15" },
+      { name: "Acid Blue 15 Liquid", ci: "Acid Blue 15" },
+      { name: "Acid Blue 9 Powder", ci: "Acid Blue 9" },
+      { name: "Acid Blue 9 Liquid", ci: "Acid Blue 9" },
+      { name: "Acid Blue 80 Powder", ci: "Acid Blue 80" },
+      { name: "Acid Blue 93 Powder", ci: "Acid Blue 93" },
+      { name: "Acid Violet 17 Liquid", ci: "Acid Violet 17" },
+      { name: "Acid Violet 17 Powder", ci: "Acid Violet 17" },
+      { name: "Acid Violet 49 Powder", ci: "Acid Violet 49" },
+      { name: "Acid Violet 49 Liquid", ci: "Acid Violet 49" },
+      { name: "Acid Black 2 Powder", ci: "Acid Black 2" },
+      { name: "Acid Black 194 Powder", ci: "Acid Black 194" }
     ]
   },
   direct: {
     title: "Direct Dyes",
     badge: "Direct Dyes",
     desc: "Anionic dyes carrying high natural affinity for cellulose fibers. Offers excellent exhaustion rates, cost-effective dyeing, and bleeding resistance for paper, cotton textiles, and wood finishing.",
-    fallbackCas: "3441-14-3",
     industries: ["Cellulose Fibers & Textiles", "Industrial Paper Coloring", "Wood Stains & Drum Leather"],
     features: ["High Direct Exhaustion Rate", "Optimal Wet Fastness Performance"],
     items: [
-      { name: "Direct Yellow 4 Powder", ci: "Direct Yellow 4", cas: "3051-11-4" },
-      { name: "Direct Orange 15 Liquid", ci: "Direct Orange 15", cas: "1325-35-5" },
-      { name: "Direct Red 239 Powder", ci: "Direct Red 239", cas: "72243-90-4" },
-      { name: "Direct Red 239 Liquid", ci: "Direct Red 239", cas: "72243-90-4" },
-      { name: "Direct Red 254 Powder", ci: "Direct Red 254", cas: "61902-17-0" },
-      { name: "Direct Red 254 Liquid", ci: "Direct Red 254", cas: "61902-17-0" },
-      { name: "Direct Blue 80 Powder", ci: "Direct Blue 80", cas: "12222-00-5" },
-      { name: "Direct Blue 86 Powder", ci: "Direct Blue 86", cas: "1330-38-7" },
-      { name: "Direct Blue 273 Liquid", ci: "Direct Blue 273", cas: "76523-10-1" },
-      { name: "Direct Blue 218 Powder", ci: "Direct Blue 218", cas: "28407-37-6" },
-      { name: "Direct Blue 218 Liquid", ci: "Direct Blue 218", cas: "28407-37-6" },
-      { name: "Direct Blue 267 Liquid", ci: "Direct Blue 267", cas: "72906-38-8" },
-      { name: "Direct Blue 279 Liquid", ci: "Direct Blue 279", cas: "72906-39-9" },
-      { name: "Direct Brown 44 Liquid", ci: "Direct Brown 44", cas: "6252-62-6" },
-      { name: "Direct Black 179 Powder", ci: "Direct Black 179", cas: "61902-23-8" },
-      { name: "Direct Black 22 Powder", ci: "Direct Black 22", cas: "6473-13-8" },
-      { name: "Direct Black 168 Liquid", ci: "Direct Black 168", cas: "85631-00-1" }
+      { name: "Direct Yellow 4 Powder", ci: "Direct Yellow 4" },
+      { name: "Direct Orange 15 Liquid", ci: "Direct Orange 15" },
+      { name: "Direct Red 239 Powder", ci: "Direct Red 239" },
+      { name: "Direct Red 239 Liquid", ci: "Direct Red 239" },
+      { name: "Direct Red 254 Powder", ci: "Direct Red 254" },
+      { name: "Direct Red 254 Liquid", ci: "Direct Red 254" },
+      { name: "Direct Blue 80 Powder", ci: "Direct Blue 80" },
+      { name: "Direct Blue 86 Powder", ci: "Direct Blue 86" },
+      { name: "Direct Blue 273 Liquid", ci: "Direct Blue 273" },
+      { name: "Direct Blue 218 Powder", ci: "Direct Blue 218" },
+      { name: "Direct Blue 218 Liquid", ci: "Direct Blue 218" },
+      { name: "Direct Blue 267 Liquid", ci: "Direct Blue 267" },
+      { name: "Direct Blue 279 Liquid", ci: "Direct Blue 279" },
+      { name: "Direct Brown 44 Liquid", ci: "Direct Brown 44" },
+      { name: "Direct Black 179 Powder", ci: "Direct Black 179" },
+      { name: "Direct Black 22 Powder", ci: "Direct Black 22" },
+      { name: "Direct Black 168 Liquid", ci: "Direct Black 168" }
     ]
   }
 };
@@ -643,7 +654,7 @@ function initCatalog() {
     // Filter items based on search query
     const filtered = data.items.filter((item) => {
       const q = modalSearchQuery.toLowerCase().trim();
-      return item.name.toLowerCase().includes(q) || item.ci.toLowerCase().includes(q) || (item.cas && item.cas.includes(q));
+      return item.name.toLowerCase().includes(q) || (item.ci && item.ci.toLowerCase().includes(q));
     });
 
     if (filtered.length === 0) {
@@ -653,20 +664,26 @@ function initCatalog() {
 
     gridContainer.innerHTML = filtered
       .map((item) => {
-        const cas = item.cas || data.fallbackCas;
         const ind1 = data.industries[0] || "General Chemical Applications";
         const ind2 = data.industries[1] || "Coloration Processings";
         const ind3 = data.industries[2] || "Industrial Solutions";
         const f1 = data.features[0] || "Excellent Shade Consistency";
         const f2 = data.features[1] || "Conforms to Int'l Standards";
+        
+        let ciDisplay = '';
+        if (item.ci && item.ci !== '—') {
+          ciDisplay = `C.I. ${item.ci}`;
+        } else if (item.ci === '—') {
+          ciDisplay = `C.I. —`;
+        }
 
         return `
         <div class="product-card">
           <div class="product-card__header">
             <span class="product-card__badge">${data.badge}</span>
-            <span class="product-card__cas">CAS ${cas}</span>
+            <span class="product-card__cas">${ciDisplay}</span>
           </div>
-          <h4 class="product-card__title">${item.name} (${item.ci})</h4>
+          <h4 class="product-card__title">${item.name}</h4>
           <p class="product-card__desc">${data.desc.split('.')[0]}. Excellent affinity, standard yield coloration grade.</p>
           
           <div class="product-card__industries-label">Primary Target Industries</div>
@@ -688,11 +705,11 @@ function initCatalog() {
           </div>
           
           <div class="product-card__actions">
-            <button class="product-card__btn-outline" onclick="showTechnicalSpecs('${item.name.replace(/'/g, "\\'")}', '${item.ci.replace(/'/g, "\\'")}', '${cas.replace(/'/g, "\\'")}', '${data.badge.replace(/'/g, "\\'")}')">
+            <button class="product-card__btn-outline" onclick="showTechnicalSpecs('${item.name.replace(/'/g, "\\'")}', '${(item.ci || '').replace(/'/g, "\\'")}', '${data.badge.replace(/'/g, "\\'")}')">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
               Technical Specs
             </button>
-            <button class="product-card__btn-primary" onclick="prefillSampleRequest('${item.name.replace(/'/g, "\\'")}', '${item.ci.replace(/'/g, "\\'")}', '${cas.replace(/'/g, "\\'")}')">
+            <button class="product-card__btn-primary" onclick="prefillSampleRequest('${item.name.replace(/'/g, "\\'")}', '${(item.ci || '').replace(/'/g, "\\'")}')">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8"/></svg>
               Request Sample
             </button>
@@ -736,7 +753,7 @@ function initCatalog() {
 }
 
 // Global functions for card click triggers
-window.showTechnicalSpecs = function(dyeName, ci, cas, division) {
+window.showTechnicalSpecs = function(dyeName, ci, division) {
   const specModal = document.getElementById('spec-modal');
   if (!specModal) return;
 
@@ -753,11 +770,7 @@ window.showTechnicalSpecs = function(dyeName, ci, cas, division) {
         </div>
         <div class="spec-modal__item">
           <span class="spec-modal__label">C.I. Designation</span>
-          <span class="spec-modal__value">${ci}</span>
-        </div>
-        <div class="spec-modal__item">
-          <span class="spec-modal__label">CAS Registry Number</span>
-          <span class="spec-modal__value">${cas}</span>
+          <span class="spec-modal__value">${ci || '—'}</span>
         </div>
         <div class="spec-modal__item">
           <span class="spec-modal__label">Assay / Strength</span>
@@ -781,7 +794,7 @@ window.showTechnicalSpecs = function(dyeName, ci, cas, division) {
         </div>
       </div>
       <div style="margin-top: 32px; text-align: right;">
-        <button class="product-card__btn-primary" style="display:inline-flex" onclick="closeSpecAndPrefill('${dyeName.replace(/'/g, "\\'")}', '${ci.replace(/'/g, "\\'")}', '${cas.replace(/'/g, "\\'")}')">
+        <button class="product-card__btn-primary" style="display:inline-flex" onclick="closeSpecAndPrefill('${dyeName.replace(/'/g, "\\'")}', '${ci.replace(/'/g, "\\'")}')">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8"/></svg>
           Request Free Trial Sample
         </button>
@@ -793,13 +806,13 @@ window.showTechnicalSpecs = function(dyeName, ci, cas, division) {
   document.body.style.overflow = 'hidden';
 };
 
-window.closeSpecAndPrefill = function(dyeName, ci, cas) {
+window.closeSpecAndPrefill = function(dyeName, ci) {
   const specModal = document.getElementById('spec-modal');
   if (specModal) specModal.classList.remove('is-open');
-  window.prefillSampleRequest(dyeName, ci, cas);
+  window.prefillSampleRequest(dyeName, ci);
 };
 
-window.prefillSampleRequest = function(dyeName, ci, cas) {
+window.prefillSampleRequest = function(dyeName, ci) {
   // Close the catalog modals
   const modal = document.getElementById('catalog-modal');
   if (modal) modal.classList.remove('is-open');
@@ -828,7 +841,7 @@ window.prefillSampleRequest = function(dyeName, ci, cas) {
 
   // Prefill field
   if (targetCompoundInput) {
-    targetCompoundInput.value = `${dyeName} (C.I. ${ci}, CAS ${cas})`;
+    targetCompoundInput.value = ci && ci !== '—' ? `${dyeName} (C.I. ${ci})` : dyeName;
   }
 
   // Show prefill alert banner
