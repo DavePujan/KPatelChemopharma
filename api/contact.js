@@ -15,75 +15,105 @@ export default async function handler(req, res) {
   try {
     const data = req.body || {};
     
+    // Determine inquiry type
+    const inquiryType = data.sample_quantity ? 'Technical Sample Request' : 'Bulk Sales Inquiry';
+
     // Fallbacks if some fields are missing
     const name = data.name || 'Website Visitor';
     const company = data.company || 'Not provided';
     const email = data.email || 'No email provided';
     const phone = data.phone || 'Not provided';
-    const compound = data.compound || 'N/A';
-    const specs = data.specs || 'None';
+    const compound = data.compound || 'Not specified';
+    const specs = data.specs || 'None provided';
     const msds = data.include_msds === 'on' ? 'Yes' : 'No';
+    
+    // Subject Line
+    const subjectLine = `New ${inquiryType} – ${compound} – ${company}`;
 
-    // Construct the elegant HTML Email Template
+    // Construct the optimized B2B Email Template
     const htmlBody = `
-      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
+      <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 650px; margin: 0 auto; border: 1px solid #eaeaea; border-radius: 4px; overflow: hidden; background-color: #ffffff;">
         
         <!-- Header -->
-        <div style="background-color: #1a1a1a; padding: 24px; text-align: center;">
-          <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600;">K. Patel.</h1>
-          <p style="color: #999999; margin: 4px 0 0 0; font-size: 14px;">New B2B Lead Submission</p>
+        <div style="background-color: #ffffff; padding: 24px 32px; border-bottom: 3px solid #294B49;">
+          <h1 style="color: #294B49; margin: 0 0 16px 0; font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">K. PATEL CHEMOPHARMA</h1>
+          <h2 style="color: #333333; margin: 0 0 16px 0; font-size: 24px; font-weight: 600;">New ${inquiryType}</h2>
+          <p style="color: #666666; margin: 0; font-size: 14px;">A new inquiry has been submitted through the website.</p>
+          <div style="margin-top: 16px; font-size: 13px; color: #888888;">
+            Submitted:<br/>
+            <strong style="color: #333333;">${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' })} IST</strong>
+          </div>
         </div>
 
         <!-- Body -->
-        <div style="padding: 32px 24px;">
-          <h2 style="color: #333333; margin: 0 0 20px 0; font-size: 18px;">Contact Details</h2>
+        <div style="padding: 32px;">
           
-          <table style="width: 100%; border-collapse: collapse;">
+          <h3 style="color: #294B49; margin: 0 0 16px 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Contact Information</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 32px;">
             <tbody>
               <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #666666; width: 35%;"><strong>Name</strong></td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #111111;">${name}</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; width: 35%; font-size: 14px;">Name</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${name}</td>
               </tr>
               <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #666666;"><strong>Email</strong></td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #111111;"><a href="mailto:${email}" style="color: #0066cc; text-decoration: none;">${email}</a></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Company</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${company}</td>
               </tr>
               <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #666666;"><strong>Company</strong></td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #111111;">${company}</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Business Email</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;"><a href="mailto:${email}" style="color: #0066cc; text-decoration: none;">${email}</a></td>
               </tr>
               <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #666666;"><strong>Phone</strong></td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #111111;">${phone}</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Phone</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;"><a href="tel:${phone.replace(/\s+/g, '')}" style="color: #0066cc; text-decoration: none;">${phone}</a></td>
               </tr>
             </tbody>
           </table>
 
-          <h2 style="color: #333333; margin: 32px 0 20px 0; font-size: 18px;">Request Requirements</h2>
-          
-          <table style="width: 100%; border-collapse: collapse;">
+          <h3 style="color: #294B49; margin: 0 0 16px 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Product Requirement</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 32px;">
             <tbody>
-              <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #666666; width: 35%;"><strong>Compound/CAS</strong></td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #111111;">${compound}</td>
+              <tr style="background-color: #F8F8F8;">
+                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; width: 35%; font-size: 14px;">Inquiry Type</td>
+                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 600;">${inquiryType}</td>
               </tr>
+              <tr style="background-color: #F8F8F8;">
+                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Product / C.I. No.</td>
+                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 600;">${compound}</td>
+              </tr>
+              ${data.sample_quantity ? `
+              <tr style="background-color: #F8F8F8;">
+                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Quantity</td>
+                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 600;">${data.sample_quantity}</td>
+              </tr>
+              ` : ''}
               <tr>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #666666;"><strong>Req. MSDS/CoA</strong></td>
-                <td style="padding: 12px 0; border-bottom: 1px solid #eaeaea; color: #111111;">${msds}</td>
+                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">MSDS / CoA Requested</td>
+                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${msds}</td>
               </tr>
             </tbody>
           </table>
 
-          <div style="margin-top: 24px; padding: 16px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
-            <strong style="display: block; color: #666666; margin-bottom: 8px; font-size: 14px;">Physical Form &amp; Spec Requirements:</strong>
-            <p style="color: #111111; margin: 0; font-size: 15px; line-height: 1.5; white-space: pre-wrap;">${specs}</p>
-          </div>
+          <h3 style="color: #294B49; margin: 0 0 16px 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Requirement Details</h3>
+          <div style="padding: 16px; border-left: 4px solid #294B49; background-color: #F8F8F8; color: #111111; font-size: 14px; line-height: 1.6; white-space: pre-wrap; margin-bottom: 32px;">${specs}</div>
+
+          <h3 style="color: #294B49; margin: 0 0 16px 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Submission Metadata</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tbody>
+              <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; width: 35%; font-size: 13px;">Submitted From</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 13px;">Website Form</td>
+              </tr>
+            </tbody>
+          </table>
 
         </div>
 
         <!-- Footer -->
-        <div style="background-color: #f5f5f5; padding: 16px 24px; text-align: center; border-top: 1px solid #eaeaea;">
-          <p style="color: #888888; margin: 0; font-size: 12px;">Submitted via K. Patel Chemopharma Website</p>
+        <div style="background-color: #ffffff; padding: 24px 32px; border-top: 1px solid #eaeaea;">
+          <p style="color: #333333; margin: 0 0 8px 0; font-size: 13px; font-weight: 600;">K. Patel Chemopharma Pvt. Ltd.</p>
+          <p style="color: #888888; margin: 0 0 8px 0; font-size: 12px;">This email was automatically generated from the website enquiry form.</p>
+          <a href="https://www.kpateldyes.com" style="color: #294B49; font-size: 12px; text-decoration: none; font-weight: 500;">https://www.kpateldyes.com</a>
         </div>
       </div>
     `;
@@ -98,22 +128,21 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         from: 'K. Patel Dyes <onboarding@resend.dev>', // Change when you verify domain
         to: 'poojandave0506@gmail.com', // Updated to deliver directly to your email
-        subject: `🚨 New B2B Lead: ${company !== 'Not provided' ? company : name}`,
         reply_to: email,
-        html: htmlBody,
+        subject: subjectLine,
+        html: htmlBody
       })
     });
 
-    const responseData = await resendResponse.json();
-
     if (!resendResponse.ok) {
-      console.error('Resend Error:', responseData);
-      return res.status(400).json({ error: responseData.message || 'Error sending email' });
+      const errorData = await resendResponse.json();
+      console.error('Resend API Error:', errorData);
+      return res.status(500).json({ error: 'Failed to send email' });
     }
 
-    return res.status(200).json({ success: true, id: responseData.id });
+    return res.status(200).json({ success: true, message: 'Email sent successfully' });
   } catch (error) {
-    console.error('Server Error:', error);
-    return res.status(500).json({ error: 'Internal Server Error' });
+    console.error('Server error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

@@ -289,15 +289,6 @@ class B2BFormValidator {
       return false;
     }
 
-    // Custom check for email (personal domains)
-    if (fieldName === 'email') {
-      const domain = val.split('@')[1];
-      if (rule.personalDomains.includes(domain)) {
-        this.showError(fieldName, rule.messages.personal);
-        return false;
-      }
-    }
-
     return true;
   }
 
@@ -329,28 +320,51 @@ class B2BFormValidator {
     const originalText = this.submitText.textContent;
     this.submitText.textContent = "Sending...";
 
-    // 4. Simulate API call (or do actual fetch)
+    // 4. API call
     try {
-      // Simulating network request delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Success state
-      this.submitBtn.classList.add('submit-success');
-      this.submitText.textContent = "✓ Request Submitted";
-      
-      // Reset form after a delay
-      setTimeout(() => {
-        this.form.reset();
-        this.submitBtn.disabled = false;
-        this.submitBtn.classList.remove('submit-success');
-        this.submitText.textContent = originalText;
-        this.updateCharCounter();
-        this.clearAllErrors();
-      }, 4000);
+      const formData = new FormData(this.form);
+      const dataObj = Object.fromEntries(formData.entries());
+
+      // If 'sample_quantity' is empty and not required, we can still pass it, 
+      // the backend will handle it correctly based on whether it is a sample tab or not.
+
+      const response = await fetch(this.form.action, {
+        method: this.form.method || 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dataObj)
+      });
+
+      if (response.ok) {
+        // Success state
+        this.submitBtn.classList.add('submit-success');
+        this.submitText.textContent = "✓ Request Submitted";
+        
+        // Reset form after a delay
+        setTimeout(() => {
+          this.form.reset();
+          this.submitBtn.disabled = false;
+          this.submitBtn.classList.remove('submit-success');
+          this.submitText.textContent = originalText;
+          this.updateCharCounter();
+          this.clearAllErrors();
+        }, 4000);
+      } else {
+        const errData = await response.json();
+        console.error("API Error:", errData);
+        throw new Error(errData.error || "Submission failed");
+      }
 
     } catch (error) {
+      console.error("Fetch Error:", error);
       this.submitText.textContent = "Error. Please try again.";
       this.submitBtn.disabled = false;
+      
+      setTimeout(() => {
+        if (!this.submitBtn.disabled) return; // Prevent overwriting if already submitted again
+        this.submitText.textContent = originalText;
+      }, 3000);
     }
   }
 

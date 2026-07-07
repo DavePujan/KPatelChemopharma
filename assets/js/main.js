@@ -569,7 +569,7 @@ const PRODUCTS_DATA = {
   acid: {
     title: "Acid Dyes",
     badge: "Acid Dyes",
-    desc: "Highly soluble anionic colorants designed for excellent dye exhaustion and levelling. Extensively used in textile coloring (wool, silk, nylon), printing inks, wood stains, and premium leather dressing.",
+    desc: "Highly soluble anionic colorants designed for excellent dye exhaustion and levelling. Extensively used in textile coloring (wool, silk, nylon), printing inks, wood stains, and premium leather dressing. Available Grades: Crude, Standard, Salt-Free, Ink Grade, and Liquid formulations are offered to meet a wide range of application and performance requirements.",
     industries: ["Textile Wool, Silk & Nylon", "Leather Drum Dyeing", "Wood Stains & Industrial Ink"],
     features: ["Exceptional Levelling & Migration", "High Wash, Light & Rub Fastness"],
     items: [
@@ -878,124 +878,7 @@ window.prefillSampleRequest = function(dyeName, ci) {
   }
 };
 
-/* ============================================
-   B2B CONTACT FORM CONTROLLER
-   ============================================ */
-function initContactForm() {
-  const tabQuote = document.getElementById('tab-quote');
-  const tabSample = document.getElementById('tab-sample');
-  
-  const formTitle = document.querySelector('.b2b-form-title');
-  const submitBtn = document.querySelector('.b2b-submit');
-  const submitText = document.getElementById('submit-btn-text');
-  
-  const targetCompoundLabel = document.getElementById('label-compound');
-  const targetCompoundInput = document.getElementById('target-compound');
-  const prefillBanner = document.querySelector('.b2b-prefill-banner');
-  const clearPrefillBtn = document.querySelector('.b2b-prefill-clear');
 
-  const b2bForm = document.getElementById('b2b-form');
-
-  if (!tabQuote || !tabSample || !submitBtn) return;
-
-  let activeFormTab = 'quote'; // 'quote' or 'sample'
-
-  function switchFormTab(tab) {
-    activeFormTab = tab;
-
-    if (tab === 'quote') {
-      tabQuote.classList.add('is-active');
-      tabSample.classList.remove('is-active');
-      if (submitText) submitText.textContent = "Initiate Bulk Sales Quote Request";
-      if (targetCompoundLabel) targetCompoundLabel.innerHTML = `Target Compound Name / CAS`;
-      // Hide prefill banner on Quote tab if they want, but let's keep it clean
-      if (prefillBanner) prefillBanner.classList.add('is-hidden');
-    } else {
-      tabQuote.classList.remove('is-active');
-      tabSample.classList.add('is-active');
-      if (submitText) submitText.textContent = "Initiate Trial Sample & CoA Request";
-      if (targetCompoundLabel) targetCompoundLabel.innerHTML = `Requested Compound for Trial *`;
-      // Show prefill banner if it has values
-      if (targetCompoundInput && targetCompoundInput.value && prefillBanner) {
-        prefillBanner.classList.remove('is-hidden');
-      }
-    }
-  }
-
-  tabQuote.addEventListener('click', (e) => {
-    e.preventDefault();
-    switchFormTab('quote');
-  });
-
-  tabSample.addEventListener('click', (e) => {
-    e.preventDefault();
-    switchFormTab('sample');
-  });
-
-  // Clear Prefill Banner Action
-  if (clearPrefillBtn) {
-    clearPrefillBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (targetCompoundInput) targetCompoundInput.value = '';
-      if (prefillBanner) prefillBanner.classList.add('is-hidden');
-      switchFormTab('quote'); // switch back to quote tab
-    });
-  }
-
-  // Handle Form Submission
-  if (b2bForm) {
-    b2bForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const nameEl = document.getElementById('contact-name');
-      const emailEl = document.getElementById('contact-email');
-      const companyEl = document.getElementById('contact-company');
-      const compound = targetCompoundInput?.value;
-
-      if ((nameEl && !nameEl.value) || 
-          (emailEl && !emailEl.value) || 
-          (companyEl && !companyEl.value) || 
-          (activeFormTab === 'sample' && !compound)) {
-        alert("Please fill in all required fields.");
-        return;
-      }
-
-      const submitBtn = b2bForm.querySelector('.b2b-submit');
-      const originalText = submitBtn ? submitBtn.innerHTML : '';
-      if (submitBtn) submitBtn.innerHTML = 'Sending...';
-
-      try {
-        const formData = new FormData(b2bForm);
-        const dataObj = Object.fromEntries(formData.entries());
-        
-        const response = await fetch(b2bForm.action, {
-          method: b2bForm.method,
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(dataObj)
-        });
-
-        if (response.ok) {
-          const name = nameEl?.value || 'there';
-          alert(`Thank you, ${name}! Your request has been successfully received.`);
-          b2bForm.reset();
-          if (prefillBanner) prefillBanner.classList.add('is-hidden');
-          switchFormTab('quote');
-        } else {
-          const errData = await response.json();
-          console.error("API Error:", errData);
-          alert("Oops! There was a problem submitting your form. Please try again.");
-        }
-      } catch (error) {
-        console.error("Fetch Error:", error);
-        alert("Oops! There was a problem submitting your form. Please try again.");
-      } finally {
-        if (submitBtn) submitBtn.innerHTML = originalText;
-      }
-    });
-  }
-}
 
 /* ============================================
    INIT
@@ -1011,5 +894,4 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof initTrustMarquee === 'function') initTrustMarquee();
   if (typeof initParallax === 'function') initParallax();
   if (typeof initCatalog === 'function') initCatalog();
-  if (typeof initContactForm === 'function') initContactForm();
 });
