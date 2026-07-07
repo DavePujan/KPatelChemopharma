@@ -127,7 +127,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: 'K. Patel Dyes <onboarding@resend.dev>', // Change when you verify domain
-        to: 'poojandave0506@gmail.com', // Updated to deliver directly to your email
+        to: 'sales@kpateldyes.com', // Updated to deliver directly to your email
         reply_to: email,
         subject: subjectLine,
         html: htmlBody
