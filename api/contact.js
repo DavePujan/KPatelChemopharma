@@ -1,3 +1,4 @@
+
 // Vercel serverless functions handle API requests (Node.js 18+ has native fetch)
 export default async function handler(req, res) {
   // Only allow POST requests
