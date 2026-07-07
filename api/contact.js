@@ -61,11 +61,11 @@ export default async function handler(req, res) {
               </tr>
               <tr>
                 <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Business Email</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;"><a href="mailto:${email}" style="color: #0066cc; text-decoration: none;">${email}</a></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${email}</td>
               </tr>
               <tr>
                 <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Phone</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;"><a href="tel:${phone.replace(/\s+/g, '')}" style="color: #0066cc; text-decoration: none;">${phone}</a></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${phone}</td>
               </tr>
             </tbody>
           </table>
