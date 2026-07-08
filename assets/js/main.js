@@ -443,43 +443,43 @@ const PRODUCTS_DATA = {
     industries: ["Paper & Board Industrial", "Stationery Writing Inks", "Biological Research Stains"],
     features: ["High Tinctorial Strength", "Excellent Liquid Mix Solubility"],
     items: [
-      { name: "Methyl Violet Liquid 50%", ci: "Basic Violet 1" },
-      { name: "Methyl Violet", ci: "Basic Violet 1" },
-      { name: "Crystal Violet Liquid 50%", ci: "Basic Violet 3" },
-      { name: "Crystal Violet", ci: "Basic Violet 3" },
-      { name: "Ethyl Violet Liquid 50%", ci: "Basic Violet 4" },
-      { name: "Ethyl Violet", ci: "Basic Violet 4" },
-      { name: "Rhodamine B Liquid 40%", ci: "Basic Violet 10" },
-      { name: "Rhodamine B 540%", ci: "Basic Violet 10" },
-      { name: "Magenta", ci: "Basic Violet 14" },
-      { name: "Basic Violet 16 Liquid", ci: "Basic Violet 16" },
-      { name: "Brilliant Green Liquid 50%", ci: "Basic Green 1" },
-      { name: "Brilliant Green Crystals", ci: "Basic Green 1" },
-      { name: "Malachite Green Liquid 50%", ci: "Basic Green 4" },
-      { name: "Malachite Green Crystals / Powder", ci: "Basic Green 4" },
-      { name: "Victoria Blue BO", ci: "Basic Blue 7" },
-      { name: "Methylene Blue 2B", ci: "Basic Blue 9" },
-      { name: "Victoria Blue B Liquid 40%", ci: "Basic Blue 26" },
-      { name: "Victoria Blue B", ci: "Basic Blue 26" },
-      { name: "Basic Blue 140 Liquid", ci: "Basic Blue 140" },
-      { name: "Chrysodine Y Liquid 35%", ci: "Basic Orange 2" },
-      { name: "Chrysodine Y", ci: "Basic Orange 2" },
-      { name: "Basic Orange 60 Liquid", ci: "Basic Orange 60" },
-      { name: "Auramine O", ci: "Basic Yellow 2" },
-      { name: "Auramine OF (Spirit Soluble)", ci: "Basic Yellow 2" },
-      { name: "Basic Yellow 28 Liquid", ci: "Basic Yellow 28" },
-      { name: "Basic Yellow 29 Liquid", ci: "Basic Yellow 29" },
-      { name: "Ethyl Auramine", ci: "Basic Yellow 37" },
-      { name: "Basic Yellow 40 Liquid", ci: "Basic Yellow 40" },
-      { name: "Basic Yellow 90 Liquid", ci: "Basic Yellow 90" },
-      { name: "Basic Yellow 96 Liquid", ci: "Basic Yellow 96" },
-      { name: "Bismark Brown G Liquid 50%", ci: "Basic Brown 1" },
-      { name: "Bismark Brown G", ci: "Basic Brown 1" },
-      { name: "Rhodamine 6GDN", ci: "Basic Red 1" },
-      { name: "Basic Red 12 Liquid", ci: "Basic Red 12" },
-      { name: "Basic Red 14 Liquid", ci: "Basic Red 14" },
-      { name: "Basic Red 49 Liquid", ci: "Basic Red 49" },
-      { name: "Basic Black MX", ci: "—" }
+      { name: "Methyl Violet Liquid 50%", hex: "#60338E", ci: "Basic Violet 1" },
+      { name: "Methyl Violet", hex: "#67389A", ci: "Basic Violet 1" },
+      { name: "Crystal Violet Liquid 50%", hex: "#5C3492", ci: "Basic Violet 3" },
+      { name: "Crystal Violet", hex: "#61379B", ci: "Basic Violet 3" },
+      { name: "Ethyl Violet Liquid 50%", hex: "#4E2C8B", ci: "Basic Violet 4" },
+      { name: "Ethyl Violet", hex: "#472B88", ci: "Basic Violet 4" },
+      { name: "Rhodamine B Liquid 40%", hex: "#C86BAA", ci: "Basic Violet 10" },
+      { name: "Rhodamine B 540%", hex: "#C761B5", ci: "Basic Violet 10" },
+      { name: "Magenta", hex: "#D53A9D", ci: "Basic Violet 14" },
+      { name: "Basic Violet 16 Liquid", hex: "#C55DA9", ci: "Basic Violet 16" },
+      { name: "Brilliant Green Liquid 50%", hex: "#43C0C9", ci: "Basic Green 1" },
+      { name: "Brilliant Green Crystals", hex: "#46C3D1", ci: "Basic Green 1" },
+      { name: "Malachite Green Liquid 50%", hex: "#36AFC7", ci: "Basic Green 4" },
+      { name: "Malachite Green Crystals / Powder", hex: "#3AA7BF", ci: "Basic Green 4" },
+      { name: "Victoria Blue BO", hex: "#2D4BA9", ci: "Basic Blue 7" },
+      { name: "Methylene Blue 2B", hex: "#27459D", ci: "Basic Blue 9" },
+      { name: "Victoria Blue B Liquid 40%", hex: "#3B66B8", ci: "Basic Blue 26" },
+      { name: "Victoria Blue B", hex: "#2E5DB1", ci: "Basic Blue 26" },
+      { name: "Basic Blue 140 Liquid", hex: "#9BD8E9", ci: "Basic Blue 140" },
+      { name: "Chrysodine Y Liquid 35%", hex: "#F2913D", ci: "Basic Orange 2" },
+      { name: "Chrysodine Y", hex: "#F2913D", ci: "Basic Orange 2" },
+      { name: "Basic Orange 60 Liquid", hex: "#E58044", ci: "Basic Orange 60" },
+      { name: "Auramine O", hex: "#F8E812", ci: "Basic Yellow 2" },
+      { name: "Auramine OF (Spirit Soluble)", hex: "#F9EB4A", ci: "Basic Yellow 2" },
+      { name: "Basic Yellow 28 Liquid", hex: "#EEA32A", ci: "Basic Yellow 28" },
+      { name: "Basic Yellow 29 Liquid", hex: "#FCEF6A", ci: "Basic Yellow 29" },
+      { name: "Ethyl Auramine", hex: "#E2DE0B", ci: "Basic Yellow 37" },
+      { name: "Basic Yellow 40 Liquid", hex: "#F5CA1E", ci: "Basic Yellow 40" },
+      { name: "Basic Yellow 90 Liquid", hex: "#F9EF78", ci: "Basic Yellow 90" },
+      { name: "Basic Yellow 96 Liquid", hex: "#FBEE59", ci: "Basic Yellow 96" },
+      { name: "Bismark Brown G Liquid 50%", hex: "#D38A6D", ci: "Basic Brown 1" },
+      { name: "Bismark Brown G", hex: "#D48A69", ci: "Basic Brown 1" },
+      { name: "Rhodamine 6GDN", hex: "#E8356C", ci: "Basic Red 1" },
+      { name: "Basic Red 12 Liquid", hex: "#E46DA3", ci: "Basic Red 12" },
+      { name: "Basic Red 14 Liquid", hex: "#CA415E", ci: "Basic Red 14" },
+      { name: "Basic Red 49 Liquid", hex: "#CC4C88", ci: "Basic Red 49" },
+      { name: "Basic Black MX", hex: "#1D0000", ci: "—" }
     ]
   },
   solvent: {
@@ -489,24 +489,24 @@ const PRODUCTS_DATA = {
     industries: ["Stationery Writing Inks", "Plastics & Lacquers", "Industrial Wood Finishes"],
     features: ["Superior Heat Stability", "Excellent Organic Solvent Solubility"],
     items: [
-      { name: "Methyl Violet B Base", ci: "Solvent Violet 8" },
-      { name: "Crystal Violet Base", ci: "Solvent Violet 9" },
-      { name: "Ethyl Violet Base", ci: "Solvent Violet 4 Base" },
-      { name: "Victoria Blue B Base", ci: "Solvent Blue 4" },
-      { name: "Solvent Blue KPP", ci: "Solvent Blue 38" },
-      { name: "Solvent Blue KPT", ci: "Solvent Blue 38" },
-      { name: "Solvent Blue KPV", ci: "Solvent Blue 43" },
-      { name: "Solvent Blue KPM", ci: "Solvent Blue 43" },
-      { name: "Solvent Black KPC", ci: "Solvent Black 46" },
-      { name: "Brilliant Red DDY", ci: "Solvent Red 39" },
-      { name: "Rhodamine B Base", ci: "Solvent Red 49" },
-      { name: "Chrysodine Y Base", ci: "Solvent Orange 3" },
-      { name: "Brilliant Yellow DDY", ci: "Solvent Yellow 47" },
-      { name: "Solvent Blue 44", ci: "Solvent Blue 44" },
-      { name: "Solvent Blue 98", ci: "Solvent Blue 98" },
-      { name: "Bismark Brown G Base W/C", ci: "Solvent Brown 41" },
-      { name: "Solvent Black 27", ci: "Solvent Black 27" },
-      { name: "Solvent Black 29", ci: "Solvent Black 29" }
+      { name: "Methyl Violet B Base", hex: "#5A2D95", ci: "Solvent Violet 8" },
+      { name: "Crystal Violet Base", hex: "#6534A0", ci: "Solvent Violet 9" },
+      { name: "Ethyl Violet Base", hex: "#4D2C8D", ci: "Solvent Violet 4 Base" },
+      { name: "Victoria Blue B Base", hex: "#2E55B3", ci: "Solvent Blue 4" },
+      { name: "Solvent Blue KPP", hex: "#67C7D8", ci: "Solvent Blue 38" },
+      { name: "Solvent Blue KPT", hex: "#76D0DD", ci: "Solvent Blue 38" },
+      { name: "Solvent Blue KPV", hex: "#3545A8", ci: "Solvent Blue 43" },
+      { name: "Solvent Blue KPM", hex: "#4A55B0", ci: "Solvent Blue 43" },
+      { name: "Solvent Black KPC", hex: "#0A0A0C", ci: "Solvent Black 46" },
+      { name: "Brilliant Red DDY", hex: "#F04A6E", ci: "Solvent Red 39" },
+      { name: "Rhodamine B Base", hex: "#C35BB4", ci: "Solvent Red 49" },
+      { name: "Chrysodine Y Base", hex: "#F57D22", ci: "Solvent Orange 3" },
+      { name: "Brilliant Yellow DDY", hex: "#FFF06A", ci: "Solvent Yellow 47" },
+      { name: "Solvent Blue 44", hex: "#3C34A5", ci: "Solvent Blue 44" },
+      { name: "Solvent Blue 98", hex: "#4E3298", ci: "Solvent Blue 98" },
+      { name: "Bismark Brown G Base W/C", hex: "#A54A22", ci: "Solvent Brown 41" },
+      { name: "Solvent Black 27", hex: "#181B43", ci: "Solvent Black 27" },
+      { name: "Solvent Black 29", hex: "#0B0C08", ci: "Solvent Black 29" }
     ]
   },
   rinsable: {
@@ -516,16 +516,16 @@ const PRODUCTS_DATA = {
     industries: ["Children's Markers & Crafts", "School & Educational Toys", "Household Cleaners"],
     features: ["EN-71 Parts 3 & 9 Safe Certification", "Zero-Staining Rinsable Washability"],
     items: [
-      { name: "Spectra Rinse Yellow GXV LQ", ci: "" },
-      { name: "Spectra Rinse Yellow R12XV LQ", ci: "" },
-      { name: "Spectra Rinse Yellow VG LV LQ", ci: "" },
-      { name: "Spectra Rinse Orange RX-LV LQ", ci: "" },
-      { name: "Spectra Rinse Red RV LQ", ci: "" },
-      { name: "Spectra Rinse Magenta LVS LQ", ci: "" },
-      { name: "Spectra Rinse Blue T14XV LQ", ci: "" },
-      { name: "Spectra Rinse Green AU767 LQ", ci: "" },
-      { name: "Spectra Rinse Violet BV LQ", ci: "" },
-      { name: "Spectra Rinse Black AV115 LIQ", ci: "" }
+      { name: "Spectra Rinse Yellow GXV LQ", hex: "#F7D95A", ci: "" },
+      { name: "Spectra Rinse Yellow R12XV LQ", hex: "#FFD067", ci: "" },
+      { name: "Spectra Rinse Yellow VG LV LQ", hex: "#F7ED8C", ci: "" },
+      { name: "Spectra Rinse Orange RX-LV LQ", hex: "#F47C39", ci: "" },
+      { name: "Spectra Rinse Red RV LQ", hex: "#F24D4D", ci: "" },
+      { name: "Spectra Rinse Magenta LVS LQ", hex: "#F37FA8", ci: "" },
+      { name: "Spectra Rinse Blue T14XV LQ", hex: "#3497C8", ci: "" },
+      { name: "Spectra Rinse Green AU767 LQ", hex: "#46B784", ci: "" },
+      { name: "Spectra Rinse Violet BV LQ", hex: "#463AA0", ci: "" },
+      { name: "Spectra Rinse Black AV115 LIQ", hex: "#111111", ci: "" }
     ]
   },
   pigments: {
@@ -705,37 +705,13 @@ function initCatalog() {
         }
 
         return `
-        <div class="product-card">
-          <div class="product-card__header">
-            <span class="product-card__badge">${data.badge}</span>
+        <div class="product-card" style="border-left-color: ${item.hex || 'var(--color-accent)'};">
+          <div class="product-card__header" style="justify-content: flex-end;">
             <span class="product-card__cas">${ciDisplay}</span>
           </div>
           <h4 class="product-card__title">${item.name}</h4>
-          <p class="product-card__desc">${data.desc.split('.')[0]}. Excellent affinity, standard yield coloration grade.</p>
           
-          <div class="product-card__industries-label">Primary Target Industries</div>
-          <div class="product-card__chips">
-            <span class="product-card__chip">${ind1}</span>
-            <span class="product-card__chip">${ind2}</span>
-            <span class="product-card__chip">${ind3}</span>
-          </div>
-          
-          <div class="product-card__features">
-            <div class="product-card__feature">
-              <svg class="product-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>${f1}</span>
-            </div>
-            <div class="product-card__feature">
-              <svg class="product-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>${f2}</span>
-            </div>
-          </div>
-          
-          <div class="product-card__actions">
-            <button class="product-card__btn-outline" onclick="showTechnicalSpecs('${item.name.replace(/'/g, "\\'")}', '${(item.ci || '').replace(/'/g, "\\'")}', '${data.badge.replace(/'/g, "\\'")}')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              Technical Specs
-            </button>
+          <div class="product-card__actions" style="grid-template-columns: 1fr;">
             <button class="product-card__btn-primary" onclick="prefillSampleRequest('${item.name.replace(/'/g, "\\'")}', '${(item.ci || '').replace(/'/g, "\\'")}')">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8"/></svg>
               Request Sample
