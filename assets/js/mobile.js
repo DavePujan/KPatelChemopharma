@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNav = document.getElementById('mobile-nav');
 
   if(toggle) {
-    toggle.addEventListener('click', () => mobileNav.classList.add('is-open'));
+    toggle.addEventListener('click', () => mobileNav.classList.toggle('is-open'));
   }
   if(close) {
     close.addEventListener('click', () => mobileNav.classList.remove('is-open'));

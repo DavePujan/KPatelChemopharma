@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>K. Patel Chemopharma — Contact Us</title>
-  <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+  <link rel="icon" type="image/png" href="/assets/images/logo-no-bg.png" />
   <meta name="description" content="Get in touch with K. Patel Chemopharma's global sales team or request technical sample and documentation." />
   <link rel="canonical" href="https://www.kpateldyes.com/contact" />
   
@@ -13,14 +13,14 @@
   <meta property="og:url" content="https://www.kpateldyes.com/contact" />
   <meta property="og:title" content="K. Patel Chemopharma — Contact Us" />
   <meta property="og:description" content="Get in touch with K. Patel Chemopharma's global sales team or request technical sample and documentation." />
-  <meta property="og:image" content="https://www.kpateldyes.com/img/logo.png" />
+  <meta property="og:image" content="https://www.kpateldyes.com/img/logo-no-bg.png" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://www.kpateldyes.com/contact" />
   <meta property="twitter:title" content="K. Patel Chemopharma — Contact Us" />
   <meta property="twitter:description" content="Get in touch with K. Patel Chemopharma's global sales team or request technical sample and documentation." />
-  <meta property="twitter:image" content="https://www.kpateldyes.com/img/logo.png" />
+  <meta property="twitter:image" content="https://www.kpateldyes.com/img/logo-no-bg.png" />
 
   <!-- JSON-LD Structured Data for Local Business -->
   <script type="application/ld+json">
@@ -28,7 +28,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "K. Patel Chemopharma Private Limited",
-    "image": "https://www.kpateldyes.com/img/logo.png",
+    "image": "https://www.kpateldyes.com/img/logo-no-bg.png",
     "@id": "https://www.kpateldyes.com/contact",
     "url": "https://www.kpateldyes.com/",
     "telephone": "+91-22-48822900",
@@ -52,7 +52,7 @@
 <body>
   <nav class="nav nav--hero is-scrolled" id="nav">
     <div class="nav__inner">
-      <a href="/" class="nav__logo">K. Patel<span>.</span></a>
+      <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.png" alt="K. Patel Logo" style="height: 36px; width: auto;" /></a>
       <button class="nav__toggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -75,7 +75,7 @@
     <!-- ========== FINAL CTA — Full-width background image ========== -->
   <section class="cta">
     <div class="cta__image-wrap">
-      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" alt="Modern corporate workspace and professional environment" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Modern corporate workspace and professional environment" loading="lazy" />
     </div>
     <div class="cta__overlay"></div>
     <div class="container cta__inner">
@@ -97,7 +97,7 @@
 
   
 <!-- ========== CONTACT GLOBAL SALES & LABS ========== -->
-  <section class="contact-section" id="contact-section" style="background: linear-gradient(rgba(245, 245, 242, 0.85), rgba(245, 245, 242, 0.95)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80') top center/cover no-repeat; position: relative;">
+  <section class="contact-section" id="contact-section" style="background: linear-gradient(rgba(245, 245, 242, 0.85), rgba(245, 245, 242, 0.95)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80') top center/cover no-repeat; position: relative;">
     <div class="container" style="position: relative; z-index: 2;">
       <div class="contact-layout animate-on-scroll">
         
@@ -212,6 +212,27 @@
                 <label for="sample-quantity" class="b2b-label">Required Sample Quantity *</label>
                 <input type="text" id="sample-quantity" name="sample_quantity" class="b2b-input" placeholder="e.g. 100g, 500g" />
                 <span class="error-msg" id="error-quantity"></span>
+              </div>
+
+              <div class="b2b-group b2b-group--full">
+                <label for="packaging-type" class="b2b-label">Preferred Packing Type *</label>
+                <select id="packaging-type" name="packaging_type" class="b2b-input" required>
+                  <option value="" disabled selected>Select packing type</option>
+                  <option value="IBCM (Intermediate Bulk Container)">IBCM (Intermediate Bulk Container)</option>
+                  <option value="Jumbo Bag (250 KG)">Jumbo Bag (250 KG)</option>
+                  <option value="Boxes (Corrugated High Strength)">Boxes (Corrugated High Strength)</option>
+                  <option value="Composite Drum (225 KG)">Composite Drum (225 KG)</option>
+                  <option value="HDPE Bags on Pallets">HDPE Bags on Pallets</option>
+                  <option value="Drum (MS/Fibre 25-50 KG)">Drum (MS/Fibre 25-50 KG)</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg" id="error-packagingType"></span>
+              </div>
+
+              <div class="b2b-group b2b-group--full" id="other-packaging-group" style="display: none;">
+                <label for="other-packaging" class="b2b-label">Specify Other Packing Type *</label>
+                <input type="text" id="other-packaging" name="other_packaging" class="b2b-input" placeholder="e.g. Custom palletized shrink wrap" />
+                <span class="error-msg" id="error-otherPackaging"></span>
               </div>
 
               <div class="b2b-group b2b-group--full">

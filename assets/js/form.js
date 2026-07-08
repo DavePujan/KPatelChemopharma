@@ -13,6 +13,8 @@ class B2BFormValidator {
       quantity: this.form.querySelector('#sample-quantity'),
       specs: this.form.querySelector('#contact-specs'),
       msds: this.form.querySelector('#contact-msds'),
+      packagingType: this.form.querySelector('#packaging-type'),
+      otherPackaging: this.form.querySelector('#other-packaging'),
       honeypot: this.form.querySelector('.honeypot')
     };
 
@@ -87,6 +89,18 @@ class B2BFormValidator {
           empty: 'Specification details are required.',
           invalid: 'Please provide more specific details (20-1000 chars).'
         }
+      },
+      packagingType: {
+        required: true,
+        messages: {
+          empty: 'Preferred packaging type is required.'
+        }
+      },
+      otherPackaging: {
+        required: false,
+        messages: {
+          empty: 'Please specify packaging details.'
+        }
       }
     };
 
@@ -135,11 +149,27 @@ class B2BFormValidator {
 
     // Blur Validation
     Object.keys(this.fields).forEach(key => {
-      if (this.fields[key] && key !== 'honeypot' && key !== 'msds') {
+      if (this.fields[key] && key !== 'honeypot' && key !== 'msds' && key !== 'packagingType') {
         this.fields[key].addEventListener('blur', () => this.validateField(key));
         this.fields[key].addEventListener('input', () => this.clearError(key));
       }
     });
+
+    if (this.fields.packagingType) {
+      this.fields.packagingType.addEventListener('change', () => {
+        const isOther = this.fields.packagingType.value === 'Other';
+        const otherGroup = this.form.querySelector('#other-packaging-group');
+        if (otherGroup) {
+          otherGroup.style.display = isOther ? 'block' : 'none';
+        }
+        this.rules.otherPackaging.required = isOther;
+        if (!isOther && this.fields.otherPackaging) {
+          this.fields.otherPackaging.value = '';
+          this.clearError('otherPackaging');
+        }
+        this.validateField('packagingType');
+      });
+    }
 
     // Autocomplete
     this.fields.compound.addEventListener('input', () => this.handleAutocomplete());
@@ -307,6 +337,7 @@ class B2BFormValidator {
     Object.keys(this.rules).forEach(key => {
       // Only validate quantity if it's required in the current mode
       if (key === 'quantity' && !this.rules.quantity.required) return;
+      if (key === 'otherPackaging' && !this.rules.otherPackaging.required) return;
       
       if (!this.validateField(key)) {
         isValid = false;
@@ -382,4 +413,43 @@ document.addEventListener('DOMContentLoaded', () => {
   forms.forEach(form => {
     new B2BFormValidator(form.id);
   });
+  
+  if (typeof initPrefillFromURL === 'function') initPrefillFromURL();
 });
+
+function initPrefillFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const sampleName = params.get('sample');
+  const sampleCi = params.get('ci');
+
+  if (sampleName) {
+    const targetCompoundInput = document.getElementById('target-compound');
+    const prefillBanner = document.querySelector('.b2b-prefill-banner');
+    const prefillName = document.getElementById('prefill-dye-name');
+    const sampleTab = document.getElementById('tab-sample');
+
+    if (sampleTab) sampleTab.click();
+    
+    if (targetCompoundInput) {
+      targetCompoundInput.value = sampleCi && sampleCi !== '—' && sampleCi !== 'undefined' ? `${sampleName} (C.I. ${sampleCi})` : sampleName;
+    }
+
+    if (prefillBanner && prefillName) {
+      prefillName.textContent = sampleName;
+      prefillBanner.classList.remove('is-hidden');
+    }
+    
+    // Clear URL without reloading
+    const newUrl = window.location.pathname + window.location.hash;
+    window.history.replaceState({}, document.title, newUrl);
+    
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact-section') || document.querySelector('.b2b-form-card');
+      if (contactSection) {
+        const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
+        const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }, 100);
+  }
+}

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>K. Patel Chemopharma — Global Colorants & Dye Chemistry</title>
-  <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+  <link rel="icon" type="image/png" href="/assets/images/logo-no-bg.png" />
   <meta name="description" content="Est. 1974. Established local as well as global supplier of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments. Delivering cost-effective colorants for customer applications worldwide." />
   <link rel="canonical" href="https://www.kpateldyes.com/" />
   
@@ -13,14 +13,14 @@
   <meta property="og:url" content="https://www.kpateldyes.com/" />
   <meta property="og:title" content="K. Patel Chemopharma — Global Colorants & Dye Chemistry" />
   <meta property="og:description" content="Est. 1974. Established local as well as global supplier of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments. Delivering cost-effective colorants for customer applications worldwide." />
-  <meta property="og:image" content="https://www.kpateldyes.com/img/logo.png" />
+  <meta property="og:image" content="https://www.kpateldyes.com/img/logo-no-bg.png" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://www.kpateldyes.com/" />
   <meta property="twitter:title" content="K. Patel Chemopharma — Global Colorants & Dye Chemistry" />
   <meta property="twitter:description" content="Est. 1974. Established local as well as global supplier of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments. Delivering cost-effective colorants for customer applications worldwide." />
-  <meta property="twitter:image" content="https://www.kpateldyes.com/img/logo.png" />
+  <meta property="twitter:image" content="https://www.kpateldyes.com/img/logo-no-bg.png" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -29,7 +29,7 @@
     "@type": "Organization",
     "name": "K. Patel Chemopharma Private Limited",
     "url": "https://www.kpateldyes.com/",
-    "logo": "https://www.kpateldyes.com/img/logo.png",
+    "logo": "https://www.kpateldyes.com/img/logo-no-bg.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-22-48822900",
@@ -49,16 +49,13 @@
 
   <!-- Device Routing Logic -->
   <script>
-    if (window.innerWidth <= 768) {
-      window.location.replace("/pages/home/");
-    }
-    
-    // Add event listener to catch window resizing
-    window.addEventListener('resize', function() {
-      if (window.innerWidth <= 768) {
-        window.location.replace("/pages/home/");
+    function redirectIfMobile() {
+      if (window.innerWidth <= 768 && window.location.pathname !== "/pages/home/") {
+        window.location.replace("/pages/home/" + window.location.search + window.location.hash);
       }
-    });
+    }
+    redirectIfMobile();
+    window.addEventListener('resize', redirectIfMobile);
   </script>
 </head>
 <body>
@@ -69,9 +66,7 @@
   <!-- ========== NAVIGATION ========== -->
   <nav class="nav nav--hero" id="nav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo">
-        K. Patel<span>.</span>
-      </a>
+      <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.png" alt="K. Patel Logo" style="height: 36px; width: auto;" /></a>
       <div class="nav__links">
         <a href="#solutions" class="nav__link">Products</a>
         <a href="#industries" class="nav__link">Industries</a>
@@ -101,7 +96,7 @@
   <section class="hero" id="hero">
     <div class="hero__image-wrap">
       <img
-        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80"
+        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
         alt="Research scientist working in modern laboratory facility"
         loading="eager"
         fetchpriority="high"
@@ -199,7 +194,7 @@
         <!-- 1. Basic Dyes -->
         <div class="dye-card" data-category="basic">
           <div class="dye-card__img-wrap">
-            <img src="/assets/images/products/basic_dye.png" alt="Basic Dyes Chemistry" loading="lazy" />
+            <img src="/assets/images/products/basic_dye.jpg" alt="Basic Dyes Chemistry" loading="lazy" />
           </div>
           <div class="dye-card__overlay">
             <span class="dye-card__explore-btn">Explore Range</span>
@@ -213,7 +208,7 @@
         <!-- 2. Solvent Dyes -->
         <div class="dye-card" data-category="solvent">
           <div class="dye-card__img-wrap">
-            <img src="/assets/images/products/solvent_dye.png" alt="Solvent Dyes Chemistry" loading="lazy" />
+            <img src="/assets/images/products/solvent_dye.jpg" alt="Solvent Dyes Chemistry" loading="lazy" />
           </div>
           <div class="dye-card__overlay">
             <span class="dye-card__explore-btn">Explore Range</span>
@@ -227,7 +222,7 @@
         <!-- 3. Rinsable Dyes -->
         <div class="dye-card" data-category="rinsable">
           <div class="dye-card__img-wrap">
-            <img src="/assets/images/products/Rinsable_dye.png" alt="Rinsable Colors Chemistry" loading="lazy" />
+            <img src="/assets/images/products/Rinsable_dye.jpg" alt="Rinsable Colors Chemistry" loading="lazy" />
           </div>
           <div class="dye-card__overlay">
             <span class="dye-card__explore-btn">Explore Range</span>
@@ -241,7 +236,7 @@
         <!-- 4. Pigments -->
         <div class="dye-card" data-category="pigments">
           <div class="dye-card__img-wrap">
-            <img src="/assets/images/products/pigment.png" alt="Pigment Powders" loading="lazy" />
+            <img src="/assets/images/products/pigment.jpg" alt="Pigment Powders" loading="lazy" />
           </div>
           <div class="dye-card__overlay">
             <span class="dye-card__explore-btn">Explore Range</span>
@@ -255,7 +250,7 @@
         <!-- 5. Pigment Dispersions -->
         <div class="dye-card" data-category="dispersions">
           <div class="dye-card__img-wrap">
-            <img src="/assets/images/products/Pigment_Dispersions_dye.png" alt="Liquid Pigment Dispersions" loading="lazy" />
+            <img src="/assets/images/products/Pigment_Dispersions_dye.jpg" alt="Liquid Pigment Dispersions" loading="lazy" />
           </div>
           <div class="dye-card__overlay">
             <span class="dye-card__explore-btn">Explore Range</span>
@@ -269,7 +264,7 @@
         <!-- 6. Acid Dyes -->
         <div class="dye-card" data-category="acid">
           <div class="dye-card__img-wrap">
-            <img src="/assets/images/products/acid_dye.png" alt="Acid Dyes" loading="lazy" />
+            <img src="/assets/images/products/acid_dye.jpg" alt="Acid Dyes" loading="lazy" />
           </div>
           <div class="dye-card__overlay">
             <span class="dye-card__explore-btn">Explore Range</span>
@@ -283,7 +278,7 @@
         <!-- 7. Direct Dyes -->
         <div class="dye-card" data-category="direct">
           <div class="dye-card__img-wrap">
-            <img src="/assets/images/products/direct_dye.png" alt="Direct Dyes" loading="lazy" />
+            <img src="/assets/images/products/direct_dye.jpg" alt="Direct Dyes" loading="lazy" />
           </div>
           <div class="dye-card__overlay">
             <span class="dye-card__explore-btn">Explore Range</span>
@@ -352,7 +347,7 @@
       <div class="industries__grid">
         <div class="industry-card reveal reveal-delay-1">
           <div class="industry-card__image-wrap">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Modern corporate architecture and construction" loading="lazy" />
+            <img src="https://www.solenis.com/globalassets/images/intro-images/papercolorants-intro-580x340.jpg" alt="Paper & Pulp" loading="lazy" />
           </div>
           <div class="industry-card__overlay"></div>
           <div class="industry-card__content">
@@ -363,7 +358,7 @@
 
         <div class="industry-card reveal reveal-delay-2">
           <div class="industry-card__image-wrap">
-            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Pharmaceutical and biotech research laboratory" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Writing Instruments" loading="lazy" />
           </div>
           <div class="industry-card__overlay"></div>
           <div class="industry-card__content">
@@ -374,7 +369,7 @@
 
         <div class="industry-card reveal reveal-delay-3">
           <div class="industry-card__image-wrap">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Advanced technology and electronics manufacturing" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1460398495418-62c9b5d79fbf?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFydCUyMG1hdGVyaWFsc3xlbnwwfHwwfHx8MA%3D%3D" alt="Printing Inks & Art Supplies" loading="lazy" />
           </div>
           <div class="industry-card__overlay"></div>
           <div class="industry-card__content">
@@ -385,7 +380,7 @@
 
         <div class="industry-card reveal reveal-delay-4">
           <div class="industry-card__image-wrap">
-            <img src="https://images.unsplash.com/photo-1605289982774-9a6fef564df8?auto=format&fit=crop&w=800&q=80" alt="Various fabrics and textiles" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1542044801-30d3e45ae49a?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGV4dGlsZXN8ZW58MHx8MHx8fDA%3D" alt="Textiles, Leather & Wool" loading="lazy" />
           </div>
           <div class="industry-card__overlay"></div>
           <div class="industry-card__content">
@@ -396,7 +391,7 @@
 
         <div class="industry-card reveal reveal-delay-5">
           <div class="industry-card__image-wrap">
-            <img src="https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?auto=format&fit=crop&w=800&q=80" alt="Treated wood panels and lush green turf" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1659930087003-2d64e33181f7?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29vZCUyMHdvcmtpbmd8ZW58MHx8MHx8fDA%3D" alt="Wood & Turf Coloring" loading="lazy" />
           </div>
           <div class="industry-card__overlay"></div>
           <div class="industry-card__content">
@@ -407,7 +402,7 @@
 
         <div class="industry-card reveal reveal-delay-6">
           <div class="industry-card__image-wrap">
-            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80" alt="Energy infrastructure and power generation" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1503694978374-8a2fa686963a?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlnaXRhbCUyMHByaW50fGVufDB8fDB8fHww" alt="Digital Ink & Coatings" loading="lazy" />
           </div>
           <div class="industry-card__overlay"></div>
           <div class="industry-card__content">
@@ -437,7 +432,7 @@
         </div>
 
         <div class="packaging-card reveal reveal-delay-2">
-          <img src="/assets/images/packaging/jumbo.png" alt="JUMBO BAG" class="packaging-card__image" loading="lazy" />
+          <img src="/assets/images/packaging/jumbo.jpg" alt="JUMBO BAG" class="packaging-card__image" loading="lazy" />
           <div class="packaging-card__content">
             <h3 class="packaging-card__title">JUMBO BAG</h3>
             <p class="packaging-card__desc">250 KG</p>
@@ -445,7 +440,7 @@
         </div>
 
         <div class="packaging-card reveal reveal-delay-3">
-          <img src="/assets/images/packaging/boxes.png" alt="BOXES" class="packaging-card__image" loading="lazy" />
+          <img src="/assets/images/packaging/boxes.jpg" alt="BOXES" class="packaging-card__image" loading="lazy" />
           <div class="packaging-card__content">
             <h3 class="packaging-card__title">BOXES</h3>
             <p class="packaging-card__desc">Corrugated high Strength Boxes</p>
@@ -453,7 +448,7 @@
         </div>
 
         <div class="packaging-card reveal reveal-delay-1">
-          <img src="/assets/images/packaging/composite.png" alt="COMPOSITE DRUM" class="packaging-card__image" loading="lazy" />
+          <img src="/assets/images/packaging/composite.jpg" alt="COMPOSITE DRUM" class="packaging-card__image" loading="lazy" />
           <div class="packaging-card__content">
             <h3 class="packaging-card__title">COMPOSITE DRUM</h3>
             <p class="packaging-card__desc">Composite Drum for Liquid dyes 225 KG.</p>
@@ -461,7 +456,7 @@
         </div>
 
         <div class="packaging-card reveal reveal-delay-2">
-          <img src="/assets/images/packaging/hdpe.png" alt="HDPE BAGS" class="packaging-card__image" loading="lazy" />
+          <img src="/assets/images/packaging/hdpe.jpg" alt="HDPE BAGS" class="packaging-card__image" loading="lazy" />
           <div class="packaging-card__content">
             <h3 class="packaging-card__title">HDPE BAGS</h3>
             <p class="packaging-card__desc">HDPE Bags on Pallets</p>
@@ -469,7 +464,7 @@
         </div>
 
         <div class="packaging-card reveal reveal-delay-3">
-          <img src="/assets/images/packaging/drum.png" alt="DRUM" class="packaging-card__image" loading="lazy" />
+          <img src="/assets/images/packaging/drum.jpg" alt="DRUM" class="packaging-card__image" loading="lazy" />
           <div class="packaging-card__content">
             <h3 class="packaging-card__title">DRUM</h3>
             <p class="packaging-card__desc">Available in Mildsteel or FibreBody (25-50 kg)</p>
@@ -548,7 +543,7 @@
           </div>
         </div>
         <div class="operations__image-wrap reveal">
-          <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=960&q=80" alt="Quality control and precision manufacturing operations" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=800&q=80" alt="Quality control and precision manufacturing operations" loading="lazy" />
         </div>
       </div>
 
@@ -587,7 +582,7 @@
           </div>
         </div>
         <div class="operations__image-wrap reveal">
-          <img src="https://images.unsplash.com/photo-1630959305606-3123a081dada?w=960&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJlc2VhcmNoJTIwYW5kJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" alt="Scientists and technicians performing custom chemical product development in a laboratory" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1630959305606-3123a081dada?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJlc2VhcmNoJTIwYW5kJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" alt="Scientists and technicians performing custom chemical product development in a laboratory" loading="lazy" />
         </div>
       </div>
     </div>
@@ -596,7 +591,7 @@
   <!-- ========== COMPANY LEGACY — Full-width image banner ========== -->
   <section class="legacy" id="legacy">
     <div class="legacy__image-wrap">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" alt="Corporate headquarters and modern architectural facility" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Corporate headquarters and modern architectural facility" loading="lazy" />
     </div>
     <div class="legacy__overlay"></div>
     <div class="legacy__bg-year" aria-hidden="true">1974</div>
@@ -823,7 +818,7 @@
   <!-- ========== FINAL CTA — Full-width background image ========== -->
   <section class="cta">
     <div class="cta__image-wrap">
-      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" alt="Modern corporate workspace and professional environment" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Modern corporate workspace and professional environment" loading="lazy" />
     </div>
     <div class="cta__overlay"></div>
     <div class="container cta__inner">
@@ -844,7 +839,7 @@
   </section>
 
   <!-- ========== CONTACT GLOBAL SALES & LABS ========== -->
-  <section class="contact-section" id="contact-section" style="background: linear-gradient(rgba(245, 245, 242, 0.85), rgba(245, 245, 242, 0.95)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80') top center/cover no-repeat; position: relative;">
+  <section class="contact-section" id="contact-section" style="background: linear-gradient(rgba(245, 245, 242, 0.85), rgba(245, 245, 242, 0.95)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80') top center/cover no-repeat; position: relative;">
     <div class="container" style="position: relative; z-index: 2;">
       <div class="contact-layout animate-on-scroll">
         
@@ -960,6 +955,26 @@
                 <input type="text" id="sample-quantity" name="sample_quantity" class="b2b-input" placeholder="e.g. 100g, 500g" />
                 <span class="error-msg" id="error-quantity"></span>
               </div>
+              <div class="b2b-group b2b-group--full">
+                <label for="packaging-type" class="b2b-label">Preferred Packing Type *</label>
+                <select id="packaging-type" name="packaging_type" class="b2b-input" required>
+                  <option value="" disabled selected>Select packing type</option>
+                  <option value="IBCM (Intermediate Bulk Container)">IBCM (Intermediate Bulk Container)</option>
+                  <option value="Jumbo Bag (250 KG)">Jumbo Bag (250 KG)</option>
+                  <option value="Boxes (Corrugated High Strength)">Boxes (Corrugated High Strength)</option>
+                  <option value="Composite Drum (225 KG)">Composite Drum (225 KG)</option>
+                  <option value="HDPE Bags on Pallets">HDPE Bags on Pallets</option>
+                  <option value="Drum (MS/Fibre 25-50 KG)">Drum (MS/Fibre 25-50 KG)</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg" id="error-packagingType"></span>
+              </div>
+
+              <div class="b2b-group b2b-group--full" id="other-packaging-group" style="display: none;">
+                <label for="other-packaging" class="b2b-label">Specify Other Packing Type *</label>
+                <input type="text" id="other-packaging" name="other_packaging" class="b2b-input" placeholder="e.g. Custom palletized shrink wrap" />
+                <span class="error-msg" id="error-otherPackaging"></span>
+              </div>
 
               <div class="b2b-group b2b-group--full">
                 <div class="b2b-label-wrapper" style="display: flex; justify-content: space-between; align-items: baseline;">
@@ -1001,7 +1016,7 @@
     <div class="container">
       <div class="footer__main">
         <div>
-          <img src="/assets/images/logo.png" alt="K. Patel Logo" class="footer-logo" />
+          <img src="/assets/images/logo-no-bg.png" alt="K. Patel Logo" class="footer-logo" />
           <div class="footer__brand-name">K. Patel<span>.</span></div>
           <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
           <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 16px; line-height: 1.6;">

@@ -131,7 +131,7 @@ function initMobileNav() {
   const closeBtn = document.querySelector('.nav__mobile-close');
   if (!toggle || !overlay) return;
 
-  toggle.addEventListener('click', () => overlay.classList.add('is-open'));
+  toggle.addEventListener('click', () => overlay.classList.toggle('is-open'));
   if (closeBtn) closeBtn.addEventListener('click', () => overlay.classList.remove('is-open'));
 
   overlay.querySelectorAll('a').forEach((link) => {
@@ -443,43 +443,43 @@ const PRODUCTS_DATA = {
     industries: ["Paper & Board Industrial", "Stationery Writing Inks", "Biological Research Stains"],
     features: ["High Tinctorial Strength", "Excellent Liquid Mix Solubility"],
     items: [
-      { name: "Methyl Violet Liquid 50%", hex: "#60338E", ci: "Basic Violet 1" },
-      { name: "Methyl Violet", hex: "#67389A", ci: "Basic Violet 1" },
-      { name: "Crystal Violet Liquid 50%", hex: "#5C3492", ci: "Basic Violet 3" },
-      { name: "Crystal Violet", hex: "#61379B", ci: "Basic Violet 3" },
-      { name: "Ethyl Violet Liquid 50%", hex: "#4E2C8B", ci: "Basic Violet 4" },
-      { name: "Ethyl Violet", hex: "#472B88", ci: "Basic Violet 4" },
-      { name: "Rhodamine B Liquid 40%", hex: "#C86BAA", ci: "Basic Violet 10" },
-      { name: "Rhodamine B 540%", hex: "#C761B5", ci: "Basic Violet 10" },
-      { name: "Magenta", hex: "#D53A9D", ci: "Basic Violet 14" },
-      { name: "Basic Violet 16 Liquid", hex: "#C55DA9", ci: "Basic Violet 16" },
-      { name: "Brilliant Green Liquid 50%", hex: "#43C0C9", ci: "Basic Green 1" },
-      { name: "Brilliant Green Crystals", hex: "#46C3D1", ci: "Basic Green 1" },
-      { name: "Malachite Green Liquid 50%", hex: "#36AFC7", ci: "Basic Green 4" },
-      { name: "Malachite Green Crystals / Powder", hex: "#3AA7BF", ci: "Basic Green 4" },
-      { name: "Victoria Blue BO", hex: "#2D4BA9", ci: "Basic Blue 7" },
-      { name: "Methylene Blue 2B", hex: "#27459D", ci: "Basic Blue 9" },
-      { name: "Victoria Blue B Liquid 40%", hex: "#3B66B8", ci: "Basic Blue 26" },
-      { name: "Victoria Blue B", hex: "#2E5DB1", ci: "Basic Blue 26" },
-      { name: "Basic Blue 140 Liquid", hex: "#9BD8E9", ci: "Basic Blue 140" },
-      { name: "Chrysodine Y Liquid 35%", hex: "#F2913D", ci: "Basic Orange 2" },
-      { name: "Chrysodine Y", hex: "#F2913D", ci: "Basic Orange 2" },
-      { name: "Basic Orange 60 Liquid", hex: "#E58044", ci: "Basic Orange 60" },
-      { name: "Auramine O", hex: "#F8E812", ci: "Basic Yellow 2" },
-      { name: "Auramine OF (Spirit Soluble)", hex: "#F9EB4A", ci: "Basic Yellow 2" },
-      { name: "Basic Yellow 28 Liquid", hex: "#EEA32A", ci: "Basic Yellow 28" },
-      { name: "Basic Yellow 29 Liquid", hex: "#FCEF6A", ci: "Basic Yellow 29" },
-      { name: "Ethyl Auramine", hex: "#E2DE0B", ci: "Basic Yellow 37" },
-      { name: "Basic Yellow 40 Liquid", hex: "#F5CA1E", ci: "Basic Yellow 40" },
-      { name: "Basic Yellow 90 Liquid", hex: "#F9EF78", ci: "Basic Yellow 90" },
-      { name: "Basic Yellow 96 Liquid", hex: "#FBEE59", ci: "Basic Yellow 96" },
-      { name: "Bismark Brown G Liquid 50%", hex: "#D38A6D", ci: "Basic Brown 1" },
-      { name: "Bismark Brown G", hex: "#D48A69", ci: "Basic Brown 1" },
-      { name: "Rhodamine 6GDN", hex: "#E8356C", ci: "Basic Red 1" },
-      { name: "Basic Red 12 Liquid", hex: "#E46DA3", ci: "Basic Red 12" },
-      { name: "Basic Red 14 Liquid", hex: "#CA415E", ci: "Basic Red 14" },
-      { name: "Basic Red 49 Liquid", hex: "#CC4C88", ci: "Basic Red 49" },
-      { name: "Basic Black MX", hex: "#1D0000", ci: "—" }
+      { name: "Methyl Violet Liquid 50%", hex: "#613C86", ci: "Basic Violet 1" },
+      { name: "Methyl Violet", hex: "#52277B", ci: "Basic Violet 1" },
+      { name: "Crystal Violet Liquid 50%", hex: "#441A6E", ci: "Basic Violet 3" },
+      { name: "Crystal Violet", hex: "#391B6B", ci: "Basic Violet 3" },
+      { name: "Ethyl Violet Liquid 50%", hex: "#392B85", ci: "Basic Violet 4" },
+      { name: "Ethyl Violet", hex: "#32237F", ci: "Basic Violet 4" },
+      { name: "Rhodamine B Liquid 40%", hex: "#C73B88", ci: "Basic Violet 10" },
+      { name: "Rhodamine B 540%", hex: "#D63984", ci: "Basic Violet 10" },
+      { name: "Magenta", hex: "#AC2863", ci: "Basic Violet 14" },
+      { name: "Basic Violet 16 Liquid", hex: "#D1458A", ci: "Basic Violet 16" },
+      { name: "Brilliant Green Liquid 50%", hex: "#00968F", ci: "Basic Green 1" },
+      { name: "Brilliant Green Crystals", hex: "#00A69C", ci: "Basic Green 1" },
+      { name: "Malachite Green Liquid 50%", hex: "#00979E", ci: "Basic Green 4" },
+      { name: "Malachite Green Crystals / Powder", hex: "#009B97", ci: "Basic Green 4" },
+      { name: "Victoria Blue BO", hex: "#143588", ci: "Basic Blue 7" },
+      { name: "Methylene Blue 2B", hex: "#113D8E", ci: "Basic Blue 9" },
+      { name: "Victoria Blue B Liquid 40%", hex: "#11368B", ci: "Basic Blue 26" },
+      { name: "Victoria Blue B", hex: "#143588", ci: "Basic Blue 26" },
+      { name: "Basic Blue 140 Liquid", hex: "#88C3E5", ci: "Basic Blue 140" },
+      { name: "Chrysodine Y Liquid 35%", hex: "#F08031", ci: "Basic Orange 2" },
+      { name: "Chrysodine Y", hex: "#EE7A31", ci: "Basic Orange 2" },
+      { name: "Basic Orange 60 Liquid", hex: "#F08B34", ci: "Basic Orange 60" },
+      { name: "Auramine O", hex: "#F4E226", ci: "Basic Yellow 2" },
+      { name: "Auramine OF (Spirit Soluble)", hex: "#F5DF34", ci: "Basic Yellow 2" },
+      { name: "Basic Yellow 28 Liquid", hex: "#EFD026", ci: "Basic Yellow 28" },
+      { name: "Basic Yellow 29 Liquid", hex: "#EBCD33", ci: "Basic Yellow 29" },
+      { name: "Ethyl Auramine", hex: "#E0E23B", ci: "Basic Yellow 37" },
+      { name: "Basic Yellow 40 Liquid", hex: "#F5D329", ci: "Basic Yellow 40" },
+      { name: "Basic Yellow 90 Liquid", hex: "#F3E85C", ci: "Basic Yellow 90" },
+      { name: "Basic Yellow 96 Liquid", hex: "#F5F285", ci: "Basic Yellow 96" },
+      { name: "Bismark Brown G Liquid 50%", hex: "#CE8261", ci: "Basic Brown 1" },
+      { name: "Bismark Brown G", hex: "#C57257", ci: "Basic Brown 1" },
+      { name: "Rhodamine 6GDN", hex: "#ED568C", ci: "Basic Red 1" },
+      { name: "Basic Red 12 Liquid", hex: "#C92446", ci: "Basic Red 12" },
+      { name: "Basic Red 14 Liquid", hex: "#BD2D53", ci: "Basic Red 14" },
+      { name: "Basic Red 49 Liquid", hex: "#C12A6C", ci: "Basic Red 49" },
+      { name: "Basic Black MX", hex: "#1C1210", ci: "—" }
     ]
   },
   solvent: {
@@ -489,24 +489,24 @@ const PRODUCTS_DATA = {
     industries: ["Stationery Writing Inks", "Plastics & Lacquers", "Industrial Wood Finishes"],
     features: ["Superior Heat Stability", "Excellent Organic Solvent Solubility"],
     items: [
-      { name: "Methyl Violet B Base", hex: "#5A2D95", ci: "Solvent Violet 8" },
-      { name: "Crystal Violet Base", hex: "#6534A0", ci: "Solvent Violet 9" },
-      { name: "Ethyl Violet Base", hex: "#4D2C8D", ci: "Solvent Violet 4 Base" },
-      { name: "Victoria Blue B Base", hex: "#2E55B3", ci: "Solvent Blue 4" },
-      { name: "Solvent Blue KPP", hex: "#67C7D8", ci: "Solvent Blue 38" },
-      { name: "Solvent Blue KPT", hex: "#76D0DD", ci: "Solvent Blue 38" },
-      { name: "Solvent Blue KPV", hex: "#3545A8", ci: "Solvent Blue 43" },
-      { name: "Solvent Blue KPM", hex: "#4A55B0", ci: "Solvent Blue 43" },
-      { name: "Solvent Black KPC", hex: "#0A0A0C", ci: "Solvent Black 46" },
-      { name: "Brilliant Red DDY", hex: "#F04A6E", ci: "Solvent Red 39" },
-      { name: "Rhodamine B Base", hex: "#C35BB4", ci: "Solvent Red 49" },
-      { name: "Chrysodine Y Base", hex: "#F57D22", ci: "Solvent Orange 3" },
-      { name: "Brilliant Yellow DDY", hex: "#FFF06A", ci: "Solvent Yellow 47" },
-      { name: "Solvent Blue 44", hex: "#3C34A5", ci: "Solvent Blue 44" },
-      { name: "Solvent Blue 98", hex: "#4E3298", ci: "Solvent Blue 98" },
-      { name: "Bismark Brown G Base W/C", hex: "#A54A22", ci: "Solvent Brown 41" },
-      { name: "Solvent Black 27", hex: "#181B43", ci: "Solvent Black 27" },
-      { name: "Solvent Black 29", hex: "#0B0C08", ci: "Solvent Black 29" }
+      { name: "Methyl Violet B Base", hex: "#49287B", ci: "Solvent Violet 8" },
+      { name: "Crystal Violet Base", hex: "#462276", ci: "Solvent Violet 9" },
+      { name: "Ethyl Violet Base", hex: "#372886", ci: "Solvent Violet 4 Base" },
+      { name: "Victoria Blue B Base", hex: "#16489B", ci: "Solvent Blue 4" },
+      { name: "Solvent Blue KPP", hex: "#74C8D8", ci: "Solvent Blue 38" },
+      { name: "Solvent Blue KPT", hex: "#59B8CA", ci: "Solvent Blue 38" },
+      { name: "Solvent Blue KPV", hex: "#2C489A", ci: "Solvent Blue 43" },
+      { name: "Solvent Blue KPM", hex: "#1C337B", ci: "Solvent Blue 43" },
+      { name: "Solvent Black KPC", hex: "#151515", ci: "Solvent Black 46" },
+      { name: "Brilliant Red DDY", hex: "#EA4853", ci: "Solvent Red 39" },
+      { name: "Rhodamine B Base", hex: "#D43981", ci: "Solvent Red 49" },
+      { name: "Chrysodine Y Base", hex: "#F48C30", ci: "Solvent Orange 3" },
+      { name: "Brilliant Yellow DDY", hex: "#FAE15A", ci: "Solvent Yellow 47" },
+      { name: "Solvent Blue 44", hex: "#3E3B92", ci: "Solvent Blue 44" },
+      { name: "Solvent Blue 98", hex: "#36368C", ci: "Solvent Blue 98" },
+      { name: "Bismark Brown G Base W/C", hex: "#7B3E26", ci: "Solvent Brown 41" },
+      { name: "Solvent Black 27", hex: "#20242E", ci: "Solvent Black 27" },
+      { name: "Solvent Black 29", hex: "#171717", ci: "Solvent Black 29" }
     ]
   },
   rinsable: {
@@ -516,15 +516,15 @@ const PRODUCTS_DATA = {
     industries: ["Children's Markers & Crafts", "School & Educational Toys", "Household Cleaners"],
     features: ["EN-71 Parts 3 & 9 Safe Certification", "Zero-Staining Rinsable Washability"],
     items: [
-      { name: "Spectra Rinse Yellow GXV LQ", hex: "#F7D95A", ci: "" },
-      { name: "Spectra Rinse Yellow R12XV LQ", hex: "#FFD067", ci: "" },
-      { name: "Spectra Rinse Yellow VG LV LQ", hex: "#F7ED8C", ci: "" },
-      { name: "Spectra Rinse Orange RX-LV LQ", hex: "#F47C39", ci: "" },
-      { name: "Spectra Rinse Red RV LQ", hex: "#F24D4D", ci: "" },
-      { name: "Spectra Rinse Magenta LVS LQ", hex: "#F37FA8", ci: "" },
-      { name: "Spectra Rinse Blue T14XV LQ", hex: "#3497C8", ci: "" },
-      { name: "Spectra Rinse Green AU767 LQ", hex: "#46B784", ci: "" },
-      { name: "Spectra Rinse Violet BV LQ", hex: "#463AA0", ci: "" },
+      { name: "Spectra Rinse Yellow GXV LQ", hex: "#F3CA40", ci: "" },
+      { name: "Spectra Rinse Yellow R12XV LQ", hex: "#F3C44C", ci: "" },
+      { name: "Spectra Rinse Yellow VG LV LQ", hex: "#F8E37E", ci: "" },
+      { name: "Spectra Rinse Orange RX-LV LQ", hex: "#F2802B", ci: "" },
+      { name: "Spectra Rinse Red RV LQ", hex: "#E8453E", ci: "" },
+      { name: "Spectra Rinse Magenta LVS LQ", hex: "#EB668C", ci: "" },
+      { name: "Spectra Rinse Blue T14XV LQ", hex: "#1CA3D4", ci: "" },
+      { name: "Spectra Rinse Green AU767 LQ", hex: "#2FA96A", ci: "" },
+      { name: "Spectra Rinse Violet BV LQ", hex: "#252D81", ci: "" },
       { name: "Spectra Rinse Black AV115 LIQ", hex: "#111111", ci: "" }
     ]
   },
@@ -535,14 +535,14 @@ const PRODUCTS_DATA = {
     industries: ["Offset & Flexo Printing Inks", "Commercial Packaging", "Industrial Coatings"],
     features: ["Excellent Light & Acid Fastness", "Optimal Dispersion Flow Performance"],
     items: [
-      { name: "Violet Toner DD 7", ci: "Pigment Violet 27" },
-      { name: "Violet Toner DD 2", ci: "Pigment Violet 3:1" },
-      { name: "Violet Toner DD 3", ci: "Pigment Violet 3" },
-      { name: "Violet Toner DD 4", ci: "Pigment Violet 3" },
-      { name: "Blue Toner DD 62", ci: "Pigment Blue 62" },
-      { name: "Blue Toner DD 14", ci: "Pigment Blue 14" },
-      { name: "Red Toner DD 169", ci: "Pigment Red 169" },
-      { name: "Red Toner DD 81", ci: "Pigment Red 81" }
+      { name: "Violet Toner DD 7", hex: "#3F2073", ci: "Pigment Violet 27" },
+      { name: "Violet Toner DD 2", hex: "#3E1B6B", ci: "Pigment Violet 3:1" },
+      { name: "Violet Toner DD 3", hex: "#5B277F", ci: "Pigment Violet 3" },
+      { name: "Violet Toner DD 4", hex: "#4E2176", ci: "Pigment Violet 3" },
+      { name: "Blue Toner DD 62", hex: "#243E94", ci: "Pigment Blue 62" },
+      { name: "Blue Toner DD 14", hex: "#243E94", ci: "Pigment Blue 14" },
+      { name: "Red Toner DD 169", hex: "#B51B29", ci: "Pigment Red 169" },
+      { name: "Red Toner DD 81", hex: "#A71627", ci: "Pigment Red 81" }
     ]
   },
   dispersions: {
@@ -552,18 +552,18 @@ const PRODUCTS_DATA = {
     industries: ["Pulp & Paper Coloring", "Aqueous Inkjet & Digital Inks", "Water-Based Wall Coatings"],
     features: ["Sedimentation & Crusting Resistance", "Uniform Sub-Micron Particle Size"],
     items: [
-      { name: "KP Sperse Violet 101", ci: "Pigment Violet 3" },
-      { name: "KP Sperse Violet 103", ci: "Pigment Violet 23" },
-      { name: "KP Sperse Violet 104", ci: "Pigment Violet 27" },
-      { name: "KP Sperse Violet 105", ci: "Pigment Violet 27" },
-      { name: "KP Sperse Blue 101", ci: "Pigment Blue 14" },
-      { name: "KP Sperse Blue 103", ci: "Pigment Blue 15" },
-      { name: "KP Sperse Red 101", ci: "Pigment Red 81" },
-      { name: "KP Sperse Red 104", ci: "Pigment Red 169" },
-      { name: "KP Sperse Yellow 103", ci: "Pigment Yellow 83" },
-      { name: "KP Sperse Yellow 106", ci: "Pigment Yellow 14" },
-      { name: "KP Sperse Green 103", ci: "Pigment Green 7" },
-      { name: "KP Sperse Black 103", ci: "Pigment Black 7" }
+      { name: "KP Sperse Violet 101", hex: "#5F5496", ci: "Pigment Violet 3" },
+      { name: "KP Sperse Violet 103", hex: "#827EAE", ci: "Pigment Violet 23" },
+      { name: "KP Sperse Violet 104", hex: "#675B9E", ci: "Pigment Violet 27" },
+      { name: "KP Sperse Violet 105", hex: "#7168A5", ci: "Pigment Violet 27" },
+      { name: "KP Sperse Blue 101", hex: "#3F60A6", ci: "Pigment Blue 14" },
+      { name: "KP Sperse Blue 103", hex: "#22A7E0", ci: "Pigment Blue 15" },
+      { name: "KP Sperse Red 101", hex: "#ED8CAE", ci: "Pigment Red 81" },
+      { name: "KP Sperse Red 104", hex: "#EC717A", ci: "Pigment Red 169" },
+      { name: "KP Sperse Yellow 103", hex: "#F6CC4A", ci: "Pigment Yellow 83" },
+      { name: "KP Sperse Yellow 106", hex: "#F6E272", ci: "Pigment Yellow 14" },
+      { name: "KP Sperse Green 103", hex: "#58C096", ci: "Pigment Green 7" },
+      { name: "KP Sperse Black 103", hex: "#616260", ci: "Pigment Black 7" }
     ]
   },
   acid: {
@@ -573,29 +573,29 @@ const PRODUCTS_DATA = {
     industries: ["Textile Wool, Silk & Nylon", "Leather Drum Dyeing", "Wood Stains & Industrial Ink"],
     features: ["Exceptional Levelling & Migration", "High Wash, Light & Rub Fastness"],
     items: [
-      { name: "Acid Yellow 6 Powder", ci: "Acid Yellow 6" },
-      { name: "Acid Yellow 23 Powder", ci: "Acid Yellow 23" },
-      { name: "Acid Yellow 36 Powder", ci: "Acid Yellow 36" },
-      { name: "Acid Yellow 42 Powder", ci: "Acid Yellow 42" },
-      { name: "Acid Yellow 73 Powder", ci: "Acid Yellow 73" },
-      { name: "Acid Orange 7 Powder", ci: "Acid Orange 7" },
-      { name: "Acid Orange 7 Liquid", ci: "Acid Orange 7" },
-      { name: "Acid Red 14 Powder", ci: "Acid Red 14" },
-      { name: "Acid Red 52 Powder", ci: "Acid Red 52" },
-      { name: "Acid Red 87 Powder", ci: "Acid Red 87" },
-      { name: "Acid Red 92 Powder", ci: "Acid Red 92" },
-      { name: "Acid Blue 15 Powder", ci: "Acid Blue 15" },
-      { name: "Acid Blue 15 Liquid", ci: "Acid Blue 15" },
-      { name: "Acid Blue 9 Powder", ci: "Acid Blue 9" },
-      { name: "Acid Blue 9 Liquid", ci: "Acid Blue 9" },
-      { name: "Acid Blue 80 Powder", ci: "Acid Blue 80" },
+      { name: "Acid Yellow 6 Powder", hex: "#F3BA22", ci: "Acid Yellow 6" },
+      { name: "Acid Yellow 23 Powder", hex: "#F9D017", ci: "Acid Yellow 23" },
+      { name: "Acid Yellow 36 Powder", hex: "#F6C121", ci: "Acid Yellow 36" },
+      { name: "Acid Yellow 42 Powder", hex: "#F3B520", ci: "Acid Yellow 42" },
+      { name: "Acid Yellow 73 Powder", hex: "#F7E017", ci: "Acid Yellow 73" },
+      { name: "Acid Orange 7 Powder", hex: "#ED7623", ci: "Acid Orange 7" },
+      { name: "Acid Orange 7 Liquid", hex: "#ED7623", ci: "Acid Orange 7" },
+      { name: "Acid Red 14 Powder", hex: "#D31D56", ci: "Acid Red 14" },
+      { name: "Acid Red 52 Powder", hex: "#ED3173", ci: "Acid Red 52" },
+      { name: "Acid Red 87 Powder", hex: "#E52E2B", ci: "Acid Red 87" },
+      { name: "Acid Red 92 Powder", hex: "#D1204F", ci: "Acid Red 92" },
+      { name: "Acid Blue 15 Powder", hex: "#3B2A85", ci: "Acid Blue 15" },
+      { name: "Acid Blue 15 Liquid", hex: "#3B2A85", ci: "Acid Blue 15" },
+      { name: "Acid Blue 9 Powder", hex: "#4758A8", ci: "Acid Blue 9" },
+      { name: "Acid Blue 9 Liquid", hex: "#4758A8", ci: "Acid Blue 9" },
+      { name: "Acid Blue 80 Powder", hex: "#2E4B9B", ci: "Acid Blue 80" },
       { name: "Acid Blue 93 Powder", ci: "Acid Blue 93" },
-      { name: "Acid Violet 17 Liquid", ci: "Acid Violet 17" },
-      { name: "Acid Violet 17 Powder", ci: "Acid Violet 17" },
-      { name: "Acid Violet 49 Powder", ci: "Acid Violet 49" },
-      { name: "Acid Violet 49 Liquid", ci: "Acid Violet 49" },
-      { name: "Acid Black 2 Powder", ci: "Acid Black 2" },
-      { name: "Acid Black 194 Powder", ci: "Acid Black 194" }
+      { name: "Acid Violet 17 Liquid", hex: "#412A81", ci: "Acid Violet 17" },
+      { name: "Acid Violet 17 Powder", hex: "#412A81", ci: "Acid Violet 17" },
+      { name: "Acid Violet 49 Powder", hex: "#552784", ci: "Acid Violet 49" },
+      { name: "Acid Violet 49 Liquid", hex: "#552784", ci: "Acid Violet 49" },
+      { name: "Acid Black 2 Powder", hex: "#161616", ci: "Acid Black 2" },
+      { name: "Acid Black 194 Powder", hex: "#161616", ci: "Acid Black 194" }
     ]
   },
   direct: {
@@ -605,23 +605,23 @@ const PRODUCTS_DATA = {
     industries: ["Cellulose Fibers & Textiles", "Industrial Paper Coloring", "Wood Stains & Drum Leather"],
     features: ["High Direct Exhaustion Rate", "Optimal Wet Fastness Performance"],
     items: [
-      { name: "Direct Yellow 4 Powder", ci: "Direct Yellow 4" },
-      { name: "Direct Orange 15 Liquid", ci: "Direct Orange 15" },
-      { name: "Direct Red 239 Powder", ci: "Direct Red 239" },
-      { name: "Direct Red 239 Liquid", ci: "Direct Red 239" },
-      { name: "Direct Red 254 Powder", ci: "Direct Red 254" },
-      { name: "Direct Red 254 Liquid", ci: "Direct Red 254" },
+      { name: "Direct Yellow 4 Powder", hex: "#EAA938", ci: "Direct Yellow 4" },
+      { name: "Direct Orange 15 Liquid", hex: "#DF5D22", ci: "Direct Orange 15" },
+      { name: "Direct Red 239 Powder", hex: "#E34825", ci: "Direct Red 239" },
+      { name: "Direct Red 239 Liquid", hex: "#E34825", ci: "Direct Red 239" },
+      { name: "Direct Red 254 Powder", hex: "#C1104D", ci: "Direct Red 254" },
+      { name: "Direct Red 254 Liquid", hex: "#C1104D", ci: "Direct Red 254" },
       { name: "Direct Blue 80 Powder", ci: "Direct Blue 80" },
-      { name: "Direct Blue 86 Powder", ci: "Direct Blue 86" },
-      { name: "Direct Blue 273 Liquid", ci: "Direct Blue 273" },
-      { name: "Direct Blue 218 Powder", ci: "Direct Blue 218" },
-      { name: "Direct Blue 218 Liquid", ci: "Direct Blue 218" },
-      { name: "Direct Blue 267 Liquid", ci: "Direct Blue 267" },
-      { name: "Direct Blue 279 Liquid", ci: "Direct Blue 279" },
-      { name: "Direct Brown 44 Liquid", ci: "Direct Brown 44" },
-      { name: "Direct Black 179 Powder", ci: "Direct Black 179" },
-      { name: "Direct Black 22 Powder", ci: "Direct Black 22" },
-      { name: "Direct Black 168 Liquid", ci: "Direct Black 168" }
+      { name: "Direct Blue 86 Powder", hex: "#24428B", ci: "Direct Blue 86" },
+      { name: "Direct Blue 273 Liquid", hex: "#5C81B8", ci: "Direct Blue 273" },
+      { name: "Direct Blue 218 Powder", hex: "#2982B8", ci: "Direct Blue 218" },
+      { name: "Direct Blue 218 Liquid", hex: "#2982B8", ci: "Direct Blue 218" },
+      { name: "Direct Blue 267 Liquid", hex: "#3359A8", ci: "Direct Blue 267" },
+      { name: "Direct Blue 279 Liquid", hex: "#789CC3", ci: "Direct Blue 279" },
+      { name: "Direct Brown 44 Liquid", hex: "#794A26", ci: "Direct Brown 44" },
+      { name: "Direct Black 179 Powder", hex: "#141414", ci: "Direct Black 179" },
+      { name: "Direct Black 22 Powder", hex: "#2B3322", ci: "Direct Black 22" },
+      { name: "Direct Black 168 Liquid", hex: "#1E3321", ci: "Direct Black 168" }
     ]
   }
 };
@@ -706,10 +706,10 @@ function initCatalog() {
 
         return `
         <div class="product-card" style="border-left-color: ${item.hex || 'var(--color-accent)'};">
-          <div class="product-card__header" style="justify-content: flex-end;">
-            <span class="product-card__cas">${ciDisplay}</span>
+          <div class="product-card__header" style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+            <h4 class="product-card__title" style="margin: 0;">${item.name}</h4>
+            <span class="product-card__cas" style="text-align: right; flex-shrink: 0;">${ciDisplay}</span>
           </div>
-          <h4 class="product-card__title">${item.name}</h4>
           
           <div class="product-card__actions" style="grid-template-columns: 1fr;">
             <button class="product-card__btn-primary" onclick="prefillSampleRequest('${item.name.replace(/'/g, "\\'")}', '${(item.ci || '').replace(/'/g, "\\'")}')">
@@ -836,6 +836,9 @@ window.prefillSampleRequest = function(dyeName, ci) {
     const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
     const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight;
     window.scrollTo({ top, behavior: 'smooth' });
+  } else {
+    window.location.href = `/index.html?sample=${encodeURIComponent(dyeName)}&ci=${encodeURIComponent(ci)}#contact-section`;
+    return;
   }
 
   // Switch form to Technical Sample & CoA tab
@@ -854,6 +857,43 @@ window.prefillSampleRequest = function(dyeName, ci) {
   }
 };
 
+function initPrefillFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const sampleName = params.get('sample');
+  const sampleCi = params.get('ci');
+
+  if (sampleName) {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      const targetCompoundInput = document.getElementById('target-compound');
+      const prefillBanner = document.querySelector('.b2b-prefill-banner');
+      const prefillName = document.getElementById('prefill-dye-name');
+      const sampleTab = document.getElementById('tab-sample');
+
+      if (sampleTab) sampleTab.click();
+      
+      if (targetCompoundInput) {
+        targetCompoundInput.value = sampleCi && sampleCi !== '—' && sampleCi !== 'undefined' ? `${sampleName} (C.I. ${sampleCi})` : sampleName;
+      }
+
+      if (prefillBanner && prefillName) {
+        prefillName.textContent = sampleName;
+        prefillBanner.classList.remove('is-hidden');
+      }
+      
+      // Clear URL without reloading
+      const newUrl = window.location.pathname + window.location.hash;
+      window.history.replaceState({}, document.title, newUrl);
+      
+      setTimeout(() => {
+        const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
+        const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }, 100);
+    }
+  }
+}
+
 
 
 /* ============================================
@@ -870,4 +910,5 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof initTrustMarquee === 'function') initTrustMarquee();
   if (typeof initParallax === 'function') initParallax();
   if (typeof initCatalog === 'function') initCatalog();
+  if (typeof initPrefillFromURL === 'function') initPrefillFromURL();
 });

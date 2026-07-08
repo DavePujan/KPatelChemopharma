@@ -1640,7 +1640,7 @@ ul, ol { list-style: none; }
   .operations__grid--reversed .operations__content { order: 1; }
   .operations__grid--reversed .operations__image-wrap { order: 2; }
   .operations__image-wrap { min-height: 400px; }
-  .operations__content { padding: 56px 40px; }
+  .operations__content { padding: 56px 40px 24px 40px; }
 
   .global__grid { grid-template-columns: 1fr; gap: 60px; }
   .global__visual { max-width: 400px; margin: 0 auto; }
@@ -1676,7 +1676,7 @@ ul, ol { list-style: none; }
   .industry-card { min-height: 300px; }
 
   .operations__highlights { grid-template-columns: 1fr; }
-  .operations__content { padding: 40px 24px; }
+  .operations__content { padding: 40px 24px 16px 24px; }
   .operations__image-wrap { min-height: 300px; }
 
   .global__stats { grid-template-columns: 1fr 1fr; }
@@ -1846,6 +1846,12 @@ ul, ol { list-style: none; }
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .dye-card__overlay {
+    display: none !important;
+  }
+}
+
 .dye-card__explore-btn {
   font-family: var(--font-body);
   font-size: 13px;
@@ -1986,6 +1992,12 @@ ul, ol { list-style: none; }
   font-size: 15px;
   color: var(--color-body-muted);
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .modal__category-desc {
+    font-size: 13px;
+  }
 }
 
 .modal__close {
@@ -2527,6 +2539,17 @@ ul, ol { list-style: none; }
   border-color: var(--color-accent);
   background: #ffffff;
   box-shadow: 0 0 0 3px rgba(47, 79, 79, 0.12);
+}
+
+select.b2b-input {
+  width: 100%;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23737373%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px top 50%;
+  background-size: 10px auto;
+  padding-right: 40px;
+  cursor: pointer;
 }
 
 .b2b-checkbox-group {

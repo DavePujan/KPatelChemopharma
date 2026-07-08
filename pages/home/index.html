@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>K. Patel Chemopharma — Mobile Home</title>
-  <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+  <link rel="icon" type="image/png" href="/assets/images/logo-no-bg.png" />
   <meta name="description" content="Est. 1974. Established local as well as global supplier of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments. Delivering cost-effective colorants for customer applications worldwide." />
   <link rel="canonical" href="https://www.kpateldyes.com/" />
   
@@ -13,14 +13,14 @@
   <meta property="og:url" content="https://www.kpateldyes.com/home" />
   <meta property="og:title" content="K. Patel Chemopharma — Mobile Home" />
   <meta property="og:description" content="Est. 1974. Established local as well as global supplier of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments. Delivering cost-effective colorants for customer applications worldwide." />
-  <meta property="og:image" content="https://www.kpateldyes.com/img/logo.png" />
+  <meta property="og:image" content="https://www.kpateldyes.com/img/logo-no-bg.png" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://www.kpateldyes.com/home" />
   <meta property="twitter:title" content="K. Patel Chemopharma — Mobile Home" />
   <meta property="twitter:description" content="Est. 1974. Established local as well as global supplier of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments. Delivering cost-effective colorants for customer applications worldwide." />
-  <meta property="twitter:image" content="https://www.kpateldyes.com/img/logo.png" />
+  <meta property="twitter:image" content="https://www.kpateldyes.com/img/logo-no-bg.png" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -29,7 +29,7 @@
     "@type": "Organization",
     "name": "K. Patel Chemopharma Private Limited",
     "url": "https://www.kpateldyes.com/",
-    "logo": "https://www.kpateldyes.com/img/logo.png",
+    "logo": "https://www.kpateldyes.com/img/logo-no-bg.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-22-48822900",
@@ -47,9 +47,7 @@
 <body>
   <nav class="nav nav--hero is-scrolled" id="nav">
     <div class="nav__inner">
-      <a href="/" class="nav__logo">
-        K. Patel<span>.</span>
-      </a>
+      <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.png" alt="K. Patel Logo" style="height: 36px; width: auto;" /></a>
       <button class="nav__toggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -73,7 +71,7 @@
   <section class="hero" id="hero">
     <div class="hero__image-wrap">
       <img
-        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80"
+        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
         alt="Research scientist working in modern laboratory facility"
         loading="eager"
         fetchpriority="high"
@@ -221,6 +219,27 @@
               </div>
 
               <div class="b2b-group b2b-group--full">
+                <label for="packaging-type" class="b2b-label">Preferred Packing Type *</label>
+                <select id="packaging-type" name="packaging_type" class="b2b-input" required>
+                  <option value="" disabled selected>Select packing type</option>
+                  <option value="IBCM (Intermediate Bulk Container)">IBCM (Intermediate Bulk Container)</option>
+                  <option value="Jumbo Bag (250 KG)">Jumbo Bag (250 KG)</option>
+                  <option value="Boxes (Corrugated High Strength)">Boxes (Corrugated High Strength)</option>
+                  <option value="Composite Drum (225 KG)">Composite Drum (225 KG)</option>
+                  <option value="HDPE Bags on Pallets">HDPE Bags on Pallets</option>
+                  <option value="Drum (MS/Fibre 25-50 KG)">Drum (MS/Fibre 25-50 KG)</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg" id="error-packagingType"></span>
+              </div>
+
+              <div class="b2b-group b2b-group--full" id="other-packaging-group" style="display: none;">
+                <label for="other-packaging" class="b2b-label">Specify Other Packing Type *</label>
+                <input type="text" id="other-packaging" name="other_packaging" class="b2b-input" placeholder="e.g. Custom palletized shrink wrap" />
+                <span class="error-msg" id="error-otherPackaging"></span>
+              </div>
+
+              <div class="b2b-group b2b-group--full">
                 <div class="b2b-label-wrapper" style="display: flex; justify-content: space-between; align-items: baseline;">
                   <label for="contact-specs" class="b2b-label">Physical Form &amp; Spec Requirements *</label>
                   <span class="char-counter" id="char-counter-specs">0 / 1000</span>
@@ -294,7 +313,7 @@
     <div class="container">
       <div class="footer__main footer__main--compact">
         <div>
-          <img src="/assets/images/logo.png" alt="K. Patel Logo" class="footer-logo" />
+          <img src="/assets/images/logo-no-bg.png" alt="K. Patel Logo" class="footer-logo" />
           <div class="footer__brand-name">K. Patel<span>.</span></div>
           <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
           <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 16px; line-height: 1.6;">

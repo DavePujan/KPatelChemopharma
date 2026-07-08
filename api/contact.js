@@ -26,6 +26,9 @@ export default async function handler(req, res) {
     const compound = data.compound || 'Not specified';
     const specs = data.specs || 'None provided';
     const msds = data.include_msds === 'on' ? 'Yes' : 'No';
+    const packagingType = data.packaging_type === 'Other' 
+      ? `Other: ${data.other_packaging || 'Not specified'}` 
+      : (data.packaging_type || 'Not specified');
     
     // Subject Line
     const subjectLine = `New ${inquiryType} – ${compound} – ${company}`;
@@ -90,6 +93,10 @@ export default async function handler(req, res) {
               <tr>
                 <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">MSDS / CoA Requested</td>
                 <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${msds}</td>
+              </tr>
+              <tr style="background-color: #F8F8F8;">
+                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Preferred Packing</td>
+                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 600;">${packagingType}</td>
               </tr>
             </tbody>
           </table>
