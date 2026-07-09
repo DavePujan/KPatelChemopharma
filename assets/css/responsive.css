@@ -24,21 +24,17 @@ body {
 }
 
 /* Stack all grids to 1 column */
-.hero__stats,
 .solutions__grid,
 .solutions__bottom-row,
 .industries__grid,
 .certifications__grid,
-.operations__grid,
 .operations__highlights,
 .legacy__layout,
 .global__grid,
 .global__stats,
 .contact-layout,
 .b2b-grid,
-.b2b-tabs,
-.product-grid,
-.spec-modal__grid {
+.b2b-tabs {
   grid-template-columns: 1fr;
   gap: 32px;
 }

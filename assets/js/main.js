@@ -439,7 +439,8 @@ const PRODUCTS_DATA = {
   basic: {
     title: "Basic Dyes",
     badge: "Basic Dyes",
-    desc: "Water-soluble cationic dyes offering outstanding brightness and tinctorial strength. Extensively utilized in paper coloring, acrylic fibers, stationery inks, wood stains, and turf coloring.",
+    desc: "Key Applications : Paper, Textiles, Leather, Coir & Others. Water-soluble cationic dyes offering outstanding brightness and tinctorial strength.",
+    descShort: "Key Applications : Paper, Textiles, Leather, Coir & Others.",
     industries: ["Paper & Board Industrial", "Stationery Writing Inks", "Biological Research Stains"],
     features: ["High Tinctorial Strength", "Excellent Liquid Mix Solubility"],
     items: [
@@ -485,13 +486,14 @@ const PRODUCTS_DATA = {
   solvent: {
     title: "Solvent Dyes",
     badge: "Solvent Dyes",
-    desc: "High-purity organosoluble colorants possessing excellent solubility in polar and non-polar organic solvents. Widely used in writing instrument inks, stationery, lacquers, wood coatings, and industrial markers.",
+    desc: "Key Applications : Ink, plastics, Smoke, Wax, Polish & Others. High-purity organosoluble colorants possessing excellent solubility in polar and non-polar organic solvents.",
+    descShort: "Key Applications : Ink, plastics, Smoke, Wax, Polish & Others.",
     industries: ["Stationery Writing Inks", "Plastics & Lacquers", "Industrial Wood Finishes"],
     features: ["Superior Heat Stability", "Excellent Organic Solvent Solubility"],
     items: [
       { name: "Methyl Violet B Base", hex: "#49287B", ci: "Solvent Violet 8" },
       { name: "Crystal Violet Base", hex: "#462276", ci: "Solvent Violet 9" },
-      { name: "Ethyl Violet Base", hex: "#372886", ci: "Solvent Violet 4 Base" },
+      { name: "Ethyl Violet Base", hex: "#372886", ci: "—" },
       { name: "Victoria Blue B Base", hex: "#16489B", ci: "Solvent Blue 4" },
       { name: "Solvent Blue KPP", hex: "#74C8D8", ci: "Solvent Blue 38" },
       { name: "Solvent Blue KPT", hex: "#59B8CA", ci: "Solvent Blue 38" },
@@ -512,7 +514,8 @@ const PRODUCTS_DATA = {
   rinsable: {
     title: "Rinsable Dyes",
     badge: "Spectra Rinse",
-    desc: "Specially formulated non-staining colorants easily washed from skin and household fabrics. Fully EN-71 certified for safety, making them ideal for children's toys, school marker inks, and household cleaners.",
+    desc: "Key Applications: Art & Craft Products, Writing Instruments, Household, Industrial And Institutional Applications where you need to have color rinse-ability.",
+    descShort: "Ideal for art, crafts, writing instruments, and household applications requiring rinse-ability.",
     industries: ["Children's Markers & Crafts", "School & Educational Toys", "Household Cleaners"],
     features: ["EN-71 Parts 3 & 9 Safe Certification", "Zero-Staining Rinsable Washability"],
     items: [
@@ -532,6 +535,7 @@ const PRODUCTS_DATA = {
     title: "Pigments",
     badge: "Pigment Toners",
     desc: "High-affinity organic and inorganic pigments yielding deep color strength and outstanding dispersion properties. Ideal for sheet-fed and web-offset packaging printing inks and coatings.",
+    descShort: "High-affinity pigments with excellent dispersion for offset printing inks and packaging coatings.",
     industries: ["Offset & Flexo Printing Inks", "Commercial Packaging", "Industrial Coatings"],
     features: ["Excellent Light & Acid Fastness", "Optimal Dispersion Flow Performance"],
     items: [
@@ -548,7 +552,8 @@ const PRODUCTS_DATA = {
   dispersions: {
     title: "Pigment Dispersions",
     badge: "KP Sperse",
-    desc: "Stable aqueous pre-dispersions of organic pigments, exhibiting optimal flow properties and sedimentation resistance. Specifically engineered for pulp and paper coloring and water-based coatings.",
+    desc: "Key Applications : Textile printing, Paint, Soap & detergent, Latex, Paper & Others. Stable aqueous pre-dispersions of organic pigments, exhibiting optimal flow properties and sedimentation resistance.",
+    descShort: "Key Applications : Textile printing, Paint, Soap & detergent, Latex, Paper & Others.",
     industries: ["Pulp & Paper Coloring", "Aqueous Inkjet & Digital Inks", "Water-Based Wall Coatings"],
     features: ["Sedimentation & Crusting Resistance", "Uniform Sub-Micron Particle Size"],
     items: [
@@ -569,7 +574,8 @@ const PRODUCTS_DATA = {
   acid: {
     title: "Acid Dyes",
     badge: "Acid Dyes",
-    desc: "Highly soluble anionic colorants designed for excellent dye exhaustion and levelling. Extensively used in textile coloring (wool, silk, nylon), printing inks, wood stains, and premium leather dressing. Available Grades: Crude, Standard, Salt-Free, Ink Grade, and Liquid formulations are offered to meet a wide range of application and performance requirements.",
+    desc: "Key Applications : Ink, leather, Wool, Wood, Textiles - Silk, Nylon & Others. Available Grades: Crude, Standard, Salt-Free, Ink Grade, and Liquid formulations are offered to meet a wide range of application and performance requirements.",
+    descShort: "Key Applications : Ink, leather, Wool, Wood, Textiles - Silk, Nylon & Others.",
     industries: ["Textile Wool, Silk & Nylon", "Leather Drum Dyeing", "Wood Stains & Industrial Ink"],
     features: ["Exceptional Levelling & Migration", "High Wash, Light & Rub Fastness"],
     items: [
@@ -601,7 +607,8 @@ const PRODUCTS_DATA = {
   direct: {
     title: "Direct Dyes",
     badge: "Direct Dyes",
-    desc: "Anionic dyes carrying high natural affinity for cellulose fibers. Offers excellent exhaustion rates, cost-effective dyeing, and bleeding resistance for paper, cotton textiles, and wood finishing.",
+    desc: "Key Applications : Paper, Textiles, Leather, Ink, Wood & others. Anionic dyes carrying high natural affinity for cellulose fibers. Offers excellent exhaustion rates, cost-effective dyeing, and bleeding resistance.",
+    descShort: "Key Applications : Paper, Textiles, Leather, Ink, Wood & others.",
     industries: ["Cellulose Fibers & Textiles", "Industrial Paper Coloring", "Wood Stains & Drum Leather"],
     features: ["High Direct Exhaustion Rate", "Optimal Wet Fastness Performance"],
     items: [
@@ -661,7 +668,7 @@ function initCatalog() {
     if (!data) return;
 
     catName.textContent = data.title;
-    catDesc.textContent = data.desc;
+    catDesc.innerHTML = `<span class="desc-desktop">${data.desc}</span><span class="desc-mobile">${data.descShort}</span>`;
 
     // Reset search
     modalSearchQuery = '';
@@ -706,9 +713,9 @@ function initCatalog() {
 
         return `
         <div class="product-card" style="border-left-color: ${item.hex || 'var(--color-accent)'};">
-          <div class="product-card__header" style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
-            <h4 class="product-card__title" style="margin: 0;">${item.name}</h4>
-            <span class="product-card__cas" style="text-align: right; flex-shrink: 0;">${ciDisplay}</span>
+          <div class="product-card__header">
+            <h4 class="product-card__title">${item.name}</h4>
+            <span class="product-card__cas">${ciDisplay}</span>
           </div>
           
           <div class="product-card__actions" style="grid-template-columns: 1fr;">
