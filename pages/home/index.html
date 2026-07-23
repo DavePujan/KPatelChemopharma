@@ -77,12 +77,15 @@
     <!-- ========== HERO — Full-screen background image ========== -->
   <section class="hero" id="hero">
     <div class="hero__image-wrap">
-      <img
-        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
-        alt="Research scientist working in modern laboratory facility"
-        loading="eager"
-        fetchpriority="high"
-      />
+      <picture class="hero__picture">
+        <source media="(max-width: 768px)" srcset="/assets/images/office/DSC00030.jpg" />
+        <img
+          src="/assets/images/office/DSC09965.jpg"
+          alt="K. Patel Chemopharma Corporate Office"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </picture>
     </div>
     <div class="hero__overlay"></div>
     <div class="container hero__content">
