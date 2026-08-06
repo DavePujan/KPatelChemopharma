@@ -3,6 +3,15 @@
 // ============================================
 function initReveal() {
   const reveals = document.querySelectorAll('.reveal');
+  
+  // Immediately reveal any elements currently inside or above the viewport
+  reveals.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < (window.innerHeight || document.documentElement.clientHeight)) {
+      el.classList.add('is-visible');
+    }
+  });
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -12,9 +21,13 @@ function initReveal() {
         }
       });
     },
-    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.01, rootMargin: '100px 0px 100px 0px' }
   );
-  reveals.forEach((el) => observer.observe(el));
+  reveals.forEach((el) => {
+    if (!el.classList.contains('is-visible')) {
+      observer.observe(el);
+    }
+  });
 }
 
 /* ============================================
@@ -698,30 +711,16 @@ function initCatalog() {
 
     gridContainer.innerHTML = filtered
       .map((item) => {
-        const ind1 = data.industries[0] || "General Chemical Applications";
-        const ind2 = data.industries[1] || "Coloration Processings";
-        const ind3 = data.industries[2] || "Industrial Solutions";
-        const f1 = data.features[0] || "Excellent Shade Consistency";
-        const f2 = data.features[1] || "Conforms to Int'l Standards";
-        
-        let ciDisplay = '';
-        if (item.ci && item.ci !== '—') {
-          ciDisplay = `C.I. ${item.ci}`;
-        } else if (item.ci === '—') {
-          ciDisplay = `C.I. —`;
-        }
-
         return `
-        <div class="product-card" style="border-left-color: ${item.hex || 'var(--color-accent)'};">
-          <div class="product-card__header">
+        <div class="product-card">
+          <div class="product-card__main">
+            <span class="product-card__strip" style="background-color: ${item.hex || 'var(--color-accent)'};"></span>
             <h4 class="product-card__title">${item.name}</h4>
-            <span class="product-card__cas">${ciDisplay}</span>
           </div>
-          
-          <div class="product-card__actions" style="grid-template-columns: 1fr;">
+          <div class="product-card__action">
             <button class="product-card__btn-primary" onclick="prefillSampleRequest('${item.name.replace(/'/g, "\\'")}', '${(item.ci || '').replace(/'/g, "\\'")}')">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8"/></svg>
-              Request Sample
+              <span>REQUEST SAMPLE</span>
             </button>
           </div>
         </div>`;
@@ -831,43 +830,58 @@ window.prefillSampleRequest = function(dyeName, ci) {
   if (specModal) specModal.classList.remove('is-open');
 
   document.body.style.overflow = '';
+  document.body.style.position = '';
 
-  // Get contact form elements
   const contactSection = document.getElementById('contact-section');
-  const targetCompoundInput = document.getElementById('target-compound');
-  const prefillBanner = document.querySelector('.b2b-prefill-banner');
-  const prefillName = document.getElementById('prefill-dye-name');
-
-  // Trigger smooth scroll to contact section
   if (contactSection) {
-    const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
-    const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight;
-    window.scrollTo({ top, behavior: 'smooth' });
+    // Switch form to Technical Sample & CoA tab
+    const sampleTab = document.getElementById('tab-sample');
+    if (sampleTab) sampleTab.click();
+
+    // Prefill field
+    const targetCompoundInput = document.getElementById('target-compound');
+    if (targetCompoundInput) {
+      targetCompoundInput.value = ci && ci !== '—' && ci !== 'undefined' ? `${dyeName} (C.I. ${ci})` : dyeName;
+    }
+
+    // Show prefill alert banner
+    const prefillBanner = document.querySelector('.b2b-prefill-banner');
+    const prefillName = document.getElementById('prefill-dye-name');
+    if (prefillBanner && prefillName) {
+      prefillName.textContent = dyeName;
+      prefillBanner.classList.remove('is-hidden');
+    }
+
+    setTimeout(() => {
+      const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
+      const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 50);
   } else {
-    window.location.href = `/index.html?sample=${encodeURIComponent(dyeName)}&ci=${encodeURIComponent(ci)}#contact-section`;
-    return;
-  }
-
-  // Switch form to Technical Sample & CoA tab
-  const sampleTab = document.getElementById('tab-sample');
-  if (sampleTab) sampleTab.click();
-
-  // Prefill field
-  if (targetCompoundInput) {
-    targetCompoundInput.value = ci && ci !== '—' ? `${dyeName} (C.I. ${ci})` : dyeName;
-  }
-
-  // Show prefill alert banner
-  if (prefillBanner && prefillName) {
-    prefillName.textContent = dyeName;
-    prefillBanner.classList.remove('is-hidden');
+    // Redirect to main home page contact section with URL parameters
+    const redirectUrl = `/?sample=${encodeURIComponent(dyeName || '')}&ci=${encodeURIComponent(ci || '')}#contact-section`;
+    window.location.assign(redirectUrl);
   }
 };
 
 function initPrefillFromURL() {
-  const params = new URLSearchParams(window.location.search);
-  const sampleName = params.get('sample');
-  const sampleCi = params.get('ci');
+  let sampleName = null;
+  let sampleCi = null;
+
+  // 1. Try standard query params (?sample=...)
+  if (window.location.search) {
+    const params = new URLSearchParams(window.location.search);
+    sampleName = params.get('sample');
+    sampleCi = params.get('ci');
+  }
+
+  // 2. Fallback if query params were placed after hash (#contact-section?sample=...)
+  if (!sampleName && window.location.hash.includes('?')) {
+    const hashQuery = window.location.hash.split('?')[1];
+    const params = new URLSearchParams(hashQuery);
+    sampleName = params.get('sample');
+    sampleCi = params.get('ci');
+  }
 
   if (sampleName) {
     const contactSection = document.getElementById('contact-section');
@@ -888,15 +902,14 @@ function initPrefillFromURL() {
         prefillBanner.classList.remove('is-hidden');
       }
       
-      // Clear URL without reloading
-      const newUrl = window.location.pathname + window.location.hash;
-      window.history.replaceState({}, document.title, newUrl);
+      // Clean URL hash without reloading
+      window.history.replaceState({}, document.title, window.location.pathname + '#contact-section');
       
       setTimeout(() => {
         const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
         const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight;
         window.scrollTo({ top, behavior: 'smooth' });
-      }, 100);
+      }, 150);
     }
   }
 }

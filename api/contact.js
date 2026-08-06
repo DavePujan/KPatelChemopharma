@@ -94,10 +94,12 @@ export default async function handler(req, res) {
                 <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">MSDS / CoA Requested</td>
                 <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${msds}</td>
               </tr>
+              ${data.packaging_type ? `
               <tr style="background-color: #F8F8F8;">
                 <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Preferred Packing</td>
                 <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 600;">${packagingType}</td>
               </tr>
+              ` : ''}
             </tbody>
           </table>
 

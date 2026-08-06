@@ -9,12 +9,11 @@ class B2BFormValidator {
       email: this.form.querySelector('#contact-email'),
       company: this.form.querySelector('#contact-company'),
       phone: this.form.querySelector('#contact-phone'),
+      address: this.form.querySelector('#contact-address'),
       compound: this.form.querySelector('#target-compound'),
       quantity: this.form.querySelector('#sample-quantity'),
       specs: this.form.querySelector('#contact-specs'),
       msds: this.form.querySelector('#contact-msds'),
-      packagingType: this.form.querySelector('#packaging-type'),
-      otherPackaging: this.form.querySelector('#other-packaging'),
       honeypot: this.form.querySelector('.honeypot')
     };
 
@@ -90,18 +89,6 @@ class B2BFormValidator {
           invalid: 'Please provide more specific details (20-1000 chars).'
         }
       },
-      packagingType: {
-        required: true,
-        messages: {
-          empty: 'Preferred packaging type is required.'
-        }
-      },
-      otherPackaging: {
-        required: false,
-        messages: {
-          empty: 'Please specify packaging details.'
-        }
-      }
     };
 
     // Autocomplete Data
@@ -149,27 +136,13 @@ class B2BFormValidator {
 
     // Blur Validation
     Object.keys(this.fields).forEach(key => {
-      if (this.fields[key] && key !== 'honeypot' && key !== 'msds' && key !== 'packagingType') {
+      if (this.fields[key] && key !== 'honeypot' && key !== 'msds') {
         this.fields[key].addEventListener('blur', () => this.validateField(key));
         this.fields[key].addEventListener('input', () => this.clearError(key));
       }
     });
 
-    if (this.fields.packagingType) {
-      this.fields.packagingType.addEventListener('change', () => {
-        const isOther = this.fields.packagingType.value === 'Other';
-        const otherGroup = this.form.querySelector('#other-packaging-group');
-        if (otherGroup) {
-          otherGroup.style.display = isOther ? 'block' : 'none';
-        }
-        this.rules.otherPackaging.required = isOther;
-        if (!isOther && this.fields.otherPackaging) {
-          this.fields.otherPackaging.value = '';
-          this.clearError('otherPackaging');
-        }
-        this.validateField('packagingType');
-      });
-    }
+
 
     // Autocomplete
     this.fields.compound.addEventListener('input', () => this.handleAutocomplete());
@@ -198,17 +171,17 @@ class B2BFormValidator {
     if (this.currentMode === 'quote') {
       this.tabQuote?.classList.add('is-active');
       this.tabSample?.classList.remove('is-active');
-      this.quantityGroup.style.display = 'none';
-      this.rules.quantity.required = false;
-      this.fields.quantity.required = false;
-      this.submitText.textContent = "Initiate Bulk Sales Quote Request";
+      if (this.quantityGroup) this.quantityGroup.classList.add('is-hidden');
+      if (this.rules?.quantity) this.rules.quantity.required = false;
+      if (this.fields?.quantity) this.fields.quantity.required = false;
+      if (this.submitText) this.submitText.textContent = "Initiate Bulk Sales Quote Request";
     } else {
       this.tabQuote?.classList.remove('is-active');
       this.tabSample?.classList.add('is-active');
-      this.quantityGroup.style.display = 'block';
-      this.rules.quantity.required = true;
-      this.fields.quantity.required = true;
-      this.submitText.textContent = "Request Technical Sample";
+      if (this.quantityGroup) this.quantityGroup.classList.remove('is-hidden');
+      if (this.rules?.quantity) this.rules.quantity.required = true;
+      if (this.fields?.quantity) this.fields.quantity.required = true;
+      if (this.submitText) this.submitText.textContent = "Request Technical Sample";
     }
   }
 
@@ -337,7 +310,6 @@ class B2BFormValidator {
     Object.keys(this.rules).forEach(key => {
       // Only validate quantity if it's required in the current mode
       if (key === 'quantity' && !this.rules.quantity.required) return;
-      if (key === 'otherPackaging' && !this.rules.otherPackaging.required) return;
       
       if (!this.validateField(key)) {
         isValid = false;
