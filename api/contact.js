@@ -23,6 +23,7 @@ export default async function handler(req, res) {
     const company = data.company || 'Not provided';
     const email = data.email || 'No email provided';
     const phone = data.phone || 'Not provided';
+    const address = data.address || 'Not provided';
     const compound = data.compound || 'Not specified';
     const specs = data.specs || 'None provided';
     const msds = data.include_msds === 'on' ? 'Yes' : 'No';
@@ -69,6 +70,10 @@ export default async function handler(req, res) {
               <tr>
                 <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Phone</td>
                 <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${phone}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Facility Address</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${address}</td>
               </tr>
             </tbody>
           </table>

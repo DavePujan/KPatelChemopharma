@@ -30,6 +30,10 @@
       "destination": "/pages/infrastructure/index.html"
     },
     {
+      "source": "/quality",
+      "destination": "/pages/quality/index.html"
+    },
+    {
       "source": "/home",
       "destination": "/pages/home/index.html"
     }
