@@ -268,11 +268,7 @@ body {
 .legacy {
   min-height: auto !important;
   height: auto !important;
-  padding-bottom: 0 !important; /* Removes the extra image bleed below the white box */
-}
-
-.legacy__content {
-  padding-top: 40px;
+  position: relative;
 }
 
 .legacy__image-wrap {
@@ -289,22 +285,86 @@ body {
   object-position: center center;
 }
 
-.legacy__companies {
-  background: #ffffff;
-  border-radius: var(--r-md);
-  position: relative;
-  z-index: 2;
-  margin-top: 32px;
-  margin-bottom: 0;
-}
+@media (max-width: 768px) {
+  .legacy__inner {
+    padding: 32px 16px 48px 16px !important;
+  }
 
-.legacy__values {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 40px;
-}
+  .legacy__content {
+    padding-top: 20px;
+    max-width: 100%;
+  }
 
-.global {
-  padding-top: 60px !important;
+  .legacy__title {
+    font-size: 1.85rem !important;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .legacy__text {
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .legacy__values {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .legacy__value {
+    padding: 8px 10px !important;
+    font-size: 11px !important;
+    text-align: center !important;
+    border-radius: 8px !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    white-space: normal !important;
+    line-height: 1.3 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .legacy__companies {
+    background: #ffffff;
+    border-radius: 14px !important;
+    padding: 20px 16px !important;
+    position: relative;
+    z-index: 2;
+    margin-top: 20px !important;
+    margin-bottom: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  }
+
+  .legacy__companies-title {
+    font-size: 17px !important;
+    margin-bottom: 16px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .legacy__companies-list {
+    gap: 16px !important;
+  }
+
+  .company-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .company-item__content {
+    width: 100%;
+  }
+
+  .company-item__link {
+    align-self: flex-start;
+    margin-top: 4px;
+    padding: 7px 12px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
 }
