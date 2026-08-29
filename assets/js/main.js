@@ -156,15 +156,37 @@ function initMobileNav() {
    SMOOTH SCROLL
    ============================================ */
 function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
-      const id = anchor.getAttribute('href');
-      if (id === '#') return;
-      const target = document.querySelector(id);
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+      const hashIndex = href.indexOf('#');
+      if (hashIndex === -1) return;
+      const hash = href.substring(hashIndex);
+      if (hash === '#' || hash === '') return;
+
+      // Only handle in-page anchors if on the same page or starting with # or /#
+      const isCurrentPage = !href.startsWith('http') && (!href.includes('.html') || href.startsWith('/#') || href.startsWith('#'));
+      if (!isCurrentPage && href.split('#')[0] !== window.location.pathname) return;
+
+      const target = document.querySelector(hash);
       if (!target) return;
       e.preventDefault();
+
       const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
-      const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+      let offset = 0;
+      if (hash === '#solutions' || hash === '#products') {
+        // Scroll slightly lower so that full product showcase (both rows) fits inside viewport
+        offset = 90;
+      } else if (hash === '#industries' || hash === '#applications') {
+        // Scroll slightly lower so that full applications grid fits inside viewport
+        offset = 80;
+      } else if (hash === '#operations' || hash === '#infrastructure') {
+        // Scroll slightly lower so that infrastructure content & image fit inside viewport
+        offset = 75;
+      }
+
+      const top = target.getBoundingClientRect().top + window.scrollY - navHeight + offset;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
@@ -832,24 +854,13 @@ window.prefillSampleRequest = function(dyeName, ci) {
   document.body.style.overflow = '';
   document.body.style.position = '';
 
-  const contactSection = document.getElementById('contact-section');
+  const contactSection = document.getElementById('contact-section') || document.querySelector('.b2b-form-card');
   if (contactSection) {
-    // Switch form to Technical Sample & CoA tab
-    const sampleTab = document.getElementById('tab-sample');
-    if (sampleTab) sampleTab.click();
-
-    // Prefill field
-    const targetCompoundInput = document.getElementById('target-compound');
-    if (targetCompoundInput) {
-      targetCompoundInput.value = ci && ci !== '—' && ci !== 'undefined' ? `${dyeName} (C.I. ${ci})` : dyeName;
-    }
-
-    // Show prefill alert banner
-    const prefillBanner = document.querySelector('.b2b-prefill-banner');
-    const prefillName = document.getElementById('prefill-dye-name');
-    if (prefillBanner && prefillName) {
-      prefillName.textContent = dyeName;
-      prefillBanner.classList.remove('is-hidden');
+    // Prefill comments field
+    const commentsInput = document.getElementById('contact-comments') || document.getElementById('contact-specs');
+    if (commentsInput) {
+      const productInfo = ci && ci !== '—' && ci !== 'undefined' ? `${dyeName} (C.I. ${ci})` : dyeName;
+      commentsInput.value = `Inquiry regarding: ${productInfo}\n`;
     }
 
     setTimeout(() => {
@@ -884,22 +895,12 @@ function initPrefillFromURL() {
   }
 
   if (sampleName) {
-    const contactSection = document.getElementById('contact-section');
+    const contactSection = document.getElementById('contact-section') || document.querySelector('.b2b-form-card');
     if (contactSection) {
-      const targetCompoundInput = document.getElementById('target-compound');
-      const prefillBanner = document.querySelector('.b2b-prefill-banner');
-      const prefillName = document.getElementById('prefill-dye-name');
-      const sampleTab = document.getElementById('tab-sample');
-
-      if (sampleTab) sampleTab.click();
-      
-      if (targetCompoundInput) {
-        targetCompoundInput.value = sampleCi && sampleCi !== '—' && sampleCi !== 'undefined' ? `${sampleName} (C.I. ${sampleCi})` : sampleName;
-      }
-
-      if (prefillBanner && prefillName) {
-        prefillName.textContent = sampleName;
-        prefillBanner.classList.remove('is-hidden');
+      const commentsInput = document.getElementById('contact-comments') || document.getElementById('contact-specs');
+      if (commentsInput) {
+        const productInfo = sampleCi && sampleCi !== '—' && sampleCi !== 'undefined' ? `${sampleName} (C.I. ${sampleCi})` : sampleName;
+        commentsInput.value = `Inquiry regarding: ${productInfo}\n`;
       }
       
       // Clean URL hash without reloading
@@ -917,6 +918,131 @@ function initPrefillFromURL() {
 
 
 /* ============================================
+   PRODUCT PAGE LIVE SEARCH FILTER
+   ============================================ */
+function initProductSearch() {
+  const searchInput = document.getElementById('product-live-search');
+  const cards = document.querySelectorAll('.dye-item-card');
+  const countBadge = document.getElementById('product-count-display');
+  const noMatchMsg = document.getElementById('no-match-message');
+  
+  if (!searchInput || !cards.length) return;
+
+  const totalCount = cards.length;
+
+  searchInput.addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const name = (card.getAttribute('data-name') || card.textContent || '').toLowerCase();
+      const ci = (card.getAttribute('data-ci') || '').toLowerCase();
+
+      if (!q || name.includes(q) || ci.includes(q)) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (countBadge) {
+      countBadge.textContent = `Showing ${visibleCount} of ${totalCount} Products`;
+    }
+
+    if (noMatchMsg) {
+      noMatchMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+  });
+}
+
+/* ============================================
+   APPLICATION VIDEOS PERFORMANCE CONTROLLER
+   - Viewport-aware playback (pauses offscreen)
+   - Staggered initialization to avoid decoder spikes
+   - Background tab pause/resume
+   - Interactive hover speed boost
+   ============================================ */
+function initApplicationVideos() {
+  const videos = Array.from(document.querySelectorAll('.application-video, .industry-card video'));
+  if (!videos.length) return;
+
+  // Stagger playback to prevent decoder spike
+  const playVideoSafely = (video, delay = 0) => {
+    if (!video) return;
+    setTimeout(() => {
+      if (video.paused) {
+        const promise = video.play();
+        if (promise !== undefined) {
+          promise.catch(() => {
+            // Autoplay policy or interrupted
+          });
+        }
+      }
+    }, delay);
+  };
+
+  const pauseVideo = (video) => {
+    if (!video || video.paused) return;
+    video.pause();
+  };
+
+  // IntersectionObserver: Play only when in viewport, pause when offscreen
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          const index = videos.indexOf(video);
+          playVideoSafely(video, Math.max(0, index) * 35);
+        } else {
+          pauseVideo(video);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '120px 0px',
+      threshold: 0.1
+    });
+
+    videos.forEach((vid) => videoObserver.observe(vid));
+  } else {
+    // Fallback if IntersectionObserver not supported
+    videos.forEach((vid, i) => playVideoSafely(vid, i * 40));
+  }
+
+  // Interactive Hover: Speed up slightly on hover for a tactile, responsive feel
+  videos.forEach((video) => {
+    const card = video.closest('.industry-card');
+    if (!card) return;
+
+    card.addEventListener('mouseenter', () => {
+      video.playbackRate = 1.25;
+      if (video.paused) playVideoSafely(video);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      video.playbackRate = 1.0;
+    });
+  });
+
+  // Pause all videos if browser tab is backgrounded
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      videos.forEach(pauseVideo);
+    } else {
+      videos.forEach((vid, i) => {
+        const rect = vid.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (inView) {
+          playVideoSafely(vid, i * 30);
+        }
+      });
+    }
+  });
+}
+
+/* ============================================
    INIT
    ============================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -931,4 +1057,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof initParallax === 'function') initParallax();
   if (typeof initCatalog === 'function') initCatalog();
   if (typeof initPrefillFromURL === 'function') initPrefillFromURL();
+  if (typeof initProductSearch === 'function') initProductSearch();
+  if (typeof initApplicationVideos === 'function') initApplicationVideos();
 });

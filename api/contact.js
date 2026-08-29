@@ -15,24 +15,15 @@ export default async function handler(req, res) {
   try {
     const data = req.body || {};
     
-    // Determine inquiry type
-    const inquiryType = data.sample_quantity ? 'Technical Sample Request' : 'Bulk Sales Inquiry';
-
     // Fallbacks if some fields are missing
     const name = data.name || 'Website Visitor';
     const company = data.company || 'Not provided';
     const email = data.email || 'No email provided';
-    const phone = data.phone || 'Not provided';
-    const address = data.address || 'Not provided';
-    const compound = data.compound || 'Not specified';
-    const specs = data.specs || 'None provided';
-    const msds = data.include_msds === 'on' ? 'Yes' : 'No';
-    const packagingType = data.packaging_type === 'Other' 
-      ? `Other: ${data.other_packaging || 'Not specified'}` 
-      : (data.packaging_type || 'Not specified');
+    const phone = data.phone || data.contact_number || 'Not provided';
+    const comments = data.comments || data.specs || data.message || 'None provided';
     
     // Subject Line
-    const subjectLine = `New ${inquiryType} – ${compound} – ${company}`;
+    const subjectLine = `New Inquiry from ${name} – ${company}`;
 
     // Construct the optimized B2B Email Template
     const htmlBody = `
@@ -41,7 +32,7 @@ export default async function handler(req, res) {
         <!-- Header -->
         <div style="background-color: #ffffff; padding: 24px 32px; border-bottom: 3px solid #294B49;">
           <h1 style="color: #294B49; margin: 0 0 16px 0; font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">K. PATEL CHEMOPHARMA</h1>
-          <h2 style="color: #333333; margin: 0 0 16px 0; font-size: 24px; font-weight: 600;">New ${inquiryType}</h2>
+          <h2 style="color: #333333; margin: 0 0 16px 0; font-size: 24px; font-weight: 600;">New Website Inquiry</h2>
           <p style="color: #666666; margin: 0; font-size: 14px;">A new inquiry has been submitted through the website.</p>
           <div style="margin-top: 16px; font-size: 13px; color: #888888;">
             Submitted:<br/>
@@ -60,63 +51,29 @@ export default async function handler(req, res) {
                 <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${name}</td>
               </tr>
               <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Company</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${company}</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Business Email</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${email}</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Phone</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Contact Number</td>
                 <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${phone}</td>
               </tr>
               <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Facility Address</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${address}</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Email</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${email}</td>
               </tr>
-            </tbody>
-          </table>
-
-          <h3 style="color: #294B49; margin: 0 0 16px 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Product Requirement</h3>
-          <table style="width: 100%; border-collapse: collapse; margin-bottom: 32px;">
-            <tbody>
-              <tr style="background-color: #F8F8F8;">
-                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; width: 35%; font-size: 14px;">Inquiry Type</td>
-                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 600;">${inquiryType}</td>
-              </tr>
-              <tr style="background-color: #F8F8F8;">
-                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Product / C.I. No.</td>
-                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 600;">${compound}</td>
-              </tr>
-              ${data.sample_quantity ? `
-              <tr style="background-color: #F8F8F8;">
-                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Quantity</td>
-                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 600;">${data.sample_quantity}</td>
-              </tr>
-              ` : ''}
               <tr>
-                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">MSDS / CoA Requested</td>
-                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${msds}</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Company</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 500;">${company}</td>
               </tr>
-              ${data.packaging_type ? `
-              <tr style="background-color: #F8F8F8;">
-                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #666666; font-size: 14px;">Preferred Packing</td>
-                <td style="padding: 10px 12px; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 14px; font-weight: 600;">${packagingType}</td>
-              </tr>
-              ` : ''}
             </tbody>
           </table>
 
-          <h3 style="color: #294B49; margin: 0 0 16px 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Requirement Details</h3>
-          <div style="padding: 16px; border-left: 4px solid #294B49; background-color: #F8F8F8; color: #111111; font-size: 14px; line-height: 1.6; white-space: pre-wrap; margin-bottom: 32px;">${specs}</div>
+          <h3 style="color: #294B49; margin: 0 0 16px 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Comments / Inquiry Details</h3>
+          <div style="padding: 16px; border-left: 4px solid #294B49; background-color: #F8F8F8; color: #111111; font-size: 14px; line-height: 1.6; white-space: pre-wrap; margin-bottom: 32px;">${comments}</div>
 
           <h3 style="color: #294B49; margin: 0 0 16px 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Submission Metadata</h3>
           <table style="width: 100%; border-collapse: collapse;">
             <tbody>
               <tr>
                 <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #666666; width: 35%; font-size: 13px;">Submitted From</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 13px;">Website Form</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #eaeaea; color: #111111; font-size: 13px;">Website Contact Form</td>
               </tr>
             </tbody>
           </table>

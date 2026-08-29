@@ -42,6 +42,7 @@ body {
 .solutions__grid,
 .solutions__bottom-row,
 .industries__grid,
+.dyes-grid,
 .certifications__grid,
 .legacy__layout,
 .global__grid,
@@ -51,6 +52,10 @@ body {
 .b2b-tabs {
   grid-template-columns: 1fr;
   gap: 32px;
+}
+
+.dyes-grid .dye-card {
+  grid-column: auto !important;
 }
 
 /* Compact & Aligned Highlights on Mobile Devices */

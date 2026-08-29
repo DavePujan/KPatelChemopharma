@@ -54,10 +54,11 @@
       <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" /></a>
       <div class="nav__links">
         <a href="/pages/about/" class="nav__link">About Us</a>
-        <a href="/#industries" class="nav__link">Industries</a>
         <a href="/#solutions" class="nav__link">Products</a>
-        <a href="/#operations" class="nav__link">Infrastructure</a>
-        <a href="/pages/quality/" class="nav__link">Quality</a>
+        <a href="/#applications" class="nav__link">Application</a>
+        <a href="/pages/infrastructure/" class="nav__link">Infrastructure</a>
+        <a href="/sustainability" class="nav__link">Sustainability</a>
+        <a href="/csr" class="nav__link">CSR</a>
       </div>
       <a href="/#contact-section" class="nav__cta">Contact</a>
       <button class="nav__toggle" aria-label="Open menu">
@@ -70,10 +71,11 @@
     <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
     <a href="/">Home</a>
     <a href="/pages/about/">About Us</a>
-    <a href="/pages/industries/">Industries</a>
-    <a href="/pages/products/">Product Catalog</a>
+    <a href="/pages/products/">Products</a>
+    <a href="/#applications">Application</a>
     <a href="/pages/infrastructure/">Infrastructure</a>
-    <a href="/pages/quality/">Quality</a>
+    <a href="/sustainability">Sustainability</a>
+    <a href="/csr">CSR</a>
     <a href="/pages/contact/">Contact Us</a>
   </div>
 
@@ -105,19 +107,19 @@
 <!-- ========== CONTACT GLOBAL SALES & LABS ========== -->
   <section class="contact-section" id="contact-section" style="background: linear-gradient(rgba(245, 245, 242, 0.85), rgba(245, 245, 242, 0.95)), url('/assets/images/office/DSC00176.webp') center center/cover no-repeat; position: relative;">
     <div class="container" style="position: relative; z-index: 2;">
-      <div class="contact-layout animate-on-scroll">
-        
-        <!-- Left Column: Contact Cards & Map -->
-        <div class="contact-info">
-          <div>
-            <span class="eyebrow">Contact Us</span>
-            <h2 class="section-title">Global Sales &amp; Labs</h2>
-            <p class="section-body">
-              Contact our sales team or request certificates and technical data sheets from our lab teams.
-            </p>
-          </div>
+      <div class="contact-header reveal">
+        <span class="eyebrow">Contact Us</span>
+        <h2 class="section-title">Global Sales &amp; Labs</h2>
+        <p class="section-body">
+          Get in touch with our commercial sales team or request certificate documentation and technical spec data sheets directly from our laboratory teams.
+        </p>
+      </div>
 
-          <!-- HQ Details Card -->
+      <div class="contact-layout animate-on-scroll">
+        <!-- Left Column: Contact Cards -->
+        <div class="contact-info">
+          
+          <!-- Headquarters Card -->
           <div class="contact-card">
             <div class="contact-card__icon-wrap">
               <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -159,7 +161,7 @@
             </div>
           </div>
 
-          <!-- Works / Manufacturing Facility Card -->
+          <!-- Manufacturing Facility Card -->
           <div class="contact-card">
             <div class="contact-card__icon-wrap">
               <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -169,26 +171,18 @@
               <span class="contact-card__value">
                 155 GIDC, Ankleshwar – 393 002.<br />
                 Gujarat, India.<br />
-                Tel.: <a href="tel:+912646654161">+91 2646 654161</a> / <a href="tel:+912646654162">62</a> / <a href="tel:+912646654163">63</a> / <a href="tel:+912646654164">64</a>
+                Tel.: +91 2646 654161 / 62 / 63 / 64
               </span>
             </div>
           </div>
 
-
         </div>
 
-        <!-- Right Column: Interactive B2B Form -->
-        <div class="b2b-form-card">
-          <!-- Form Tabs -->
-          <div class="b2b-tabs">
-            <button type="button" class="b2b-tab-btn is-active" id="tab-quote">Bulk Sales Quotation</button>
-            <button type="button" class="b2b-tab-btn" id="tab-sample">Technical Sample &amp; CoA</button>
-          </div>
-
-          <!-- Prefill Banner -->
-          <div class="b2b-prefill-banner is-hidden">
-            <span>Prefilled Compound: <strong id="prefill-dye-name"></strong></span>
-            <button type="button" class="b2b-prefill-clear">Clear prefill</button>
+        <!-- Right Column: Form -->
+        <div class="b2b-form-card reveal">
+          <div style="margin-bottom: 24px;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-heading-primary); margin-bottom: 8px;">Send an Inquiry</h3>
+            <p style="font-size: 14px; color: var(--color-body-muted);">Fill out the form below and our team will get back to you promptly.</p>
           </div>
 
           <!-- Form Element -->
@@ -205,71 +199,39 @@
               </div>
 
               <div class="b2b-group">
-                <label for="contact-email" class="b2b-label">Business Email *</label>
+                <label for="contact-phone" class="b2b-label">Contact Number *</label>
+                <input type="tel" id="contact-phone" name="phone" class="b2b-input" placeholder="e.g. +91 98765 43210" required />
+                <span class="error-msg" id="error-phone"></span>
+              </div>
+
+              <div class="b2b-group">
+                <label for="contact-email" class="b2b-label">Email *</label>
                 <input type="email" id="contact-email" name="email" class="b2b-input" placeholder="name@company.com" required />
                 <span class="error-msg" id="error-email"></span>
               </div>
 
               <div class="b2b-group">
-                <label for="contact-company" class="b2b-label">Company / Organization *</label>
+                <label for="contact-company" class="b2b-label">Company *</label>
                 <input type="text" id="contact-company" name="company" class="b2b-input" placeholder="e.g. Acme Corp" required />
                 <span class="error-msg" id="error-company"></span>
               </div>
 
-              <div class="b2b-group">
-                <label for="contact-phone" class="b2b-label">Phone Number</label>
-                <input type="tel" id="contact-phone" name="phone" class="b2b-input" placeholder="e.g. +91 98765 43210" />
-                <span class="error-msg" id="error-phone"></span>
-              </div>
-
               <div class="b2b-group b2b-group--full">
-                <label for="contact-address" class="b2b-label">Company / Facility Address</label>
-                <input type="text" id="contact-address" name="address" class="b2b-input" placeholder="City, State, Country or Facility Location" />
-                <span class="error-msg" id="error-address"></span>
+                <label for="contact-comments" class="b2b-label">Comments *</label>
+                <textarea id="contact-comments" name="comments" class="b2b-textarea" rows="4" placeholder="Please describe your inquiry, product requirement, or questions..." required></textarea>
+                <span class="error-msg" id="error-comments"></span>
               </div>
 
-              <div class="b2b-group b2b-group--full autocomplete-wrapper">
-                <label for="target-compound" class="b2b-label" id="label-compound">Product Name / C.I. No. *</label>
-                <input type="text" id="target-compound" name="compound" class="b2b-input" placeholder="e.g. Methyl Violet (Basic Violet 1)" required autocomplete="off" />
-                <div class="autocomplete-dropdown" id="compound-dropdown"></div>
-                <span class="error-msg" id="error-compound"></span>
-              </div>
-
-              <div class="b2b-group b2b-group--full is-hidden" id="sample-quantity-group">
-                <label for="sample-quantity" class="b2b-label">Required Sample Quantity *</label>
-                <input type="text" id="sample-quantity" name="sample_quantity" class="b2b-input" placeholder="e.g. 100g, 500g" />
-                <span class="error-msg" id="error-quantity"></span>
-              </div>
-
-
-
-              <div class="b2b-group b2b-group--full">
-                <div class="b2b-label-wrapper" style="display: flex; justify-content: space-between; align-items: baseline;">
-                  <label for="contact-specs" class="b2b-label">Physical Form &amp; Spec Requirements *</label>
-                  <span class="char-counter" id="char-counter-specs">0 / 1000</span>
-                </div>
-                <textarea id="contact-specs" name="specs" class="b2b-textarea" rows="5" placeholder="Example:&#10;• Product: Methyl Violet (Basic Violet 1)&#10;• Form: Liquid 50%&#10;• Quantity: 500 kg&#10;• Packaging: 25 kg drums&#10;• End Application: Paper Coating" required></textarea>
-                <span class="error-msg" id="error-specs"></span>
-              </div>
-
-            </div>
-
-            <!-- MSDS Request Checkbox -->
-            <div class="b2b-checkbox-group">
-              <input type="checkbox" id="contact-msds" name="include_msds" class="b2b-checkbox" />
-              <label for="contact-msds" class="b2b-checkbox-label">
-                Include Material Safety Data Sheet (MSDS) &amp; CoA in response
-              </label>
             </div>
 
             <!-- Submit Button -->
             <button type="submit" class="b2b-submit">
-              <span id="submit-btn-text">Initiate Bulk Sales Quote Request</span>
+              <span id="submit-btn-text">Submit Inquiry</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
 
             <p class="b2b-footer-notice">
-              Our sales team responds to accredited business inquiries under priority SLAs (typically within 12 hours).
+              Our team responds to all inquiries promptly (typically within 12 hours).
             </p>
           </form>
         </div>
@@ -317,7 +279,6 @@
       </div>
       <div class="footer__bottom">
         <div class="footer__badges">
-          <span class="footer__badge">Government Recognized Export House</span>
           <span class="footer__badge">ISO 9001:2015 & 14001:2015</span>
         </div>
         <p class="footer__copyright">&copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.</p>

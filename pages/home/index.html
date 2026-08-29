@@ -50,10 +50,11 @@
       <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" /></a>
       <div class="nav__links">
         <a href="/pages/about/" class="nav__link">About Us</a>
-        <a href="/pages/industries/" class="nav__link">Industries</a>
         <a href="/pages/products/" class="nav__link">Products</a>
+        <a href="/pages/applications/" class="nav__link">Application</a>
         <a href="/pages/infrastructure/" class="nav__link">Infrastructure</a>
-        <a href="/pages/quality/" class="nav__link">Quality</a>
+        <a href="/sustainability" class="nav__link">Sustainability</a>
+        <a href="/csr" class="nav__link">CSR</a>
       </div>
       <a href="/pages/contact/" class="nav__cta">Contact</a>
       <button class="nav__toggle" aria-label="Open menu">
@@ -66,10 +67,11 @@
     <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
     <a href="/">Home</a>
     <a href="/pages/about/">About Us</a>
-    <a href="/pages/industries/">Industries</a>
-    <a href="/pages/products/">Product Catalog</a>
+    <a href="/pages/products/">Products</a>
+    <a href="/pages/applications/">Application</a>
     <a href="/pages/infrastructure/">Infrastructure</a>
-    <a href="/pages/quality/">Quality</a>
+    <a href="/sustainability">Sustainability</a>
+    <a href="/csr">CSR</a>
     <a href="/pages/contact/">Contact Us</a>
   </div>
 
@@ -91,22 +93,24 @@
     <div class="container hero__content">
 
       <h1 class="hero__title">
-        Global Colorants & <span class="accent">Dye Chemistry</span>
+        Manufacturer of Dyes, Pigments <span class="accent">& Dispersions Innovatively</span>
       </h1>
       <p class="hero__text">
-        K. Patel Chemopharma Private Limited is an established global manufacturer and supplier of Basic Dyes, Solvent Dyes, and Pigments, delivering cost-effective colorant solutions to industry leaders worldwide since 1974.
+        Manufacturing Dyes, Pigment & Related Dispersions as colorants for varied customer applications cost effectively
       </p>
       <div class="hero__stats">
         <div class="hero__stat">
           <div class="hero__stat-number" data-count="50" data-suffix="+">50+</div>
-          <div class="hero__stat-label">Years of Experience</div>
+          <div class="hero__stat-label">Years in Global Supplies</div>
         </div>
         <div class="hero__stat">
-          <div class="hero__stat-number" data-count="100" data-suffix="+">100+</div>
-          <div class="hero__stat-label">Dyes & Pigments</div>
+          <div class="hero__stat-number" data-count="150" data-suffix="+">150+</div>
+          <div class="hero__stat-label">Products</div>
         </div>
         <div class="hero__stat">
-          <div class="hero__stat-number" data-count="4" data-suffix="R">4R</div>
+          <div class="hero__stat-number">
+            <img src="/assets/images/4r.webp" alt="4R Recycle" class="hero__stat-img" />
+          </div>
           <div class="hero__stat-label">ETP Water Recycle</div>
         </div>
       </div>
@@ -128,10 +132,10 @@
         </div>
       </a>
 
-      <a href="/pages/industries/" class="portal-card">
+      <a href="/pages/applications/" class="portal-card">
         <div class="portal-card__content">
-          <span class="portal-card__title">Industries Served</span>
-          <span class="portal-card__subtitle">Applications & Solutions</span>
+          <span class="portal-card__title">Applications & Sectors</span>
+          <span class="portal-card__subtitle">Application-Specific Colorants</span>
           <span class="portal-card__explore">Click to explore &rarr;</span>
         </div>
         <div class="portal-card__icon">
@@ -150,23 +154,22 @@
         </div>
       </a>
 
+      <a href="/sustainability" class="portal-card">
+        <div class="portal-card__content">
+          <span class="portal-card__title">Sustainability</span>
+          <span class="portal-card__subtitle">4R Framework & ETP Recycling</span>
+          <span class="portal-card__explore">Click to explore &rarr;</span>
+        </div>
+        <div class="portal-card__icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+      </a>
+
       <!-- Direct B2B Contact Form -->
       <div class="b2b-form-card" style="margin-top: 16px; border: 1px solid var(--color-border); border-radius: var(--r-md); box-shadow: var(--shadow-sm);">
           <div style="margin-bottom: 24px;">
             <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-heading-primary); margin-bottom: 8px;">Contact Us</h3>
-            <p style="font-size: 14px; color: var(--color-body-muted);">Request B2B Consultation &amp; Quotes</p>
-          </div>
-
-          <!-- Form Tabs -->
-          <div class="b2b-tabs">
-            <button type="button" class="b2b-tab-btn is-active" id="tab-quote">Bulk Sales Quotation</button>
-            <button type="button" class="b2b-tab-btn" id="tab-sample">Technical Sample &amp; CoA</button>
-          </div>
-
-          <!-- Prefill Banner -->
-          <div class="b2b-prefill-banner is-hidden">
-            <span>Prefilled Compound: <strong id="prefill-dye-name"></strong></span>
-            <button type="button" class="b2b-prefill-clear">Clear prefill</button>
+            <p style="font-size: 14px; color: var(--color-body-muted);">Fill out the form below and our team will get back to you promptly.</p>
           </div>
 
           <!-- Form Element -->
@@ -183,62 +186,40 @@
               </div>
 
               <div class="b2b-group">
-                <label for="contact-email" class="b2b-label">Business Email *</label>
+                <label for="contact-phone" class="b2b-label">Contact Number *</label>
+                <input type="tel" id="contact-phone" name="phone" class="b2b-input" placeholder="e.g. +91 98765 43210" required />
+                <span class="error-msg" id="error-phone"></span>
+              </div>
+
+              <div class="b2b-group">
+                <label for="contact-email" class="b2b-label">Email *</label>
                 <input type="email" id="contact-email" name="email" class="b2b-input" placeholder="name@company.com" required />
                 <span class="error-msg" id="error-email"></span>
               </div>
 
               <div class="b2b-group">
-                <label for="contact-company" class="b2b-label">Company / Organization *</label>
+                <label for="contact-company" class="b2b-label">Company *</label>
                 <input type="text" id="contact-company" name="company" class="b2b-input" placeholder="e.g. Acme Corp" required />
                 <span class="error-msg" id="error-company"></span>
               </div>
 
-              <div class="b2b-group">
-                <label for="contact-phone" class="b2b-label">Phone Number</label>
-                <input type="tel" id="contact-phone" name="phone" class="b2b-input" placeholder="e.g. +91 98765 43210" />
-                <span class="error-msg" id="error-phone"></span>
-              </div>
-
-              <div class="b2b-group b2b-group--full autocomplete-wrapper">
-                <label for="target-compound" class="b2b-label" id="label-compound">Product Name / C.I. No. *</label>
-                <input type="text" id="target-compound" name="compound" class="b2b-input" placeholder="e.g. Methyl Violet (Basic Violet 1)" required autocomplete="off" />
-                <div class="autocomplete-dropdown" id="compound-dropdown"></div>
-                <span class="error-msg" id="error-compound"></span>
-              </div>
-
-              <div class="b2b-group b2b-group--full" id="sample-quantity-group" style="display: none;">
-                <label for="sample-quantity" class="b2b-label">Required Sample Quantity *</label>
-                <input type="text" id="sample-quantity" name="sample_quantity" class="b2b-input" placeholder="e.g. 100g, 500g" />
-                <span class="error-msg" id="error-quantity"></span>
-              </div>
-
-              </div>
-
               <div class="b2b-group b2b-group--full">
-                <div class="b2b-label-wrapper" style="display: flex; justify-content: space-between; align-items: baseline;">
-                  <label for="contact-specs" class="b2b-label">Physical Form &amp; Spec Requirements *</label>
-                  <span class="char-counter" id="char-counter-specs">0 / 1000</span>
-                </div>
-                <textarea id="contact-specs" name="specs" class="b2b-textarea" rows="5" placeholder="Example:&#10;• Product: Methyl Violet (Basic Violet 1)&#10;• Form: Liquid 50%&#10;• Quantity: 500 kg&#10;• Packaging: 25 kg drums&#10;• End Application: Paper Coating" required></textarea>
-                <span class="error-msg" id="error-specs"></span>
+                <label for="contact-comments" class="b2b-label">Comments *</label>
+                <textarea id="contact-comments" name="comments" class="b2b-textarea" rows="4" placeholder="Please describe your inquiry, product requirement, or questions..." required></textarea>
+                <span class="error-msg" id="error-comments"></span>
               </div>
 
-            </div>
-
-            <!-- MSDS Request Checkbox -->
-            <div class="b2b-checkbox-group">
-              <input type="checkbox" id="contact-msds" name="include_msds" class="b2b-checkbox" />
-              <label for="contact-msds" class="b2b-checkbox-label">
-                Include Material Safety Data Sheet (MSDS) &amp; CoA in response
-              </label>
             </div>
 
             <!-- Submit Button -->
             <button type="submit" class="b2b-submit">
-              <span id="submit-btn-text">Initiate Bulk Sales Quote Request</span>
+              <span id="submit-btn-text">Submit Inquiry</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
+
+            <p class="b2b-footer-notice">
+              Our team responds to all inquiries promptly (typically within 12 hours).
+            </p>
           </form>
       </div>
 
@@ -247,7 +228,7 @@
 
 <!-- ========== TRUST STRIP ========== -->
   <section class="trust" id="trust">
-    <p class="trust__heading">Established Manufacturer of Dyes, Pigments & Dispersions</p>
+    <p class="trust__heading">Rooted in tradition, serving global aspirations</p>
     <div class="trust__track">
       <div class="trust__set">
         <div class="trust__item">
@@ -321,7 +302,6 @@
       </div>
       <div class="footer__bottom">
         <div class="footer__badges">
-          <span class="footer__badge">Government Recognized Export House</span>
           <span class="footer__badge">ISO 9001:2015 & 14001:2015</span>
         </div>
         <p class="footer__copyright">&copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.</p>

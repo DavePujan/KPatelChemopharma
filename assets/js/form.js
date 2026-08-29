@@ -6,29 +6,16 @@ class B2BFormValidator {
     // Form Fields
     this.fields = {
       name: this.form.querySelector('#contact-name'),
+      phone: this.form.querySelector('#contact-phone'),
       email: this.form.querySelector('#contact-email'),
       company: this.form.querySelector('#contact-company'),
-      phone: this.form.querySelector('#contact-phone'),
-      address: this.form.querySelector('#contact-address'),
-      compound: this.form.querySelector('#target-compound'),
-      quantity: this.form.querySelector('#sample-quantity'),
-      specs: this.form.querySelector('#contact-specs'),
-      msds: this.form.querySelector('#contact-msds'),
+      comments: this.form.querySelector('#contact-comments') || this.form.querySelector('#contact-specs'),
       honeypot: this.form.querySelector('.honeypot')
     };
 
     // UI Elements
-    this.charCounter = this.form.querySelector('#char-counter-specs');
     this.submitBtn = this.form.querySelector('.b2b-submit');
     this.submitText = this.form.querySelector('#submit-btn-text');
-    this.dropdown = this.form.querySelector('#compound-dropdown');
-    
-    // Tabs
-    this.tabQuote = document.getElementById('tab-quote');
-    this.tabSample = document.getElementById('tab-sample');
-    this.quantityGroup = document.getElementById('sample-quantity-group');
-
-    this.currentMode = 'quote'; // 'quote' or 'sample'
 
     // Validation Rules
     this.rules = {
@@ -40,14 +27,20 @@ class B2BFormValidator {
           invalid: 'Name should contain only letters (2-60 chars).'
         }
       },
+      phone: {
+        regex: /^\+?[0-9\s()-]{8,20}$/,
+        required: true,
+        messages: {
+          empty: 'Contact number is required.',
+          invalid: 'Please enter a valid contact number.'
+        }
+      },
       email: {
         regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
         required: true,
-        personalDomains: ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com', 'proton.me', 'aol.com', 'live.com'],
         messages: {
-          empty: 'Business email is required.',
-          invalid: 'Please enter a valid email address.',
-          personal: 'Please use your company email.'
+          empty: 'Email address is required.',
+          invalid: 'Please enter a valid email address.'
         }
       },
       company: {
@@ -58,172 +51,48 @@ class B2BFormValidator {
           invalid: 'Please enter a valid company name.'
         }
       },
-      phone: {
-        regex: /^\+?[0-9\s()-]{8,20}$/,
-        required: false,
-        messages: {
-          invalid: 'Please enter a valid phone number.'
-        }
-      },
-      compound: {
+      comments: {
         required: true,
-        minLength: 3,
-        maxLength: 120,
+        minLength: 5,
+        maxLength: 2000,
         messages: {
-          empty: 'Product name or C.I. No. is required.',
-          invalid: 'Must be between 3 and 120 characters.'
+          empty: 'Please enter your comments or requirement.',
+          invalid: 'Comments must be between 5 and 2000 characters.'
         }
-      },
-      quantity: {
-        required: false, // Will be set dynamically based on mode
-        messages: {
-          empty: 'Required sample quantity is required.'
-        }
-      },
-      specs: {
-        required: true,
-        minLength: 20,
-        maxLength: 1000,
-        messages: {
-          empty: 'Specification details are required.',
-          invalid: 'Please provide more specific details (20-1000 chars).'
-        }
-      },
+      }
     };
-
-    // Autocomplete Data
-    this.products = [
-      "Methyl Violet (Basic Violet 1)",
-      "Crystal Violet (Basic Violet 3)",
-      "Ethyl Violet (Basic Violet 4)",
-      "Rhodamine B (Basic Violet 10)",
-      "Magenta (Basic Violet 14)",
-      "Auramine O (Basic Yellow 2)",
-      "Chrysoidine Y (Basic Orange 2)",
-      "Bismark Brown (Basic Brown 1)",
-      "Malachite Green (Basic Green 4)",
-      "Brilliant Green (Basic Green 1)",
-      "Victoria Blue B (Basic Blue 26)",
-      "Victoria Blue R (Basic Blue 11)",
-      "Victoria Pure Blue BO (Basic Blue 7)",
-      "Methylene Blue (Basic Blue 9)",
-      "Acid Yellow 36",
-      "Acid Orange 7",
-      "Solvent Red 119",
-      "Solvent Blue 35"
-    ];
 
     this.init();
   }
 
   init() {
     this.attachEventListeners();
-    this.updateTabState();
   }
 
   attachEventListeners() {
-    // Real-time formatting & char counting
-    this.fields.email.addEventListener('input', (e) => {
-      e.target.value = e.target.value.toLowerCase();
-    });
+    // Real-time formatting
+    if (this.fields.email) {
+      this.fields.email.addEventListener('input', (e) => {
+        e.target.value = e.target.value.toLowerCase();
+      });
+    }
 
-    this.fields.phone.addEventListener('input', (e) => {
-      // Basic auto-formatting (remove invalid chars)
-      e.target.value = e.target.value.replace(/[^\+0-9\s()-]/g, '');
-    });
+    if (this.fields.phone) {
+      this.fields.phone.addEventListener('input', (e) => {
+        e.target.value = e.target.value.replace(/[^\+0-9\s()-]/g, '');
+      });
+    }
 
-    this.fields.specs.addEventListener('input', () => this.updateCharCounter());
-
-    // Blur Validation
+    // Blur & input validation
     Object.keys(this.fields).forEach(key => {
-      if (this.fields[key] && key !== 'honeypot' && key !== 'msds') {
+      if (this.fields[key] && key !== 'honeypot') {
         this.fields[key].addEventListener('blur', () => this.validateField(key));
         this.fields[key].addEventListener('input', () => this.clearError(key));
       }
     });
 
-
-
-    // Autocomplete
-    this.fields.compound.addEventListener('input', () => this.handleAutocomplete());
-    document.addEventListener('click', (e) => {
-      if (e.target !== this.fields.compound && e.target !== this.dropdown) {
-        this.dropdown.style.display = 'none';
-      }
-    });
-
-    // Tabs
-    if (this.tabQuote && this.tabSample) {
-      this.tabQuote.addEventListener('click', () => this.switchMode('quote'));
-      this.tabSample.addEventListener('click', () => this.switchMode('sample'));
-    }
-
     // Form Submit
     this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-  }
-
-  switchMode(mode) {
-    this.currentMode = mode;
-    this.updateTabState();
-  }
-
-  updateTabState() {
-    if (this.currentMode === 'quote') {
-      this.tabQuote?.classList.add('is-active');
-      this.tabSample?.classList.remove('is-active');
-      if (this.quantityGroup) this.quantityGroup.classList.add('is-hidden');
-      if (this.rules?.quantity) this.rules.quantity.required = false;
-      if (this.fields?.quantity) this.fields.quantity.required = false;
-      if (this.submitText) this.submitText.textContent = "Initiate Bulk Sales Quote Request";
-    } else {
-      this.tabQuote?.classList.remove('is-active');
-      this.tabSample?.classList.add('is-active');
-      if (this.quantityGroup) this.quantityGroup.classList.remove('is-hidden');
-      if (this.rules?.quantity) this.rules.quantity.required = true;
-      if (this.fields?.quantity) this.fields.quantity.required = true;
-      if (this.submitText) this.submitText.textContent = "Request Technical Sample";
-    }
-  }
-
-  updateCharCounter() {
-    const len = this.fields.specs.value.length;
-    this.charCounter.textContent = `${len} / 1000`;
-    if (len > 1000) {
-      this.charCounter.style.color = 'var(--color-error, #dc2626)';
-    } else {
-      this.charCounter.style.color = 'inherit';
-    }
-  }
-
-  handleAutocomplete() {
-    const val = this.fields.compound.value.toLowerCase();
-    this.dropdown.innerHTML = '';
-    
-    if (!val) {
-      this.dropdown.style.display = 'none';
-      return;
-    }
-
-    const matches = this.products.filter(p => p.toLowerCase().includes(val));
-    
-    if (matches.length > 0) {
-      this.dropdown.style.display = 'block';
-      matches.forEach(match => {
-        const div = document.createElement('div');
-        div.className = 'autocomplete-item';
-        // Highlight match
-        const regex = new RegExp(`(${val})`, 'gi');
-        div.innerHTML = match.replace(regex, '<strong>$1</strong>');
-        div.addEventListener('click', () => {
-          this.fields.compound.value = match;
-          this.dropdown.style.display = 'none';
-          this.validateField('compound');
-        });
-        this.dropdown.appendChild(div);
-      });
-    } else {
-      this.dropdown.style.display = 'none';
-    }
   }
 
   showError(fieldName, message) {
@@ -272,7 +141,7 @@ class B2BFormValidator {
     }
 
     if (!rule.required && !val) {
-      return true; // Optional field is empty, valid
+      return true;
     }
 
     // Regex check
@@ -298,9 +167,8 @@ class B2BFormValidator {
   async handleSubmit(e) {
     e.preventDefault();
 
-    // 1. Check honeypot
+    // 1. Check honeypot for bot filtering
     if (this.fields.honeypot && this.fields.honeypot.value) {
-      // Silently reject
       console.warn('Bot detected.');
       return;
     }
@@ -308,9 +176,6 @@ class B2BFormValidator {
     // 2. Validate all fields
     let isValid = true;
     Object.keys(this.rules).forEach(key => {
-      // Only validate quantity if it's required in the current mode
-      if (key === 'quantity' && !this.rules.quantity.required) return;
-      
       if (!this.validateField(key)) {
         isValid = false;
       }
@@ -319,19 +184,16 @@ class B2BFormValidator {
     if (!isValid) return;
 
     // 3. Update button state
-    this.submitBtn.disabled = true;
-    const originalText = this.submitText.textContent;
-    this.submitText.textContent = "Sending...";
+    if (this.submitBtn) this.submitBtn.disabled = true;
+    const originalText = this.submitText ? this.submitText.textContent : 'Submit Inquiry';
+    if (this.submitText) this.submitText.textContent = "Sending...";
 
     // 4. API call
     try {
       const formData = new FormData(this.form);
       const dataObj = Object.fromEntries(formData.entries());
 
-      // If 'sample_quantity' is empty and not required, we can still pass it, 
-      // the backend will handle it correctly based on whether it is a sample tab or not.
-
-      const response = await fetch(this.form.action, {
+      const response = await fetch(this.form.action || '/api/contact', {
         method: this.form.method || 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -341,32 +203,32 @@ class B2BFormValidator {
 
       if (response.ok) {
         // Success state
-        this.submitBtn.classList.add('submit-success');
-        this.submitText.textContent = "✓ Request Submitted";
+        if (this.submitBtn) this.submitBtn.classList.add('submit-success');
+        if (this.submitText) this.submitText.textContent = "✓ Inquiry Submitted";
         
-        // Reset form after a delay
+        // Reset form after delay
         setTimeout(() => {
           this.form.reset();
-          this.submitBtn.disabled = false;
-          this.submitBtn.classList.remove('submit-success');
-          this.submitText.textContent = originalText;
-          this.updateCharCounter();
+          if (this.submitBtn) {
+            this.submitBtn.disabled = false;
+            this.submitBtn.classList.remove('submit-success');
+          }
+          if (this.submitText) this.submitText.textContent = originalText;
           this.clearAllErrors();
         }, 4000);
       } else {
-        const errData = await response.json();
+        const errData = await response.json().catch(() => ({}));
         console.error("API Error:", errData);
         throw new Error(errData.error || "Submission failed");
       }
 
     } catch (error) {
       console.error("Fetch Error:", error);
-      this.submitText.textContent = "Error. Please try again.";
-      this.submitBtn.disabled = false;
+      if (this.submitText) this.submitText.textContent = "Error. Please try again.";
+      if (this.submitBtn) this.submitBtn.disabled = false;
       
       setTimeout(() => {
-        if (!this.submitBtn.disabled) return; // Prevent overwriting if already submitted again
-        this.submitText.textContent = originalText;
+        if (this.submitText) this.submitText.textContent = originalText;
       }, 3000);
     }
   }
@@ -380,7 +242,6 @@ class B2BFormValidator {
 
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
-  // If multiple forms exist, initialize all
   const forms = document.querySelectorAll('form[id="b2b-form"]');
   forms.forEach(form => {
     new B2BFormValidator(form.id);
@@ -395,22 +256,12 @@ function initPrefillFromURL() {
   const sampleCi = params.get('ci');
 
   if (sampleName) {
-    const targetCompoundInput = document.getElementById('target-compound');
-    const prefillBanner = document.querySelector('.b2b-prefill-banner');
-    const prefillName = document.getElementById('prefill-dye-name');
-    const sampleTab = document.getElementById('tab-sample');
-
-    if (sampleTab) sampleTab.click();
-    
-    if (targetCompoundInput) {
-      targetCompoundInput.value = sampleCi && sampleCi !== '—' && sampleCi !== 'undefined' ? `${sampleName} (C.I. ${sampleCi})` : sampleName;
+    const commentsInput = document.getElementById('contact-comments') || document.getElementById('contact-specs');
+    if (commentsInput) {
+      const productInfo = sampleCi && sampleCi !== '—' && sampleCi !== 'undefined' ? `${sampleName} (C.I. ${sampleCi})` : sampleName;
+      commentsInput.value = `Inquiry regarding: ${productInfo}\n`;
     }
 
-    if (prefillBanner && prefillName) {
-      prefillName.textContent = sampleName;
-      prefillBanner.classList.remove('is-hidden');
-    }
-    
     // Clear URL without reloading
     const newUrl = window.location.pathname + window.location.hash;
     window.history.replaceState({}, document.title, newUrl);

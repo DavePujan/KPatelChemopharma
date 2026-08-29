@@ -22,8 +22,40 @@
       "destination": "/pages/products/index.html"
     },
     {
+      "source": "/products/basic-dyes",
+      "destination": "/pages/products/basic-dyes/index.html"
+    },
+    {
+      "source": "/products/solvent-dyes",
+      "destination": "/pages/products/solvent-dyes/index.html"
+    },
+    {
+      "source": "/products/rinsable-dyes",
+      "destination": "/pages/products/rinsable-dyes/index.html"
+    },
+    {
+      "source": "/products/pigments",
+      "destination": "/pages/products/pigments/index.html"
+    },
+    {
+      "source": "/products/pigment-dispersions",
+      "destination": "/pages/products/pigment-dispersions/index.html"
+    },
+    {
+      "source": "/products/acid-dyes",
+      "destination": "/pages/products/acid-dyes/index.html"
+    },
+    {
+      "source": "/products/direct-dyes",
+      "destination": "/pages/products/direct-dyes/index.html"
+    },
+    {
+      "source": "/applications",
+      "destination": "/pages/applications/index.html"
+    },
+    {
       "source": "/industries",
-      "destination": "/pages/industries/index.html"
+      "destination": "/pages/applications/index.html"
     },
     {
       "source": "/infrastructure",
@@ -31,7 +63,15 @@
     },
     {
       "source": "/quality",
-      "destination": "/pages/quality/index.html"
+      "destination": "/pages/infrastructure/index.html"
+    },
+    {
+      "source": "/sustainability",
+      "destination": "/pages/sustainability/index.html"
+    },
+    {
+      "source": "/csr",
+      "destination": "/pages/csr/index.html"
     },
     {
       "source": "/home",
