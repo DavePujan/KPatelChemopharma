@@ -75,6 +75,7 @@
   <link rel="stylesheet" href="/assets/css/components/navbar.css" />
   <link rel="stylesheet" href="/assets/css/components/footer.css" />
   <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/responsive.css" />
 
   <style>
     /* Sustainability-specific high-impact styles */
@@ -466,7 +467,7 @@
     </section>
 
     <!-- ========== SUSTAINABILITY CONSULTATION CTA ========== -->
-    <section class="section" style="padding: 70px 0;">
+    <section class="section sustainability-request-cta" style="padding: 70px 0;">
       <div class="container">
         <div class="product-quote-cta reveal" style="margin-top: 0;">
           <div>
@@ -487,48 +488,47 @@
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__main footer__main--compact">
-        <div>
-          <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="footer-logo" />
+      <div class="footer__main">
+        <!-- Brand -->
+        <div class="footer__col footer__col--brand">
+          <a href="/" class="footer__logo-link">
+            <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="footer-logo" />
+          </a>
           <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
-          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 12px; line-height: 1.6;">
-            <strong>Corporate Office:</strong><br />
-            504, Eureka Tower, Mindspace, Malad West,<br />
-            Mumbai – 400 064, India
+          <p class="footer__brand-desc">
+            Pioneering color chemistry since 1974. Exporting to 40+ countries globally.
           </p>
         </div>
-        <div>
-          <p class="footer__links-title">Quick Links</p>
-          <ul style="font-size: 13px; color: var(--color-body); line-height: 1.9;">
-            <li><a href="/pages/about/">About Us</a></li>
-            <li><a href="/pages/products/">Product Catalog</a></li>
-            <li><a href="/#applications">Applications</a></li>
-            <li><a href="/sustainability">Sustainability</a></li>
-            <li><a href="/csr">Corporate Social Responsibility</a></li>
-            <li><a href="/#contact-section">Contact Us</a></li>
+
+        <!-- Product Range -->
+        <div class="footer__col footer__col--nav">
+          <h4 class="footer__col-title">PRODUCT RANGE</h4>
+          <ul class="footer__nav-list">
+            <li><a href="/products/basic-dyes">Basic Dyes</a></li>
+            <li><a href="/products/solvent-dyes">Solvent Dyes</a></li>
+            <li><a href="/products/rinsable-dyes">Rinsable Dyes</a></li>
+            <li><a href="/products/pigments">Pigments</a></li>
+            <li><a href="/products/pigment-dispersions">Pigment Dispersions</a></li>
+            <li><a href="/products/acid-dyes">Acid Dyes</a></li>
+            <li><a href="/products/direct-dyes">Direct Dyes</a></li>
           </ul>
         </div>
-        <div>
-          <p class="footer__links-title">Manufacturing Plant</p>
-          <p style="font-size: 13px; color: var(--color-body-muted); margin-bottom: 12px; line-height: 1.6;">
-            <strong>Ankleshwar Works:</strong><br />
-            155 GIDC, Ankleshwar – 393 002, Gujarat, India
-          </p>
-          <div class="footer__contact-item" style="margin-bottom: 6px;">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
-            +91-22-4882 2900
-          </div>
-          <div class="footer__contact-item">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-            sales@kpateldyes.com
-          </div>
-        </div>
       </div>
-      <div class="footer__bottom" style="padding: 18px 0;">
-        <div class="footer__badges">
-          <span class="footer__badge">ISO 9001:2015 &amp; 14001:2015</span>
+
+      <!-- Bottom Bar -->
+      <div class="footer__bottom">
+        <div class="footer__cert-badges">
+          <span class="footer__cert-badge">ISO 9001:2015</span>
+          <span class="footer__cert-divider">&middot;</span>
+          <span class="footer__cert-badge">ISO 14001:2015</span>
+          <span class="footer__cert-divider">&middot;</span>
+          <span class="footer__cert-badge">ZED Certified</span>
+          <span class="footer__cert-divider">&middot;</span>
+          <span class="footer__cert-badge">SA 8000</span>
         </div>
-        <p class="footer__copyright" style="font-size: 13px;">&copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.</p>
+        <p class="footer__copyright">
+          &copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.
+        </p>
       </div>
     </div>
   </footer>

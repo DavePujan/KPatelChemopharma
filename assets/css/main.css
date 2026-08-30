@@ -484,6 +484,13 @@ main>section:first-of-type {
   animation: heroImageEntry 2.5s var(--ease-out) forwards;
 }
 
+@media (max-width: 768px) {
+  .hero__image-wrap picture,
+  .hero__image-wrap img {
+    object-position: 45% center;
+  }
+}
+
 @keyframes heroImageEntry {
   0% {
     transform: scale(1.05);

@@ -46,33 +46,36 @@
   <link rel="stylesheet" href="/assets/css/components/navbar.css" />
   <link rel="stylesheet" href="/assets/css/components/footer.css" />
   <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/responsive.css" />
   
 </head>
 <body>
+  <!-- Navigation Header -->
   <nav class="nav nav--hero is-scrolled" id="nav">
     <div class="nav__inner">
       <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" /></a>
       <div class="nav__links">
         <a href="/pages/about/" class="nav__link">About Us</a>
-        <a href="/#solutions" class="nav__link">Products</a>
-        <a href="/#applications" class="nav__link">Application</a>
+        <a href="/pages/products/" class="nav__link">Products</a>
+        <a href="/pages/applications/" class="nav__link">Application</a>
         <a href="/pages/infrastructure/" class="nav__link">Infrastructure</a>
         <a href="/sustainability" class="nav__link">Sustainability</a>
         <a href="/csr" class="nav__link">CSR</a>
       </div>
-      <a href="/#contact-section" class="nav__cta">Contact</a>
+      <a href="/pages/contact/" class="nav__cta">Contact</a>
       <button class="nav__toggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <!-- Mobile Navigation Overlay -->
   <div class="nav__mobile" id="mobile-nav">
     <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
     <a href="/">Home</a>
     <a href="/pages/about/">About Us</a>
     <a href="/pages/products/">Products</a>
-    <a href="/#applications">Application</a>
+    <a href="/pages/applications/">Application</a>
     <a href="/pages/infrastructure/">Infrastructure</a>
     <a href="/sustainability">Sustainability</a>
     <a href="/csr">CSR</a>
@@ -80,213 +83,204 @@
   </div>
 
   <main>
-    <!-- ========== FINAL CTA — Full-width background image ========== -->
-  <section class="cta">
-    <div class="cta__image-wrap">
-      <img src="/assets/images/office/DSC00090.webp" alt="K. Patel Dyes Headquarters Environment" loading="lazy" />
-    </div>
-    <div class="cta__overlay"></div>
-    <div class="container cta__inner">
-      <div class="cta__content">
-        <span class="eyebrow eyebrow--light reveal" style="justify-content:center">Get Started</span>
-        <h2 class="section-title reveal reveal-delay-1">Connect With K. Patel Dyes</h2>
-        <p class="cta__text reveal reveal-delay-2">
-          Partner with an experienced supplier for Basic Dyes, Solvent Dyes, Pigments, and specialty rinsable craft solutions.
+    <!-- ========== CONTACT HERO HEADER ========== -->
+    <section class="section" style="padding-top: 48px; padding-bottom: 12px;">
+      <div class="container">
+        <span class="eyebrow">Contact Us</span>
+        <h1 class="section-title" style="margin-bottom: 10px;">Global Sales &amp; Laboratories</h1>
+        <p class="section-body" style="max-width: 720px; margin-bottom: 24px;">
+          Get in touch with our commercial sales team or request certificate documentation, shade development, and technical spec data sheets directly from our laboratory teams.
         </p>
-        <div class="cta__actions">
-          <a href="#contact-section" class="btn btn--white">
-            Contact Our Team
-            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <div style="margin-bottom: 16px;">
+          <a href="/" class="btn btn--outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px;">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Return to Home Page
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  
-<!-- ========== CONTACT GLOBAL SALES & LABS ========== -->
-  <section class="contact-section" id="contact-section" style="background: linear-gradient(rgba(245, 245, 242, 0.85), rgba(245, 245, 242, 0.95)), url('/assets/images/office/DSC00176.webp') center center/cover no-repeat; position: relative;">
-    <div class="container" style="position: relative; z-index: 2;">
-      <div class="contact-header reveal">
-        <span class="eyebrow">Contact Us</span>
-        <h2 class="section-title">Global Sales &amp; Labs</h2>
-        <p class="section-body">
-          Get in touch with our commercial sales team or request certificate documentation and technical spec data sheets directly from our laboratory teams.
-        </p>
-      </div>
+    <!-- ========== CONTACT GLOBAL SALES & LABS ========== -->
+    <section class="contact-section" id="contact-section" style="background: linear-gradient(rgba(245, 245, 242, 0.88), rgba(245, 245, 242, 0.96)), url('/assets/images/office/DSC00176.webp') center center/cover no-repeat; position: relative; padding-top: 24px;">
+      <div class="container contact-section-inner" style="position: relative; z-index: 2;">
+        
+        <div class="contact-layout animate-on-scroll">
+          <!-- Left Column: Contact Cards -->
+          <div class="contact-info">
+            
+            <!-- Headquarters Card -->
+            <div class="contact-card">
+              <div class="contact-card__icon-wrap">
+                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="contact-card__details">
+                <span class="contact-card__label">Corporate Headquarters</span>
+                <span class="contact-card__value">
+                  504, Eureka Tower, Mindspace,<br />
+                  Off Link Road, Malad West,<br />
+                  Mumbai – 400 064. Maharashtra, India.
+                </span>
+              </div>
+            </div>
 
-      <div class="contact-layout animate-on-scroll">
-        <!-- Left Column: Contact Cards -->
-        <div class="contact-info">
-          
-          <!-- Headquarters Card -->
-          <div class="contact-card">
-            <div class="contact-card__icon-wrap">
-              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <!-- Hotline / Phone Card -->
+            <div class="contact-card">
+              <div class="contact-card__icon-wrap">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-card__details">
+                <span class="contact-card__label">Sales &amp; Business Hotline</span>
+                <span class="contact-card__value">
+                  <a href="tel:+912248822900">+91-22-4882 2900</a><br />
+                  <a href="tel:+912250622900">+91-22-5062 2900</a>
+                </span>
+              </div>
             </div>
-            <div class="contact-card__details">
-              <span class="contact-card__label">Corporate Headquarters</span>
-              <span class="contact-card__value">
-                504, Eureka Tower, Mindspace,<br />
-                Off Link Road, Malad West,<br />
-                Mumbai – 400 064. Maharashtra, India.
-              </span>
+
+            <!-- Email Sales Card -->
+            <div class="contact-card">
+              <div class="contact-card__icon-wrap">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-card__details">
+                <span class="contact-card__label">Sales &amp; Technical Support</span>
+                <span class="contact-card__value">
+                  <a href="mailto:sales@kpateldyes.com">sales@kpateldyes.com</a>
+                </span>
+              </div>
             </div>
+
+            <!-- Manufacturing Facility Card -->
+            <div class="contact-card">
+              <div class="contact-card__icon-wrap">
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card__details">
+                <span class="contact-card__label">Works / Manufacturing Facility</span>
+                <span class="contact-card__value">
+                  155 GIDC, Ankleshwar – 393 002.<br />
+                  Gujarat, India.<br />
+                  Tel.: +91 2646 654161 / 62 / 63 / 64
+                </span>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Hotline / Phone Card -->
-          <div class="contact-card">
-            <div class="contact-card__icon-wrap">
-              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+          <!-- Right Column: Form -->
+          <div class="b2b-form-card">
+            <div style="margin-bottom: 20px;">
+              <h2 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--color-heading-primary); margin-bottom: 6px;">Send an Inquiry</h2>
+              <p style="font-size: 14px; color: var(--color-body-muted); line-height: 1.5;">Fill out the form below and our laboratory and sales teams will get back to you promptly.</p>
             </div>
-            <div class="contact-card__details">
-              <span class="contact-card__label">Sales &amp; Business Hotline</span>
-              <span class="contact-card__value">
-                <a href="tel:+912248822900">+91-22-4882 2900</a><br />
-                <a href="tel:+912250622900">+91-22-5062 2900</a>
-              </span>
-            </div>
-          </div>
 
-          <!-- Email Sales Card -->
-          <div class="contact-card">
-            <div class="contact-card__icon-wrap">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div class="contact-card__details">
-              <span class="contact-card__label">Sales &amp; Technical Support</span>
-              <span class="contact-card__value">
-                <a href="mailto:sales@kpateldyes.com">sales@kpateldyes.com</a>
-              </span>
-            </div>
-          </div>
+            <!-- Form Element -->
+            <form id="b2b-form" action="/api/contact" method="POST" novalidate>
+              <!-- Honeypot -->
+              <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;" />
 
-          <!-- Manufacturing Facility Card -->
-          <div class="contact-card">
-            <div class="contact-card__icon-wrap">
-              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="contact-card__details">
-              <span class="contact-card__label">Works / Manufacturing Facility</span>
-              <span class="contact-card__value">
-                155 GIDC, Ankleshwar – 393 002.<br />
-                Gujarat, India.<br />
-                Tel.: +91 2646 654161 / 62 / 63 / 64
-              </span>
-            </div>
+              <div class="b2b-grid">
+                
+                <div class="b2b-group">
+                  <label for="contact-name" class="b2b-label">Your Name *</label>
+                  <input type="text" id="contact-name" name="name" class="b2b-input" placeholder="Enter full name" required />
+                  <span class="error-msg" id="error-name"></span>
+                </div>
+
+                <div class="b2b-group">
+                  <label for="contact-phone" class="b2b-label">Contact Number *</label>
+                  <input type="tel" id="contact-phone" name="phone" class="b2b-input" placeholder="e.g. +91 98765 43210" required />
+                  <span class="error-msg" id="error-phone"></span>
+                </div>
+
+                <div class="b2b-group">
+                  <label for="contact-email" class="b2b-label">Email *</label>
+                  <input type="email" id="contact-email" name="email" class="b2b-input" placeholder="name@company.com" required />
+                  <span class="error-msg" id="error-email"></span>
+                </div>
+
+                <div class="b2b-group">
+                  <label for="contact-company" class="b2b-label">Company *</label>
+                  <input type="text" id="contact-company" name="company" class="b2b-input" placeholder="e.g. Acme Corp" required />
+                  <span class="error-msg" id="error-company"></span>
+                </div>
+
+                <div class="b2b-group b2b-group--full">
+                  <label for="contact-comments" class="b2b-label">Comments *</label>
+                  <textarea id="contact-comments" name="comments" class="b2b-textarea" rows="4" placeholder="Please describe your inquiry, product requirement, or questions..." required></textarea>
+                  <span class="error-msg" id="error-comments"></span>
+                </div>
+
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="b2b-submit">
+                <span id="submit-btn-text">Submit Inquiry</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2"/></svg>
+              </button>
+
+              <p class="b2b-footer-notice" style="margin-top: 14px; font-size: 12.5px; color: var(--color-body-muted); text-align: center;">
+                Our team responds to all inquiries promptly (typically within 12 hours).
+              </p>
+            </form>
           </div>
 
         </div>
-
-        <!-- Right Column: Form -->
-        <div class="b2b-form-card reveal">
-          <div style="margin-bottom: 24px;">
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-heading-primary); margin-bottom: 8px;">Send an Inquiry</h3>
-            <p style="font-size: 14px; color: var(--color-body-muted);">Fill out the form below and our team will get back to you promptly.</p>
-          </div>
-
-          <!-- Form Element -->
-          <form id="b2b-form" action="/api/contact" method="POST" novalidate>
-            <!-- Honeypot -->
-            <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;" />
-
-            <div class="b2b-grid">
-              
-              <div class="b2b-group">
-                <label for="contact-name" class="b2b-label">Your Name *</label>
-                <input type="text" id="contact-name" name="name" class="b2b-input" placeholder="Enter full name" required />
-                <span class="error-msg" id="error-name"></span>
-              </div>
-
-              <div class="b2b-group">
-                <label for="contact-phone" class="b2b-label">Contact Number *</label>
-                <input type="tel" id="contact-phone" name="phone" class="b2b-input" placeholder="e.g. +91 98765 43210" required />
-                <span class="error-msg" id="error-phone"></span>
-              </div>
-
-              <div class="b2b-group">
-                <label for="contact-email" class="b2b-label">Email *</label>
-                <input type="email" id="contact-email" name="email" class="b2b-input" placeholder="name@company.com" required />
-                <span class="error-msg" id="error-email"></span>
-              </div>
-
-              <div class="b2b-group">
-                <label for="contact-company" class="b2b-label">Company *</label>
-                <input type="text" id="contact-company" name="company" class="b2b-input" placeholder="e.g. Acme Corp" required />
-                <span class="error-msg" id="error-company"></span>
-              </div>
-
-              <div class="b2b-group b2b-group--full">
-                <label for="contact-comments" class="b2b-label">Comments *</label>
-                <textarea id="contact-comments" name="comments" class="b2b-textarea" rows="4" placeholder="Please describe your inquiry, product requirement, or questions..." required></textarea>
-                <span class="error-msg" id="error-comments"></span>
-              </div>
-
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="b2b-submit">
-              <span id="submit-btn-text">Submit Inquiry</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-
-            <p class="b2b-footer-notice">
-              Our team responds to all inquiries promptly (typically within 12 hours).
-            </p>
-          </form>
-        </div>
-
       </div>
-    </div>
-  </section>
-
-  
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__main footer__main--compact">
-        <div>
-          <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="footer-logo" />
+      <div class="footer__main">
+        <!-- Brand -->
+        <div class="footer__col footer__col--brand">
+          <a href="/" class="footer__logo-link">
+            <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="footer-logo" />
+          </a>
           <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
-          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 16px; line-height: 1.6;">
-            <strong>Corporate Office:</strong><br />
-            504, Eureka Tower, Mindspace, Malad West,<br />
-            Mumbai 400064, India
+          <p class="footer__brand-desc">
+            Pioneering color chemistry since 1974. Exporting to 40+ countries globally.
           </p>
         </div>
-        <div>
-          <p class="footer__links-title">Group Companies</p>
-          <div style="font-size: 13px; color: var(--color-body); line-height: 1.8;">
-            <a href="/pages/company/" style="color: inherit; text-decoration: none; font-weight: 500;">View Group Companies &rarr;</a>
-          </div>
-        </div>
-        <div>
-          <p class="footer__links-title">Contact</p>
-          <p style="font-size: 13px; color: var(--color-body-muted); margin-bottom: 12px; line-height: 1.6;">
-            <strong>Ankleshwar Works:</strong><br />
-            155 GIDC, Ankleshwar 393002, Gujarat, India
-          </p>
-          <div class="footer__contact-item" style="margin-bottom: 4px;">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
-            +91-22-4882 2900
-          </div>
-          <div class="footer__contact-item">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-            sales@kpateldyes.com
-          </div>
+
+        <!-- Product Range -->
+        <div class="footer__col footer__col--nav">
+          <h4 class="footer__col-title">PRODUCT RANGE</h4>
+          <ul class="footer__nav-list">
+            <li><a href="/products/basic-dyes">Basic Dyes</a></li>
+            <li><a href="/products/solvent-dyes">Solvent Dyes</a></li>
+            <li><a href="/products/rinsable-dyes">Rinsable Dyes</a></li>
+            <li><a href="/products/pigments">Pigments</a></li>
+            <li><a href="/products/pigment-dispersions">Pigment Dispersions</a></li>
+            <li><a href="/products/acid-dyes">Acid Dyes</a></li>
+            <li><a href="/products/direct-dyes">Direct Dyes</a></li>
+          </ul>
         </div>
       </div>
+
+      <!-- Bottom Bar -->
       <div class="footer__bottom">
-        <div class="footer__badges">
-          <span class="footer__badge">ISO 9001:2015 & 14001:2015</span>
+        <div class="footer__cert-badges">
+          <span class="footer__cert-badge">ISO 9001:2015</span>
+          <span class="footer__cert-divider">&middot;</span>
+          <span class="footer__cert-badge">ISO 14001:2015</span>
+          <span class="footer__cert-divider">&middot;</span>
+          <span class="footer__cert-badge">ZED Certified</span>
+          <span class="footer__cert-divider">&middot;</span>
+          <span class="footer__cert-badge">SA 8000</span>
         </div>
-        <p class="footer__copyright">&copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.</p>
+        <p class="footer__copyright">
+          &copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.
+        </p>
       </div>
     </div>
   </footer>
 
-  <script src="/assets/js/mobile.js"></script>
+  <script src="/assets/js/main.js"></script>
   <script src="/assets/js/form.js"></script>
 </body>
 </html>

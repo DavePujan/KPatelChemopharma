@@ -3,313 +3,590 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>K. Patel Chemopharma — Mobile Home</title>
+  <title>K. Patel Chemopharma — Manufacturer of Dyes, Pigments &amp; Dispersions</title>
   <link rel="icon" type="image/png" href="/assets/images/logo-no-bg.webp" />
-  <meta name="description" content="Est. 1974. Established local as well as global supplier of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments. Delivering cost-effective colorants for customer applications worldwide." />
+  <meta name="description" content="Pioneering color chemistry since 1974. Established global manufacturer of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments conforming to international standards." />
   <link rel="canonical" href="https://www.kpateldyes.com/" />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.kpateldyes.com/home" />
-  <meta property="og:title" content="K. Patel Chemopharma — Mobile Home" />
-  <meta property="og:description" content="Est. 1974. Established local as well as global supplier of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments. Delivering cost-effective colorants for customer applications worldwide." />
-  <meta property="og:image" content="https://www.kpateldyes.com/img/logo-no-bg.webp" />
+  <meta property="og:url" content="https://www.kpateldyes.com/" />
+  <meta property="og:title" content="K. Patel Chemopharma — Manufacturer of Dyes, Pigments &amp; Dispersions" />
+  <meta property="og:description" content="Pioneering color chemistry since 1974. Manufacturer of high-grade colorants for global industrial applications." />
+  <meta property="og:image" content="https://www.kpateldyes.com/assets/images/logo-no-bg.webp" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://www.kpateldyes.com/home" />
-  <meta property="twitter:title" content="K. Patel Chemopharma — Mobile Home" />
-  <meta property="twitter:description" content="Est. 1974. Established local as well as global supplier of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments. Delivering cost-effective colorants for customer applications worldwide." />
-  <meta property="twitter:image" content="https://www.kpateldyes.com/img/logo-no-bg.webp" />
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "K. Patel Chemopharma Private Limited",
-    "url": "https://www.kpateldyes.com/",
-    "logo": "https://www.kpateldyes.com/img/logo-no-bg.webp",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-22-48822900",
-      "contactType": "customer service"
-    }
-  }
-  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/components/navbar.css" />
-  <link rel="stylesheet" href="/assets/css/components/footer.css" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="/assets/css/main.css" />
   <link rel="stylesheet" href="/assets/css/responsive.css" />
-  
+
+  <!-- Desktop Breakpoint Redirect -->
+  <script>
+    function redirectIfDesktop() {
+      if (window.innerWidth > 768) {
+        window.location.replace("/" + window.location.search + window.location.hash);
+      }
+    }
+    window.addEventListener("DOMContentLoaded", redirectIfDesktop);
+    window.addEventListener("resize", redirectIfDesktop);
+  </script>
 </head>
-<body>
-  <nav class="nav nav--hero is-scrolled" id="nav">
-    <div class="nav__inner">
-      <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" /></a>
-      <div class="nav__links">
-        <a href="/pages/about/" class="nav__link">About Us</a>
-        <a href="/pages/products/" class="nav__link">Products</a>
-        <a href="/pages/applications/" class="nav__link">Application</a>
-        <a href="/pages/infrastructure/" class="nav__link">Infrastructure</a>
-        <a href="/sustainability" class="nav__link">Sustainability</a>
-        <a href="/csr" class="nav__link">CSR</a>
-      </div>
-      <a href="/pages/contact/" class="nav__cta">Contact</a>
-      <button class="nav__toggle" aria-label="Open menu">
+<body class="m-home">
+
+  <!-- ============================================
+       1. MOBILE HEADER
+       ============================================ -->
+  <header class="m-header" id="mobile-header">
+    <div class="m-container m-header__inner">
+      <a href="/" class="m-header__logo">
+        <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" />
+      </a>
+      <button class="m-header__toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <div class="nav__mobile" id="mobile-nav">
-    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
-    <a href="/">Home</a>
-    <a href="/pages/about/">About Us</a>
-    <a href="/pages/products/">Products</a>
-    <a href="/pages/applications/">Application</a>
-    <a href="/pages/infrastructure/">Infrastructure</a>
-    <a href="/sustainability">Sustainability</a>
-    <a href="/csr">CSR</a>
-    <a href="/pages/contact/">Contact Us</a>
+  <!-- Full-screen Navigation Overlay -->
+  <div class="m-menu" id="mobile-menu" aria-hidden="true">
+    <div class="m-menu__top">
+      <a href="/" class="m-header__logo">
+        <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" />
+      </a>
+      <button class="m-menu__close" id="menu-close" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <nav class="m-menu__nav">
+      <a href="/pages/about/" class="m-menu__link">About Us <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="#m-products" class="m-menu__link">Products <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="#m-applications" class="m-menu__link">Applications <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="#m-infrastructure" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/sustainability" class="m-menu__link">Sustainability <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/csr" class="m-menu__link">CSR <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/contact/" class="m-menu__link">Contact <span class="m-menu__arrow">&rarr;</span></a>
+    </nav>
+    <div class="m-menu__footer">
+      <div class="m-menu__contact-item">
+        <a href="tel:+912248822900">+91-22-4882 2900</a>
+      </div>
+      <div class="m-menu__contact-item">
+        <a href="mailto:sales@kpateldyes.com">sales@kpateldyes.com</a>
+      </div>
+    </div>
   </div>
 
   <main>
-    <!-- ========== HERO — Full-screen background image ========== -->
-  <section class="hero" id="hero">
-    <div class="hero__image-wrap">
-      <picture class="hero__picture">
-        <source media="(max-width: 768px)" srcset="/assets/images/office/DSC00030.webp" type="image/webp" />
-        <img
-          src="/assets/images/office/DSC09965.webp"
-          alt="K. Patel Chemopharma Corporate Office"
-          loading="eager"
-          fetchpriority="high"
-        />
-      </picture>
-    </div>
-    <div class="hero__overlay"></div>
-    <div class="container hero__content">
-
-      <h1 class="hero__title">
-        Manufacturer of Dyes, Pigments <span class="accent">& Dispersions Innovatively</span>
-      </h1>
-      <p class="hero__text">
-        Manufacturing Dyes, Pigment & Related Dispersions as colorants for varied customer applications cost effectively
-      </p>
-      <div class="hero__stats">
-        <div class="hero__stat">
-          <div class="hero__stat-number" data-count="50" data-suffix="+">50+</div>
-          <div class="hero__stat-label">Years in Global Supplies</div>
+    <!-- ============================================
+         2. MOBILE HERO (NO EXPLORE PRODUCT BUTTON)
+         ============================================ -->
+    <section class="m-hero" id="hero">
+      <div class="m-hero__bg">
+        <img src="/assets/images/office/DSC00176.webp" alt="K. Patel Chemopharma Corporate Headquarters" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="m-hero__overlay"></div>
+      <div class="m-container m-hero__content">
+        <span class="m-eyebrow m-hero__eyebrow">SINCE 1974</span>
+        <h1 class="m-hero__title">
+          Manufacturer of Dyes, Pigments &amp; Dispersions
+        </h1>
+        <p class="m-hero__sub">
+          Color solutions engineered for diverse industrial applications.
+        </p>
+        <div class="m-hero__actions">
+          <a href="/pages/contact/" class="m-btn m-btn--primary">
+            Request a consultation &rarr;
+          </a>
         </div>
-        <div class="hero__stat">
-          <div class="hero__stat-number" data-count="150" data-suffix="+">150+</div>
-          <div class="hero__stat-label">Products</div>
-        </div>
-        <div class="hero__stat">
-          <div class="hero__stat-number">
-            <img src="/assets/images/4r.webp" alt="4R Recycle" class="hero__stat-img" />
+        <div class="m-hero__metrics">
+          <div class="m-hero__metric">
+            <span class="m-hero__metric-num">50+</span>
+            <span class="m-hero__metric-lbl">Years Global Supply</span>
           </div>
-          <div class="hero__stat-label">ETP Water Recycle</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== MOBILE DASHBOARD PORTAL ========== -->
-  <section class="mobile-portal">
-    <div class="mobile-portal__grid">
-      
-      <a href="/pages/products/" class="portal-card">
-        <div class="portal-card__content">
-          <span class="portal-card__title">Product Catalog</span>
-          <span class="portal-card__subtitle">Dyes, Pigments & Extracts</span>
-          <span class="portal-card__explore">Click to explore &rarr;</span>
-        </div>
-        <div class="portal-card__icon">
-          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-        </div>
-      </a>
-
-      <a href="/pages/applications/" class="portal-card">
-        <div class="portal-card__content">
-          <span class="portal-card__title">Applications & Sectors</span>
-          <span class="portal-card__subtitle">Application-Specific Colorants</span>
-          <span class="portal-card__explore">Click to explore &rarr;</span>
-        </div>
-        <div class="portal-card__icon">
-          <svg viewBox="0 0 24 24"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7-5V2H2v18z"></path><path d="M12 16h4"></path><path d="M12 12h4"></path><path d="M12 8h4"></path><path d="M6 16h.01"></path><path d="M6 12h.01"></path><path d="M6 8h.01"></path></svg>
-        </div>
-      </a>
-
-      <a href="/pages/infrastructure/" class="portal-card">
-        <div class="portal-card__content">
-          <span class="portal-card__title">Infrastructure</span>
-          <span class="portal-card__subtitle">Facilities & Certifications</span>
-          <span class="portal-card__explore">Click to explore &rarr;</span>
-        </div>
-        <div class="portal-card__icon">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 17 22 12"></polyline></svg>
-        </div>
-      </a>
-
-      <a href="/sustainability" class="portal-card">
-        <div class="portal-card__content">
-          <span class="portal-card__title">Sustainability</span>
-          <span class="portal-card__subtitle">4R Framework & ETP Recycling</span>
-          <span class="portal-card__explore">Click to explore &rarr;</span>
-        </div>
-        <div class="portal-card__icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-      </a>
-
-      <!-- Direct B2B Contact Form -->
-      <div class="b2b-form-card" style="margin-top: 16px; border: 1px solid var(--color-border); border-radius: var(--r-md); box-shadow: var(--shadow-sm);">
-          <div style="margin-bottom: 24px;">
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-heading-primary); margin-bottom: 8px;">Contact Us</h3>
-            <p style="font-size: 14px; color: var(--color-body-muted);">Fill out the form below and our team will get back to you promptly.</p>
+          <div class="m-hero__metric-divider"></div>
+          <div class="m-hero__metric">
+            <span class="m-hero__metric-num">150+</span>
+            <span class="m-hero__metric-lbl">Colorant Products</span>
           </div>
-
-          <!-- Form Element -->
-          <form id="b2b-form" action="/api/contact" method="POST" novalidate>
-            <!-- Honeypot -->
-            <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;" />
-
-            <div class="b2b-grid">
-              
-              <div class="b2b-group">
-                <label for="contact-name" class="b2b-label">Your Name *</label>
-                <input type="text" id="contact-name" name="name" class="b2b-input" placeholder="Enter full name" required />
-                <span class="error-msg" id="error-name"></span>
-              </div>
-
-              <div class="b2b-group">
-                <label for="contact-phone" class="b2b-label">Contact Number *</label>
-                <input type="tel" id="contact-phone" name="phone" class="b2b-input" placeholder="e.g. +91 98765 43210" required />
-                <span class="error-msg" id="error-phone"></span>
-              </div>
-
-              <div class="b2b-group">
-                <label for="contact-email" class="b2b-label">Email *</label>
-                <input type="email" id="contact-email" name="email" class="b2b-input" placeholder="name@company.com" required />
-                <span class="error-msg" id="error-email"></span>
-              </div>
-
-              <div class="b2b-group">
-                <label for="contact-company" class="b2b-label">Company *</label>
-                <input type="text" id="contact-company" name="company" class="b2b-input" placeholder="e.g. Acme Corp" required />
-                <span class="error-msg" id="error-company"></span>
-              </div>
-
-              <div class="b2b-group b2b-group--full">
-                <label for="contact-comments" class="b2b-label">Comments *</label>
-                <textarea id="contact-comments" name="comments" class="b2b-textarea" rows="4" placeholder="Please describe your inquiry, product requirement, or questions..." required></textarea>
-                <span class="error-msg" id="error-comments"></span>
-              </div>
-
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="b2b-submit">
-              <span id="submit-btn-text">Submit Inquiry</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-
-            <p class="b2b-footer-notice">
-              Our team responds to all inquiries promptly (typically within 12 hours).
-            </p>
-          </form>
-      </div>
-
-    </div>
-  </section>
-
-<!-- ========== TRUST STRIP ========== -->
-  <section class="trust" id="trust">
-    <p class="trust__heading">Rooted in tradition, serving global aspirations</p>
-    <div class="trust__track">
-      <div class="trust__set">
-        <div class="trust__item">
-          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-          Basic Dyes
-        </div>
-        <div class="trust__item">
-          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg></div>
-          Solvent Dyes
-        </div>
-        <div class="trust__item">
-          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
-          Rinsable Dyes
-        </div>
-        <div class="trust__item">
-          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="6"/></svg></div>
-          Pigments
-        </div>
-        <div class="trust__item">
-          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 17,14 19,22 12,17 5,22 7,14 2,9 9,9"/></svg></div>
-          Pigment Dispersions
-        </div>
-        <div class="trust__item">
-          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 12h16M12 4v16"/></svg></div>
-          Acid Dyes
-        </div>
-        <div class="trust__item">
-          <div class="trust__item-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></div>
-          Direct Dyes
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  
+    <!-- ============================================
+         3. BRAND INTRO (EDITORIAL BRIDGE)
+         ============================================ -->
+    <section class="m-section m-intro">
+      <div class="m-container">
+        <span class="m-eyebrow">Rooted in Tradition, Serving Global Aspirations</span>
+        <h2 class="m-intro__title">
+          Rooted in tradition. Built for global color solutions.
+        </h2>
+        <p class="m-intro__body">
+          Pioneering color chemistry since 1974. We manufacture high-performance dyes, pigments, and dispersions for global clients across 40+ countries with strict international quality compliance.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         4. PRODUCT RANGE (AUTO-SCROLL CAROUSEL)
+         ============================================ -->
+    <section class="m-section" id="m-products">
+      <div class="m-container m-section-header">
+        <span class="m-eyebrow">Product Range</span>
+        <h2 class="m-section-title">Our Colorant Portfolio</h2>
+        <p class="m-section-body">
+          High-grade dyes, pigments, and related dispersions conforming to international standards.
+        </p>
+        <div class="m-carousel-top-bar">
+          <span class="m-counter" id="product-counter">01 / 07</span>
+        </div>
+      </div>
+
+      <div class="m-carousel-track" id="product-carousel">
+        <!-- 1. Basic Dyes -->
+        <a href="/products/basic-dyes" class="m-product-card">
+          <img src="/assets/images/products/new-images/basicdye2.webp" alt="Basic Dyes" loading="lazy" />
+          <div class="m-product-card__gradient"></div>
+          <div class="m-product-card__meta">
+            <h3 class="m-product-card__title">Basic Dyes &rarr;</h3>
+          </div>
+        </a>
+
+        <!-- 2. Solvent Dyes -->
+        <a href="/products/solvent-dyes" class="m-product-card">
+          <img src="/assets/images/products/new-images/solventdye2.webp" alt="Solvent Dyes" loading="lazy" />
+          <div class="m-product-card__gradient"></div>
+          <div class="m-product-card__meta">
+            <h3 class="m-product-card__title">Solvent Dyes &rarr;</h3>
+          </div>
+        </a>
+
+        <!-- 3. Rinsable Dyes -->
+        <a href="/products/rinsable-dyes" class="m-product-card">
+          <img src="/assets/images/products/new-images/rinsable2.webp" alt="Rinsable Dyes" loading="lazy" />
+          <div class="m-product-card__gradient"></div>
+          <div class="m-product-card__meta">
+            <h3 class="m-product-card__title">Rinsable Dyes &rarr;</h3>
+          </div>
+        </a>
+
+        <!-- 4. Pigments -->
+        <a href="/products/pigments" class="m-product-card">
+          <img src="/assets/images/products/new-images/pigments2.webp" alt="Pigments" loading="lazy" />
+          <div class="m-product-card__gradient"></div>
+          <div class="m-product-card__meta">
+            <h3 class="m-product-card__title">Pigments &rarr;</h3>
+          </div>
+        </a>
+
+        <!-- 5. Pigment Dispersions -->
+        <a href="/products/pigment-dispersions" class="m-product-card">
+          <img src="/assets/images/products/new-images/pigment_disperisons2.webp" alt="Pigment Dispersions" loading="lazy" />
+          <div class="m-product-card__gradient"></div>
+          <div class="m-product-card__meta">
+            <h3 class="m-product-card__title">Pigment Dispersions &rarr;</h3>
+          </div>
+        </a>
+
+        <!-- 6. Acid Dyes -->
+        <a href="/products/acid-dyes" class="m-product-card">
+          <img src="/assets/images/products/new-images/aciddyes2.webp" alt="Acid Dyes" loading="lazy" />
+          <div class="m-product-card__gradient"></div>
+          <div class="m-product-card__meta">
+            <h3 class="m-product-card__title">Acid Dyes &rarr;</h3>
+          </div>
+        </a>
+
+        <!-- 7. Direct Dyes -->
+        <a href="/products/direct-dyes" class="m-product-card">
+          <img src="/assets/images/products/new-images/directdye2.webp" alt="Direct Dyes" loading="lazy" />
+          <div class="m-product-card__gradient"></div>
+          <div class="m-product-card__meta">
+            <h3 class="m-product-card__title">Direct Dyes &rarr;</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================
+         5. KEY APPLICATIONS (AUTO-SCROLL, NO BUTTON)
+         ============================================ -->
+    <section class="m-section" id="m-applications">
+      <div class="m-container m-section-header">
+        <span class="m-eyebrow">Key Applications</span>
+        <h2 class="m-section-title">Colorants tailored for diverse applications.</h2>
+        <div class="m-carousel-top-bar">
+          <span class="m-counter" id="application-counter">01 / 06</span>
+        </div>
+      </div>
+
+      <div class="m-carousel-track" id="application-carousel">
+        <!-- 1. Paper & Pulp -->
+        <div class="m-app-card">
+          <img src="/assets/images/industries/opt/paper-and-pulp.webp" alt="Paper & Pulp" loading="lazy" />
+          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__content">
+            <h3 class="m-app-card__title">Paper &amp; Pulp</h3>
+            <p class="m-app-card__text">Optimized Basic and Direct Dyes together with pigment dispersions for commercial paper coloring.</p>
+          </div>
+        </div>
+
+        <!-- 2. Writing Instruments -->
+        <div class="m-app-card">
+          <img src="/assets/images/industries/opt/writing-instruments.webp" alt="Writing Instruments" loading="lazy" />
+          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__content">
+            <h3 class="m-app-card__title">Writing Instruments</h3>
+            <p class="m-app-card__text">Custom-grade ballpoint pen inks, marker inks, ribbon inks, and child-safe EN-71 compliant solutions.</p>
+          </div>
+        </div>
+
+        <!-- 3. Printing Inks & Art Supplies -->
+        <div class="m-app-card">
+          <img src="/assets/images/industries/opt/printing-ink-and-art-supply.webp" alt="Printing Inks & Art Supplies" loading="lazy" />
+          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__content">
+            <h3 class="m-app-card__title">Printing Inks &amp; Art Supplies</h3>
+            <p class="m-app-card__text">High-performance violet and blue toners alongside rinsable dyes for consumer arts and crafts.</p>
+          </div>
+        </div>
+
+        <!-- 4. Textiles, Leather & Wool -->
+        <div class="m-app-card">
+          <img src="/assets/images/industries/opt/textile-leather-and-wool.webp" alt="Textiles, Leather & Wool" loading="lazy" />
+          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__content">
+            <h3 class="m-app-card__title">Textiles, Leather &amp; Wool</h3>
+            <p class="m-app-card__text">Vibrant, high-affinity Acid and Direct Dyes engineered for silk, nylon, wool, and leather treatments.</p>
+          </div>
+        </div>
+
+        <!-- 5. Wood & Turf Coloring -->
+        <div class="m-app-card">
+          <img src="/assets/images/industries/opt/wood-and-turf-coloring.webp" alt="Wood & Turf Coloring" loading="lazy" />
+          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__content">
+            <h3 class="m-app-card__title">Wood &amp; Turf Coloring</h3>
+            <p class="m-app-card__text">Robust colorants designed to withstand environmental conditions for MDF, treated wood, and lawn turf coloring.</p>
+          </div>
+        </div>
+
+        <!-- 6. Digital Ink & Coatings -->
+        <div class="m-app-card">
+          <img src="/assets/images/industries/opt/digital-ink-and-coating.webp" alt="Digital Ink & Coatings" loading="lazy" />
+          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__content">
+            <h3 class="m-app-card__title">Digital Ink &amp; Coatings</h3>
+            <p class="m-app-card__text">Advanced organic and inorganic pigment dispersions engineered for conventional and digital inkjet printer applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         6. INFRASTRUCTURE (PERFECT STYLIZED POINTS)
+         ============================================ -->
+    <section class="m-section m-capability" id="m-infrastructure">
+      <div class="m-capability__media">
+        <img src="/assets/images/infrastructure/infrastructure01.webp" alt="Ankleshwar GIDC Manufacturing Complex" loading="lazy" />
+      </div>
+      <div class="m-container m-capability__body">
+        <span class="m-eyebrow">Infrastructure</span>
+        <h2 class="m-section-title">State-Of-The-Art Manufacturing Facilities</h2>
+        <p class="m-section-body">
+          Operating multiple manufacturing facilities at Ankleshwar GIDC (Gujarat), India's premier chemical zone. Built for cost efficiency, high output, and environmental preservation.
+        </p>
+
+        <ul class="m-points-list">
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Ankleshwar GIDC Chemical Zone Location</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>State-of-the-Art Testing &amp; QA Laboratory</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Equipped R&amp;D Laboratory (HPLC, GC, AAS, UV-Vis)</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>4R Effluent Treatment (Recover, Reduce, Reuse, Recycle)</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Reverse Osmosis Water Purification</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Custom Packaging (IBC, Jumbo Bags, Drums, Pallets)</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================
+         7. QUALITY ASSURANCE & LAB (PERFECT STYLIZED POINTS)
+         ============================================ -->
+    <section class="m-section m-capability" id="m-quality">
+      <div class="m-capability__media">
+        <img src="/assets/images/quality/quality.webp" alt="Quality Assurance & Analytical Lab" loading="lazy" />
+      </div>
+      <div class="m-container m-capability__body">
+        <span class="m-eyebrow">Quality &amp; Testing</span>
+        <h2 class="m-section-title">Quality Assurance &amp; Analytical Lab</h2>
+        <p class="m-section-body">
+          Meeting stringent international customer specifications with complete batch-to-batch repeatability. Our in-house analytical laboratory supports over 80% global exports.
+        </p>
+
+        <ul class="m-points-list">
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>HPLC &amp; Gas Chromatography (GC) for purity profiling</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Atomic Absorption (AAS) heavy metal trace analysis</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>UV/VIS Spectrophotometry &amp; Color Matching</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Rheology, Viscometry &amp; Hegman dispersion testing</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================
+         8. RESEARCH & DEVELOPMENT (PERFECT STYLIZED POINTS)
+         ============================================ -->
+    <section class="m-section m-capability" id="m-rnd">
+      <div class="m-capability__media">
+        <img src="/assets/images/infrastructure/infrastructure02.webp" alt="Custom Chemical Product Development" loading="lazy" />
+      </div>
+      <div class="m-container m-capability__body">
+        <span class="m-eyebrow">Research &amp; Development</span>
+        <h2 class="m-section-title">Custom Product Development</h2>
+        <p class="m-section-body">
+          Customer requirements are at the heart of our innovation process. Our technical team collaborates closely with customers to develop customized formulations.
+        </p>
+
+        <ul class="m-points-list">
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Customer-specific product development</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Tailored formulations for unique applications</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Process innovation through advanced chemistry</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Continuous product improvement</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Quality assurance backed by international standards</span>
+          </li>
+          <li class="m-point-item">
+            <span class="m-point-bullet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Scalable manufacturing from development to production</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================
+         9. COMPANY LEGACY & CORPORATE TIMELINE GRAPHIC
+         ============================================ -->
+    <section class="m-section m-legacy" id="m-legacy">
+      <div class="m-container">
+        <span class="m-eyebrow">Since 1974</span>
+        <h2 class="m-section-title">A Legacy of Entrepreneurial Vision</h2>
+        <p class="m-section-body">
+          From Mr. M. K. Patel's foundational enterprise in 1956 to our chemical manufacturing incorporation in 1974, the K. Patel Group has built a multi-decade legacy across dyestuffs, chemicals, and pharmaceuticals.
+        </p>
+
+        <div class="m-legacy__graphic-card">
+          <img src="/assets/images/kpatel-group-corporate-timeline.webp" alt="K. Patel Group Corporate Timeline Since 1956" loading="lazy" class="m-legacy__graphic" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         10. CERTIFICATIONS & STANDARDS (COMPACT 2-COL GRID)
+         ============================================ -->
+    <section class="m-section" id="m-certifications">
+      <div class="m-container">
+        <span class="m-eyebrow">Standards &amp; Compliance</span>
+        <h2 class="m-section-title">International Certifications. Quality Assurance.</h2>
+        <p class="m-section-body">
+          We maintain rigorous manufacturing and testing standards to fulfill quality and compliance requirements across global markets.
+        </p>
+
+        <div class="m-cert-grid">
+          <div class="m-cert-tile">
+            <img src="/assets/images/certification/9001-2015.webp" alt="ISO 9001:2015 Quality Management" loading="lazy" />
+          </div>
+          <div class="m-cert-tile">
+            <img src="/assets/images/certification/14001-2015.webp" alt="ISO 14001:2015 Environmental Management" loading="lazy" />
+          </div>
+          <div class="m-cert-tile">
+            <img src="/assets/images/certification/together-for-sustainability.webp" alt="Together for Sustainability (TfS)" loading="lazy" />
+          </div>
+          <div class="m-cert-tile">
+            <img src="/assets/images/certification/zed-msme-certification.webp" alt="ZED MSME Certification" loading="lazy" />
+          </div>
+          <div class="m-cert-tile">
+            <img src="/assets/images/certification/ethically-correct-certified-sa-8000.webp" alt="SA8000 Social Accountability" loading="lazy" />
+          </div>
+          <div class="m-cert-tile">
+            <img src="/assets/images/certification/iso-45001-2018-occcupational-health-safety-management-system.webp" alt="ISO 45001:2018 Occupational Health & Safety" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         11. SUSTAINABILITY (4R FRAMEWORK + ETP)
+         ============================================ -->
+    <section class="m-section" id="m-sustainability">
+      <div class="m-container">
+        <span class="m-eyebrow">Sustainability</span>
+        <h2 class="m-section-title">Coloring Industry. More Responsible.</h2>
+        <p class="m-section-body">
+          Preservation of natural ecosystems is integral to our 50-year manufacturing heritage through state-of-the-art effluent treatment, closed-loop water recovery, solar power, and responsible formulation.
+        </p>
+
+        <div class="m-sustain-card">
+          <div class="m-sustain-card__icon">
+            <img src="/assets/images/4r.webp" alt="4R Environmental Doctrine" loading="lazy" />
+          </div>
+          <div class="m-sustain-card__text">
+            <h4 class="m-sustain-card__heading">4R Environmental Framework</h4>
+            <p>Recover, Reduce, Reuse &amp; Recycle doctrine governing daily operations at our Ankleshwar complex alongside in-house ETP water recycling and reverse osmosis used-water purification.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <a href="/sustainability" class="m-btn m-btn--outline">Explore Sustainability &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         12. FINAL CONVERSION CTA (NO FORM)
+         ============================================ -->
+    <section class="m-section m-conversion" id="m-contact">
+      <div class="m-container">
+        <span class="m-eyebrow">Connect With Us</span>
+        <h2 class="m-conversion__title">Looking for the Right Color Solution?</h2>
+        <p class="m-conversion__body">
+          Talk to our commercial sales and laboratory teams about your product requirements, shade matching, or regulatory compliance.
+        </p>
+        <div class="m-conversion__actions">
+          <a href="/pages/contact/" class="m-btn m-btn--primary">
+            Send an Inquiry &rarr;
+          </a>
+        </div>
+        <div class="m-conversion__direct">
+          <div class="m-conversion__item">
+            <span class="m-conversion__label">Sales Hotline:</span>
+            <a href="tel:+912248822900" class="m-conversion__val">+91-22-4882 2900</a>
+          </div>
+          <div class="m-conversion__item">
+            <span class="m-conversion__label">Email:</span>
+            <a href="mailto:sales@kpateldyes.com" class="m-conversion__val">sales@kpateldyes.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__main footer__main--compact">
-        <div>
-          <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="footer-logo" />
-          <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
-          <p style="font-size: 13px; color: var(--color-body-muted); margin-top: 16px; line-height: 1.6;">
-            <strong>Corporate Office:</strong><br />
-            504, Eureka Tower, Mindspace, Malad West,<br />
-            Mumbai 400064, India
-          </p>
-        </div>
-        <div>
-          <p class="footer__links-title">Group Companies</p>
-          <div style="font-size: 13px; color: var(--color-body); line-height: 1.8;">
-            <a href="/pages/company/" style="color: inherit; text-decoration: none; font-weight: 500;">View Group Companies &rarr;</a>
-          </div>
-        </div>
-        <div>
-          <p class="footer__links-title">Contact</p>
-          <p style="font-size: 13px; color: var(--color-body-muted); margin-bottom: 12px; line-height: 1.6;">
-            <strong>Ankleshwar Works:</strong><br />
-            155 GIDC, Ankleshwar 393002, Gujarat, India
-          </p>
-          <div class="footer__contact-item" style="margin-bottom: 4px;">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
-            +91-22-4882 2900
-          </div>
-          <div class="footer__contact-item">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-            sales@kpateldyes.com
-          </div>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <div class="footer__badges">
-          <span class="footer__badge">ISO 9001:2015 & 14001:2015</span>
-        </div>
-        <p class="footer__copyright">&copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.</p>
-      </div>
+  <!-- ============================================
+       13. ONE-LINER MOBILE FOOTER
+       ============================================ -->
+  <footer class="m-footer--oneliner">
+    <div class="m-container m-footer__oneliner-inner">
+      <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="m-footer__oneliner-logo" />
+      <p class="m-footer__oneliner-copy">&copy; 2026 K. Patel Chemopharma Pvt. Ltd. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="/assets/js/mobile.js"></script>
-  <script src="/assets/js/form.js"></script>
 </body>
 </html>
