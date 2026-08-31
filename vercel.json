@@ -1,5 +1,6 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/",
@@ -7,75 +8,75 @@
     },
     {
       "source": "/about",
-      "destination": "/pages/about/index.html"
+      "destination": "/pages/about"
     },
     {
       "source": "/company",
-      "destination": "/pages/company/index.html"
+      "destination": "/pages/company"
     },
     {
       "source": "/contact",
-      "destination": "/pages/contact/index.html"
+      "destination": "/pages/contact"
     },
     {
       "source": "/products",
-      "destination": "/pages/products/index.html"
+      "destination": "/pages/products"
     },
     {
       "source": "/products/basic-dyes",
-      "destination": "/pages/products/basic-dyes/index.html"
+      "destination": "/pages/products/basic-dyes"
     },
     {
       "source": "/products/solvent-dyes",
-      "destination": "/pages/products/solvent-dyes/index.html"
+      "destination": "/pages/products/solvent-dyes"
     },
     {
       "source": "/products/rinsable-dyes",
-      "destination": "/pages/products/rinsable-dyes/index.html"
+      "destination": "/pages/products/rinsable-dyes"
     },
     {
       "source": "/products/pigments",
-      "destination": "/pages/products/pigments/index.html"
+      "destination": "/pages/products/pigments"
     },
     {
       "source": "/products/pigment-dispersions",
-      "destination": "/pages/products/pigment-dispersions/index.html"
+      "destination": "/pages/products/pigment-dispersions"
     },
     {
       "source": "/products/acid-dyes",
-      "destination": "/pages/products/acid-dyes/index.html"
+      "destination": "/pages/products/acid-dyes"
     },
     {
       "source": "/products/direct-dyes",
-      "destination": "/pages/products/direct-dyes/index.html"
+      "destination": "/pages/products/direct-dyes"
     },
     {
       "source": "/applications",
-      "destination": "/pages/applications/index.html"
+      "destination": "/pages/applications"
     },
     {
       "source": "/industries",
-      "destination": "/pages/applications/index.html"
+      "destination": "/pages/applications"
     },
     {
       "source": "/infrastructure",
-      "destination": "/pages/infrastructure/index.html"
+      "destination": "/pages/infrastructure"
     },
     {
       "source": "/quality",
-      "destination": "/pages/infrastructure/index.html"
+      "destination": "/pages/infrastructure"
     },
     {
       "source": "/sustainability",
-      "destination": "/pages/sustainability/index.html"
+      "destination": "/pages/sustainability"
     },
     {
       "source": "/csr",
-      "destination": "/pages/csr/index.html"
+      "destination": "/pages/csr"
     },
     {
       "source": "/home",
-      "destination": "/pages/home/index.html"
+      "destination": "/pages/home"
     }
   ]
 }
