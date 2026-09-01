@@ -5,14 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNavigation();
   initSubpageMobileNav();
   
-  // Initialize Product Range Carousel
+  // Initialize Product Range Carousel (Fast & snappier 2.0s duration)
   initCarousel({
     trackId: 'product-carousel',
     counterId: 'product-counter',
     dotsId: 'product-dots',
     prevBtnId: 'product-prev',
     nextBtnId: 'product-next',
-    totalCount: 7
+    totalCount: 7,
+    interval: 2000
   });
 
   // Initialize Key Applications Carousel
@@ -22,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     dotsId: 'application-dots',
     prevBtnId: 'app-prev',
     nextBtnId: 'app-next',
-    totalCount: 6
+    totalCount: 6,
+    interval: 2600
   });
 
   // Initialize Mobile Application Videos Controller
@@ -231,7 +233,7 @@ function initCarousel(config) {
     if (resumeTimer) clearTimeout(resumeTimer);
     resumeTimer = setTimeout(() => {
       isUserInteracting = false;
-    }, 4500);
+    }, 2800);
   }
 
   // Touch event tracking
@@ -248,7 +250,8 @@ function initCarousel(config) {
 
   function startAutoScroll() {
     stopAutoScroll();
-    autoScrollTimer = setInterval(stepAutoScroll, 3600);
+    const duration = config.interval || 2000;
+    autoScrollTimer = setInterval(stepAutoScroll, duration);
   }
 
   function stopAutoScroll() {
