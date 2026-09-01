@@ -1569,21 +1569,22 @@ body.m-home {
   }
 
   .contact-card__icon-wrap {
-    width: 42px !important;
-    height: 42px !important;
-    border-radius: 10px !important;
-    background: rgba(214, 178, 122, 0.22) !important;
-    border: 1px solid rgba(214, 178, 122, 0.45) !important;
+    width: 32px !important;
+    height: 32px !important;
+    background: transparent !important;
+    border: none !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     flex-shrink: 0 !important;
+    margin-top: 2px !important;
   }
 
   .contact-card__icon-wrap svg {
-    width: 18px !important;
-    height: 18px !important;
-    stroke: var(--m-secondary-brown) !important;
+    width: 22px !important;
+    height: 22px !important;
+    stroke: var(--m-primary-brown, #5A2C20) !important;
+    stroke-width: 2 !important;
   }
 
   .contact-card__label {
