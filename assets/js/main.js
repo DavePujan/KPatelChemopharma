@@ -958,67 +958,96 @@ function initProductSearch() {
 
 /* ============================================
    APPLICATION VIDEOS PERFORMANCE CONTROLLER
-   - Viewport-aware playback (pauses offscreen)
-   - Staggered initialization to avoid decoder spikes
-   - Background tab pause/resume
-   - Interactive hover speed boost
+   - Viewport-aware playback (IntersectionObserver with 200px prefetch margin)
+   - Staggered playback initialization to eliminate decoder contention & frame drops
+   - Tab visibility lifecycle (automatic pause in background, intelligent resume)
+   - Prefers-reduced-motion & Data Saver accessibility compliance
+   - Interactive hover acceleration (1.2x playback rate)
    ============================================ */
 function initApplicationVideos() {
   const videos = Array.from(document.querySelectorAll('.application-video, .industry-card video'));
   if (!videos.length) return;
 
-  // Stagger playback to prevent decoder spike
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isSaveData = Boolean(navigator.connection && navigator.connection.saveData);
+
+  // If user enabled reduced motion or Data Saver, do not autoplay background videos
+  if (prefersReducedMotion || isSaveData) {
+    videos.forEach((video) => {
+      video.pause();
+      video.preload = 'none';
+    });
+    return;
+  }
+
+  // Active timers tracking to prevent overlapping play calls
+  const playTimers = new WeakMap();
+
   const playVideoSafely = (video, delay = 0) => {
     if (!video) return;
-    setTimeout(() => {
+
+    if (playTimers.has(video)) {
+      clearTimeout(playTimers.get(video));
+      playTimers.delete(video);
+    }
+
+    const timer = setTimeout(() => {
       if (video.paused) {
-        const promise = video.play();
-        if (promise !== undefined) {
-          promise.catch(() => {
-            // Autoplay policy or interrupted
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Autoplay policy or user interruption handled silently
           });
         }
       }
     }, delay);
+
+    playTimers.set(video, timer);
   };
 
   const pauseVideo = (video) => {
-    if (!video || video.paused) return;
-    video.pause();
+    if (!video) return;
+    if (playTimers.has(video)) {
+      clearTimeout(playTimers.get(video));
+      playTimers.delete(video);
+    }
+    if (!video.paused) {
+      video.pause();
+    }
   };
 
-  // IntersectionObserver: Play only when in viewport, pause when offscreen
+  // IntersectionObserver: Play when near viewport, pause when offscreen
   if ('IntersectionObserver' in window) {
     const videoObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const video = entry.target;
         if (entry.isIntersecting) {
           const index = videos.indexOf(video);
-          playVideoSafely(video, Math.max(0, index) * 35);
+          playVideoSafely(video, Math.max(0, index) * 40);
         } else {
           pauseVideo(video);
         }
       });
     }, {
       root: null,
-      rootMargin: '120px 0px',
+      rootMargin: '200px 0px',
       threshold: 0.1
     });
 
     videos.forEach((vid) => videoObserver.observe(vid));
   } else {
-    // Fallback if IntersectionObserver not supported
+    // Fallback if IntersectionObserver is not supported
     videos.forEach((vid, i) => playVideoSafely(vid, i * 40));
   }
 
-  // Interactive Hover: Speed up slightly on hover for a tactile, responsive feel
+  // Interactive Hover: Speed up slightly on hover for tactile responsiveness
   videos.forEach((video) => {
     const card = video.closest('.industry-card');
     if (!card) return;
 
     card.addEventListener('mouseenter', () => {
-      video.playbackRate = 1.25;
-      if (video.paused) playVideoSafely(video);
+      video.playbackRate = 1.2;
+      if (video.paused) playVideoSafely(video, 0);
     });
 
     card.addEventListener('mouseleave', () => {
@@ -1026,14 +1055,14 @@ function initApplicationVideos() {
     });
   });
 
-  // Pause all videos if browser tab is backgrounded
+  // Background tab management: Pause on hide, resume visible on active
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       videos.forEach(pauseVideo);
     } else {
       videos.forEach((vid, i) => {
         const rect = vid.getBoundingClientRect();
-        const inView = rect.top < window.innerHeight && rect.bottom > 0;
+        const inView = rect.top < window.innerHeight + 100 && rect.bottom > -100;
         if (inView) {
           playVideoSafely(vid, i * 30);
         }
