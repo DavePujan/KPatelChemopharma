@@ -9,60 +9,26 @@
     content="Discover K. Patel Chemopharma's environmental sustainability initiatives: in-house ETP and RO water recycling, industrial solar energy park, 4R circular framework, and ISO 14001:2015 eco-compliance." />
   <link rel="canonical" href="https://www.kpateldyes.com/sustainability" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Sustainability & Environmental Stewardship — K. Patel Chemopharma" />
-  <meta property="og:description"
-    content="Preserving ecosystems through in-house ETP & RO water recycling, dedicated solar park, and zero-compromise environmental compliance." />
+    <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="K. Patel Chemopharma" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://www.kpateldyes.com/sustainability" />
-  <meta property="og:image" content="https://www.kpateldyes.com/assets/images/infrastructure/water_recycling_ro.webp" />
+  <meta property="og:title" content="Sustainability & Environmental Stewardship — K. Patel Chemopharma" />
+  <meta property="og:description" content="Discover K. Patel Chemopharma's environmental sustainability initiatives: in-house ETP and RO water recycling, industrial solar energy park, 4R circular framework, and ISO 14001:2015 eco-compliance." />
+  <meta property="og:image" content="https://www.kpateldyes.com/assets/images/og-kpatel.jpg" />
+  <meta property="og:image:secure_url" content="https://www.kpateldyes.com/assets/images/og-kpatel.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content="Sustainability & Environmental Stewardship — K. Patel Chemopharma" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sustainability & Environmental Stewardship — K. Patel Chemopharma" />
-  <meta name="twitter:description"
-    content="Discover our 4R circular framework, advanced effluent treatment, solar energy adoption, and ISO 14001:2015 compliance." />
-  <meta name="twitter:image" content="https://www.kpateldyes.com/assets/images/infrastructure/water_recycling_ro.webp" />
-
-  <!-- Structured Data JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.kpateldyes.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Sustainability",
-            "item": "https://www.kpateldyes.com/sustainability"
-          }
-        ]
-      },
-      {
-        "@type": "AboutPage",
-        "@id": "https://www.kpateldyes.com/sustainability",
-        "name": "Sustainability & Environmental Stewardship",
-        "description": "Environmental management, ETP water recycling, solar energy adoption, and 4R eco-initiatives at K. Patel Chemopharma.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "K. Patel Chemopharma Private Limited",
-          "url": "https://www.kpateldyes.com"
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.kpateldyes.com/sustainability" />
+  <meta property="twitter:title" content="Sustainability & Environmental Stewardship — K. Patel Chemopharma" />
+  <meta property="twitter:description" content="Discover K. Patel Chemopharma's environmental sustainability initiatives: in-house ETP and RO water recycling, industrial solar energy park, 4R circular framework, and ISO 14001:2015 eco-compliance." />
+  <meta property="twitter:image" content="https://www.kpateldyes.com/assets/images/og-kpatel.jpg" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -239,9 +205,9 @@
       <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" /></a>
       <div class="nav__links">
         <a href="/pages/about/" class="nav__link">About Us</a>
-        <a href="/pages/products/" class="nav__link">Products</a>
+        <a href="/#solutions" class="nav__link">Products</a>
         <a href="/#applications" class="nav__link">Application</a>
-        <a href="/pages/infrastructure/" class="nav__link">Infrastructure</a>
+        <a href="/#operations" class="nav__link">Infrastructure</a>
         <a href="/sustainability" class="nav__link is-active">Sustainability</a>
         <a href="/csr" class="nav__link">CSR</a>
       </div>
@@ -253,15 +219,30 @@
   </nav>
 
   <!-- Mobile Nav Overlay -->
-  <div class="nav__mobile" id="mobile-nav">
-    <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
-    <a href="/pages/about/">About Us</a>
-    <a href="/pages/products/">Products</a>
-    <a href="/#applications">Application</a>
-    <a href="/pages/infrastructure/">Infrastructure</a>
-    <a href="/sustainability">Sustainability</a>
-    <a href="/csr">CSR</a>
-    <a href="/#contact-section">Contact</a>
+  <div class="nav__mobile m-menu" id="mobile-nav" aria-hidden="true">
+    <div class="m-menu__top">
+      <a href="/" class="m-header__logo">
+        <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" style="height: 30px;" />
+      </a>
+      <button class="nav__mobile-close m-menu__close" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <nav class="m-menu__nav">
+      <a href="/pages/about/" class="m-menu__link">About Us <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/home/#m-products" class="m-menu__link">Products <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/home/#m-applications" class="m-menu__link">Applications <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/home/#m-infrastructure" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/sustainability" class="m-menu__link">Sustainability <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/csr" class="m-menu__link">CSR <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/contact/" class="m-menu__link">Contact <span class="m-menu__arrow">&rarr;</span></a>
+    </nav>
+    <div class="m-menu__footer">
+      <div class="m-menu__contact-item">
+        <a href="tel:+912248822900">+91-22-4882 2900</a>
+      </div>
+      <div class="m-menu__contact-item">
+        <a href="mailto:sales@kpateldyes.com">sales@kpateldyes.com</a>
+      </div>
+    </div>
   </div>
 
   <main>

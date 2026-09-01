@@ -4,16 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>K. Patel Chemopharma — Manufacturer of Dyes, Pigments &amp; Dispersions</title>
-  <link rel="icon" type="image/png" href="/assets/images/logo-no-bg.webp" />
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
   <meta name="description" content="Pioneering color chemistry since 1974. Established global manufacturer of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments conforming to international standards." />
   <link rel="canonical" href="https://www.kpateldyes.com/" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="K. Patel Chemopharma" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://www.kpateldyes.com/" />
   <meta property="og:title" content="K. Patel Chemopharma — Manufacturer of Dyes, Pigments &amp; Dispersions" />
-  <meta property="og:description" content="Pioneering color chemistry since 1974. Manufacturer of high-grade colorants for global industrial applications." />
-  <meta property="og:image" content="https://www.kpateldyes.com/assets/images/logo-no-bg.webp" />
+  <meta property="og:description" content="Pioneering color chemistry since 1974. Established global manufacturer of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments conforming to international standards." />
+  <meta property="og:image" content="https://www.kpateldyes.com/assets/images/og-kpatel.jpg" />
+  <meta property="og:image:secure_url" content="https://www.kpateldyes.com/assets/images/og-kpatel.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content="K. Patel Chemopharma — Precision Color Chemistry Since 1974" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.kpateldyes.com/" />
+  <meta property="twitter:title" content="K. Patel Chemopharma — Manufacturer of Dyes, Pigments &amp; Dispersions" />
+  <meta property="twitter:description" content="Pioneering color chemistry since 1974. Established global manufacturer of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, and Pigments conforming to international standards." />
+  <meta property="twitter:image" content="https://www.kpateldyes.com/assets/images/og-kpatel.jpg" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -80,35 +95,36 @@
 
   <main>
     <!-- ============================================
-         2. MOBILE HERO (NO EXPLORE PRODUCT BUTTON)
+         2. MOBILE HERO (MILLIKEN-STYLE MEDIA + CARD)
          ============================================ -->
     <section class="m-hero" id="hero">
-      <div class="m-hero__bg">
+      <div class="m-hero__media">
         <img src="/assets/images/office/DSC00176.webp" alt="K. Patel Chemopharma Corporate Headquarters" loading="eager" fetchpriority="high" />
       </div>
-      <div class="m-hero__overlay"></div>
-      <div class="m-container m-hero__content">
-        <span class="m-eyebrow m-hero__eyebrow">SINCE 1974</span>
-        <h1 class="m-hero__title">
-          Manufacturer of Dyes, Pigments &amp; Dispersions
-        </h1>
-        <p class="m-hero__sub">
-          Color solutions engineered for diverse industrial applications.
-        </p>
-        <div class="m-hero__actions">
-          <a href="/pages/contact/" class="m-btn m-btn--primary">
-            Request a consultation &rarr;
-          </a>
-        </div>
-        <div class="m-hero__metrics">
-          <div class="m-hero__metric">
-            <span class="m-hero__metric-num">50+</span>
-            <span class="m-hero__metric-lbl">Years Global Supply</span>
+      <div class="m-hero__card">
+        <div class="m-container">
+          <span class="m-hero__eyebrow">SINCE 1974</span>
+          <h1 class="m-hero__title">
+            Manufacturer of Dyes, Pigments &amp; Dispersions
+          </h1>
+          <p class="m-hero__sub">
+            Color solutions engineered for diverse industrial applications across 40+ countries.
+          </p>
+          <div class="m-hero__actions">
+            <a href="/pages/contact/" class="m-btn m-btn--primary">
+              Request a consultation &rarr;
+            </a>
           </div>
-          <div class="m-hero__metric-divider"></div>
-          <div class="m-hero__metric">
-            <span class="m-hero__metric-num">150+</span>
-            <span class="m-hero__metric-lbl">Colorant Products</span>
+          <div class="m-hero__metrics">
+            <div class="m-hero__metric">
+              <span class="m-hero__metric-num">50+</span>
+              <span class="m-hero__metric-lbl">Years Global Supply</span>
+            </div>
+            <div class="m-hero__metric-divider"></div>
+            <div class="m-hero__metric">
+              <span class="m-hero__metric-num">150+</span>
+              <span class="m-hero__metric-lbl">Colorant Products</span>
+            </div>
           </div>
         </div>
       </div>
@@ -139,9 +155,6 @@
         <p class="m-section-body">
           High-grade dyes, pigments, and related dispersions conforming to international standards.
         </p>
-        <div class="m-carousel-top-bar">
-          <span class="m-counter" id="product-counter">01 / 07</span>
-        </div>
       </div>
 
       <div class="m-carousel-track" id="product-carousel">
@@ -208,25 +221,48 @@
           </div>
         </a>
       </div>
+
+      <!-- Milliken-Style Navigation Controls -->
+      <div class="m-container">
+        <div class="m-carousel-nav" id="product-carousel-nav">
+          <button class="m-carousel-arrow m-carousel-arrow--prev" id="product-prev" aria-label="Previous product">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <div class="m-carousel-indicators">
+            <div class="m-carousel-dots" id="product-dots"></div>
+            <span class="m-counter" id="product-counter">01 / 07</span>
+          </div>
+          <button class="m-carousel-arrow m-carousel-arrow--next" id="product-next" aria-label="Next product">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- ============================================
-         5. KEY APPLICATIONS (AUTO-SCROLL, NO BUTTON)
+         5. KEY APPLICATIONS (AUTO-SCROLL CAROUSEL)
          ============================================ -->
     <section class="m-section" id="m-applications">
       <div class="m-container m-section-header">
         <span class="m-eyebrow">Key Applications</span>
-        <h2 class="m-section-title">Colorants tailored for diverse applications.</h2>
-        <div class="m-carousel-top-bar">
-          <span class="m-counter" id="application-counter">01 / 06</span>
-        </div>
+        <h2 class="m-section-title">Colorants Tailored For Diverse Applications</h2>
+        <p class="m-section-body">
+          Specialty color chemistries formulated for textiles, paper, inks, writing instruments, and coatings.
+        </p>
       </div>
 
       <div class="m-carousel-track" id="application-carousel">
         <!-- 1. Paper & Pulp -->
         <div class="m-app-card">
-          <img src="/assets/images/industries/opt/paper-and-pulp.webp" alt="Paper & Pulp" loading="lazy" />
-          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__media">
+            <video class="application-video" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="/assets/images/industries/opt/paper-and-pulp.webp">
+              <source src="/assets/images/industries/opt/paper-and-pulp.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div class="m-app-card__content">
             <h3 class="m-app-card__title">Paper &amp; Pulp</h3>
             <p class="m-app-card__text">Optimized Basic and Direct Dyes together with pigment dispersions for commercial paper coloring.</p>
@@ -235,8 +271,11 @@
 
         <!-- 2. Writing Instruments -->
         <div class="m-app-card">
-          <img src="/assets/images/industries/opt/writing-instruments.webp" alt="Writing Instruments" loading="lazy" />
-          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__media">
+            <video class="application-video" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="/assets/images/industries/opt/writing-instruments.webp">
+              <source src="/assets/images/industries/opt/writing-instruments.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div class="m-app-card__content">
             <h3 class="m-app-card__title">Writing Instruments</h3>
             <p class="m-app-card__text">Custom-grade ballpoint pen inks, marker inks, ribbon inks, and child-safe EN-71 compliant solutions.</p>
@@ -245,8 +284,11 @@
 
         <!-- 3. Printing Inks & Art Supplies -->
         <div class="m-app-card">
-          <img src="/assets/images/industries/opt/printing-ink-and-art-supply.webp" alt="Printing Inks & Art Supplies" loading="lazy" />
-          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__media">
+            <video class="application-video" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="/assets/images/industries/opt/printing-ink-and-art-supply.webp">
+              <source src="/assets/images/industries/opt/printing-ink-and-art-supply.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div class="m-app-card__content">
             <h3 class="m-app-card__title">Printing Inks &amp; Art Supplies</h3>
             <p class="m-app-card__text">High-performance violet and blue toners alongside rinsable dyes for consumer arts and crafts.</p>
@@ -255,8 +297,11 @@
 
         <!-- 4. Textiles, Leather & Wool -->
         <div class="m-app-card">
-          <img src="/assets/images/industries/opt/textile-leather-and-wool.webp" alt="Textiles, Leather & Wool" loading="lazy" />
-          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__media">
+            <video class="application-video" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="/assets/images/industries/opt/textile-leather-and-wool.webp">
+              <source src="/assets/images/industries/opt/textile-leather-and-wool.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div class="m-app-card__content">
             <h3 class="m-app-card__title">Textiles, Leather &amp; Wool</h3>
             <p class="m-app-card__text">Vibrant, high-affinity Acid and Direct Dyes engineered for silk, nylon, wool, and leather treatments.</p>
@@ -265,8 +310,11 @@
 
         <!-- 5. Wood & Turf Coloring -->
         <div class="m-app-card">
-          <img src="/assets/images/industries/opt/wood-and-turf-coloring.webp" alt="Wood & Turf Coloring" loading="lazy" />
-          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__media">
+            <video class="application-video" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="/assets/images/industries/opt/wood-and-turf-coloring.webp">
+              <source src="/assets/images/industries/opt/wood-and-turf-coloring.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div class="m-app-card__content">
             <h3 class="m-app-card__title">Wood &amp; Turf Coloring</h3>
             <p class="m-app-card__text">Robust colorants designed to withstand environmental conditions for MDF, treated wood, and lawn turf coloring.</p>
@@ -275,12 +323,35 @@
 
         <!-- 6. Digital Ink & Coatings -->
         <div class="m-app-card">
-          <img src="/assets/images/industries/opt/digital-ink-and-coating.webp" alt="Digital Ink & Coatings" loading="lazy" />
-          <div class="m-app-card__gradient"></div>
+          <div class="m-app-card__media">
+            <video class="application-video" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="/assets/images/industries/opt/digital-ink-and-coating.webp">
+              <source src="/assets/images/industries/opt/digital-ink-and-coating.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div class="m-app-card__content">
             <h3 class="m-app-card__title">Digital Ink &amp; Coatings</h3>
             <p class="m-app-card__text">Advanced organic and inorganic pigment dispersions engineered for conventional and digital inkjet printer applications.</p>
           </div>
+        </div>
+      </div>
+
+      <!-- Milliken-Style Navigation Controls -->
+      <div class="m-container">
+        <div class="m-carousel-nav" id="application-carousel-nav">
+          <button class="m-carousel-arrow m-carousel-arrow--prev" id="app-prev" aria-label="Previous application">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <div class="m-carousel-indicators">
+            <div class="m-carousel-dots" id="application-dots"></div>
+            <span class="m-counter" id="application-counter">01 / 06</span>
+          </div>
+          <button class="m-carousel-arrow m-carousel-arrow--next" id="app-next" aria-label="Next application">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
         </div>
       </div>
     </section>

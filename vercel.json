@@ -77,6 +77,10 @@
     {
       "source": "/home",
       "destination": "/pages/home"
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/pages/thank-you"
     }
   ]
 }

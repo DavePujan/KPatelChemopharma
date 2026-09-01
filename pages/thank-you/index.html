@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inquiry Received — Thank You | K. Patel Chemopharma</title>
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  <meta name="description"
+    content="Thank you for submitting your inquiry to K. Patel Chemopharma. Our technical and sales teams will review your specifications and respond within 12 business hours." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Open Graph / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="K. Patel Chemopharma" />
+  <meta property="og:title" content="Inquiry Received — Thank You | K. Patel Chemopharma" />
+  <meta property="og:description" content="Thank you for submitting your inquiry to K. Patel Chemopharma. Our technical and sales teams will review your specifications and respond within 12 business hours." />
+  <meta property="og:image" content="https://www.kpateldyes.com/assets/images/og-kpatel.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Inquiry Received — Thank You | K. Patel Chemopharma" />
+  <meta property="twitter:description" content="Thank you for submitting your inquiry to K. Patel Chemopharma. Our technical and sales teams will review your specifications and respond within 12 business hours." />
+  <meta property="twitter:image" content="https://www.kpateldyes.com/assets/images/og-kpatel.jpg" />
+
+  <!-- Fonts & Core CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/components/navbar.css" />
+  <link rel="stylesheet" href="/assets/css/components/footer.css" />
+  <link rel="stylesheet" href="/assets/css/responsive.css" />
+
+  <style>
+    .thankyou-hero {
+      min-height: calc(100vh - 120px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px 60px;
+      background: radial-gradient(circle at 50% 15%, rgba(243, 237, 226, 0.8) 0%, rgba(250, 248, 243, 1) 75%);
+      box-sizing: border-box;
+    }
+
+    .thankyou-card {
+      max-width: 760px;
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid var(--m-border, #DED2C3);
+      border-radius: 20px;
+      padding: 48px 40px;
+      box-shadow: 0 12px 40px rgba(90, 44, 32, 0.06);
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .success-icon-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(214, 178, 122, 0.25) 0%, rgba(90, 44, 32, 0.1) 100%);
+      border: 2px solid #D6B27A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      color: #5A2C20;
+    }
+
+    .success-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      background: rgba(214, 178, 122, 0.18);
+      border: 1px solid rgba(214, 178, 122, 0.45);
+      color: #5A2C20;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .thankyou-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 700;
+      color: #5A2C20;
+      margin: 0 0 14px 0;
+      line-height: 1.25;
+    }
+
+    .thankyou-desc {
+      font-size: 15px;
+      line-height: 1.65;
+      color: #4A403A;
+      max-width: 600px;
+      margin: 0 auto 32px auto;
+    }
+
+    /* What Happens Next Timeline */
+    .next-steps-container {
+      background: #FAF8F3;
+      border: 1px solid #DED2C3;
+      border-radius: 14px;
+      padding: 24px 20px;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+
+    .next-steps-heading {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7A4A3A;
+      margin: 0 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .next-steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .next-step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .next-step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #5A2C20;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .next-step-content h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #5A2C20;
+      margin: 0 0 3px 0;
+    }
+
+    .next-step-content p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #4A403A;
+      margin: 0;
+    }
+
+    /* Direct Contact Strip */
+    .urgent-contact-strip {
+      background: #F3EDE2;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .urgent-contact-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #5A2C20;
+    }
+
+    .urgent-contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .urgent-contact-links a {
+      color: #5A2C20;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .urgent-contact-links a:hover {
+      color: #7A4A3A;
+      text-decoration: underline;
+    }
+
+    /* Action Buttons */
+    .thankyou-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .btn-ty-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #5A2C20;
+      color: #FFFFFF !important;
+      padding: 13px 26px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(90, 44, 32, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .btn-ty-primary:hover {
+      background: #7A4A3A;
+      transform: translateY(-1px);
+    }
+
+    .btn-ty-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #F3EDE2;
+      color: #5A2C20 !important;
+      border: 1px solid #DED2C3;
+      padding: 13px 24px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-ty-secondary:hover {
+      background: #E8D8C0;
+      border-color: #D6B27A;
+    }
+
+    @media (max-width: 600px) {
+      .thankyou-card {
+        padding: 32px 18px;
+      }
+      .urgent-contact-strip {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .thankyou-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-ty-primary,
+      .btn-ty-secondary {
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <nav class="nav nav--hero is-scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" /></a>
+      <div class="nav__links">
+        <a href="/pages/about/" class="nav__link">About Us</a>
+        <a href="/#solutions" class="nav__link">Products</a>
+        <a href="/#applications" class="nav__link">Applications</a>
+        <a href="/#operations" class="nav__link">Infrastructure</a>
+        <a href="/sustainability" class="nav__link">Sustainability</a>
+        <a href="/csr" class="nav__link">CSR</a>
+      </div>
+      <a href="/pages/contact/" class="nav__cta">Contact Us</a>
+      <button class="nav__toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="nav__mobile m-menu" id="mobile-nav" aria-hidden="true">
+    <div class="m-menu__top">
+      <a href="/" class="m-header__logo">
+        <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" style="height: 30px;" />
+      </a>
+      <button class="nav__mobile-close m-menu__close" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <nav class="m-menu__nav">
+      <a href="/pages/about/" class="m-menu__link">About Us <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/home/#m-products" class="m-menu__link">Products <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/home/#m-applications" class="m-menu__link">Applications <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/home/#m-infrastructure" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/sustainability" class="m-menu__link">Sustainability <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/csr" class="m-menu__link">CSR <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/contact/" class="m-menu__link">Contact <span class="m-menu__arrow">&rarr;</span></a>
+    </nav>
+    <div class="m-menu__footer">
+      <div class="m-menu__contact-item">
+        <a href="tel:+912248822900">+91-22-4882 2900</a>
+      </div>
+      <div class="m-menu__contact-item">
+        <a href="mailto:sales@kpateldyes.com">sales@kpateldyes.com</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="thankyou-hero">
+      <div class="thankyou-card">
+        <div class="success-icon-wrap">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+
+        <span class="success-badge">
+          Inquiry Successfully Logged
+        </span>
+
+        <h1 class="thankyou-title">Thank You for Connecting with Us</h1>
+        <p class="thankyou-desc">
+          Your inquiry has been received by K. Patel Chemopharma. Our commercial team and specialized dye laboratory have been notified with your specifications.
+        </p>
+
+        <!-- What Happens Next -->
+        <div class="next-steps-container">
+          <div class="next-steps-heading">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            What Happens Next
+          </div>
+          <div class="next-steps-list">
+            <div class="next-step-item">
+              <div class="next-step-num">1</div>
+              <div class="next-step-content">
+                <h4>Technical Review &amp; Shade Matching (Within 4–6 Hours)</h4>
+                <p>Our color chemists evaluate your substrate, application viscosity, light fastness, and regulatory requirements (REACH, EN-71, OEKO-TEX).</p>
+              </div>
+            </div>
+            <div class="next-step-item">
+              <div class="next-step-num">2</div>
+              <div class="next-step-content">
+                <h4>Data Dossier &amp; Commercial Quotation (Within 12 Hours)</h4>
+                <p>We provide comprehensive Technical Data Sheets (TDS), Safety Data Sheets (SDS), and custom volume pricing tailored to your export or domestic delivery terms.</p>
+              </div>
+            </div>
+            <div class="next-step-item">
+              <div class="next-step-num">3</div>
+              <div class="next-step-content">
+                <h4>Working Sample Dispatch</h4>
+                <p>Upon request, standardized or customized shade lab samples are dispatched via express courier accompanied by batch Certificates of Analysis (COA).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Immediate Contact Hotline -->
+        <div class="urgent-contact-strip">
+          <div class="urgent-contact-label">Need urgent technical or shipping assistance?</div>
+          <div class="urgent-contact-links">
+            <a href="tel:+912248822900">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68A2 2 0 0 1 22 16.92z"/></svg>
+              +91-22-4882 2900
+            </a>
+            <a href="mailto:sales@kpateldyes.com">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              sales@kpateldyes.com
+            </a>
+          </div>
+        </div>
+
+        <div class="thankyou-actions">
+          <a href="/" class="btn-ty-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Return to Homepage
+          </a>
+          <a href="/pages/products/" class="btn-ty-secondary">
+            Browse Product Range
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__col footer__col--brand">
+          <a href="/" class="footer__logo-link">
+            <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="footer-logo" />
+          </a>
+          <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
+          <p class="footer__brand-desc">
+            Pioneering color chemistry since 1974. Exporting dyes, pigments, and dispersions to 40+ countries globally.
+          </p>
+        </div>
+
+        <div class="footer__col footer__col--nav">
+          <h4 class="footer__heading">Product Range</h4>
+          <ul class="footer__links">
+            <li><a href="/pages/products/basic-dyes/">Basic Dyes</a></li>
+            <li><a href="/pages/products/solvent-dyes/">Solvent Dyes</a></li>
+            <li><a href="/pages/products/rinsable-dyes/">Rinsable Dyes</a></li>
+            <li><a href="/pages/products/pigments/">Pigments</a></li>
+            <li><a href="/pages/products/pigment-dispersions/">Pigment Dispersions</a></li>
+            <li><a href="/pages/products/acid-dyes/">Acid Dyes</a></li>
+            <li><a href="/pages/products/direct-dyes/">Direct Dyes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col footer__col--nav">
+          <h4 class="footer__heading">Company</h4>
+          <ul class="footer__links">
+            <li><a href="/pages/about/">About Us</a></li>
+            <li><a href="/pages/company/">Company Legacy</a></li>
+            <li><a href="/pages/infrastructure/">Infrastructure &amp; Labs</a></li>
+            <li><a href="/pages/applications/">Key Applications</a></li>
+            <li><a href="/sustainability">Sustainability</a></li>
+            <li><a href="/csr">CSR Initiatives</a></li>
+            <li><a href="/pages/contact/">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col footer__col--contact">
+          <h4 class="footer__heading">Corporate Office</h4>
+          <p class="footer__address">
+            504, Eureka Tower, Mindspace, Off Link Road, Malad West, Mumbai – 400 064, India.
+          </p>
+          <p class="footer__phone"><a href="tel:+912248822900">+91-22-4882 2900</a></p>
+          <p class="footer__email"><a href="mailto:sales@kpateldyes.com">sales@kpateldyes.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; <span id="year">2026</span> K. Patel Chemopharma Private Limited. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/mobile.js"></script>
+</body>
+
+</html>
