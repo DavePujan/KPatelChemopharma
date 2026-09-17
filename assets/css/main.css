@@ -2205,6 +2205,17 @@ main>section:first-of-type {
     min-height: 300px;
   }
 
+  .industry-card__image-wrap video,
+  .industry-card__image-wrap img,
+  .application-video {
+    transform: scale(1.22);
+    transform-origin: 8% 8%;
+  }
+
+  .industry-card:hover .industry-card__image-wrap video {
+    transform: scale(1.22);
+  }
+
   .operations__highlights {
     grid-template-columns: 1fr;
   }

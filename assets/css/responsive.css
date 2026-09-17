@@ -629,6 +629,8 @@ body.m-home {
   height: 100%;
   object-fit: cover;
   display: block;
+  transform: scale(1.22);
+  transform-origin: 8% 8%;
 }
 
 .m-app-card__gradient {
@@ -1422,6 +1424,12 @@ body.m-home {
     height: 100% !important;
     object-fit: cover !important;
     display: block !important;
+    transform: scale(1.22) !important;
+    transform-origin: 8% 8% !important;
+  }
+
+  .industry-card:hover .industry-card__image-wrap video {
+    transform: scale(1.22) !important;
   }
 
   .industry-card__overlay {
