@@ -176,8 +176,8 @@ function initSmoothScroll() {
       const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
       let offset = 0;
       if (hash === '#solutions' || hash === '#products') {
-        // Scroll slightly lower so that full product showcase (both rows) fits inside viewport
-        offset = 90;
+        // Natural alignment below fixed navbar without clipping section header or eyebrow
+        offset = 0;
       } else if (hash === '#industries' || hash === '#applications') {
         // Scroll slightly lower so that full applications grid fits inside viewport
         offset = 80;
@@ -554,16 +554,16 @@ const PRODUCTS_DATA = {
     industries: ["Children's Markers & Crafts", "School & Educational Toys", "Household Cleaners"],
     features: ["EN-71 Parts 3 & 9 Safe Certification", "Zero-Staining Rinsable Washability"],
     items: [
-      { name: "Spectra Rinse Yellow GXV LQ", hex: "#F3CA40", ci: "" },
-      { name: "Spectra Rinse Yellow R12XV LQ", hex: "#F3C44C", ci: "" },
-      { name: "Spectra Rinse Yellow VG LV LQ", hex: "#F8E37E", ci: "" },
-      { name: "Spectra Rinse Orange RX-LV LQ", hex: "#F2802B", ci: "" },
-      { name: "Spectra Rinse Red RV LQ", hex: "#E8453E", ci: "" },
-      { name: "Spectra Rinse Magenta LVS LQ", hex: "#EB668C", ci: "" },
-      { name: "Spectra Rinse Blue T14XV LQ", hex: "#1CA3D4", ci: "" },
-      { name: "Spectra Rinse Green AU767 LQ", hex: "#2FA96A", ci: "" },
-      { name: "Spectra Rinse Violet BV LQ", hex: "#252D81", ci: "" },
-      { name: "Spectra Rinse Black AV115 LIQ", hex: "#111111", ci: "" }
+      { name: "Spectra Rinse Yellow GXV LQ", hex: "#F3CA40", ci: "—" },
+      { name: "Spectra Rinse Yellow R12XV LQ", hex: "#F3C44C", ci: "—" },
+      { name: "Spectra Rinse Yellow VG LV LQ", hex: "#F8E37E", ci: "—" },
+      { name: "Spectra Rinse Orange RX-LV LQ", hex: "#F2802B", ci: "—" },
+      { name: "Spectra Rinse Red RV LQ", hex: "#E8453E", ci: "—" },
+      { name: "Spectra Rinse Magenta LVS LQ", hex: "#EB668C", ci: "—" },
+      { name: "Spectra Rinse Blue T14XV LQ", hex: "#1CA3D4", ci: "—" },
+      { name: "Spectra Rinse Green AU767 LQ", hex: "#2FA96A", ci: "—" },
+      { name: "Spectra Rinse Violet BV LQ", hex: "#252D81", ci: "—" },
+      { name: "Spectra Rinse Black AV115 LIQ", hex: "#111111", ci: "—" }
     ]
   },
   pigments: {
@@ -630,7 +630,7 @@ const PRODUCTS_DATA = {
       { name: "Acid Blue 9 Powder", hex: "#4758A8", ci: "Acid Blue 9" },
       { name: "Acid Blue 9 Liquid", hex: "#4758A8", ci: "Acid Blue 9" },
       { name: "Acid Blue 80 Powder", hex: "#2E4B9B", ci: "Acid Blue 80" },
-      { name: "Acid Blue 93 Powder", ci: "Acid Blue 93" },
+      { name: "Acid Blue 93 Powder", hex: "#223B86", ci: "Acid Blue 93" },
       { name: "Acid Violet 17 Liquid", hex: "#412A81", ci: "Acid Violet 17" },
       { name: "Acid Violet 17 Powder", hex: "#412A81", ci: "Acid Violet 17" },
       { name: "Acid Violet 49 Powder", hex: "#552784", ci: "Acid Violet 49" },
@@ -653,7 +653,7 @@ const PRODUCTS_DATA = {
       { name: "Direct Red 239 Liquid", hex: "#E34825", ci: "Direct Red 239" },
       { name: "Direct Red 254 Powder", hex: "#C1104D", ci: "Direct Red 254" },
       { name: "Direct Red 254 Liquid", hex: "#C1104D", ci: "Direct Red 254" },
-      { name: "Direct Blue 80 Powder", ci: "Direct Blue 80" },
+      { name: "Direct Blue 80 Powder", hex: "#243E94", ci: "Direct Blue 80" },
       { name: "Direct Blue 86 Powder", hex: "#24428B", ci: "Direct Blue 86" },
       { name: "Direct Blue 273 Liquid", hex: "#5C81B8", ci: "Direct Blue 273" },
       { name: "Direct Blue 218 Powder", hex: "#2982B8", ci: "Direct Blue 218" },

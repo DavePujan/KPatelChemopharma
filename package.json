@@ -1,0 +1,17 @@
+{
+  "name": "kpatel-chemopharma",
+  "version": "1.0.0",
+  "description": "K. Patel Chemopharma Private Limited - Official Website",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "chemopharma",
+    "dyes",
+    "pigments"
+  ],
+  "author": "K. Patel Chemopharma",
+  "license": "UNLICENSED"
+}
