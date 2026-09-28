@@ -3688,6 +3688,12 @@ select.b2b-input {
   border-bottom: 1px solid var(--color-border);
 }
 
+@media (min-width: 1025px) {
+  .product-hero .container {
+    max-width: calc(860px + (var(--container-pad) * 2));
+  }
+}
+
 .product-hero__image-wrap {
   width: 100%;
   display: flex;
@@ -3697,7 +3703,7 @@ select.b2b-input {
 
 .product-hero__image {
   width: 100%;
-  max-width: 1200px;
+  max-width: 860px;
   height: auto;
   display: block;
   border-radius: var(--r-md, 12px);
