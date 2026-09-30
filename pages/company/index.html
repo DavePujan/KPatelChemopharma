@@ -86,9 +86,68 @@
     <!-- ========== COMPANY LEGACY — Full-width image banner ========== -->
   <section class="legacy" id="legacy">
     <div class="legacy__image-wrap">
-      <picture class="legacy__picture">
+      <!-- Desktop Interactive Boardroom Image & Hotspots (1536x1024) -->
+      <svg class="legacy__desktop-svg" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMin slice" role="img"
+        aria-label="K. Patel Chemopharma Corporate Boardroom &amp; Group Timeline" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <image href="/assets/images/legacy-boardroom-merged.webp"
+          xlink:href="/assets/images/legacy-boardroom-merged.webp" x="0" y="0" width="1536" height="1024" />
+
+        <!-- 1. 1956 - K. Patel & Co. Pvt. Ltd. (Construction House) -->
+        <a href="https://www.kpatelrealty.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+          aria-label="K. Patel &amp; Co. Pvt. Ltd. (Est. 1956 - Construction House) - Visit Website">
+          <title>K. Patel &amp; Co. Pvt. Ltd. (1956) — Construction House</title>
+          <circle cx="876" cy="555" r="73" class="timeline-node__hitbox" />
+        </a>
+
+        <!-- 2. 1974 - K. Patel Chemopharma Pvt. Ltd. -->
+        <a href="https://www.kpateldyes.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+          aria-label="K. Patel Chemopharma Pvt. Ltd. (Est. 1974 - Dyes &amp; Pigments) - Visit Website">
+          <title>K. Patel Chemopharma Pvt. Ltd. (1974) — Dyes &amp; Pigments</title>
+          <circle cx="915" cy="386" r="82" class="timeline-node__hitbox" />
+        </a>
+
+        <!-- 3. 1991 - K. Patel Dyechem Industries Pvt. Ltd. -->
+        <a href="https://www.kpateldyes.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+          aria-label="K. Patel Dyechem Industries Pvt. Ltd. (Est. 1991 - Chemical Division) - Visit Website">
+          <title>K. Patel Dyechem Industries Pvt. Ltd. (1991) — Chemical Division</title>
+          <circle cx="1018" cy="280" r="86" class="timeline-node__hitbox" />
+        </a>
+
+        <!-- 4. 1994 - Devanshi Dyestuff -->
+        <a href="https://www.kpateldyes.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+          aria-label="Devanshi Dyestuff (Est. 1994 - Dyestuffs &amp; Chemical Division) - Visit Website">
+          <title>Devanshi Dyestuff (1994) — Dyestuff Division</title>
+          <circle cx="1168" cy="252" r="88" class="timeline-node__hitbox" />
+        </a>
+
+        <!-- 5. 1995 - K. Patel International -->
+        <a href="https://www.lab-reagents.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+          aria-label="K. Patel International (Est. 1995 - Lab Chemicals &amp; Salts) - Visit Website">
+          <title>K. Patel International (1995) — Lab Chemicals &amp; Salts</title>
+          <circle cx="1272" cy="350" r="92" class="timeline-node__hitbox" />
+        </a>
+
+        <!-- 6. 2005 - K. Patel Phyto Extractions Pvt. Ltd. -->
+        <a href="https://phytoextractskp.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+          aria-label="K. Patel Phyto Extractions Pvt. Ltd. (Est. 2005 - Herbal Extracts &amp; Phytochemicals) - Visit Website">
+          <title>K. Patel Phyto Extractions Pvt. Ltd. (2005) — Botanical Extracts &amp; Phytochemicals</title>
+          <circle cx="1340" cy="572" r="88" class="timeline-node__hitbox" />
+        </a>
+
+        <!-- Center Hub - K. Patel Group -->
+        <a href="https://www.kpateldyes.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+          aria-label="K. Patel Group (Since 1956) - Visit Website">
+          <title>K. Patel Group — Since 1956</title>
+          <circle cx="1090" cy="495" r="115" class="timeline-node__hitbox" />
+        </a>
+      </svg>
+
+      <!-- Small-screen / Mobile Picture Fallback -->
+      <picture class="legacy__picture legacy__mobile-picture">
         <source media="(max-width: 768px)" srcset="/assets/images/office/DSC00143.webp" type="image/webp" />
-        <img src="/assets/images/office/DSC00165.webp" alt="K. Patel Chemopharma Corporate Headquarters" loading="lazy" />
+        <img src="/assets/images/office/DSC00165.webp" alt="K. Patel Chemopharma Corporate Headquarters"
+          loading="lazy" />
       </picture>
     </div>
     <div class="legacy__overlay"></div>
@@ -99,48 +158,61 @@
           <span class="eyebrow eyebrow--light reveal">Since 1974</span>
           <h2 class="legacy__title reveal reveal-delay-1">A Legacy Of Entrepreneurial Vision</h2>
           <p class="legacy__text reveal reveal-delay-2">
-            From Mr. M. K. Patel's early vision in 1956, K. Patel Chemopharma was established as our chemical manufacturing division in 1974. Today, we are built on process excellence, high ethical standards, and global supply consistency.
+            From Mr. M. K. Patel's early vision in 1956, K. Patel Chemopharma was established as our chemical
+            manufacturing division in 1974. Today, we are built on process excellence, high ethical standards, and
+            global supply consistency.
           </p>
         </div>
 
-        <div class="legacy__infographic-wrap reveal reveal-delay-4">
+        <!-- Small Screen Infographic Card: Retained for mobile/tablet readability -->
+        <div class="legacy__infographic-wrap legacy__infographic-wrap--mobile reveal reveal-delay-4">
           <div class="corporate-timeline">
-            <svg viewBox="0 0 1189 713" class="corporate-timeline__svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="K. Patel Group Companies Corporate Timeline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg viewBox="0 0 1189 713" class="corporate-timeline__svg" preserveAspectRatio="xMidYMid meet" role="img"
+              aria-label="K. Patel Group Companies Corporate Timeline" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
               <!-- Infographic Graphic (WebP) -->
-              <image href="/assets/images/kpatel-group-corporate-timeline.webp" xlink:href="/assets/images/kpatel-group-corporate-timeline.webp" x="0" y="0" width="1189" height="713" />
-              
+              <image href="/assets/images/kpatel-group-corporate-timeline.webp"
+                xlink:href="/assets/images/kpatel-group-corporate-timeline.webp" x="0" y="0" width="1189"
+                height="713" />
+
               <!-- 1. 1956 - K. Patel & Co. Pvt. Ltd. (Construction House) -->
-              <a href="https://www.kpatelrealty.com/" target="_blank" rel="noopener noreferrer" class="timeline-node" aria-label="K. Patel &amp; Co. Pvt. Ltd. (Est. 1956 - Construction House) - Visit Website">
+              <a href="https://www.kpatelrealty.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+                aria-label="K. Patel &amp; Co. Pvt. Ltd. (Est. 1956 - Construction House) - Visit Website">
                 <title>K. Patel &amp; Co. Pvt. Ltd. (1956) — Construction House</title>
                 <circle cx="129" cy="466" r="110" class="timeline-node__hitbox" />
               </a>
 
               <!-- 2. 1974 - K. Patel Chemopharma Pvt. Ltd. -->
-              <a href="https://www.kpateldyes.com/" target="_blank" rel="noopener noreferrer" class="timeline-node" aria-label="K. Patel Chemopharma Pvt. Ltd. (Est. 1974 - Dyes &amp; Pigments) - Visit Website">
+              <a href="https://www.kpateldyes.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+                aria-label="K. Patel Chemopharma Pvt. Ltd. (Est. 1974 - Dyes &amp; Pigments) - Visit Website">
                 <title>K. Patel Chemopharma Pvt. Ltd. (1974) — Dyes &amp; Pigments</title>
                 <circle cx="262" cy="259" r="110" class="timeline-node__hitbox" />
               </a>
 
               <!-- 3. 1991 - K. Patel Dyechem Industries Pvt. Ltd. -->
-              <a href="https://www.kpateldyes.com/" target="_blank" rel="noopener noreferrer" class="timeline-node" aria-label="K. Patel Dyechem Industries Pvt. Ltd. (Est. 1991 - Chemical Division) - Visit Website">
+              <a href="https://www.kpateldyes.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+                aria-label="K. Patel Dyechem Industries Pvt. Ltd. (Est. 1991 - Chemical Division) - Visit Website">
                 <title>K. Patel Dyechem Industries Pvt. Ltd. (1991) — Chemical Division</title>
                 <circle cx="471" cy="132" r="110" class="timeline-node__hitbox" />
               </a>
 
               <!-- 4. 1994 - Devanshi Dyestuff -->
-              <a href="https://www.kpateldyes.com/" target="_blank" rel="noopener noreferrer" class="timeline-node" aria-label="Devanshi Dyestuff (Est. 1994 - Dyestuffs &amp; Chemical Division) - Visit Website">
+              <a href="https://www.kpateldyes.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+                aria-label="Devanshi Dyestuff (Est. 1994 - Dyestuffs &amp; Chemical Division) - Visit Website">
                 <title>Devanshi Dyestuff (1994) — Dyestuff Division</title>
                 <circle cx="713" cy="131" r="110" class="timeline-node__hitbox" />
               </a>
 
               <!-- 5. 1995 - K. Patel International -->
-              <a href="https://www.lab-reagents.com/" target="_blank" rel="noopener noreferrer" class="timeline-node" aria-label="K. Patel International (Est. 1995 - Lab Chemicals &amp; Salts) - Visit Website">
+              <a href="https://www.lab-reagents.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+                aria-label="K. Patel International (Est. 1995 - Lab Chemicals &amp; Salts) - Visit Website">
                 <title>K. Patel International (1995) — Lab Chemicals &amp; Salts</title>
                 <circle cx="921" cy="259" r="110" class="timeline-node__hitbox" />
               </a>
 
               <!-- 6. 2005 - K. Patel Phyto Extractions Pvt. Ltd. -->
-              <a href="https://phytoextractskp.com/" target="_blank" rel="noopener noreferrer" class="timeline-node" aria-label="K. Patel Phyto Extractions Pvt. Ltd. (Est. 2005 - Herbal Extracts &amp; Phytochemicals) - Visit Website">
+              <a href="https://phytoextractskp.com/" target="_blank" rel="noopener noreferrer" class="timeline-node"
+                aria-label="K. Patel Phyto Extractions Pvt. Ltd. (Est. 2005 - Herbal Extracts &amp; Phytochemicals) - Visit Website">
                 <title>K. Patel Phyto Extractions Pvt. Ltd. (2005) — Botanical Extracts &amp; Phytochemicals</title>
                 <circle cx="1053" cy="466" r="110" class="timeline-node__hitbox" />
               </a>

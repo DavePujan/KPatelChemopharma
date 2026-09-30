@@ -1613,13 +1613,13 @@ body.m-home {
 
   .contact-card {
     padding: 16px !important;
-    border-radius: var(--m-radius-sm) !important;
-    border: 1px solid var(--m-border) !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(17, 24, 39, 0.06) !important;
     background: #FFFFFF !important;
     display: flex !important;
     align-items: flex-start !important;
     gap: 14px !important;
-    box-shadow: var(--m-shadow-subtle) !important;
+    box-shadow: 0 1px 2px rgba(60, 30, 20, 0.04), 0 10px 24px rgba(60, 30, 20, 0.08) !important;
   }
 
   .contact-card__icon-wrap {

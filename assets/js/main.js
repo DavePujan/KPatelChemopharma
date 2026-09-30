@@ -394,7 +394,7 @@ function initTrustMarquee() {
    SUBTLE PARALLAX — hero & legacy images
    ============================================ */
 function initParallax() {
-  const wrappers = document.querySelectorAll('.hero__image-wrap, .legacy__image-wrap, .cta__image-wrap');
+  const wrappers = document.querySelectorAll('.hero__image-wrap, .cta__image-wrap');
   if (!wrappers.length) return;
 
   // Set up items with their initial scroll positions mapped immediately
