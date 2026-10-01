@@ -29,7 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Mobile Application Videos Controller
   initApplicationVideos();
+
+  // Prevent active outline/highlight lingering on clicked timeline nodes
+  initTimelineNodes();
 });
+
+function initTimelineNodes() {
+  const nodes = document.querySelectorAll('.timeline-node');
+  nodes.forEach(node => {
+    node.addEventListener('mouseup', () => node.blur());
+    node.addEventListener('mouseleave', () => node.blur());
+    node.addEventListener('click', () => {
+      setTimeout(() => node.blur(), 50);
+    });
+  });
+}
 
 /**
  * Full-screen mobile navigation with body scroll lock

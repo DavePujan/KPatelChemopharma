@@ -772,6 +772,7 @@ body.m-home {
   border-bottom: 1px solid var(--m-border);
 }
 
+.m-capability__media picture,
 .m-capability__media img {
   width: 100%;
   height: 100%;

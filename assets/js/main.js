@@ -1088,4 +1088,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof initPrefillFromURL === 'function') initPrefillFromURL();
   if (typeof initProductSearch === 'function') initProductSearch();
   if (typeof initApplicationVideos === 'function') initApplicationVideos();
+  if (typeof initTimelineNodes === 'function') initTimelineNodes();
 });
+
+function initTimelineNodes() {
+  const nodes = document.querySelectorAll('.timeline-node');
+  nodes.forEach(node => {
+    node.addEventListener('mouseup', () => node.blur());
+    node.addEventListener('mouseleave', () => node.blur());
+    node.addEventListener('click', () => {
+      setTimeout(() => node.blur(), 50);
+    });
+  });
+}
