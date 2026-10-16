@@ -500,6 +500,68 @@ body.m-home {
   background: var(--m-border);
 }
 
+.m-hero__4r-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.m-hero__4r-card:active {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(0.99);
+}
+
+.m-hero__4r-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.m-hero__4r-title {
+  font-family: var(--font-heading, inherit);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--m-primary-brown, #1e293b);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.m-hero__4r-visual {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.m-hero__4r-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+}
+
+.m-hero__4r-arrow {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--m-secondary-brown, #64748b);
+}
+
 /* ==========================================================
    3. BRAND INTRO (EDITORIAL BRIDGE)
    ========================================================== */
@@ -715,21 +777,35 @@ body.m-home {
 .m-carousel-dots {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 2px;
 }
 
 .m-carousel-dot {
+  min-width: 26px;
+  min-height: 26px;
+  background: transparent !important;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.m-carousel-dot::after {
+  content: '';
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: var(--m-border);
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  transition: all 0.25s ease;
+  transition: width 0.25s ease, background-color 0.25s ease, border-radius 0.25s ease;
+  display: block;
 }
 
-.m-carousel-dot.is-active {
+.m-carousel-dot.is-active::after {
   width: 20px;
   border-radius: 10px;
   background: var(--m-sand);

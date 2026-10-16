@@ -179,8 +179,8 @@ function initSmoothScroll() {
         // Natural alignment below fixed navbar without clipping section header or eyebrow
         offset = 0;
       } else if (hash === '#industries' || hash === '#applications') {
-        // Scroll slightly lower so that full applications grid fits inside viewport
-        offset = 80;
+        // Align flush below fixed navbar so eyebrow and header are completely visible
+        offset = 0;
       } else if (hash === '#operations' || hash === '#infrastructure') {
         // Scroll slightly lower so that infrastructure content & image fit inside viewport
         offset = 75;
@@ -589,7 +589,7 @@ const PRODUCTS_DATA = {
     badge: "KP Sperse",
     desc: "Key Applications : Textile printing, Paint, Soap & detergent, Latex, Paper & Others. Stable aqueous pre-dispersions of organic pigments, exhibiting optimal flow properties and sedimentation resistance.",
     descShort: "Key Applications : Textile printing, Paint, Soap & detergent, Latex, Paper & Others.",
-    industries: ["Pulp & Paper Coloring", "Aqueous Inkjet & Digital Inks", "Water-Based Wall Coatings"],
+    industries: ["Pulp & Paper Coloring", "Aqueous Inkjet & Printing Inks", "Water-Based Wall Coatings"],
     features: ["Sedimentation & Crusting Resistance", "Uniform Sub-Micron Particle Size"],
     items: [
       { name: "KP Sperse Violet 101", hex: "#5F5496", ci: "Pigment Violet 3" },

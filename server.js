@@ -198,11 +198,17 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
+    // Long-term immutable caching for static assets, no-cache for HTML documents
+    const isStaticAsset = pathname.startsWith('/assets/') || ext === '.woff2' || ext === '.woff' || ext === '.webp' || ext === '.svg' || ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.css' || ext === '.js';
+    const cacheHeader = isStaticAsset
+      ? 'public, max-age=31536000, immutable'
+      : 'public, max-age=0, must-revalidate';
+
     res.writeHead(200, {
       'Content-Type': contentType,
       'Content-Length': fileSize,
       'Accept-Ranges': 'bytes',
-      'Cache-Control': 'no-cache'
+      'Cache-Control': cacheHeader
     });
 
     const stream = fs.createReadStream(filePath);

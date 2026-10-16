@@ -8,8 +8,61 @@
   <meta name="description"
     content="Learn about K. Patel Chemopharma's Corporate Social Responsibility initiatives: healthcare support for Jayaben Mody Hospital, rural education empowerment, Swachh Bharat sanitation, and governance under the Companies Act." />
   <link rel="canonical" href="https://www.kpateldyes.com/csr" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <!-- Open Graph / WhatsApp / LinkedIn -->
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Corporation",
+        "@id": "https://www.kpateldyes.com/#organization",
+        "name": "K. Patel Chemopharma Private Limited",
+        "url": "https://www.kpateldyes.com/",
+        "logo": "https://www.kpateldyes.com/assets/images/logo-no-bg.webp",
+        "foundingDate": "1974",
+        "sameAs": [
+          "https://www.linkedin.com/company/k-patel-chemopharma/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ankleshwar",
+          "addressRegion": "Gujarat",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.kpateldyes.com/csr#webpage",
+        "url": "https://www.kpateldyes.com/csr",
+        "name": "Corporate Social Responsibility (CSR) — K. Patel Chemopharma",
+        "isPartOf": { "@id": "https://www.kpateldyes.com/#organization" },
+        "description": "Learn about K. Patel Chemopharma's Corporate Social Responsibility initiatives: healthcare support for Jayaben Mody Hospital, rural education empowerment, Swachh Bharat sanitation, and governance under Section 135."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.kpateldyes.com/csr#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.kpateldyes.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Corporate Social Responsibility",
+            "item": "https://www.kpateldyes.com/csr"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="K. Patel Chemopharma" />
   <meta property="og:locale" content="en_US" />
@@ -43,380 +96,14 @@
   <link rel="stylesheet" href="/assets/css/main.css" />
   <link rel="stylesheet" href="/assets/css/responsive.css" />
 
-  <style>
-    /* CSR-specific bespoke visual styles */
-    .csr-hero {
-      padding: 130px 0 60px 0;
-      background: linear-gradient(180deg, rgba(41, 75, 73, 0.05) 0%, rgba(250, 250, 248, 0) 100%);
-    }
-
-    .csr-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      margin-top: 40px;
-    }
-
-    .csr-card {
-      background: var(--color-bg-card);
-      border: 1px solid var(--color-border);
-      border-radius: var(--r-lg);
-      padding: 36px 32px;
-      box-shadow: var(--shadow-sm);
-      transition: transform var(--dur-norm) var(--ease-out), box-shadow var(--dur-norm) var(--ease-out), border-color var(--dur-norm) var(--ease-out);
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .csr-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--color-accent);
-      opacity: 0;
-      transition: opacity var(--dur-fast) ease;
-    }
-
-    .csr-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-      border-color: rgba(47, 79, 79, 0.3);
-    }
-
-    .csr-card:hover::before {
-      opacity: 1;
-    }
-
-    .csr-card__icon {
-      width: auto;
-      height: auto;
-      background: transparent;
-      color: #5A2C20;
-      display: inline-flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-bottom: 20px;
-    }
-
-    .csr-card__icon svg {
-      width: 28px;
-      height: 28px;
-      stroke: #5A2C20;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .csr-card__pillar {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-      margin-bottom: 8px;
-    }
-
-    .csr-card__title {
-      font-family: var(--font-heading);
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--color-heading-primary);
-      margin-bottom: 14px;
-      line-height: 1.3;
-    }
-
-    .csr-card__desc {
-      font-size: 15px;
-      color: var(--color-body);
-      line-height: 1.65;
-      margin-bottom: 20px;
-      flex-grow: 1;
-    }
-
-    .csr-card__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      border-top: 1px solid var(--color-border-subtle);
-      padding-top: 18px;
-    }
-
-    .csr-card__item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 13.5px;
-      color: var(--color-body-muted);
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
-
-    .csr-card__item:last-child {
-      margin-bottom: 0;
-    }
-
-    .csr-card__item-bullet {
-      color: var(--color-accent);
-      font-weight: bold;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    /* Spotlights & Partnerships */
-    .spotlight-banner {
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: var(--r-xl);
-      padding: 48px;
-      margin-top: 40px;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .spotlight-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .spotlight-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      background: #E8F5E9;
-      color: #2E7D32;
-      border-radius: 100px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    /* Governance Table & Cards */
-    .gov-section {
-      background: var(--color-surface);
-      border-top: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
-      padding: 80px 0;
-    }
-
-    .gov-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 48px;
-      margin-top: 40px;
-    }
-
-    .gov-box {
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: var(--r-lg);
-      padding: 36px;
-      box-shadow: var(--shadow-xs);
-    }
-
-    .gov-box__title {
-      font-family: var(--font-heading);
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--color-heading-primary);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .gov-box__title svg {
-      color: var(--color-accent);
-      flex-shrink: 0;
-    }
-
-    .gov-box p {
-      font-size: 14.5px;
-      color: var(--color-body);
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    .gov-exclusion-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 13.5px;
-      color: var(--color-body);
-      margin-bottom: 12px;
-      line-height: 1.5;
-    }
-
-    .gov-exclusion-item svg {
-      color: #d32f2f;
-      flex-shrink: 0;
-      margin-top: 3px;
-    }
-
-
-
-    /* CSR Metrics */
-    .csr-metrics {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 50px;
-    }
-
-    .csr-metric-card {
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: var(--r-lg);
-      padding: 28px 24px;
-      text-align: center;
-      box-shadow: var(--shadow-xs);
-    }
-
-    .csr-metric-card__val {
-      font-family: var(--font-heading);
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--color-accent);
-      line-height: 1.1;
-      margin-bottom: 8px;
-    }
-
-    .csr-metric-card__label {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--color-heading-primary);
-      margin-bottom: 4px;
-    }
-
-    .csr-metric-card__sub {
-      font-size: 12px;
-      color: var(--color-body-faint);
-    }
-
-    @media (max-width: 992px) {
-      .csr-grid, .spotlight-grid, .gov-grid {
-        grid-template-columns: 1fr;
-      }
-      .csr-metrics {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .csr-hero {
-        padding: 48px 0 32px 0 !important;
-      }
-      .csr-hero .section-title {
-        font-size: clamp(26px, 6.5vw, 32px) !important;
-        line-height: 1.2 !important;
-      }
-      .csr-hero .section-body {
-        font-size: 14.5px !important;
-        line-height: 1.6 !important;
-      }
-      .csr-metrics {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-        margin-top: 24px !important;
-      }
-      .csr-metric-card {
-        padding: 16px 12px !important;
-        border-radius: 10px !important;
-      }
-      .csr-metric-card__val {
-        font-size: 1.6rem !important;
-        margin-bottom: 4px !important;
-      }
-      .csr-metric-card__label {
-        font-size: 10.5px !important;
-        letter-spacing: 0.04em !important;
-      }
-      .csr-metric-card__sub {
-        font-size: 10px !important;
-        line-height: 1.3 !important;
-      }
-      .csr-grid {
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
-        margin-top: 24px !important;
-      }
-      .csr-card {
-        padding: 22px 18px !important;
-        border-radius: 12px !important;
-      }
-      .csr-card__icon {
-        width: 42px !important;
-        height: 42px !important;
-        border-radius: 10px !important;
-        margin-bottom: 16px !important;
-      }
-      .csr-card__icon svg {
-        width: 22px !important;
-        height: 22px !important;
-      }
-      .csr-card__title {
-        font-size: 18px !important;
-        margin-bottom: 10px !important;
-      }
-      .csr-card__desc {
-        font-size: 14px !important;
-        line-height: 1.55 !important;
-        margin-bottom: 16px !important;
-      }
-      .csr-card__item {
-        font-size: 13px !important;
-        line-height: 1.45 !important;
-        gap: 8px !important;
-      }
-      .spotlight-banner {
-        padding: 22px 16px !important;
-        border-radius: 14px !important;
-        margin-top: 24px !important;
-      }
-      .spotlight-grid {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
-      }
-      .spotlight-grid > div:last-child {
-        padding: 20px 16px !important;
-        border-radius: 12px !important;
-      }
-      .gov-section {
-        padding: 48px 0 !important;
-      }
-      .gov-grid {
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
-        margin-top: 24px !important;
-      }
-      .gov-box {
-        padding: 22px 18px !important;
-        border-radius: 12px !important;
-      }
-      .gov-box__title {
-        font-size: 17px !important;
-      }
-
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/pages/csr.css" />
 </head>
 
 <body>
   <!-- Header / Navigation -->
   <nav class="nav nav--hero is-scrolled" id="nav">
     <div class="nav__inner">
-      <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" /></a>
+      <a href="/" class="nav__logo"><img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" width="160" height="34" /></a>
       <div class="nav__links">
         <a href="/pages/about/" class="nav__link">About Us</a>
         <a href="/#solutions" class="nav__link">Products</a>
@@ -436,7 +123,7 @@
   <div class="nav__mobile m-menu" id="mobile-nav" aria-hidden="true">
     <div class="m-menu__top">
       <a href="/" class="m-header__logo">
-        <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" style="height: 30px;" />
+        <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" width="160" height="30" style="height: 30px; width: auto;" />
       </a>
       <button class="nav__mobile-close m-menu__close" aria-label="Close navigation menu">&times;</button>
     </div>
@@ -460,265 +147,549 @@
   </div>
 
   <main>
-    <!-- ========== HERO SECTION ========== -->
-    <section class="csr-hero">
+    <!-- ========== MILLIKEN-STYLE FULL-WIDTH PHOTOGRAPHIC HERO ========== -->
+    <section class="csr-hero" aria-label="Corporate Social Responsibility Overview">
+      <div class="csr-hero__media">
+        <img src="/assets/images/csr/csr.webp"
+          alt="Corporate Social Responsibility and Community Stewardship — K. Patel Chemopharma"
+          class="csr-hero__bg"
+          width="1440"
+          height="600"
+          fetchpriority="high"
+          loading="eager" />
+        <div class="csr-hero__scrim"></div>
+      </div>
+      <div class="csr-hero__panel reveal">
+        <h1 class="csr-hero__title">CORPORATE SOCIAL RESPONSIBILITY</h1>
+        <p class="csr-hero__statement">Community &amp; social stewardship empowering Ankleshwar and Gujarat</p>
+      </div>
+    </section>
+
+    <!-- ========== WHITE EDITORIAL CONTENT SECTION ========== -->
+    <section class="csr-editorial" id="community-stewardship">
       <div class="container">
-        <!-- Breadcrumbs -->
-        <nav class="breadcrumbs" aria-label="Breadcrumbs">
-          <a href="/">Home</a>
-          <span class="breadcrumbs__separator">/</span>
-          <span class="breadcrumbs__current">Corporate Social Responsibility</span>
-        </nav>
+        <div class="csr-editorial__grid">
+          <div class="csr-editorial__main">
+            <h2 class="csr-editorial__title reveal">COMMUNITY &amp; <span class="csr-editorial__title-nowrap">SOCIAL STEWARDSHIP</span></h2>
+            <p class="csr-editorial__lead reveal reveal-delay-1">
+              At K. Patel Chemopharma, our CSR mission uplifts rural communities, expands healthcare access, empowers youth through education, and supports community welfare across Ankleshwar, Gujarat.
+            </p>
+            <p class="csr-editorial__body reveal reveal-delay-2">
+              Targeted community initiatives creating measurable impact across healthcare, education, sanitation, and rural welfare.
+            </p>
+          </div>
 
-        <div style="max-width: 860px; margin-top: 24px;">
-          <span class="eyebrow">Community &amp; Social Stewardship</span>
-          <h1 class="section-title">Corporate Social Responsibility (CSR)</h1>
-          <p class="section-body" style="margin-top: 18px; font-size: 1.15rem; color: var(--color-body); line-height: 1.75;">
-            At <strong>K. Patel Chemopharma</strong>, our CSR mission uplifts rural communities, expands healthcare access, empowers youth through education, and supports community welfare across Ankleshwar, Gujarat.
-          </p>
-          <div style="margin-top: 32px;" class="reveal reveal-delay-3">
-            <a href="/" class="btn btn--outline">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                style="margin-right:8px;">
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-              </svg>
-              Return to Home Page
-            </a>
-          </div>
-        </div>
-
-        <!-- Metrics Snapshot -->
-        <div class="csr-metrics reveal">
-          <div class="csr-metric-card">
-            <div class="csr-metric-card__val">2.0%</div>
-            <div class="csr-metric-card__label">Statutory Spend</div>
-            <div class="csr-metric-card__sub">Min. 2% 3-Yr Avg PAT Allocation</div>
-          </div>
-          <div class="csr-metric-card">
-            <div class="csr-metric-card__val">50+</div>
-            <div class="csr-metric-card__label">Years of Stewardship</div>
-            <div class="csr-metric-card__sub">Empowering Ankleshwar &amp; Gujarat</div>
-          </div>
-          <div class="csr-metric-card">
-            <div class="csr-metric-card__val">100%</div>
-            <div class="csr-metric-card__label">Legal Compliance</div>
-            <div class="csr-metric-card__sub">Sec 135 Companies Act 2013</div>
-          </div>
-          <div class="csr-metric-card">
-            <div class="csr-metric-card__val">10,000+</div>
-            <div class="csr-metric-card__label">Lives Impacted</div>
-            <div class="csr-metric-card__sub">Healthcare &amp; Education Outreach</div>
+          <!-- Verified Plant / CSR Performance Benchmarks Card -->
+          <div class="csr-metrics-panel reveal reveal-delay-2">
+            <div class="csr-metrics-panel__header">
+              <span class="csr-metrics-panel__eyebrow">Operational Benchmarks</span>
+              <h3 class="csr-metrics-panel__title">Verified CSR Performance</h3>
+            </div>
+            <div class="csr-metrics-panel__grid">
+              <div class="csr-metric-item">
+                <div class="csr-metric-item__value">2.0%</div>
+                <div class="csr-metric-item__label">Statutory Spend</div>
+                <div class="csr-metric-item__detail">Min. 2% 3-Yr Avg PAT Allocation</div>
+              </div>
+              <div class="csr-metric-item">
+                <div class="csr-metric-item__value">50<span class="csr-metric-item__plus">+</span> Yrs</div>
+                <div class="csr-metric-item__label">Stewardship Legacy</div>
+                <div class="csr-metric-item__detail">Empowering Ankleshwar &amp; Gujarat</div>
+              </div>
+              <div class="csr-metric-item">
+                <div class="csr-metric-item__value">100%</div>
+                <div class="csr-metric-item__label">Legal Compliance</div>
+                <div class="csr-metric-item__detail">Sec 135 Companies Act 2013</div>
+              </div>
+              <div class="csr-metric-item">
+                <div class="csr-metric-item__value">10k<span class="csr-metric-item__plus">+</span></div>
+                <div class="csr-metric-item__label">Lives Impacted</div>
+                <div class="csr-metric-item__detail">Healthcare &amp; education outreach</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== PHILOSOPHY & OBJECTIVES ========== -->
-    <section class="section section--divider" style="background: #ffffff;">
+    <!-- ========== CORE CSR PILLARS (EDITORIAL 4-COLUMN DOCTRINE) ========== -->
+    <section class="csr-pillars" id="core-pillars">
       <div class="container">
-        <div style="max-width: 780px;">
-          <span class="eyebrow">Our Focus</span>
-          <h2 class="section-title" style="font-size: 2.2rem;">Core CSR Pillars</h2>
-          <p class="section-body" style="margin-top: 14px;">
+        <div class="csr-pillars__header reveal">
+          <h2 class="csr-pillars__main-title">Core CSR pillars</h2>
+          <p class="csr-pillars__main-subtitle">
             Targeted community initiatives creating measurable impact across four key areas:
           </p>
         </div>
 
-        <div class="csr-grid">
-          <!-- Pillar 1: Healthcare -->
-          <div class="csr-card reveal">
-            <div class="csr-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5" />
-              </svg>
-            </div>
-            <span class="csr-card__pillar">Pillar 01</span>
-            <h3 class="csr-card__title">Healthcare Access</h3>
-            <p class="csr-card__desc">
-              Improving medical care, diagnostics, and maternal health for underprivileged families in rural Ankleshwar.
+        <div class="csr-pillars__editorial-grid">
+          <!-- 01 HEALTHCARE -->
+          <article class="pillar-col reveal">
+            <div class="pillar-col__rule"></div>
+            <div class="pillar-col__num">01</div>
+            <span class="pillar-col__tag">HEALTHCARE</span>
+            <h3 class="pillar-col__title">Healthcare Access</h3>
+            <p class="pillar-col__desc">
+              Improving medical care, diagnostics, and maternal health for underprivileged families in rural Ankleshwar. Funding diagnostic equipment and subsidized treatment at Smt. Jayaben Mody Hospital.
             </p>
-            <ul class="csr-card__list">
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Hospital Support:</strong> Funding diagnostic equipment and subsidized treatment at Smt. Jayaben Mody Hospital.</span>
-              </li>
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Maternal Care:</strong> Supporting prenatal wellness at Sanskar Deep Garbh Sankar Kendra.</span>
-              </li>
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Medical Aid:</strong> Supplying essential medicines and organizing rural health screening camps.</span>
-              </li>
-            </ul>
+          </article>
+
+          <!-- 02 EDUCATION -->
+          <article class="pillar-col reveal reveal-delay-1">
+            <div class="pillar-col__rule"></div>
+            <div class="pillar-col__num">02</div>
+            <span class="pillar-col__tag">EDUCATION</span>
+            <h3 class="pillar-col__title">Education &amp; Youth</h3>
+            <p class="pillar-col__desc">
+              Upgrading school infrastructure and supplying essential learning tools for underprivileged students. Annual distribution of notebooks, textbooks, uniforms, and classroom furniture.
+            </p>
+          </article>
+
+          <!-- 03 SANITATION -->
+          <article class="pillar-col reveal reveal-delay-2">
+            <div class="pillar-col__rule"></div>
+            <div class="pillar-col__num">03</div>
+            <span class="pillar-col__tag">SANITATION</span>
+            <h3 class="pillar-col__title">Swachh Bharat &amp; Sanitation</h3>
+            <p class="pillar-col__desc">
+              Promoting dignified public health through clean water solutions, modern school sanitation facilities, and rural drainage infrastructure in local utility areas.
+            </p>
+          </article>
+
+          <!-- 04 COMMUNITY & ECOLOGY -->
+          <article class="pillar-col reveal reveal-delay-3">
+            <div class="pillar-col__rule"></div>
+            <div class="pillar-col__num">04</div>
+            <span class="pillar-col__tag">COMMUNITY &amp; ECOLOGY</span>
+            <h3 class="pillar-col__title">Community Relief &amp; Ecology</h3>
+            <p class="pillar-col__desc">
+              Direct aid during hardships and food security drives for daily-wage families, alongside in-house 95%+ water recovery, solar power, and ISO 14001:2015 operations.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== UN SUSTAINABLE DEVELOPMENT GOALS (SDG) MOSAIC ========== -->
+    <section class="csr-sdg" id="sdg-priorities" aria-label="United Nations Sustainable Development Goals Alignment">
+      <div class="container">
+        <div class="csr-sdg__header reveal">
+          <span class="csr-sdg__eyebrow">OUR SUSTAINABILITY PRIORITIES</span>
+          <h2 class="csr-sdg__title">Contributing to a Better Future</h2>
+          <p class="csr-sdg__subtitle">
+            Connecting responsible manufacturing with the United Nations Sustainable Development Goals.
+          </p>
+        </div>
+
+        <!-- ================================================================
+             BIG SCREENS: 4 Interactive Tiles + Selected Detail Panel
+             ================================================================ -->
+        <div class="sdg-desktop reveal" aria-label="SDG Desktop Interactive Mosaic">
+          <!-- Left Column: 4 Goal Tiles -->
+          <div class="sdg-tiles-list" role="tablist" aria-orientation="vertical">
+            <!-- Tile 06 -->
+            <button class="sdg-tile is-active" id="sdg-tab-06" role="tab" aria-selected="true" aria-controls="sdg-panel-06" data-target="06">
+              <div class="sdg-tile__icon-box" style="background-color: #00ADD8;">
+                <img src="/assets/images/sdg/sdg06.svg" alt="UN SDG 06 Icon" class="sdg-tile__icon-img" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="sdg-tile__meta">
+                <span class="sdg-tile__num" style="color: #006f8c;">06 &mdash; Clean Water</span>
+                <h3 class="sdg-tile__title">Water treatment and reuse</h3>
+              </div>
+              <div class="sdg-tile__indicator" aria-hidden="true">&rarr;</div>
+            </button>
+
+            <!-- Tile 12 -->
+            <button class="sdg-tile" id="sdg-tab-12" role="tab" aria-selected="false" aria-controls="sdg-panel-12" data-target="12">
+              <div class="sdg-tile__icon-box" style="background-color: #CF8D2A;">
+                <img src="/assets/images/sdg/sdg12.svg" alt="UN SDG 12 Icon" class="sdg-tile__icon-img" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="sdg-tile__meta">
+                <span class="sdg-tile__num" style="color: #9E6714;">12 &mdash; Responsible Production</span>
+                <h3 class="sdg-tile__title">Recover, Reduce, Reuse, Recycle</h3>
+              </div>
+              <div class="sdg-tile__indicator" aria-hidden="true">&rarr;</div>
+            </button>
+
+            <!-- Tile 09 -->
+            <button class="sdg-tile" id="sdg-tab-09" role="tab" aria-selected="false" aria-controls="sdg-panel-09" data-target="09">
+              <div class="sdg-tile__icon-box" style="background-color: #F36D24;">
+                <img src="/assets/images/sdg/sdg09.svg" alt="UN SDG 09 Icon" class="sdg-tile__icon-img" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="sdg-tile__meta">
+                <span class="sdg-tile__num" style="color: #C04809;">09 &mdash; Innovation</span>
+                <h3 class="sdg-tile__title">Product development and quality</h3>
+              </div>
+              <div class="sdg-tile__indicator" aria-hidden="true">&rarr;</div>
+            </button>
+
+            <!-- Tile 08 -->
+            <button class="sdg-tile" id="sdg-tab-08" role="tab" aria-selected="false" aria-controls="sdg-panel-08" data-target="08">
+              <div class="sdg-tile__icon-box" style="background-color: #A21942;">
+                <img src="/assets/images/sdg/sdg08.svg" alt="UN SDG 08 Icon" class="sdg-tile__icon-img" width="56" height="56" loading="lazy" />
+              </div>
+              <div class="sdg-tile__meta">
+                <span class="sdg-tile__num" style="color: #8F1737;">08 &mdash; Decent Work</span>
+                <h3 class="sdg-tile__title">People, learning and well-being</h3>
+              </div>
+              <div class="sdg-tile__indicator" aria-hidden="true">&rarr;</div>
+            </button>
           </div>
 
-          <!-- Pillar 2: Education -->
-          <div class="csr-card reveal reveal-delay-1">
-            <div class="csr-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
-                <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
-              </svg>
+          <!-- Right Column: Selected Goal Detail Panel Stage -->
+          <div class="sdg-stage">
+            <!-- Panel 06 (Active by default) -->
+            <div class="sdg-panel is-active" id="sdg-panel-06" role="tabpanel" aria-labelledby="sdg-tab-06" data-sdg="06">
+              <div class="sdg-panel__hero" style="background-color: #00ADD8;">
+                <div class="sdg-panel__hero-text">
+                  <span class="sdg-panel__tag">GOAL 06 &bull; CLEAN WATER &amp; SANITATION</span>
+                  <h3 class="sdg-panel__title">Water, treated responsibly.</h3>
+                </div>
+                <div class="sdg-panel__badge">
+                  <img src="/assets/images/sdg/sdg06.svg" alt="UN SDG 06 Badge" width="76" height="76" loading="lazy" />
+                </div>
+              </div>
+              <div class="sdg-panel__body">
+                <p class="sdg-panel__lead">
+                  Our effluent treatment plant and reverse osmosis (R/O) system support the continuous treatment, recycling, and reuse of water from manufacturing operations.
+                </p>
+                <div class="sdg-approach">
+                  <span class="sdg-approach__eyebrow">Our approach</span>
+                  <div class="sdg-approach__grid">
+                    <div class="sdg-approach__card">
+                      <span class="sdg-approach__pill" style="background-color: #D9F4FC; color: #007796;">Effluent management</span>
+                      <p class="sdg-approach__desc">Treatment of industrial effluents before appropriate reuse or discharge, adhering strictly to GIDC &amp; GPCB norms.</p>
+                    </div>
+                    <div class="sdg-approach__card">
+                      <span class="sdg-approach__pill" style="background-color: #D9F4FC; color: #007796;">Water reuse</span>
+                      <p class="sdg-approach__desc">Recovery of treated manufacturing water where suitable, returning clean process water directly to plant utility loops.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span class="csr-card__pillar">Pillar 02</span>
-            <h3 class="csr-card__title">Education &amp; Youth</h3>
-            <p class="csr-card__desc">
-              Upgrading school infrastructure and supplying essential learning tools for underprivileged students.
-            </p>
-            <ul class="csr-card__list">
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>School Upgrades:</strong> Classroom flooring, structural repairs, and sanitation for village schools.</span>
-              </li>
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Learning Kits:</strong> Annual distribution of notebooks, textbooks, uniforms, and study supplies.</span>
-              </li>
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Classroom Furniture:</strong> Providing desks, benches, and digital learning tools.</span>
-              </li>
-            </ul>
+
+            <!-- Panel 12 -->
+            <div class="sdg-panel" id="sdg-panel-12" role="tabpanel" aria-labelledby="sdg-tab-12" data-sdg="12" hidden>
+              <div class="sdg-panel__hero" style="background-color: #CF8D2A;">
+                <div class="sdg-panel__hero-text">
+                  <span class="sdg-panel__tag">GOAL 12 &bull; RESPONSIBLE CONSUMPTION &amp; PRODUCTION</span>
+                  <h3 class="sdg-panel__title">Circular manufacturing &amp; waste reduction.</h3>
+                </div>
+                <div class="sdg-panel__badge">
+                  <img src="/assets/images/sdg/sdg12.svg" alt="UN SDG 12 Badge" width="76" height="76" loading="lazy" />
+                </div>
+              </div>
+              <div class="sdg-panel__body">
+                <p class="sdg-panel__lead">
+                  Integrating the 4R environmental framework into our dye and chemical synthesis to maximize yield and eliminate unnecessary industrial waste.
+                </p>
+                <div class="sdg-approach">
+                  <span class="sdg-approach__eyebrow">Our approach</span>
+                  <div class="sdg-approach__grid">
+                    <div class="sdg-approach__card">
+                      <span class="sdg-approach__pill" style="background-color: #F9EFDB; color: #8A590F;">4R Methodology</span>
+                      <p class="sdg-approach__desc">Systematic Recover, Reduce, Reuse, and Recycle protocols across raw materials, reaction yields, and batch handling.</p>
+                    </div>
+                    <div class="sdg-approach__card">
+                      <span class="sdg-approach__pill" style="background-color: #F9EFDB; color: #8A590F;">Eco-Efficiency</span>
+                      <p class="sdg-approach__desc">Closed-loop solvent recovery and non-toxic color formulations minimizing ecological footprints.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 09 -->
+            <div class="sdg-panel" id="sdg-panel-09" role="tabpanel" aria-labelledby="sdg-tab-09" data-sdg="09" hidden>
+              <div class="sdg-panel__hero" style="background-color: #F36D24;">
+                <div class="sdg-panel__hero-text">
+                  <span class="sdg-panel__tag">GOAL 09 &bull; INDUSTRY, INNOVATION &amp; INFRASTRUCTURE</span>
+                  <h3 class="sdg-panel__title">Advanced chemical R&amp;D and clean power.</h3>
+                </div>
+                <div class="sdg-panel__badge">
+                  <img src="/assets/images/sdg/sdg09.svg" alt="UN SDG 09 Badge" width="76" height="76" loading="lazy" />
+                </div>
+              </div>
+              <div class="sdg-panel__body">
+                <p class="sdg-panel__lead">
+                  Modernizing testing laboratories, developing customized dye solutions, and operating dedicated captive solar generation at Ankleshwar GIDC.
+                </p>
+                <div class="sdg-approach">
+                  <span class="sdg-approach__eyebrow">Our approach</span>
+                  <div class="sdg-approach__grid">
+                    <div class="sdg-approach__card">
+                      <span class="sdg-approach__pill" style="background-color: #FEEADB; color: #AD3C00;">Analytical R&amp;D</span>
+                      <p class="sdg-approach__desc">State-of-the-art laboratory testing (HPLC, GC, AAS, UV-Vis) ensuring precise purity and global quality compliance.</p>
+                    </div>
+                    <div class="sdg-approach__card">
+                      <span class="sdg-approach__pill" style="background-color: #FEEADB; color: #AD3C00;">Clean Infrastructure</span>
+                      <p class="sdg-approach__desc">Captive industrial solar park and semi-automated delivery systems reducing plant carbon intensity.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 08 -->
+            <div class="sdg-panel" id="sdg-panel-08" role="tabpanel" aria-labelledby="sdg-tab-08" data-sdg="08" hidden>
+              <div class="sdg-panel__hero" style="background-color: #A21942;">
+                <div class="sdg-panel__hero-text">
+                  <span class="sdg-panel__tag">GOAL 08 &bull; DECENT WORK &amp; ECONOMIC GROWTH</span>
+                  <h3 class="sdg-panel__title">Empowering people &amp; workplace safety.</h3>
+                </div>
+                <div class="sdg-panel__badge">
+                  <img src="/assets/images/sdg/sdg08.svg" alt="UN SDG 08 Badge" width="76" height="76" loading="lazy" />
+                </div>
+              </div>
+              <div class="sdg-panel__body">
+                <p class="sdg-panel__lead">
+                  Prioritizing employee health, comprehensive industrial safety standards, and lifelong professional development across our manufacturing teams.
+                </p>
+                <div class="sdg-approach">
+                  <span class="sdg-approach__eyebrow">Our approach</span>
+                  <div class="sdg-approach__grid">
+                    <div class="sdg-approach__card">
+                      <span class="sdg-approach__pill" style="background-color: #F6DFE5; color: #7B0E2B;">Workplace Safety</span>
+                      <p class="sdg-approach__desc">Strict PPE protocols, hazard prevention, and fair labor practices adhering to SA 8000 guidelines.</p>
+                    </div>
+                    <div class="sdg-approach__card">
+                      <span class="sdg-approach__pill" style="background-color: #F6DFE5; color: #7B0E2B;">Skills &amp; Training</span>
+                      <p class="sdg-approach__desc">Continuous technical upskilling, training workshops, and local employment creation in Gujarat.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================================================================
+             SMALL SCREENS: Stacked Vertical Cards with Expandable Details
+             ================================================================ -->
+        <div class="sdg-mobile" aria-label="SDG Mobile Accordion">
+          <!-- Card 06 -->
+          <div class="sdg-m-card is-open" data-sdg="06">
+            <button class="sdg-m-card__trigger" type="button" aria-expanded="true" aria-controls="sdg-m-body-06">
+              <div class="sdg-m-card__icon" style="background-color: #00ADD8;">
+                <img src="/assets/images/sdg/sdg06.svg" alt="UN SDG 06 Icon" width="46" height="46" loading="lazy" />
+              </div>
+              <div class="sdg-m-card__meta">
+                <span class="sdg-m-card__num" style="color: #006f8c;">06 &mdash; Clean Water</span>
+                <h3 class="sdg-m-card__title">Water treatment and reuse</h3>
+              </div>
+              <span class="sdg-m-card__chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="sdg-m-card__body" id="sdg-m-body-06">
+              <div class="sdg-m-card__accent" style="background-color: #00ADD8;"></div>
+              <div class="sdg-m-card__content">
+                <span class="sdg-m-card__tag" style="color: #006f8c;">GOAL 06 &bull; CLEAN WATER &amp; SANITATION</span>
+                <h4 class="sdg-m-card__heading">Water, treated responsibly.</h4>
+                <p class="sdg-m-card__lead">
+                  Continuous industrial wastewater treatment and reverse osmosis (R/O) recycling at our Ankleshwar plant.
+                </p>
+                <div class="sdg-m-approach">
+                  <div class="sdg-m-approach__item">
+                    <span class="sdg-m-approach__pill" style="background-color: #D9F4FC; color: #006e8b;">Effluent Management</span>
+                    <p class="sdg-m-approach__desc">Full effluent treatment adhering strictly to GIDC &amp; GPCB norms before discharge.</p>
+                  </div>
+                  <div class="sdg-m-approach__item">
+                    <span class="sdg-m-approach__pill" style="background-color: #D9F4FC; color: #006e8b;">Water Reuse</span>
+                    <p class="sdg-m-approach__desc">Treated manufacturing water recycled back into cooling and plant utility loops.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Pillar 3: Swachh Bharat -->
-          <div class="csr-card reveal">
-            <div class="csr-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6.8 11a6 6 0 1 0 10.396 0l-5.196 -8l-5.2 8z" />
-                <path d="M6 14a6 6 0 0 0 12 0" />
-              </svg>
+          <!-- Card 12 -->
+          <div class="sdg-m-card" data-sdg="12">
+            <button class="sdg-m-card__trigger" type="button" aria-expanded="false" aria-controls="sdg-m-body-12">
+              <div class="sdg-m-card__icon" style="background-color: #CF8D2A;">
+                <img src="/assets/images/sdg/sdg12.svg" alt="UN SDG 12 Icon" width="46" height="46" loading="lazy" />
+              </div>
+              <div class="sdg-m-card__meta">
+                <span class="sdg-m-card__num" style="color: #9E6714;">12 &mdash; Responsible Production</span>
+                <h3 class="sdg-m-card__title">Recover, Reduce, Reuse, Recycle</h3>
+              </div>
+              <span class="sdg-m-card__chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="sdg-m-card__body" id="sdg-m-body-12" hidden>
+              <div class="sdg-m-card__accent" style="background-color: #CF8D2A;"></div>
+              <div class="sdg-m-card__content">
+                <span class="sdg-m-card__tag" style="color: #9E6714;">GOAL 12 &bull; RESPONSIBLE PRODUCTION</span>
+                <h4 class="sdg-m-card__heading">Circular manufacturing &amp; waste reduction.</h4>
+                <p class="sdg-m-card__lead">
+                  Applying the 4R framework to chemical synthesis to maximize yield and minimize process waste.
+                </p>
+                <div class="sdg-m-approach">
+                  <div class="sdg-m-approach__item">
+                    <span class="sdg-m-approach__pill" style="background-color: #F9EFDB; color: #8A590F;">4R Protocols</span>
+                    <p class="sdg-m-approach__desc">Systematic Recover, Reduce, Reuse, Recycle across batches and raw materials.</p>
+                  </div>
+                  <div class="sdg-m-approach__item">
+                    <span class="sdg-m-approach__pill" style="background-color: #F9EFDB; color: #8A590F;">Solvent Recovery</span>
+                    <p class="sdg-m-approach__desc">Closed-loop solvent recovery systems reducing overall chemical loss.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span class="csr-card__pillar">Pillar 03</span>
-            <h3 class="csr-card__title">Swachh Bharat &amp; Sanitation</h3>
-            <p class="csr-card__desc">
-              Promoting dignified public health through clean water solutions and rural sanitation infrastructure.
-            </p>
-            <ul class="csr-card__list">
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Sanitation Facilities:</strong> Building modern toilet blocks in village schools and public spaces.</span>
-              </li>
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Drainage &amp; Waste:</strong> Improving community drainage and supporting local waste management.</span>
-              </li>
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Drinking Water:</strong> Installing clean drinking water systems in rural utility areas.</span>
-              </li>
-            </ul>
           </div>
 
-          <!-- Pillar 4: Community Relief & Environment -->
-          <div class="csr-card reveal reveal-delay-1">
-            <div class="csr-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                <path d="M12 6l-2 4l4 3.5l-2 3.5" />
-              </svg>
+          <!-- Card 09 -->
+          <div class="sdg-m-card" data-sdg="09">
+            <button class="sdg-m-card__trigger" type="button" aria-expanded="false" aria-controls="sdg-m-body-09">
+              <div class="sdg-m-card__icon" style="background-color: #F36D24;">
+                <img src="/assets/images/sdg/sdg09.svg" alt="UN SDG 09 Icon" width="46" height="46" loading="lazy" />
+              </div>
+              <div class="sdg-m-card__meta">
+                <span class="sdg-m-card__num" style="color: #C04809;">09 &mdash; Innovation</span>
+                <h3 class="sdg-m-card__title">Product development and quality</h3>
+              </div>
+              <span class="sdg-m-card__chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="sdg-m-card__body" id="sdg-m-body-09" hidden>
+              <div class="sdg-m-card__accent" style="background-color: #F36D24;"></div>
+              <div class="sdg-m-card__content">
+                <span class="sdg-m-card__tag" style="color: #C04809;">GOAL 09 &bull; INDUSTRY, INNOVATION &amp; INFRASTRUCTURE</span>
+                <h4 class="sdg-m-card__heading">Advanced chemical R&amp;D and clean power.</h4>
+                <p class="sdg-m-card__lead">
+                  Modern analytical laboratories and captive industrial solar generation at Ankleshwar GIDC.
+                </p>
+                <div class="sdg-m-approach">
+                  <div class="sdg-m-approach__item">
+                    <span class="sdg-m-approach__pill" style="background-color: #FEEADB; color: #AD3C00;">Analytical QA</span>
+                    <p class="sdg-m-approach__desc">In-house HPLC, GC, AAS, and UV-Vis testing ensuring global purity standards.</p>
+                  </div>
+                  <div class="sdg-m-approach__item">
+                    <span class="sdg-m-approach__pill" style="background-color: #FEEADB; color: #AD3C00;">Solar Generation</span>
+                    <p class="sdg-m-approach__desc">Dedicated captive solar park powering manufacturing operations with clean energy.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span class="csr-card__pillar">Pillar 04</span>
-            <h3 class="csr-card__title">Community Relief &amp; Ecology</h3>
-            <p class="csr-card__desc">
-              Providing direct aid during hardships alongside zero-compromise environmental stewardship.
-            </p>
-            <ul class="csr-card__list">
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Food Security:</strong> Food grain and essential ration drives for daily-wage families.</span>
-              </li>
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Seasonal Aid:</strong> Distributing rain umbrellas and protective supplies during monsoons.</span>
-              </li>
-              <li class="csr-card__item">
-                <span class="csr-card__item-bullet">&#x2713;</span>
-                <span><strong>Eco-Compliance:</strong> In-house 95%+ water recovery, solar power, and ISO 14001:2015 operations.</span>
-              </li>
-            </ul>
+          </div>
+
+          <!-- Card 08 -->
+          <div class="sdg-m-card" data-sdg="08">
+            <button class="sdg-m-card__trigger" type="button" aria-expanded="false" aria-controls="sdg-m-body-08">
+              <div class="sdg-m-card__icon" style="background-color: #A21942;">
+                <img src="/assets/images/sdg/sdg08.svg" alt="UN SDG 08 Icon" width="46" height="46" loading="lazy" />
+              </div>
+              <div class="sdg-m-card__meta">
+                <span class="sdg-m-card__num" style="color: #8F1737;">08 &mdash; Decent Work</span>
+                <h3 class="sdg-m-card__title">People, learning and well-being</h3>
+              </div>
+              <span class="sdg-m-card__chevron" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="sdg-m-card__body" id="sdg-m-body-08" hidden>
+              <div class="sdg-m-card__accent" style="background-color: #A21942;"></div>
+              <div class="sdg-m-card__content">
+                <span class="sdg-m-card__tag" style="color: #8F1737;">GOAL 08 &bull; DECENT WORK &amp; ECONOMIC GROWTH</span>
+                <h4 class="sdg-m-card__heading">Empowering people &amp; workplace safety.</h4>
+                <p class="sdg-m-card__lead">
+                  Fostering a safe, ethical shop floor with continuous technical training and worker well-being.
+                </p>
+                <div class="sdg-m-approach">
+                  <div class="sdg-m-approach__item">
+                    <span class="sdg-m-approach__pill" style="background-color: #F6DFE5; color: #7B0E2B;">Workplace Safety</span>
+                    <p class="sdg-m-approach__desc">Mandatory PPE protocols, hazard mitigation, and SA 8000 fair labor standards.</p>
+                  </div>
+                  <div class="sdg-m-approach__item">
+                    <span class="sdg-m-approach__pill" style="background-color: #F6DFE5; color: #7B0E2B;">Skills Training</span>
+                    <p class="sdg-m-approach__desc">Continuous workforce technical upskilling and stable local employment in Gujarat.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== SPOTLIGHT PARTNERSHIP SECTION ========== -->
-    <section class="section" style="background: var(--color-bg);">
+    <!-- ========== KEY HEALTHCARE PARTNERSHIP SECTION ========== -->
+    <section class="csr-spotlight">
       <div class="container">
-        <div class="spotlight-banner reveal">
-          <div class="spotlight-grid">
-            <div>
-              <span class="spotlight-badge">Key Healthcare Partnership</span>
-              <h3 style="font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: var(--color-heading-primary); margin-bottom: 14px; line-height: 1.3;">
-                Smt. Jayaben Mody Multispeciality Hospital
-              </h3>
-              <p style="font-size: 15px; color: var(--color-body); line-height: 1.7; margin-bottom: 20px;">
-                As a longstanding corporate donor, <strong>K. Patel Chemopharma</strong> supports Ankleshwar's premier non-profit hospital, managed by the Ankleshwar Industrial Development Society (AIDS). Our contributions fund advanced diagnostic machinery, ICU resources, and subsidized treatments for rural and underprivileged patients.
-              </p>
-              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                <span style="font-size: 12px; font-weight: 600; padding: 6px 12px; background: var(--color-accent-subtle); color: var(--color-accent); border-radius: 4px;">
-                  &#x2713; Ankleshwar, Gujarat
-                </span>
-                <span style="font-size: 12px; font-weight: 600; padding: 6px 12px; background: var(--color-accent-subtle); color: var(--color-accent); border-radius: 4px;">
-                  &#x2713; Diagnostic &amp; ICU Care
-                </span>
-                <span style="font-size: 12px; font-weight: 600; padding: 6px 12px; background: var(--color-accent-subtle); color: var(--color-accent); border-radius: 4px;">
-                  &#x2713; Subsidized Treatment
-                </span>
-              </div>
+        <div class="csr-spotlight__grid">
+          <div class="csr-spotlight__content reveal">
+            <span class="csr-spotlight__eyebrow">Key Healthcare Partnership</span>
+            <h2 class="csr-spotlight__title">Smt. Jayaben Mody Multispeciality Hospital</h2>
+            <p class="csr-spotlight__body">
+              As a longstanding corporate donor, <strong>K. Patel Chemopharma</strong> supports Ankleshwar's premier non-profit hospital, managed by the Ankleshwar Industrial Development Society (AIDS). Our contributions fund advanced diagnostic machinery, ICU resources, and subsidized treatments for rural and underprivileged patients.
+            </p>
+            <div class="trust-badges-row">
+              <span class="trust-badge trust-badge--initiative">&#x2713; Ankleshwar, Gujarat</span>
+              <span class="trust-badge trust-badge--initiative">&#x2713; Diagnostic &amp; ICU Care</span>
+              <span class="trust-badge trust-badge--initiative">&#x2713; Subsidized Treatment</span>
             </div>
+          </div>
 
-            <div style="background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--r-lg); padding: 28px 24px;">
-              <h4 style="font-family: var(--font-heading); font-size: 17px; font-weight: 700; color: var(--color-heading-primary); margin-bottom: 12px;">
-                Impact Highlights
-              </h4>
-              <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: var(--color-body); line-height: 1.8;">
-                <li><strong>&#x2022; Subsidized Care:</strong> Affordable consultations, diagnostics, and treatments for local workers and families.</li>
-                <li><strong>&#x2022; Medical Infrastructure:</strong> Ongoing grants for critical testing equipment and emergency supplies.</li>
-                <li><strong>&#x2022; Community Reach:</strong> Serving over 10,000 patients annually across the Bharuch-Ankleshwar belt.</li>
-              </ul>
-            </div>
+          <div class="csr-spotlight__card reveal reveal-delay-1">
+            <h3 class="csr-spotlight__card-title">Impact Highlights</h3>
+            <ul class="csr-spotlight__list">
+              <li class="csr-spotlight__item">
+                <span class="csr-spotlight__bullet">&#x2022;</span>
+                <span><strong>Subsidized Care:</strong> Affordable consultations, diagnostics, and treatments for local workers and families.</span>
+              </li>
+              <li class="csr-spotlight__item">
+                <span class="csr-spotlight__bullet">&#x2022;</span>
+                <span><strong>Medical Infrastructure:</strong> Ongoing grants for critical testing equipment and emergency supplies.</span>
+              </li>
+              <li class="csr-spotlight__item">
+                <span class="csr-spotlight__bullet">&#x2022;</span>
+                <span><strong>Community Reach:</strong> Serving over 10,000 patients annually across the Bharuch-Ankleshwar belt.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========== GOVERNANCE & STATUTORY POLICY ========== -->
-    <section class="gov-section">
+    <section class="csr-governance">
       <div class="container">
-        <div style="max-width: 780px;">
-          <span class="eyebrow">Governance &amp; Oversight</span>
-          <h2 class="section-title" style="font-size: 2.2rem;">CSR Framework &amp; Compliance</h2>
-          <p class="section-body" style="margin-top: 14px;">
+        <div class="csr-governance__header reveal">
+          <span class="csr-governance__eyebrow">Governance &amp; Oversight</span>
+          <h2 class="csr-governance__title">CSR Framework &amp; Compliance</h2>
+          <p class="csr-governance__desc">
             All CSR initiatives are governed by our Board-appointed CSR Committee in strict accordance with Section 135 of the Companies Act, 2013.
           </p>
         </div>
 
-        <div class="gov-grid">
+        <div class="csr-governance__grid">
           <!-- Committee & Funding Details -->
-          <div class="gov-box reveal">
-            <h3 class="gov-box__title">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Board Oversight &amp; Funding
-            </h3>
-            <ul style="list-style: none; padding: 0; font-size: 14px; color: var(--color-body); line-height: 1.8; margin: 0;">
-              <li><strong>&#x2022; Statutory Spend:</strong> Minimum 2% of average net profits (preceding 3 financial years) dedicated to approved CSR programs.</li>
-              <li><strong>&#x2022; Project Appraisal:</strong> All initiatives undergo pre-evaluation for measurable, long-term community benefits.</li>
-              <li><strong>&#x2022; Annual Disclosures:</strong> Complete CSR expenditure and progress reported annually in the Board's Report.</li>
+          <div class="gov-card reveal">
+            <h3 class="gov-card__title">Board Oversight &amp; Funding</h3>
+            <ul class="gov-card__list">
+              <li class="gov-card__item"><strong>Statutory Spend:</strong> Minimum 2% of average net profits (preceding 3 financial years) dedicated to approved CSR programs.</li>
+              <li class="gov-card__item"><strong>Project Appraisal:</strong> All initiatives undergo pre-evaluation for measurable, long-term community benefits.</li>
+              <li class="gov-card__item"><strong>Annual Disclosures:</strong> Complete CSR expenditure and progress reported annually in the Board's Report.</li>
             </ul>
           </div>
 
           <!-- Guiding Principles -->
-          <div class="gov-box reveal reveal-delay-1">
-            <h3 class="gov-box__title">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Guiding Principles
-            </h3>
-            <ul style="list-style: none; padding: 0; font-size: 14px; color: var(--color-body); line-height: 1.8; margin: 0;">
-              <li><strong>&#x2022; Community-Centric:</strong> Funds exclusively support public welfare, fully separate from commercial operations.</li>
-              <li><strong>&#x2022; Local Impact:</strong> Primary focus on rural communities and families around our Ankleshwar manufacturing hub.</li>
-              <li><strong>&#x2022; Strict Non-Affiliation:</strong> Zero political donations; support directed only to vetted non-profit trusts and institutions.</li>
+          <div class="gov-card reveal reveal-delay-1">
+            <h3 class="gov-card__title">Guiding Principles</h3>
+            <ul class="gov-card__list">
+              <li class="gov-card__item"><strong>Community-Centric:</strong> Funds exclusively support public welfare, fully separate from commercial operations.</li>
+              <li class="gov-card__item"><strong>Local Impact:</strong> Primary focus on rural communities and families around our Ankleshwar manufacturing hub.</li>
+              <li class="gov-card__item"><strong>Strict Non-Affiliation:</strong> Zero political donations; support directed only to vetted non-profit trusts and institutions.</li>
             </ul>
           </div>
         </div>
@@ -733,7 +704,7 @@
         <!-- Brand -->
         <div class="footer__col footer__col--brand">
           <a href="/" class="footer__logo-link">
-            <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="footer-logo" />
+            <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="footer-logo" width="160" height="30" />
           </a>
           <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
           <p class="footer__brand-desc">
@@ -743,7 +714,7 @@
 
         <!-- Product Range -->
         <div class="footer__col footer__col--nav">
-          <h4 class="footer__col-title">PRODUCT RANGE</h4>
+          <h3 class="footer__col-title">PRODUCT RANGE</h3>
           <ul class="footer__nav-list">
             <li><a href="/products/basic-dyes">Basic Dyes</a></li>
             <li><a href="/products/solvent-dyes">Solvent Dyes</a></li>
@@ -776,5 +747,83 @@
 
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/analytics.js" defer></script>
+
+  <!-- SDG Interactive Tabs (Desktop) and Accordion (Mobile) -->
+  <script>
+    (function () {
+      function initSdgInteractions() {
+        // Desktop Tab Switching
+        var desktopTiles = document.querySelectorAll('.sdg-tile');
+        var desktopPanels = document.querySelectorAll('.sdg-panel');
+
+        desktopTiles.forEach(function (tile) {
+          tile.addEventListener('click', function () {
+            var targetGoal = this.getAttribute('data-target');
+
+            desktopTiles.forEach(function (t) {
+              t.classList.remove('is-active');
+              t.setAttribute('aria-selected', 'false');
+            });
+            desktopPanels.forEach(function (p) {
+              p.classList.remove('is-active');
+              p.setAttribute('hidden', '');
+            });
+
+            this.classList.add('is-active');
+            this.setAttribute('aria-selected', 'true');
+
+            var activePanel = document.getElementById('sdg-panel-' + targetGoal);
+            if (activePanel) {
+              activePanel.removeAttribute('hidden');
+              void activePanel.offsetWidth;
+              activePanel.classList.add('is-active');
+            }
+          });
+        });
+
+        // Mobile Accordion Toggle — Zero-Lag Pre-Cached Handler
+        var mobileCards = Array.prototype.slice.call(document.querySelectorAll('.sdg-m-card'));
+        var cardData = mobileCards.map(function (card) {
+          return {
+            card: card,
+            trigger: card.querySelector('.sdg-m-card__trigger'),
+            body: card.querySelector('.sdg-m-card__body')
+          };
+        });
+
+        cardData.forEach(function (item) {
+          if (!item.trigger || !item.body) return;
+
+          item.trigger.addEventListener('click', function (e) {
+            e.preventDefault();
+            var isAlreadyOpen = item.card.classList.contains('is-open');
+
+            // Fast close currently open card (only mutates the active card)
+            for (var i = 0; i < cardData.length; i++) {
+              var c = cardData[i];
+              if (c.card.classList.contains('is-open')) {
+                c.card.classList.remove('is-open');
+                c.trigger.setAttribute('aria-expanded', 'false');
+                c.body.setAttribute('hidden', '');
+              }
+            }
+
+            // Immediately open clicked card
+            if (!isAlreadyOpen) {
+              item.card.classList.add('is-open');
+              item.trigger.setAttribute('aria-expanded', 'true');
+              item.body.removeAttribute('hidden');
+            }
+          });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSdgInteractions);
+      } else {
+        initSdgInteractions();
+      }
+    })();
+  </script>
 </body>
 </html>
