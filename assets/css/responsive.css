@@ -661,6 +661,7 @@ body.m-home {
   max-width: 325px;
   height: 310px;
   border-radius: var(--m-radius);
+  clip-path: inset(0 round var(--m-radius));
   position: relative;
   overflow: hidden;
   scroll-snap-align: center;
@@ -1521,6 +1522,8 @@ body.m-home {
 
   .industry-card {
     border-radius: var(--m-radius) !important;
+    clip-path: inset(0 round var(--m-radius)) !important;
+    -webkit-clip-path: inset(0 round var(--m-radius)) !important;
     border: 1px solid var(--m-border) !important;
     overflow: hidden !important;
     box-shadow: var(--m-shadow-card) !important;
