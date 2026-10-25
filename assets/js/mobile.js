@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Prevent active outline/highlight lingering on clicked timeline nodes
   initTimelineNodes();
+
+  // Scroll-driven vertical company timeline
+  initScrollDrivenTimeline();
 });
 
 function initTimelineNodes() {
@@ -43,6 +46,52 @@ function initTimelineNodes() {
       setTimeout(() => node.blur(), 50);
     });
   });
+}
+
+function initScrollDrivenTimeline() {
+  const vList = document.querySelector('.k-timeline__v-list');
+  const items = document.querySelectorAll('.k-timeline__v-item');
+  const railProgress = document.querySelector('.k-timeline__v-rail-progress');
+
+  if (!vList || !items.length || !railProgress) return;
+
+  const updateProgress = () => {
+    const viewportCenter = window.innerHeight * 0.55;
+    let activeIndex = 0;
+    let minDistance = Infinity;
+
+    items.forEach((item, index) => {
+      const rect = item.getBoundingClientRect();
+      const itemCenter = rect.top + rect.height / 2;
+      const distance = Math.abs(viewportCenter - itemCenter);
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        activeIndex = index;
+      }
+    });
+
+    items.forEach((item, index) => {
+      if (index <= activeIndex) {
+        item.classList.add('is-active');
+      } else {
+        item.classList.remove('is-active');
+      }
+    });
+
+    if (items.length > 1) {
+      const firstItem = items[0];
+      const activeItem = items[activeIndex];
+      const totalSpan = items[items.length - 1].offsetTop - firstItem.offsetTop;
+      const currentSpan = activeItem.offsetTop - firstItem.offsetTop;
+      const progress = totalSpan > 0 ? Math.min(100, Math.max(0, (currentSpan / totalSpan) * 100)) : 0;
+      railProgress.style.height = `${progress}%`;
+    }
+  };
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress, { passive: true });
+  updateProgress();
 }
 
 /**

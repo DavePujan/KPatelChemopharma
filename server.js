@@ -198,11 +198,8 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    // Long-term immutable caching for static assets, no-cache for HTML documents
-    const isStaticAsset = pathname.startsWith('/assets/') || ext === '.woff2' || ext === '.woff' || ext === '.webp' || ext === '.svg' || ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.css' || ext === '.js';
-    const cacheHeader = isStaticAsset
-      ? 'public, max-age=31536000, immutable'
-      : 'public, max-age=0, must-revalidate';
+    // Development dev server: disable aggressive caching so changes are immediately loaded
+    const cacheHeader = 'no-cache, no-store, must-revalidate';
 
     res.writeHead(200, {
       'Content-Type': contentType,
