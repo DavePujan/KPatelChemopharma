@@ -62,7 +62,7 @@
 
   <link rel="stylesheet" href="/assets/css/components/navbar.css" />
   <link rel="stylesheet" href="/assets/css/components/footer.css" />
-  <link rel="stylesheet" href="/assets/css/main.css?v=2" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
 
   <!-- Device Routing Logic -->
   <script>
@@ -572,224 +572,124 @@
         <!-- Small Screen Infographic Card: Retained for mobile/tablet readability -->
         <!-- Small Screen Infographic Card: Responsive Timeline Component -->
         <div class="legacy__infographic-wrap legacy__infographic-wrap--mobile reveal reveal-delay-4" style="padding: 16px;">
-          <div class="k-timeline">
-            <!-- Section Header -->
-            <div class="k-timeline__header">
-              <span class="k-timeline__eyebrow">OUR JOURNEY</span>
-              <h2 class="k-timeline__title">A legacy built over time.</h2>
-              <p class="k-timeline__subtitle">Six milestones. One evolving group.</p>
-            </div>
-
-            <!-- DESKTOP 6-COLUMN HORIZONTAL TIMELINE (>= 769px) -->
-            <div class="k-timeline__desktop" aria-label="Company history chronological timeline">
-              <div class="k-timeline__grid">
-                
-                <!-- Card 1: 1956 -->
-                <div class="k-timeline__card k-timeline__card--1">
-                  <div class="k-timeline__year-box">
-                    <span class="k-timeline__year">1956</span>
-                  </div>
-                  <div class="k-timeline__body">
-                    <div class="k-timeline__logo-wrap">
-                      <img src="/assets/images/timeline/logos/logo-1956.webp" alt="K. Patel &amp; Co. Logo" class="k-timeline__logo" loading="lazy">
-                    </div>
-                    <div class="k-timeline__brand-slot"></div>
-                    <h3 class="k-timeline__company">K. Patel &amp; Co. Pvt. Ltd.</h3>
-                  </div>
-                </div>
-
-                <!-- Card 2: 1974 -->
-                <div class="k-timeline__card k-timeline__card--2">
-                  <div class="k-timeline__year-box">
-                    <span class="k-timeline__year">1974</span>
-                  </div>
-                  <div class="k-timeline__body">
-                    <div class="k-timeline__logo-wrap">
-                      <img src="/assets/images/timeline/logos/logo-1974.webp" alt="K. Patel Chemopharma Logo" class="k-timeline__logo" loading="lazy">
-                    </div>
-                    <div class="k-timeline__brand-slot"></div>
-                    <h3 class="k-timeline__company">K. Patel Chempharma Pvt. Ltd.</h3>
-                  </div>
-                </div>
-
-                <!-- Card 3: 1991 -->
-                <div class="k-timeline__card k-timeline__card--3">
-                  <div class="k-timeline__year-box">
-                    <span class="k-timeline__year">1991</span>
-                  </div>
-                  <div class="k-timeline__body">
-                    <div class="k-timeline__logo-wrap">
-                      <img src="/assets/images/timeline/logos/logo-1991.webp" alt="KDI Logo" class="k-timeline__logo" loading="lazy">
-                    </div>
-                    <div class="k-timeline__brand-slot">
-                      <span class="k-timeline__brand-pill">KDI</span>
-                    </div>
-                    <h3 class="k-timeline__company">K. Patel Dyechem Industries</h3>
-                  </div>
-                </div>
-
-                <!-- Card 4: 1994 -->
-                <div class="k-timeline__card k-timeline__card--4">
-                  <div class="k-timeline__year-box">
-                    <span class="k-timeline__year">1994</span>
-                  </div>
-                  <div class="k-timeline__body">
-                    <div class="k-timeline__logo-wrap">
-                      <img src="/assets/images/timeline/logos/logo-1994.webp" alt="Devanshi Dyestuff Logo" class="k-timeline__logo" loading="lazy">
-                    </div>
-                    <div class="k-timeline__brand-slot"></div>
-                    <h3 class="k-timeline__company">Devanshi Dyestuff</h3>
-                  </div>
-                </div>
-
-                <!-- Card 5: 1995 -->
-                <div class="k-timeline__card k-timeline__card--5">
-                  <div class="k-timeline__year-box">
-                    <span class="k-timeline__year">1995</span>
-                  </div>
-                  <div class="k-timeline__body">
-                    <div class="k-timeline__logo-wrap">
-                      <img src="/assets/images/timeline/logos/logo-1995.webp" alt="KPI Logo" class="k-timeline__logo" loading="lazy">
-                    </div>
-                    <div class="k-timeline__brand-slot">
-                      <span class="k-timeline__brand-pill">KPI</span>
-                    </div>
-                    <h3 class="k-timeline__company">K. Patel International</h3>
-                  </div>
-                </div>
-
-                <!-- Card 6: 2005 -->
-                <div class="k-timeline__card k-timeline__card--6">
-                  <div class="k-timeline__year-box">
-                    <span class="k-timeline__year">2005</span>
-                  </div>
-                  <div class="k-timeline__body">
-                    <div class="k-timeline__logo-wrap">
-                      <img src="/assets/images/timeline/logos/logo-2005.webp" alt="K. Patel Phyto Extractions Logo" class="k-timeline__logo" loading="lazy">
-                    </div>
-                    <div class="k-timeline__brand-slot"></div>
-                    <h3 class="k-timeline__company">K. Patel Phyto Extractions Pvt. Ltd.</h3>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- MOBILE VERTICAL SCROLL-DRIVEN TIMELINE (<= 768px) -->
-            <div class="k-timeline__mobile" aria-label="Company history chronological vertical timeline">
-              <div class="k-timeline__v-rail" aria-hidden="true">
-                <div class="k-timeline__v-rail-progress"></div>
-              </div>
-
-              <div class="k-timeline__v-list">
+          <div class="journey-timeline">
+            <div class="journey-timeline__wrapper">
+              <div class="journey-timeline__track">
+                <div class="journey-timeline__v-rail" aria-hidden="true"></div>
                 
                 <!-- Milestone 1: 1956 -->
-                <div class="k-timeline__v-item k-timeline__v-item--1" data-milestone="1956">
-                  <div class="k-timeline__v-node">
-                    <span class="k-timeline__v-dot"></span>
+                <div class="journey-timeline__col journey-timeline__col--1" data-year="1956">
+                  <div class="journey-timeline__node" aria-hidden="true">
+                    <span class="journey-timeline__node-dot"></span>
                   </div>
-                  <div class="k-timeline__v-card">
-                    <div class="k-timeline__v-top">
-                      <div class="k-timeline__v-meta">
-                        <span class="k-timeline__v-year">1956</span>
-                      </div>
-                      <div class="k-timeline__v-logo-wrap">
-                        <img src="/assets/images/timeline/logos/logo-1956.webp" alt="K. Patel &amp; Co. Logo" class="k-timeline__v-logo" loading="lazy">
-                      </div>
+                  <div class="journey-timeline__connector" aria-hidden="true"></div>
+                  <div class="journey-timeline__card">
+                    <div class="journey-timeline__year-box">
+                      <span class="journey-timeline__year">1956</span>
                     </div>
-                    <h3 class="k-timeline__v-company">K. Patel &amp; Co. Pvt. Ltd.</h3>
+                    <div class="journey-timeline__media">
+                      <img src="/assets/images/timeline/photos/photo-1956.webp" alt="1956 - K. Patel &amp; Co. Pvt. Ltd." class="journey-timeline__img" loading="lazy">
+                    </div>
+                    <div class="journey-timeline__content">
+                      <h3 class="journey-timeline__company">K. Patel &amp; Co. Pvt. Ltd.</h3>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Milestone 2: 1974 -->
-                <div class="k-timeline__v-item k-timeline__v-item--2" data-milestone="1974">
-                  <div class="k-timeline__v-node">
-                    <span class="k-timeline__v-dot"></span>
+                <div class="journey-timeline__col journey-timeline__col--2" data-year="1974">
+                  <div class="journey-timeline__node" aria-hidden="true">
+                    <span class="journey-timeline__node-dot"></span>
                   </div>
-                  <div class="k-timeline__v-card">
-                    <div class="k-timeline__v-top">
-                      <div class="k-timeline__v-meta">
-                        <span class="k-timeline__v-year">1974</span>
-                      </div>
-                      <div class="k-timeline__v-logo-wrap">
-                        <img src="/assets/images/timeline/logos/logo-1974.webp" alt="K. Patel Chemopharma Logo" class="k-timeline__v-logo" loading="lazy">
-                      </div>
+                  <div class="journey-timeline__connector" aria-hidden="true"></div>
+                  <div class="journey-timeline__card">
+                    <div class="journey-timeline__year-box">
+                      <span class="journey-timeline__year">1974</span>
                     </div>
-                    <h3 class="k-timeline__v-company">K. Patel Chempharma Pvt. Ltd.</h3>
+                    <div class="journey-timeline__media">
+                      <img src="/assets/images/timeline/photos/photo-1974.webp" alt="1974 - K. Patel Chempharma Pvt. Ltd." class="journey-timeline__img" loading="lazy">
+                    </div>
+                    <div class="journey-timeline__content">
+                      <h3 class="journey-timeline__company">K. Patel Chempharma Pvt. Ltd.</h3>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Milestone 3: 1991 -->
-                <div class="k-timeline__v-item k-timeline__v-item--3" data-milestone="1991">
-                  <div class="k-timeline__v-node">
-                    <span class="k-timeline__v-dot"></span>
+                <div class="journey-timeline__col journey-timeline__col--3" data-year="1991">
+                  <div class="journey-timeline__node" aria-hidden="true">
+                    <span class="journey-timeline__node-dot"></span>
                   </div>
-                  <div class="k-timeline__v-card">
-                    <div class="k-timeline__v-top">
-                      <div class="k-timeline__v-meta">
-                        <span class="k-timeline__v-year">1991</span>
-                        <span class="k-timeline__brand-pill">KDI</span>
-                      </div>
-                      <div class="k-timeline__v-logo-wrap">
-                        <img src="/assets/images/timeline/logos/logo-1991.webp" alt="KDI Logo" class="k-timeline__v-logo" loading="lazy">
-                      </div>
+                  <div class="journey-timeline__connector" aria-hidden="true"></div>
+                  <div class="journey-timeline__card">
+                    <div class="journey-timeline__year-box">
+                      <span class="journey-timeline__year">1991</span>
                     </div>
-                    <h3 class="k-timeline__v-company">K. Patel Dyechem Industries</h3>
+                    <div class="journey-timeline__media">
+                      <img src="/assets/images/timeline/photos/photo-1991.webp" alt="1991 - K. Patel Dyechem Industries" class="journey-timeline__img" loading="lazy">
+                    </div>
+                    <div class="journey-timeline__content">
+                      <span class="journey-timeline__brand-tag">Brand: KDI</span>
+                      <h3 class="journey-timeline__company">K. Patel Dyechem Industries</h3>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Milestone 4: 1994 -->
-                <div class="k-timeline__v-item k-timeline__v-item--4" data-milestone="1994">
-                  <div class="k-timeline__v-node">
-                    <span class="k-timeline__v-dot"></span>
+                <div class="journey-timeline__col journey-timeline__col--4" data-year="1994">
+                  <div class="journey-timeline__node" aria-hidden="true">
+                    <span class="journey-timeline__node-dot"></span>
                   </div>
-                  <div class="k-timeline__v-card">
-                    <div class="k-timeline__v-top">
-                      <div class="k-timeline__v-meta">
-                        <span class="k-timeline__v-year">1994</span>
-                      </div>
-                      <div class="k-timeline__v-logo-wrap">
-                        <img src="/assets/images/timeline/logos/logo-1994.webp" alt="Devanshi Dyestuff Logo" class="k-timeline__v-logo" loading="lazy">
-                      </div>
+                  <div class="journey-timeline__connector" aria-hidden="true"></div>
+                  <div class="journey-timeline__card">
+                    <div class="journey-timeline__year-box">
+                      <span class="journey-timeline__year">1994</span>
                     </div>
-                    <h3 class="k-timeline__v-company">Devanshi Dyestuff</h3>
+                    <div class="journey-timeline__media">
+                      <img src="/assets/images/timeline/photos/photo-1994.webp" alt="1994 - Devanshi Dyestuff" class="journey-timeline__img" loading="lazy">
+                    </div>
+                    <div class="journey-timeline__content">
+                      <h3 class="journey-timeline__company">Devanshi Dyestuff</h3>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Milestone 5: 1995 -->
-                <div class="k-timeline__v-item k-timeline__v-item--5" data-milestone="1995">
-                  <div class="k-timeline__v-node">
-                    <span class="k-timeline__v-dot"></span>
+                <div class="journey-timeline__col journey-timeline__col--5" data-year="1995">
+                  <div class="journey-timeline__node" aria-hidden="true">
+                    <span class="journey-timeline__node-dot"></span>
                   </div>
-                  <div class="k-timeline__v-card">
-                    <div class="k-timeline__v-top">
-                      <div class="k-timeline__v-meta">
-                        <span class="k-timeline__v-year">1995</span>
-                        <span class="k-timeline__brand-pill">KPI</span>
-                      </div>
-                      <div class="k-timeline__v-logo-wrap">
-                        <img src="/assets/images/timeline/logos/logo-1995.webp" alt="KPI Logo" class="k-timeline__v-logo" loading="lazy">
-                      </div>
+                  <div class="journey-timeline__connector" aria-hidden="true"></div>
+                  <div class="journey-timeline__card">
+                    <div class="journey-timeline__year-box">
+                      <span class="journey-timeline__year">1995</span>
                     </div>
-                    <h3 class="k-timeline__v-company">K. Patel International</h3>
+                    <div class="journey-timeline__media">
+                      <img src="/assets/images/timeline/photos/photo-1995.webp" alt="1995 - K. Patel International" class="journey-timeline__img" loading="lazy">
+                    </div>
+                    <div class="journey-timeline__content">
+                      <span class="journey-timeline__brand-tag">Brand: KPI</span>
+                      <h3 class="journey-timeline__company">K. Patel International</h3>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Milestone 6: 2005 -->
-                <div class="k-timeline__v-item k-timeline__v-item--6" data-milestone="2005">
-                  <div class="k-timeline__v-node">
-                    <span class="k-timeline__v-dot"></span>
+                <div class="journey-timeline__col journey-timeline__col--6" data-year="2005">
+                  <div class="journey-timeline__node" aria-hidden="true">
+                    <span class="journey-timeline__node-dot"></span>
                   </div>
-                  <div class="k-timeline__v-card">
-                    <div class="k-timeline__v-top">
-                      <div class="k-timeline__v-meta">
-                        <span class="k-timeline__v-year">2005</span>
-                      </div>
-                      <div class="k-timeline__v-logo-wrap">
-                        <img src="/assets/images/timeline/logos/logo-2005.webp" alt="K. Patel Phyto Extractions Logo" class="k-timeline__v-logo" loading="lazy">
-                      </div>
+                  <div class="journey-timeline__connector" aria-hidden="true"></div>
+                  <div class="journey-timeline__card">
+                    <div class="journey-timeline__year-box">
+                      <span class="journey-timeline__year">2005</span>
                     </div>
-                    <h3 class="k-timeline__v-company">K. Patel Phyto Extractions Pvt. Ltd.</h3>
+                    <div class="journey-timeline__media">
+                      <img src="/assets/images/timeline/photos/photo-2005.webp" alt="2005 - K. Patel Phyto Extractions Pvt. Ltd." class="journey-timeline__img" loading="lazy">
+                    </div>
+                    <div class="journey-timeline__content">
+                      <h3 class="journey-timeline__company">K. Patel Phyto Extractions Pvt. Ltd.</h3>
+                    </div>
                   </div>
                 </div>
 
@@ -1189,7 +1089,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=2"></script>
+  <script src="/assets/js/main.js"></script>
   <script src="/assets/js/form.js"></script>
   <script src="/assets/js/analytics.js" defer></script>
 </body>

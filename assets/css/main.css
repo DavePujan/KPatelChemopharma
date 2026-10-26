@@ -4585,395 +4585,601 @@ select.b2b-input {
 }
 
 /* ==========================================================================
-   AUTHENTIC 6-MILESTONE COMPANY HISTORY TIMELINE (.k-timeline)
+   HORIZONTAL MULTICOLOR INFOGRAPHIC TIMELINE COMPONENT
    ========================================================================== */
-.k-timeline {
+.journey-timeline {
   width: 100%;
-  margin: 32px 0 0 0;
-  box-sizing: border-box;
+  margin: 24px 0 0 0;
 }
 
-.k-timeline__header {
-  margin-bottom: 32px;
+.journey-timeline__header {
+  margin-bottom: 26px;
   text-align: left;
 }
 
-.k-timeline__eyebrow {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-primary, #5A2C20);
-  margin-bottom: 8px;
-}
-
-.k-timeline__title {
-  font-size: 34px;
+.journey-timeline__title {
+  font-size: 32px;
   font-weight: 300;
-  letter-spacing: -0.025em;
-  color: #0f172a;
-  margin: 0 0 8px 0;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin: 0 0 6px 0;
   line-height: 1.25;
 }
 
-.k-timeline__subtitle {
-  font-size: 16px;
+.journey-timeline__subtitle {
+  font-size: 15.5px;
+  font-weight: 400;
   color: #64748b;
   margin: 0;
-  font-weight: 400;
   line-height: 1.5;
 }
 
-/* Palette Variables */
-.k-timeline__card--1,
-.k-timeline__v-item--1 {
-  --col-accent: #E85747;
-  --col-accent-light: rgba(232, 87, 71, 0.1);
-  --col-accent-border: rgba(232, 87, 71, 0.25);
+.journey-timeline__wrapper {
+  position: relative;
+  width: 100%;
+  overflow: visible;
 }
 
-.k-timeline__card--2,
-.k-timeline__v-item--2 {
-  --col-accent: #F2A421;
-  --col-accent-light: rgba(242, 164, 33, 0.12);
-  --col-accent-border: rgba(242, 164, 33, 0.28);
+/* Palette mapping for 6 milestones */
+.journey-timeline__col--1 { --milestone-accent: #E85747; } /* 1956 - Coral red */
+.journey-timeline__col--2 { --milestone-accent: #F2A421; } /* 1974 - Amber / gold */
+.journey-timeline__col--3 { --milestone-accent: #0A5C9B; } /* 1991 - Deep blue */
+.journey-timeline__col--4 { --milestone-accent: #6355A4; } /* 1994 - Royal purple */
+.journey-timeline__col--5 { --milestone-accent: #00A3E0; } /* 1995 - Cyan */
+.journey-timeline__col--6 { --milestone-accent: #73B62A; } /* 2005 - Green */
+
+.journey-timeline__col .journey-timeline__year-box,
+.journey-timeline__col .journey-timeline__content {
+  background-color: var(--milestone-accent);
 }
 
-.k-timeline__card--3,
-.k-timeline__v-item--3 {
-  --col-accent: #0A5C9B;
-  --col-accent-light: rgba(10, 92, 155, 0.1);
-  --col-accent-border: rgba(10, 92, 155, 0.25);
-}
-
-.k-timeline__card--4,
-.k-timeline__v-item--4 {
-  --col-accent: #6355A4;
-  --col-accent-light: rgba(99, 85, 164, 0.1);
-  --col-accent-border: rgba(99, 85, 164, 0.25);
-}
-
-.k-timeline__card--5,
-.k-timeline__v-item--5 {
-  --col-accent: #00A3E0;
-  --col-accent-light: rgba(0, 163, 224, 0.1);
-  --col-accent-border: rgba(0, 163, 224, 0.25);
-}
-
-.k-timeline__card--6,
-.k-timeline__v-item--6 {
-  --col-accent: #73B62A;
-  --col-accent-light: rgba(115, 182, 42, 0.12);
-  --col-accent-border: rgba(115, 182, 42, 0.28);
-}
-
-/* --------------------------------------------------------------------------
-   DESKTOP 6-COLUMN HORIZONTAL GRID
-   -------------------------------------------------------------------------- */
-.k-timeline__desktop {
-  display: block;
-}
-
-.k-timeline__mobile {
-  display: none;
-}
-
-.k-timeline__grid {
+/* DESKTOP (1024px and up): 6-column horizontal chevron timeline */
+.journey-timeline__track {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   width: 100%;
   border-radius: 8px;
   overflow: visible;
-  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.08);
 }
 
-.k-timeline__card {
+.journey-timeline__v-rail,
+.journey-timeline__node,
+.journey-timeline__connector,
+.journey-timeline__scroll-hint {
+  display: none;
+}
+
+.journey-timeline__col {
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
-.k-timeline__card:nth-child(1) { z-index: 6; }
-.k-timeline__card:nth-child(2) { z-index: 5; }
-.k-timeline__card:nth-child(3) { z-index: 4; }
-.k-timeline__card:nth-child(4) { z-index: 3; }
-.k-timeline__card:nth-child(5) { z-index: 2; }
-.k-timeline__card:nth-child(6) { z-index: 1; }
+.journey-timeline__col:nth-child(1) { z-index: 6; }
+.journey-timeline__col:nth-child(2) { z-index: 5; }
+.journey-timeline__col:nth-child(3) { z-index: 4; }
+.journey-timeline__col:nth-child(4) { z-index: 3; }
+.journey-timeline__col:nth-child(5) { z-index: 2; }
+.journey-timeline__col:nth-child(6) { z-index: 1; }
 
-.k-timeline__year-box {
+.journey-timeline__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/* Year Header Row (Arrow/Chevron) */
+.journey-timeline__year-box {
   position: relative;
-  height: 68px;
-  background-color: var(--col-accent);
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(100% + 20px);
-  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
-  padding-right: 16px;
+  width: calc(100% + 18px);
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
   box-sizing: border-box;
+  padding-right: 14px;
   user-select: none;
 }
 
-.k-timeline__card:first-child .k-timeline__year-box {
+.journey-timeline__col:first-child .journey-timeline__year-box {
   border-top-left-radius: 8px;
 }
 
-.k-timeline__year {
-  font-size: 28px;
+.journey-timeline__year {
+  font-size: clamp(22px, 2.1vw, 32px);
   font-weight: 800;
   color: #ffffff;
   letter-spacing: -0.01em;
   line-height: 1;
+  text-align: center;
 }
 
-.k-timeline__body {
+/* Stock Photographs */
+.journey-timeline__media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  position: relative;
+}
+
+.journey-timeline__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.journey-timeline__col:hover .journey-timeline__img {
+  transform: scale(1.06);
+}
+
+/* Description Panel Beneath Image */
+.journey-timeline__content {
   flex: 1;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-top: none;
-  padding: 24px 10px 28px 10px;
+  padding: 18px 10px 22px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  transition: border-color 0.2s ease;
+  color: #ffffff;
+  min-height: 95px;
+  box-sizing: border-box;
 }
 
-.k-timeline__card:first-child .k-timeline__body {
+.journey-timeline__col:first-child .journey-timeline__content {
   border-bottom-left-radius: 8px;
 }
 
-.k-timeline__card:last-child .k-timeline__body {
+.journey-timeline__col:last-child .journey-timeline__content {
   border-bottom-right-radius: 8px;
 }
 
-.k-timeline__logo-wrap {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid var(--col-accent-border);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-  padding: 4px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.k-timeline__card:hover .k-timeline__logo-wrap {
-  transform: scale(1.08);
-  border-color: var(--col-accent);
-}
-
-.k-timeline__logo {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-}
-
-.k-timeline__brand-slot {
-  min-height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-}
-
-.k-timeline__brand-pill {
+.journey-timeline__brand-tag {
   display: inline-block;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--col-accent);
-  background: var(--col-accent-light);
-  border: 1px solid var(--col-accent-border);
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.42);
   padding: 2px 9px;
   border-radius: 999px;
-  line-height: 1.4;
+  margin-bottom: 6px;
+  line-height: 1.25;
 }
 
-.k-timeline__company {
-  font-size: 14.5px;
+.journey-timeline__company,
+h3.journey-timeline__company,
+.journey-timeline__content .journey-timeline__company {
+  font-size: 14px;
   font-weight: 700;
-  color: #1e293b;
+  color: #ffffff !important;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.35;
+  text-align: center;
   word-break: normal;
   overflow-wrap: break-word;
 }
 
-/* --------------------------------------------------------------------------
-   MOBILE VERTICAL SCROLL-DRIVEN TIMELINE (<= 768px)
-   -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-  .k-timeline__desktop {
-    display: none;
+/* TABLET BEHAVIOR (768px to 1023px): Vertical timeline with alternating left/right nodes */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .journey-timeline__wrapper {
+    overflow: visible;
   }
 
-  .k-timeline__mobile {
-    display: block;
-    position: relative;
-    padding-left: 36px;
-    margin-top: 24px;
-  }
-
-  .k-timeline__title {
-    font-size: 28px;
-  }
-
-  .k-timeline__subtitle {
-    font-size: 14.5px;
-  }
-
-  /* Connecting Vertical Rail */
-  .k-timeline__v-rail {
-    position: absolute;
-    left: 11px;
-    top: 24px;
-    bottom: 40px;
-    width: 2px;
-    background: #e2e8f0;
-    border-radius: 2px;
-  }
-
-  .k-timeline__v-rail-progress {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 0%;
-    background: linear-gradient(180deg, #E85747 0%, #0A5C9B 50%, #73B62A 100%);
-    border-radius: 2px;
-    transition: height 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .k-timeline__v-list {
+  .journey-timeline__track {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+    gap: 36px;
+    padding: 20px 0;
+    width: 100%;
+    min-width: 0;
   }
 
-  .k-timeline__v-item {
+  /* Central vertical rail */
+  .journey-timeline__v-rail {
+    display: block;
+    position: absolute;
+    top: 24px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    background: #cbd5e1;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  .journey-timeline__col {
     position: relative;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    z-index: 2;
+  }
+
+  /* Alternating left and right alignment */
+  .journey-timeline__col--1,
+  .journey-timeline__col--3,
+  .journey-timeline__col--5 {
     align-items: flex-start;
   }
 
-  /* Node Dot on the Rail */
-  .k-timeline__v-node {
-    position: absolute;
-    left: -36px;
-    top: 18px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: 2.5px solid var(--col-accent);
-    box-sizing: border-box;
+  .journey-timeline__col--2,
+  .journey-timeline__col--4,
+  .journey-timeline__col--6 {
+    align-items: flex-end;
+  }
+
+  /* Milestone card placed cleanly on left or right half */
+  .journey-timeline__card {
+    width: calc(50% - 32px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Node positioned directly on the central rail */
+  .journey-timeline__node {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
-    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    position: absolute;
+    left: 50%;
+    top: 38px;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid var(--milestone-accent);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.95), 0 2px 6px rgba(0, 0, 0, 0.12);
+    z-index: 4;
   }
 
-  .k-timeline__v-dot {
+  .journey-timeline__node-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: transparent;
-    transition: background-color 0.25s ease, transform 0.25s ease;
+    background: var(--milestone-accent);
   }
 
-  .k-timeline__v-item.is-active .k-timeline__v-node {
-    background: var(--col-accent);
-    box-shadow: 0 0 0 4px var(--col-accent-light);
-    transform: scale(1.15);
-  }
-
-  .k-timeline__v-item.is-active .k-timeline__v-dot {
-    background: #ffffff;
-  }
-
-  /* Milestone Card Surface */
-  .k-timeline__v-card {
-    flex: 1;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 16px 18px;
-    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
-    box-sizing: border-box;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-  }
-
-  .k-timeline__v-item.is-active .k-timeline__v-card {
-    border-color: var(--col-accent);
-    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
-  }
-
-  .k-timeline__v-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px;
-  }
-
-  .k-timeline__v-meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .k-timeline__v-year {
-    font-size: 26px;
-    font-weight: 800;
-    color: var(--col-accent);
-    letter-spacing: -0.02em;
-    line-height: 1;
-  }
-
-  .k-timeline__v-logo-wrap {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1.5px solid var(--col-accent-border);
-    padding: 2px;
-    box-sizing: border-box;
-    background: #ffffff;
-    flex-shrink: 0;
-  }
-
-  .k-timeline__v-logo {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+  /* Short connector lines bridging rail to card */
+  .journey-timeline__connector {
     display: block;
+    position: absolute;
+    top: 38px;
+    height: 2px;
+    background: var(--milestone-accent);
+    opacity: 0.7;
+    z-index: 2;
   }
 
-  .k-timeline__v-company {
-    font-size: 15.5px;
-    font-weight: 700;
-    color: #1e293b;
-    margin: 0;
-    line-height: 1.4;
+  .journey-timeline__col--1 .journey-timeline__connector,
+  .journey-timeline__col--3 .journey-timeline__connector,
+  .journey-timeline__col--5 .journey-timeline__connector {
+    left: calc(50% - 32px);
+    width: 32px;
+  }
+
+  .journey-timeline__col--2 .journey-timeline__connector,
+  .journey-timeline__col--4 .journey-timeline__connector,
+  .journey-timeline__col--6 .journey-timeline__connector {
+    left: 50%;
+    width: 32px;
+  }
+
+  .journey-timeline__year-box {
+    width: 100%;
+    height: 48px;
+    clip-path: none;
+    padding: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .journey-timeline__year {
+    font-size: 24px;
+  }
+
+  .journey-timeline__media {
+    height: 140px;
+    aspect-ratio: auto;
+  }
+
+  .journey-timeline__content {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 16px 14px;
+    min-height: 80px;
+  }
+
+  .journey-timeline__company {
+    font-size: 15px;
   }
 }
 
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .k-timeline__card,
-  .k-timeline__v-node,
-  .k-timeline__v-card,
-  .k-timeline__v-rail-progress {
-    transition: none !important;
+/* MOBILE BEHAVIOR (360px to 767px): Vertical timeline with alternating left/right rhythm */
+@media (min-width: 360px) and (max-width: 767px) {
+  .journey-timeline__wrapper {
+    overflow: visible;
+  }
+
+  .journey-timeline__track {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+    gap: 20px;
+    padding: 14px 0;
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Central vertical rail */
+  .journey-timeline__v-rail {
+    display: block;
+    position: absolute;
+    top: 20px;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5px;
+    background: #cbd5e1;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  .journey-timeline__col {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+  }
+
+  /* Left-right alternating alignment */
+  .journey-timeline__col--1,
+  .journey-timeline__col--3,
+  .journey-timeline__col--5 {
+    align-items: flex-start;
+  }
+
+  .journey-timeline__col--2,
+  .journey-timeline__col--4,
+  .journey-timeline__col--6 {
+    align-items: flex-end;
+  }
+
+  /* Compact milestone card */
+  .journey-timeline__card {
+    width: calc(50% - 16px);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Milestone node on the central rail */
+  .journey-timeline__node {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 26px;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2.5px solid var(--milestone-accent);
+    box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 0.95), 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+  }
+
+  .journey-timeline__node-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--milestone-accent);
+  }
+
+  /* Short connector lines from central rail to each milestone */
+  .journey-timeline__connector {
+    display: block;
+    position: absolute;
+    top: 26px;
+    height: 2px;
+    background: var(--milestone-accent);
+    opacity: 0.75;
+    z-index: 2;
+  }
+
+  .journey-timeline__col--1 .journey-timeline__connector,
+  .journey-timeline__col--3 .journey-timeline__connector,
+  .journey-timeline__col--5 .journey-timeline__connector {
+    left: calc(50% - 16px);
+    width: 16px;
+  }
+
+  .journey-timeline__col--2 .journey-timeline__connector,
+  .journey-timeline__col--4 .journey-timeline__connector,
+  .journey-timeline__col--6 .journey-timeline__connector {
+    left: 50%;
+    width: 16px;
+  }
+
+  .journey-timeline__year-box {
+    width: 100%;
+    height: 36px;
+    clip-path: none;
+    padding: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .journey-timeline__year {
+    font-size: 19px;
+  }
+
+  .journey-timeline__media {
+    height: 92px;
+    aspect-ratio: auto;
+  }
+
+  .journey-timeline__content {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 10px 8px 12px;
+    min-height: 62px;
+  }
+
+  .journey-timeline__brand-tag {
+    font-size: 9.5px;
+    padding: 1px 6px;
+    margin-bottom: 4px;
+    letter-spacing: 0.04em;
+  }
+
+  .journey-timeline__company {
+    font-size: clamp(11.5px, 2.9vw, 13px);
+    line-height: 1.3;
+    font-weight: 700;
+  }
+}
+
+/* ULTRA-NARROW SCREENS (<= 359px, e.g. 320px): Left rail for maximum company name readability */
+@media (max-width: 359px) {
+  .journey-timeline__wrapper {
+    overflow: visible;
+  }
+
+  .journey-timeline__track {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+    gap: 20px;
+    padding: 10px 0;
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Left-aligned vertical rail */
+  .journey-timeline__v-rail {
+    display: block;
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 16px;
+    width: 2.5px;
+    background: #cbd5e1;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  .journey-timeline__col {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+  }
+
+  /* Node placed on the left rail */
+  .journey-timeline__node {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 16px;
+    top: 32px;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2.5px solid var(--milestone-accent);
+    box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 0.95), 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+  }
+
+  .journey-timeline__node-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--milestone-accent);
+  }
+
+  /* Connector line from left rail to card */
+  .journey-timeline__connector {
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 32px;
+    width: 20px;
+    height: 2px;
+    background: var(--milestone-accent);
+    opacity: 0.75;
+    z-index: 2;
+  }
+
+  /* Milestone card placed cleanly to the right */
+  .journey-timeline__card {
+    margin-left: 36px;
+    width: calc(100% - 36px);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .journey-timeline__year-box {
+    width: 100%;
+    height: 38px;
+    clip-path: none;
+    padding: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .journey-timeline__year {
+    font-size: 20px;
+  }
+
+  .journey-timeline__media {
+    height: 100px;
+    aspect-ratio: auto;
+  }
+
+  .journey-timeline__content {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 12px 10px;
+    min-height: 64px;
+  }
+
+  .journey-timeline__brand-tag {
+    font-size: 10px;
+    padding: 1px 6px;
+    margin-bottom: 4px;
+  }
+
+  .journey-timeline__company {
+    font-size: 13px;
+    line-height: 1.35;
   }
 }
