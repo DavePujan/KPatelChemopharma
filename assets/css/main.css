@@ -4770,6 +4770,23 @@ h3.journey-timeline__company,
   overflow-wrap: break-word;
 }
 
+/* Temporary milestone text - hidden by default on small screens, displayed only on big screens (>= 1024px) */
+.journey-timeline__desc {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .journey-timeline__desc {
+    display: block;
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 8px 0 0 0;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
 /* TABLET BEHAVIOR (768px to 1023px): Vertical timeline with alternating left/right nodes */
 @media (min-width: 768px) and (max-width: 1023px) {
   .journey-timeline__wrapper {
