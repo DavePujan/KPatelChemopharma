@@ -53,10 +53,10 @@
       max-width: 760px;
       width: 100%;
       background: #FFFFFF;
-      border: 1px solid var(--m-border, #DED2C3);
+      border: 1px solid var(--m-border, #e5e5e5);
       border-radius: 20px;
       padding: 48px 40px;
-      box-shadow: 0 12px 40px rgba(90, 44, 32, 0.06);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
       text-align: center;
       box-sizing: border-box;
     }
@@ -65,13 +65,13 @@
       width: 72px;
       height: 72px;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(214, 178, 122, 0.25) 0%, rgba(90, 44, 32, 0.1) 100%);
-      border: 2px solid #D6B27A;
+      background: linear-gradient(135deg, rgba(47, 79, 79, 0.15) 0%, rgba(47, 79, 79, 0.05) 100%);
+      border: 2px solid rgb(47, 79, 79);
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 20px auto;
-      color: #5A2C20;
+      color: rgb(47, 79, 79);
     }
 
     .success-badge {
@@ -80,9 +80,9 @@
       gap: 6px;
       padding: 5px 14px;
       border-radius: 9999px;
-      background: rgba(214, 178, 122, 0.18);
-      border: 1px solid rgba(214, 178, 122, 0.45);
-      color: #5A2C20;
+      background: rgba(47, 79, 79, 0.08);
+      border: 1px solid rgba(47, 79, 79, 0.25);
+      color: rgb(47, 79, 79);
       font-size: 11.5px;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -94,7 +94,7 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(26px, 4vw, 36px);
       font-weight: 700;
-      color: #5A2C20;
+      color: #111111;
       margin: 0 0 14px 0;
       line-height: 1.25;
     }
@@ -102,15 +102,15 @@
     .thankyou-desc {
       font-size: 15px;
       line-height: 1.65;
-      color: #4A403A;
+      color: #525252;
       max-width: 600px;
       margin: 0 auto 32px auto;
     }
 
     /* What Happens Next Timeline */
     .next-steps-container {
-      background: #FAF8F3;
-      border: 1px solid #DED2C3;
+      background: #fafaf8;
+      border: 1px solid #e5e5e5;
       border-radius: 14px;
       padding: 24px 20px;
       text-align: left;
@@ -122,7 +122,7 @@
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #7A4A3A;
+      color: #64748b;
       margin: 0 0 16px 0;
       display: flex;
       align-items: center;
@@ -145,7 +145,7 @@
       width: 26px;
       height: 26px;
       border-radius: 50%;
-      background: #5A2C20;
+      background: rgb(47, 79, 79);
       color: #FFFFFF;
       font-size: 12px;
       font-weight: 700;
@@ -159,20 +159,21 @@
     .next-step-content h4 {
       font-size: 14px;
       font-weight: 700;
-      color: #5A2C20;
+      color: #111111;
       margin: 0 0 3px 0;
     }
 
     .next-step-content p {
       font-size: 13px;
       line-height: 1.5;
-      color: #4A403A;
+      color: #525252;
       margin: 0;
     }
 
     /* Direct Contact Strip */
     .urgent-contact-strip {
-      background: #F3EDE2;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
       border-radius: 10px;
       padding: 16px 20px;
       margin-bottom: 32px;
@@ -187,7 +188,7 @@
     .urgent-contact-label {
       font-size: 13px;
       font-weight: 600;
-      color: #5A2C20;
+      color: #111111;
     }
 
     .urgent-contact-links {
@@ -197,7 +198,7 @@
     }
 
     .urgent-contact-links a {
-      color: #5A2C20;
+      color: rgb(47, 79, 79);
       font-size: 13.5px;
       font-weight: 700;
       text-decoration: none;
@@ -207,7 +208,7 @@
     }
 
     .urgent-contact-links a:hover {
-      color: #7A4A3A;
+      color: #1f3d3d;
       text-decoration: underline;
     }
 
@@ -224,7 +225,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #5A2C20;
+      background: rgb(47, 79, 79);
       color: #FFFFFF !important;
       padding: 13px 26px;
       border-radius: 9999px;
@@ -233,12 +234,12 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
       text-decoration: none;
-      box-shadow: 0 4px 14px rgba(90, 44, 32, 0.2);
+      box-shadow: 0 4px 14px rgba(47, 79, 79, 0.2);
       transition: all 0.2s ease;
     }
 
     .btn-ty-primary:hover {
-      background: #7A4A3A;
+      background: #1f3d3d;
       transform: translateY(-1px);
     }
 
@@ -246,9 +247,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #F3EDE2;
-      color: #5A2C20 !important;
-      border: 1px solid #DED2C3;
+      background: #ffffff;
+      color: #111111 !important;
+      border: 1px solid #e5e5e5;
       padding: 13px 24px;
       border-radius: 9999px;
       font-size: 13px;
@@ -260,8 +261,8 @@
     }
 
     .btn-ty-secondary:hover {
-      background: #E8D8C0;
-      border-color: #D6B27A;
+      background: #f8fafc;
+      border-color: #cbd5e1;
     }
 
     @media (max-width: 600px) {

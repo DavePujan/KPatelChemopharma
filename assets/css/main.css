@@ -69,12 +69,12 @@
   --r-xl: 20px;
 }
 
-/* Preserve original accent palette on mobile / small screens */
+/* Harmonized modern corporate accent palette on mobile / small screens (aligned with desktop) */
 @media (max-width: 768px) {
   :root {
-    --color-accent: #5A2C20;
-    --color-accent-hover: #431E15;
-    --color-accent-subtle: rgba(90, 44, 32, 0.08);
+    --color-accent: rgb(47, 79, 79);
+    --color-accent-hover: #1f3d3d;
+    --color-accent-subtle: rgba(47, 79, 79, 0.08);
   }
 }
 
@@ -1516,7 +1516,7 @@ main>section:first-of-type {
 }
 
 .timeline-node:focus-visible {
-  outline: 2px solid var(--color-accent, #5A2C20);
+  outline: 2px solid var(--color-accent, rgb(47, 79, 79));
   outline-offset: 4px;
 }
 
@@ -1712,9 +1712,9 @@ main>section:first-of-type {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-accent, #5A2C20);
-  background: rgba(90, 44, 32, 0.06);
-  border: 1px solid rgba(90, 44, 32, 0.14);
+  color: var(--color-accent, rgb(47, 79, 79));
+  background: rgba(47, 79, 79, 0.08);
+  border: 1px solid rgba(47, 79, 79, 0.18);
   padding: 5px 14px;
   border-radius: 100px;
   margin-bottom: 18px;
@@ -1724,7 +1724,7 @@ main>section:first-of-type {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--color-accent, #5A2C20);
+  background: var(--color-accent, rgb(47, 79, 79));
   display: inline-block;
 }
 
@@ -1796,11 +1796,14 @@ main>section:first-of-type {
 }
 
 /* ============================================
-   HIDE LEGACY SECTION ON BIG SCREENS (DESKTOP)
+   HIDE LEGACY SECTION
    ============================================ */
+.legacy--about {
+  display: none !important;
+}
+
 @media (min-width: 769px) {
-  .legacy--home,
-  .legacy--about {
+  .legacy--home {
     display: none !important;
   }
 }
@@ -2134,20 +2137,20 @@ main>section:first-of-type {
 .sustainability__highlight:hover {
   transform: translateY(-3px);
   background: #ffffff;
-  border-color: var(--color-accent, #5A2C20);
-  box-shadow: 0 8px 20px rgba(90, 44, 32, 0.08);
+  border-color: var(--color-accent, rgb(47, 79, 79));
+  box-shadow: 0 8px 20px rgba(47, 79, 79, 0.08);
 }
 
 .sustainability__highlight-icon {
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: rgba(90, 44, 32, 0.08);
+  background: rgba(47, 79, 79, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--color-accent, #5A2C20);
+  color: var(--color-accent, rgb(47, 79, 79));
   transition: background 0.25s var(--ease-out), color 0.25s var(--ease-out), transform 0.25s var(--ease-out);
 }
 
@@ -2158,7 +2161,7 @@ main>section:first-of-type {
 }
 
 .sustainability__highlight:hover .sustainability__highlight-icon {
-  background: var(--color-accent, #5A2C20);
+  background: var(--color-accent, rgb(47, 79, 79));
   color: #ffffff;
   transform: scale(1.05);
 }
