@@ -4229,131 +4229,143 @@ select.b2b-input {
    ======================================================== */
 .brochure-table-wrap {
   width: 100%;
-  max-width: 760px;
+  max-width: 610px;
   margin: 0 auto;
 }
 
 .brochure-table-header {
   display: grid;
-  grid-template-columns: 170px 300px 1fr;
+  grid-template-columns: 148px 220px 120px;
+  column-gap: 56px;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 0 16px;
-  margin-bottom: 12px;
+  padding: 0;
+  margin-bottom: 22px;
+}
+
+.brochure-th {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .brochure-th--tone {
-  display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .brochure-th--name {
-  display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .brochure-th--ci {
-  display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .brochure-pill {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background: #8C8C8C;
+  width: 100%;
+  height: 30px;
+  background: #9D9E9E;
   color: #FFFFFF;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 6px 20px;
-  border-radius: 4px;
+  border-radius: 2px;
   text-align: center;
 }
 
 .brochure-th--tone .brochure-pill {
-  width: 150px;
+  width: 148px;
+}
+
+.brochure-th--name .brochure-pill {
+  max-width: 195px;
+}
+
+.brochure-th--ci .brochure-pill {
+  max-width: 115px;
 }
 
 .dyes-showcase-grid {
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
-  border-top: 1px solid #E2E2E2;
-  border-bottom: 1px solid #E2E2E2;
+  background: transparent;
+  border: none;
 }
 
 .dye-item-card {
   display: grid;
-  grid-template-columns: 170px 300px 1fr;
+  grid-template-columns: 148px 220px 120px;
+  column-gap: 56px;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 10px 16px;
-  background: #FFFFFF;
+  height: 42px;
+  padding: 0;
+  background-color: transparent;
+  background-image: 
+    linear-gradient(#E6E7E7, #E6E7E7),
+    linear-gradient(#E6E7E7, #E6E7E7),
+    linear-gradient(#E6E7E7, #E6E7E7);
+  background-position: 
+    left 0 bottom 0,
+    left 204px bottom 0,
+    right 0 bottom 0;
+  background-size: 
+    148px 1px,
+    220px 1px,
+    120px 1px;
+  background-repeat: no-repeat;
   border: none;
-  border-bottom: 1px solid #ECECEC;
   border-radius: 0;
   box-shadow: none;
   transition: background-color 0.15s ease;
   position: relative;
 }
 
-.dye-item-card:last-child {
-  border-bottom: none;
-}
-
 .dye-item-card:hover {
-  background: #FAF8F5;
+  background-color: #FAFAFA;
   transform: none;
   box-shadow: none;
 }
 
 .dye-item-card__color-swatch {
-  width: 150px;
-  height: 22px;
+  width: 140px;
+  height: 18px;
   border-radius: 2px;
   flex-shrink: 0;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+  display: block;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 .dye-item-card__name {
   font-family: var(--font-heading);
-  font-size: 13.5px;
-  font-weight: 700;
-  color: #2D2D2D;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #555555;
   text-transform: uppercase;
-  letter-spacing: 0.025em;
-  line-height: 1.4;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-align: center;
   margin: 0;
+  white-space: nowrap;
 }
 
 .dye-item-card__ci {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: #555555;
   text-transform: uppercase;
-  letter-spacing: 0.025em;
-  line-height: 1.4;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-align: center;
   margin: 0;
-}
-
-@media (min-width: 769px) and (max-width: 960px) {
-
-  .brochure-table-header,
-  .dye-item-card {
-    grid-template-columns: 140px 240px 1fr;
-    gap: 12px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  .brochure-th--tone .brochure-pill,
-  .dye-item-card__color-swatch {
-    width: 125px;
-  }
+  white-space: nowrap;
 }
 
 .category-nav-section {
