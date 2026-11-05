@@ -36,8 +36,8 @@
   
   <link rel="stylesheet" href="/assets/css/components/navbar.css?v=20261031" />
   <link rel="stylesheet" href="/assets/css/components/footer.css?v=20261031" />
-  <link rel="stylesheet" href="/assets/css/main.css?v=20261102" />
-  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261031" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261105" />
+  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261105" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -123,21 +123,16 @@
 
   <main>
     <!-- ========== PRODUCT HERO ========== -->
-    <section class="product-hero">
+    <section class="product-hero product-hero--full-width">
+      <div class="product-hero__image-wrap">
+        <picture class="product-hero__picture">
+          <source media="(min-width: 769px)" srcset="/assets/images/products/vertical-header-img/pigment-dispersion-vertical.webp" />
+          <img fetchpriority="high" loading="eager" src="/assets/images/products/header-img/pigment-dispersions.webp" alt="Pigment Dispersions" class="product-hero__image" width="1502" height="375" />
+        </picture>
+        <h1 class="visually-hidden">Pigment Dispersions</h1>
+      </div>
+
       <div class="container">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="breadcrumbs__sep">/</span>
-          <a href="/pages/products/">Products</a>
-          <span class="breadcrumbs__sep">/</span>
-          <span class="breadcrumbs__current">Pigment Dispersions</span>
-        </nav>
-
-        <div class="product-hero__image-wrap">
-          <img src="/assets/images/products/header-img/pigment-dispersions.png" alt="Pigment Dispersions" class="product-hero__image" width="1503" height="377" />
-          <h1 class="visually-hidden">Pigment Dispersions</h1>
-        </div>
-
         <div class="product-key-apps">
           <span class="product-key-apps__label">Key Applications:</span>
           <p class="product-key-apps__text">Pulp and Paper</p>
@@ -150,6 +145,7 @@
       <div class="container">
         <!-- Dispersions Dyes Brochure Table -->
         <div class="brochure-table-wrap">
+          <h2 class="visually-hidden">Product Portfolio &amp; Shade Guide</h2>
           <div class="brochure-table-header">
             <div class="brochure-th brochure-th--tone"><span class="brochure-pill">TONE</span></div>
             <div class="brochure-th brochure-th--name"><span class="brochure-pill">PRODUCT NAME</span></div>

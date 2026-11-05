@@ -288,6 +288,20 @@ h2.sustain-editorial__title {
   margin-bottom: 20px;
 }
 
+.doctrine-col__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 56px;
+  margin-bottom: 18px;
+}
+
+.doctrine-col__header .doctrine-col__num {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
 .doctrine-col__num {
   font-family: var(--font-heading);
   font-size: 56px;
@@ -298,12 +312,24 @@ h2.sustain-editorial__title {
   margin-bottom: 18px;
 }
 
+.doctrine-col__icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 8px;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
 .doctrine-col__tag {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #00695c;
+  color: #14532d;
   margin-bottom: 8px;
   display: block;
 }
@@ -483,9 +509,19 @@ h2.sustain-editorial__title {
     gap: 40px;
   }
 
+  .doctrine-col__header {
+    min-height: 48px;
+    margin-bottom: 14px;
+  }
+
   .doctrine-col__num {
     font-size: 48px;
-    margin-bottom: 14px;
+    margin-bottom: 0;
+  }
+
+  .doctrine-col__icon {
+    width: 44px;
+    height: 44px;
   }
 }
 

@@ -1436,55 +1436,232 @@ body.m-home {
     color: var(--m-primary-brown) !important;
   }
 
-  /* Dyes Detail Swatch Cards & Brochure Table Overrides */
+  /* Full-width Product Category Hero on Mobile */
+  main > .product-hero--full-width:first-of-type,
+  main > .product-hero--full-width,
+  .product-hero--full-width {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 16px !important;
+    background: var(--color-bg) !important;
+  }
+
+  .product-hero--full-width > .product-hero__image-wrap {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  .product-hero--full-width > .product-hero__image-wrap .product-hero__picture {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  .product-hero--full-width > .product-hero__image-wrap .product-hero__image {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* ========================================================
+     DYES BROCHURE CATALOG TABLE (MOBILE / SMALL SCREENS <= 768px)
+     ======================================================== */
   .brochure-table-wrap {
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
+    overflow-x: hidden !important;
+    padding: 0 !important;
   }
 
   .brochure-table-header {
-    display: none !important;
+    display: grid !important;
+    grid-template-columns: 1.1fr 2.3fr 1.6fr !important;
+    column-gap: 8px !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 0 4px !important;
+    margin-bottom: 12px !important;
+    height: 32px !important;
   }
 
-  .dye-item-card__ci {
-    display: none !important;
+  .brochure-th {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+
+  .brochure-pill {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 26px !important;
+    background: #595959 !important;
+    color: #FFFFFF !important;
+    font-family: var(--font-heading) !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    border-radius: 3px !important;
+    padding: 0 2px !important;
+    white-space: nowrap !important;
   }
 
   .dyes-showcase-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    padding: 24px 0 !important;
-    border: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    width: 100% !important;
+    padding: 0 !important;
     background: transparent !important;
+    border: none !important;
   }
 
   .dye-item-card {
-    background: #FFFFFF !important;
-    border: 1px solid var(--m-border) !important;
-    border-radius: var(--m-radius-sm) !important;
-    padding: 14px 16px !important;
-    display: flex !important;
+    display: grid !important;
+    grid-template-columns: 1.1fr 2.3fr 1.6fr !important;
+    column-gap: 8px !important;
     align-items: center !important;
-    gap: 14px !important;
-    box-shadow: var(--m-shadow-subtle) !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    min-height: 40px !important;
+    height: auto !important;
+    padding: 8px 4px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #E6E7E7 !important;
+    background-image: none !important;
+  }
+
+  .dye-item-card:hover {
+    background-color: rgba(0, 0, 0, 0.02) !important;
   }
 
   .dye-item-card__color-swatch {
-    width: 26px !important;
-    height: 26px !important;
-    border-radius: 6px !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    width: 100% !important;
+    max-width: 60px !important;
+    height: 14px !important;
+    border-radius: 2px !important;
+    border: none !important;
+    margin: 0 auto !important;
     flex-shrink: 0 !important;
+    display: block !important;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06) !important;
   }
 
   .dye-item-card__name {
-    font-size: 14.5px !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(10.5px, 2.5vw, 12px) !important;
     font-weight: 600 !important;
-    color: var(--m-primary-brown) !important;
+    color: #333333 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
     margin: 0 !important;
-    text-transform: none !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  .dye-item-card__ci {
+    display: block !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(10px, 2.3vw, 11.5px) !important;
+    font-weight: 600 !important;
+    color: #666666 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* Foundation Band (Mission, Vision, Values) on Mobile */
+  .foundation-band {
+    padding: 52px 0 !important;
+    background-color: var(--color-accent, rgb(47, 79, 79)) !important;
+    color: #FFFFFF !important;
+  }
+
+  .foundation-band__header {
+    margin-bottom: 28px !important;
+  }
+
+  .foundation-band__eyebrow {
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  .foundation-band__title {
+    color: #FFFFFF !important;
+    font-size: 26px !important;
+  }
+
+  .foundation-band__subtitle {
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 14.5px !important;
+  }
+
+  .foundation-band__grid {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    padding-top: 8px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+  }
+
+  .foundation-band__pillar {
+    padding: 24px 0 !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+  }
+
+  .foundation-band__pillar:first-child {
+    padding-top: 16px !important;
+  }
+
+  .foundation-band__pillar:last-child {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+
+  .foundation-band__icon {
+    color: #FFFFFF !important;
+    margin-bottom: 12px !important;
+  }
+
+  .foundation-band__icon svg {
+    stroke: #FFFFFF !important;
+  }
+
+  .foundation-band__pillar-title {
+    color: #FFFFFF !important;
+    font-size: 19px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .foundation-band__pillar-desc {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 14px !important;
+    line-height: 1.62 !important;
   }
 
   /* Specifications & Tables */
@@ -2040,8 +2217,10 @@ body.m-home {
     line-height: 1.35 !important;
     color: var(--m-text) !important;
     text-decoration: none !important;
-    display: inline-block !important;
-    padding: 1px 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 24px !important;
+    padding: 3px 0 !important;
   }
 
   .footer__contact-item {
@@ -2064,6 +2243,10 @@ body.m-home {
     line-height: 1.3 !important;
     color: var(--m-text) !important;
     text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 24px !important;
+    padding: 3px 0 !important;
   }
 
   /* Footer Bottom Bar */

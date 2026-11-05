@@ -27,11 +27,10 @@
   <meta property="twitter:image" content="https://www.kpateldyes.com/assets/images/og-kpatel.jpg" />
 
   <!-- Fonts & Core CSS -->
+    <!-- Fonts & CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/assets/css/main.css?v=20261102" />
   <link rel="stylesheet" href="/assets/css/components/navbar.css?v=20261031" />
@@ -91,7 +90,7 @@
     }
 
     .thankyou-title {
-      font-family: 'Playfair Display', serif;
+      font-family: var(--font-heading);
       font-size: clamp(26px, 4vw, 36px);
       font-weight: 700;
       color: #111111;
@@ -417,23 +416,25 @@
     </section>
   </main>
 
-  <!-- Footer -->
+    <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__main">
+        <!-- Brand -->
         <div class="footer__col footer__col--brand">
           <a href="/" class="footer__logo-link">
-            <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="footer-logo" />
+            <img src="/assets/images/logo-no-bg.webp" alt="K. Patel Logo" class="footer-logo" width="160" height="30" />
           </a>
           <p class="footer__brand-tagline">K. Patel Chemopharma Private Limited</p>
           <p class="footer__brand-desc">
-            Pioneering color chemistry since 1974. Exporting dyes, pigments, and dispersions to 40+ countries globally.
+            Pioneering color chemistry since 1974. Exporting to 40+ countries globally.
           </p>
         </div>
 
-        <div class="footer__col footer__col--nav">
-          <h4 class="footer__heading">Product Range</h4>
-          <ul class="footer__links">
+        <!-- Product Range (Verified 7 Product Lines) -->
+        <div class="footer__col footer__col--products">
+          <h3 class="footer__col-title">Product Range</h3>
+          <ul class="footer__nav-list">
             <li><a href="/pages/products/basic-dyes/">Basic Dyes</a></li>
             <li><a href="/pages/products/solvent-dyes/">Solvent Dyes</a></li>
             <li><a href="/pages/products/rinsable-dyes/">Rinsable Dyes</a></li>
@@ -443,34 +444,19 @@
             <li><a href="/pages/products/direct-dyes/">Direct Dyes</a></li>
           </ul>
         </div>
-
-        <div class="footer__col footer__col--nav">
-          <h4 class="footer__heading">Company</h4>
-          <ul class="footer__links">
-            <li><a href="/pages/about/">About Us</a></li>
-            <li><a href="/pages/company/">Company Legacy</a></li>
-            <li><a href="/pages/infrastructure/">Infrastructure &amp; Labs</a></li>
-            <li><a href="/pages/applications/">Key Applications</a></li>
-            <li><a href="/sustainability">Sustainability</a></li>
-            <li><a href="/csr">CSR Initiatives</a></li>
-            <li><a href="/pages/contact/">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__col footer__col--contact">
-          <h4 class="footer__heading">Corporate Office</h4>
-          <p class="footer__address">
-            504, Eureka Tower, Mindspace, Off Link Road, Malad West, Mumbai – 400 064, India.
-          </p>
-          <p class="footer__phone"><a href="tel:+912248822900">+91-22-4882 2900</a></p>
-          <p class="footer__email"><a href="mailto:sales@kpateldyes.com">sales@kpateldyes.com</a></p>
-        </div>
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copyright">
-          &copy; <span id="year">2026</span> K. Patel Chemopharma Private Limited. All rights reserved.
-        </p>
+        <div class="footer__badges">
+          <span>ISO 9001:2015</span>
+          <span class="footer__dot">&middot;</span>
+          <span>ISO 14001:2015</span>
+          <span class="footer__dot">&middot;</span>
+          <span>ZED Certified</span>
+          <span class="footer__dot">&middot;</span>
+          <span>SA 8000</span>
+        </div>
+        <p class="footer__copyright">&copy; 2026 K. Patel Chemopharma Private Limited. All rights reserved.</p>
       </div>
     </div>
   </footer>
