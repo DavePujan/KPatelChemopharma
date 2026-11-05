@@ -4094,6 +4094,13 @@ main > .product-hero--full-width,
   box-shadow: none;
 }
 
+@media (min-width: 1024px) {
+  .product-hero--full-width > .product-hero__image-wrap img[alt="Pigments"],
+  .product-hero--full-width > .product-hero__image-wrap .product-hero__image--pigments {
+    height: 110%;
+  }
+}
+
 @media (min-width: 1025px) {
   .product-hero--full-width .container {
     max-width: var(--container-max);
@@ -4501,6 +4508,15 @@ main > .product-hero--full-width,
   box-shadow: 0 10px 30px rgba(47, 79, 79, 0.15);
 }
 
+@media (max-width: 992px) {
+  .product-quote-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 28px;
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .product-quote-cta {
     flex-direction: column;
@@ -4511,15 +4527,16 @@ main > .product-hero--full-width,
 
 .product-quote-cta__title {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.65vw, 1.75rem);
   font-weight: 700;
+  line-height: 1.35;
   margin-bottom: 8px;
 }
 
 .product-quote-cta__text {
   font-size: 14.5px;
   color: rgba(255, 255, 255, 0.8);
-  max-width: 540px;
+  max-width: 680px;
   line-height: 1.6;
 }
 

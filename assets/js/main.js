@@ -176,8 +176,8 @@ function initSmoothScroll() {
       const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
       let offset = 0;
       if (hash === '#solutions' || hash === '#products') {
-        // Natural alignment below fixed navbar without clipping section header or eyebrow
-        offset = 0;
+        // Option A: Scroll 150px further on laptops/desktops so Row 1 and Row 2 of product cards sit fully above fold
+        offset = window.innerWidth >= 1024 ? 150 : 0;
       } else if (hash === '#industries' || hash === '#applications') {
         // Align flush below fixed navbar so eyebrow and header are completely visible
         offset = 0;
