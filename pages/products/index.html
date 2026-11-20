@@ -41,6 +41,45 @@
   <link rel="stylesheet" href="/assets/css/main.css?v=20261102" />
   <link rel="stylesheet" href="/assets/css/responsive.css?v=20261031" />
 
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.kpateldyes.com/products#webpage",
+        "url": "https://www.kpateldyes.com/products",
+        "name": "Industrial Dyes, Pigments & Colorants Range — K. Patel Chemopharma",
+        "description": "Explore K. Patel Chemopharma's complete product line: Basic Dyes, Solvent Dyes, Rinsable Dyes, Pigments, Pigment Dispersions, Acid Dyes, and Direct Dyes.",
+        "publisher": { "@id": "https://www.kpateldyes.com/#organization" },
+        "breadcrumb": { "@id": "https://www.kpateldyes.com/products#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.kpateldyes.com/products#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.kpateldyes.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.kpateldyes.com/products" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://www.kpateldyes.com/products#itemlist",
+        "name": "Product Categories",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Basic Dyes", "url": "https://www.kpateldyes.com/products/basic-dyes" },
+          { "@type": "ListItem", "position": 2, "name": "Solvent Dyes", "url": "https://www.kpateldyes.com/products/solvent-dyes" },
+          { "@type": "ListItem", "position": 3, "name": "Rinsable Dyes", "url": "https://www.kpateldyes.com/products/rinsable-dyes" },
+          { "@type": "ListItem", "position": 4, "name": "Pigments", "url": "https://www.kpateldyes.com/products/pigments" },
+          { "@type": "ListItem", "position": 5, "name": "Pigment Dispersions", "url": "https://www.kpateldyes.com/products/pigment-dispersions" },
+          { "@type": "ListItem", "position": 6, "name": "Acid Dyes", "url": "https://www.kpateldyes.com/products/acid-dyes" },
+          { "@type": "ListItem", "position": 7, "name": "Direct Dyes", "url": "https://www.kpateldyes.com/products/direct-dyes" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -73,7 +112,7 @@
       <a href="/pages/about/" class="m-menu__link">About Us <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/pages/home/#m-products" class="m-menu__link">Products <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/pages/home/#m-applications" class="m-menu__link">Applications <span class="m-menu__arrow">&rarr;</span></a>
-      <a href="/pages/home/#m-infrastructure" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/infrastructure/" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/sustainability" class="m-menu__link">Sustainability <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/csr" class="m-menu__link">CSR <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/pages/contact/" class="m-menu__link">Contact <span class="m-menu__arrow">&rarr;</span></a>
@@ -201,7 +240,7 @@
         <div>
           <p class="footer__links-title">Group Companies</p>
           <div style="font-size: 13px; color: var(--color-body); line-height: 1.8;">
-            <a href="/pages/company/" style="color: inherit; text-decoration: none; font-weight: 500;">View Group Companies &rarr;</a>
+            <a href="/pages/about/#timeline" style="color: inherit; text-decoration: none; font-weight: 500;">View Group Companies &rarr;</a>
           </div>
         </div>
         <div>

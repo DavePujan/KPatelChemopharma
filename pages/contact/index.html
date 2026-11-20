@@ -36,11 +36,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/components/navbar.css?v=20261031" />
   <link rel="stylesheet" href="/assets/css/components/footer.css?v=20261031" />
-  <link rel="stylesheet" href="/assets/css/main.css?v=20261102" />
-  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261031" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261121" />
+  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261121" />
   
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://www.kpateldyes.com/contact#webpage",
+        "url": "https://www.kpateldyes.com/contact",
+        "name": "Contact Global Sales & Technical Support — K. Patel Chemopharma",
+        "description": "Get in touch with K. Patel Chemopharma's commercial sales team or request technical specifications, certificate documentation, and shade development directly from our laboratory.",
+        "publisher": { "@id": "https://www.kpateldyes.com/#organization" },
+        "breadcrumb": { "@id": "https://www.kpateldyes.com/contact#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.kpateldyes.com/contact#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.kpateldyes.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.kpateldyes.com/contact" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body class="contact-page">
   <!-- Navigation Header -->
   <nav class="nav nav--hero is-scrolled" id="nav">
     <div class="nav__inner">
@@ -72,7 +97,7 @@
       <a href="/pages/about/" class="m-menu__link">About Us <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/pages/home/#m-products" class="m-menu__link">Products <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/pages/home/#m-applications" class="m-menu__link">Applications <span class="m-menu__arrow">&rarr;</span></a>
-      <a href="/pages/home/#m-infrastructure" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/infrastructure/" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/sustainability" class="m-menu__link">Sustainability <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/csr" class="m-menu__link">CSR <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/pages/contact/" class="m-menu__link">Contact <span class="m-menu__arrow">&rarr;</span></a>
@@ -89,7 +114,7 @@
 
   <main>
     <!-- ========== CONTACT HERO HEADER ========== -->
-    <section class="section" style="padding-top: 48px; padding-bottom: 12px;">
+    <section class="section contact-hero-section">
       <div class="container">
         <span class="eyebrow">Contact Us</span>
         <h1 class="section-title" style="margin-bottom: 10px;">Global Sales &amp; Laboratories</h1>
@@ -108,7 +133,7 @@
     </section>
 
     <!-- ========== CONTACT GLOBAL SALES & LABS ========== -->
-    <section class="contact-section" id="contact-section" style="background: linear-gradient(rgba(250, 248, 243, 0.35), rgba(243, 237, 226, 0.5)), url('/assets/images/Contact-Us-BG.webp') center center/cover no-repeat; position: relative; padding-top: 24px;">
+    <section class="contact-section" id="contact-section" style="position: relative; padding-top: 24px;">
       <div class="container contact-section-inner" style="position: relative; z-index: 2;">
         
         <div class="contact-layout animate-on-scroll">
@@ -199,8 +224,8 @@
           <!-- Right Column: Form -->
           <div class="b2b-form-card">
             <div style="margin-bottom: 20px;">
-              <h2 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--color-heading-primary); margin-bottom: 6px;">Send an Inquiry</h2>
-              <p style="font-size: 14px; color: var(--color-body-muted); line-height: 1.5;">Fill out the form below and our laboratory and sales teams will get back to you promptly.</p>
+              <h2 class="b2b-form-card__title">Send an Inquiry</h2>
+              <p class="b2b-form-card__subtitle">Fill out the form below and our laboratory and sales teams will get back to you promptly.</p>
             </div>
 
             <!-- Form Element -->
@@ -249,7 +274,7 @@
               </button>
 
               <p class="b2b-footer-notice" style="margin-top: 14px; font-size: 12.5px; color: var(--color-body-muted); text-align: center;">
-                Our team responds to all inquiries promptly (typically within 12 hours).
+                Our team responds to all inquiries promptly.
               </p>
             </form>
           </div>
@@ -307,7 +332,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=20261031"></script>
+  <script src="/assets/js/main.js?v=20261121"></script>
   <script src="/assets/js/form.js?v=20261031"></script>
   <script src="/assets/js/analytics.js?v=20261031" defer></script>
 </body>

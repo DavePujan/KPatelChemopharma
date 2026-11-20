@@ -877,6 +877,32 @@ main>section:first-of-type {
   scroll-margin-top: 77px;
 }
 
+/* Compact desktop spacing so both header and all 7 cards fit above the fold */
+@media (min-width: 1024px) {
+  #solutions.section {
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+  .solutions__header {
+    margin-bottom: 18px;
+  }
+  .solutions__header .eyebrow {
+    margin-bottom: 8px;
+  }
+  .solutions__header .section-title {
+    margin-bottom: 10px;
+  }
+  .solutions__header .section-body {
+    font-size: 15.5px;
+    line-height: 1.5;
+  }
+  .dyes-grid {
+    margin-top: 0;
+    gap: 16px;
+  }
+}
+
+
 .solutions__header {
   text-align: center;
   max-width: 660px;
@@ -1041,7 +1067,6 @@ main>section:first-of-type {
   clip-path: inset(0 round var(--r-lg));
   -webkit-clip-path: inset(0 round var(--r-lg));
   isolation: isolate;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
   transform: translateZ(0);
   min-height: 380px;
   cursor: pointer;
@@ -2760,9 +2785,22 @@ main>section:first-of-type {
   transition: opacity var(--dur-norm) var(--ease-out);
 }
 
+html.is-menu-open,
+body.is-menu-open {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+}
+
+.nav__mobile {
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
 .nav__mobile.is-open {
   opacity: 1;
   pointer-events: all;
+  touch-action: pan-y !important;
+  overscroll-behavior: contain !important;
 }
 
 .nav__mobile-close {
@@ -4283,9 +4321,21 @@ main > .product-hero--full-width,
   .product-key-apps {
     flex-direction: column;
     align-items: flex-start;
-    gap: 6px;
-    padding: 14px 16px;
-    margin-top: 16px;
+    gap: 4px;
+    padding: 10px 14px;
+    margin-top: 14px;
+    border-radius: 8px;
+  }
+
+  .product-key-apps__label {
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    line-height: 1.25;
+  }
+
+  .product-key-apps__text {
+    font-size: 12.5px;
+    line-height: 1.45;
   }
 }
 
@@ -4436,6 +4486,34 @@ main > .product-hero--full-width,
   text-align: center;
   margin: 0;
   white-space: nowrap;
+}
+
+/* Brochure Table Metadata (Rinsable Dyes Product Line & European Directives Compliance) */
+.brochure-table-meta {
+  margin-top: 28px;
+  padding-left: 27.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brochure-table-meta__item {
+  margin: 0;
+  font-family: var(--font-body, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #555555;
+  letter-spacing: 0.02em;
+}
+
+.brochure-table-meta__label {
+  font-weight: 500;
+  color: #555555;
+}
+
+.brochure-table-meta__value {
+  font-weight: 500;
+  color: #555555;
 }
 
 .category-nav-section {
@@ -4676,6 +4754,19 @@ main > .product-hero--full-width,
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+  }
+}
+
+/* Milestone Timeline Scroll Anchor */
+#timeline,
+#our-journey {
+  scroll-margin-top: 77px;
+}
+
+@media (max-width: 768px) {
+  #timeline,
+  #our-journey {
+    scroll-margin-top: 68px;
   }
 }
 
@@ -5303,14 +5394,14 @@ h3.journey-timeline__company,
 .foundation-band {
   background-color: var(--color-accent, rgb(47, 79, 79));
   color: #ffffff;
-  padding: 88px 0;
+  padding: 76px 0 88px;
   position: relative;
   overflow: hidden;
 }
 
 .foundation-band__header {
   max-width: 720px;
-  margin-bottom: 56px;
+  margin-bottom: 36px;
 }
 
 .foundation-band__eyebrow {
@@ -5318,12 +5409,12 @@ h3.journey-timeline__company,
   align-items: center;
   gap: 12px;
   font-family: var(--font-heading);
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
 }
 
 .foundation-band__eyebrow::before {
@@ -5331,78 +5422,68 @@ h3.journey-timeline__company,
   display: inline-block;
   width: 24px;
   height: 1.5px;
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.foundation-band__title {
-  font-family: var(--font-heading);
-  font-size: clamp(28px, 3.2vw, 40px);
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin: 0 0 16px 0;
-}
-
-.foundation-band__subtitle {
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.82);
-  margin: 0;
+  background: rgba(255, 255, 255, 0.65);
 }
 
 .foundation-band__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-  padding-top: 52px;
+  gap: 28px;
+  align-items: stretch;
 }
 
 .foundation-band__pillar {
-  padding: 0 44px;
-  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  background-color: var(--color-accent, rgb(47, 79, 79));
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 18px;
+  padding: 38px 32px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .foundation-band__pillar:first-child {
-  padding-left: 0;
+  padding-left: 32px;
 }
 
 .foundation-band__pillar:last-child {
-  padding-right: 0;
-  border-right: none;
+  padding-right: 32px;
 }
 
 .foundation-band__icon {
-  color: #ffffff;
+  width: 32px;
+  height: 32px;
   margin-bottom: 22px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .foundation-band__icon svg {
+  width: 28px;
+  height: 28px;
   stroke: #ffffff;
-  opacity: 0.95;
+  opacity: 1;
 }
 
 .foundation-band__pillar-title {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: #ffffff;
   margin: 0 0 14px 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .foundation-band__pillar-desc {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 15.5px;
   line-height: 1.72;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.92);
   margin: 0;
   flex-grow: 1;
 }
@@ -5410,12 +5491,21 @@ h3.journey-timeline__company,
 /* Tablet Layout (769px - 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
   .foundation-band {
-    padding: 68px 0;
+    padding: 64px 0 76px;
   }
   .foundation-band__header {
-    margin-bottom: 42px;
+    margin-bottom: 32px;
+  }
+  .foundation-band__grid {
+    gap: 18px;
   }
   .foundation-band__pillar {
-    padding: 0 24px;
+    padding: 30px 22px;
+  }
+  .foundation-band__pillar:first-child {
+    padding-left: 22px;
+  }
+  .foundation-band__pillar:last-child {
+    padding-right: 22px;
   }
 }

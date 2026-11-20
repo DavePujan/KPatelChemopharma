@@ -1,9 +1,96 @@
+
+/**
+ * Subtle scroll-triggered entrance animations for Infrastructure page on small screens
+ */
+function initInfrastructureScrollAnimation() {
+  if (window.innerWidth > 768) return;
+
+  const infraSections = document.querySelectorAll('.m-capability');
+  if (!infraSections.length) return;
+
+  // Mark HTML element as ready for scroll animations
+  document.documentElement.classList.add('has-scroll-anim');
+
+  // Tag animatable elements
+  infraSections.forEach((section) => {
+    const media = section.querySelector('.m-capability__media');
+    if (media) media.classList.add('m-scroll-reveal', 'm-scroll-reveal--media');
+
+    const eyebrow = section.querySelector('.m-eyebrow');
+    if (eyebrow) eyebrow.classList.add('m-scroll-reveal', 'm-scroll-reveal--text');
+
+    const title = section.querySelector('.m-section-title');
+    if (title) title.classList.add('m-scroll-reveal', 'm-scroll-reveal--text');
+
+    const body = section.querySelector('.m-section-body');
+    if (body) body.classList.add('m-scroll-reveal', 'm-scroll-reveal--text');
+
+    const points = section.querySelectorAll('.m-point-item');
+    points.forEach((pt, index) => {
+      pt.classList.add('m-scroll-reveal', 'm-scroll-reveal--point');
+      pt.style.setProperty('--item-index', index);
+    });
+  });
+
+  const targets = document.querySelectorAll('.m-scroll-reveal');
+
+  // IntersectionObserver for modern performant viewport tracking
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting || entry.boundingClientRect.top < window.innerHeight) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px 40px 0px',
+      threshold: 0.05
+    });
+
+    targets.forEach((el) => observer.observe(el));
+  }
+
+  // Fast scroll & swipe handler to guarantee no elements are missed during fast flicks
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const winH = window.innerHeight + 50;
+        let pendingCount = 0;
+        targets.forEach((el) => {
+          if (!el.classList.contains('is-revealed')) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= winH) {
+              el.classList.add('is-revealed');
+            } else {
+              pendingCount++;
+            }
+          }
+        });
+        if (pendingCount === 0) {
+          window.removeEventListener('scroll', onScroll);
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  // Initial check for elements in first view
+  onScroll();
+}
+
+// Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   // Ensure all .reveal elements are visible across subpages
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
 
   initMobileNavigation();
   initSubpageMobileNav();
+  initInfrastructureScrollAnimation();
   
   // Initialize Product Range Carousel (Fast & snappier 2.0s duration)
   initCarousel({
@@ -60,13 +147,22 @@ function initMobileNavigation() {
     menu.classList.add('is-open');
     menu.setAttribute('aria-hidden', 'false');
     toggle.setAttribute('aria-expanded', 'true');
+    document.documentElement.classList.add('is-menu-open');
+    document.body.classList.add('is-menu-open');
+    document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
+    if (document.activeElement && typeof document.activeElement.blur === 'function') {
+      document.activeElement.blur();
+    }
     menu.classList.remove('is-open');
     menu.setAttribute('aria-hidden', 'true');
     toggle.setAttribute('aria-expanded', 'false');
+    document.documentElement.classList.remove('is-menu-open');
+    document.body.classList.remove('is-menu-open');
+    document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
   }
 
@@ -115,17 +211,28 @@ function initSubpageMobileNav() {
   const closeBtn = mobileNav ? mobileNav.querySelector('.nav__mobile-close') : null;
 
   if (!toggle || !mobileNav) return;
+  if (toggle.dataset.navInitialized) return;
+  toggle.dataset.navInitialized = 'true';
 
   function openSubpageMenu() {
     mobileNav.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
     toggle.setAttribute('aria-expanded', 'true');
+    document.documentElement.classList.add('is-menu-open');
+    document.body.classList.add('is-menu-open');
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
   }
 
   function closeSubpageMenu() {
+    if (document.activeElement && typeof document.activeElement.blur === 'function') {
+      document.activeElement.blur();
+    }
     mobileNav.classList.remove('is-open');
-    document.body.style.overflow = '';
     toggle.setAttribute('aria-expanded', 'false');
+    document.documentElement.classList.remove('is-menu-open');
+    document.body.classList.remove('is-menu-open');
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
   }
 
   toggle.addEventListener('click', openSubpageMenu);

@@ -19,25 +19,124 @@
         "@type": "Corporation",
         "@id": "https://www.kpateldyes.com/#organization",
         "name": "K. Patel Chemopharma Private Limited",
+        "alternateName": ["K. Patel Chemopharma", "K. Patel Dyes"],
         "url": "https://www.kpateldyes.com/",
-        "logo": "https://www.kpateldyes.com/assets/images/logo-no-bg.webp",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kpateldyes.com/assets/images/logo/logo-no-bg.png",
+          "caption": "K. Patel Chemopharma Logo"
+        },
+        "image": "https://www.kpateldyes.com/assets/images/og-kpatel.jpg",
         "foundingDate": "1974",
+        "description": "Premier Indian manufacturer and global exporter of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, Direct Dyes, and Pigment Dispersions conforming to international quality and environmental standards.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "504, Eureka Tower, Mindspace, Off Link Road, Malad (West)",
+          "addressLocality": "Mumbai",
+          "addressRegion": "Maharashtra",
+          "postalCode": "400064",
+          "addressCountry": "IN"
+        },
+        "location": {
+          "@type": "Place",
+          "name": "K. Patel Chemopharma Manufacturing Facility",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Plot No. 4701/1, GIDC Industrial Estate",
+            "addressLocality": "Ankleshwar",
+            "addressRegion": "Gujarat",
+            "postalCode": "393002",
+            "addressCountry": "IN"
+          }
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-22-48822900",
+            "contactType": "sales",
+            "email": "sales@kpateldyes.com",
+            "areaServed": "Global",
+            "availableLanguage": ["English", "Hindi", "Gujarati"]
+          }
+        ],
         "sameAs": [
           "https://www.linkedin.com/company/k-patel-chemopharma/"
         ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Ankleshwar",
-          "addressRegion": "Gujarat",
-          "addressCountry": "IN"
-        }
+        "knowsAbout": [
+          "Basic Dyes",
+          "Solvent Dyes",
+          "Rinsable Dyes",
+          "Acid Dyes",
+          "Direct Dyes",
+          "Pigments",
+          "Pigment Dispersions",
+          "Spectra Rinse",
+          "Industrial Dyestuffs",
+          "Zero Liquid Discharge Chemical Manufacturing"
+        ],
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "name": "ISO 9001:2015 Quality Management System" },
+          { "@type": "EducationalOccupationalCredential", "name": "ISO 14001:2015 Environmental Management System" },
+          { "@type": "EducationalOccupationalCredential", "name": "ISO 45001:2018 Occupational Health and Safety" },
+          { "@type": "EducationalOccupationalCredential", "name": "SA 8000 Social Accountability" },
+          { "@type": "EducationalOccupationalCredential", "name": "ZED MSME Gold Certification" },
+          { "@type": "EducationalOccupationalCredential", "name": "Together for Sustainability (TfS) Accredited" },
+          { "@type": "EducationalOccupationalCredential", "name": "EcoVadis Sustainability Rating" }
+        ]
       },
       {
         "@type": "WebSite",
         "@id": "https://www.kpateldyes.com/#website",
         "url": "https://www.kpateldyes.com/",
         "name": "K. Patel Chemopharma",
+        "description": "Manufacturer of Dyes, Pigments & Dispersions",
         "publisher": { "@id": "https://www.kpateldyes.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.kpateldyes.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What product lines does K. Patel Chemopharma manufacture?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "K. Patel Chemopharma manufactures high-purity Basic Dyes, Solvent Dyes, Rinsable Colorants (Spectra Rinse), Acid Dyes, Direct Dyes, Organic/Inorganic Pigment Toners, and Aqueous Pigment Dispersions (KP Sperse) for global industrial applications."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is K. Patel Chemopharma's manufacturing capacity and facility size?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our state-of-the-art facility located in Ankleshwar GIDC (Gujarat, India) spans 25,000 square meters with an installed annual production capacity of 6,000 metric tons (MT), featuring automated glass-lined and SS reactors with Zero Liquid Discharge (ZLD) effluent treatment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which quality and environmental certifications does K. Patel Chemopharma hold?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "K. Patel Chemopharma holds ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, SA 8000 (Social Accountability), ZED MSME Gold, Together for Sustainability (TfS), and EcoVadis sustainability ratings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does K. Patel Chemopharma support custom shade matching and salt-free dye synthesis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our on-site R&D and analytical laboratory is equipped with HPLC, GC, UV-Vis spectrophotometers, and computerized color matching to provide custom synthesis, high-exhaustion salt-free dyes, and specialized pH/viscosity tailored formulations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are your export destinations and shipping capabilities?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We export directly to over 65 countries across North America, Europe, Latin America, the Middle East, and Asia-Pacific. We provide global export packaging including 25 kg multi-wall bags, HDPE drums, fiber drums, and 500 kg palletized bulk bags."
+            }
+          }
+        ]
       }
     ]
   }
@@ -70,8 +169,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/assets/css/main.css?v=20261102" />
-  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261031" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261121" />
+  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261121_carousel_arrows" />
 
   <!-- Desktop Breakpoint Redirect -->
   <script>
@@ -112,7 +211,7 @@
       <a href="/pages/about/" class="m-menu__link">About Us <span class="m-menu__arrow">&rarr;</span></a>
       <a href="#m-products" class="m-menu__link">Products <span class="m-menu__arrow">&rarr;</span></a>
       <a href="#m-applications" class="m-menu__link">Applications <span class="m-menu__arrow">&rarr;</span></a>
-      <a href="#m-infrastructure" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/infrastructure/" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/sustainability" class="m-menu__link">Sustainability <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/csr" class="m-menu__link">CSR <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/pages/contact/" class="m-menu__link">Contact <span class="m-menu__arrow">&rarr;</span></a>
@@ -144,11 +243,7 @@
           <p class="m-hero__sub">
             Color solutions engineered for diverse industrial applications across 40+ countries.
           </p>
-          <div class="m-hero__actions">
-            <a href="/pages/contact/" class="m-btn m-btn--primary">
-              Inquire Now &rarr;
-            </a>
-          </div>
+          
           <div class="m-hero__metrics">
             <div class="m-hero__metric">
               <span class="m-hero__metric-num">50+</span>
@@ -404,340 +499,6 @@
     </section>
 
     <!-- ============================================
-         6. INFRASTRUCTURE (PERFECT STYLIZED POINTS)
-         ============================================ -->
-    <section class="m-section m-capability" id="m-infrastructure">
-      <div class="m-capability__media">
-        <picture>
-          <source media="(max-width: 768px)" srcset="/assets/images/infrastructure/infra01-small.webp" type="image/webp" />
-          <img src="/assets/images/infrastructure/infra01.webp" alt="Ankleshwar GIDC Manufacturing Complex" width="941" height="1672" loading="lazy" />
-        </picture>
-      </div>
-      <div class="m-container m-capability__body">
-        <span class="m-eyebrow">Infrastructure</span>
-        <h2 class="m-section-title">State-Of-The-Art Manufacturing Facilities</h2>
-        <p class="m-section-body">
-          Operating multiple manufacturing facilities at Ankleshwar GIDC (Gujarat), India's premier chemical zone. Built for cost efficiency, high output, and environmental preservation.
-        </p>
-
-        <ul class="m-points-list">
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Ankleshwar GIDC Chemical Zone Location</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>State-of-the-Art Testing &amp; QA Laboratory</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Equipped R&amp;D Laboratory (HPLC, GC, AAS, UV-Vis)</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>4R Effluent Treatment (Recover, Reduce, Reuse, Recycle)</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Reverse Osmosis Water Purification</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Custom Packaging (IBC, Jumbo Bags, Drums, Pallets)</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============================================
-         7. QUALITY ASSURANCE & LAB (PERFECT STYLIZED POINTS)
-         ============================================ -->
-    <section class="m-section m-capability" id="m-quality">
-      <div class="m-capability__media">
-        <img src="/assets/images/quality/quality.webp" alt="Quality Assurance & Analytical Lab" width="1200" height="1800" loading="lazy" />
-      </div>
-      <div class="m-container m-capability__body">
-        <span class="m-eyebrow">Quality &amp; Testing</span>
-        <h2 class="m-section-title">Quality Assurance &amp; Analytical Lab</h2>
-        <p class="m-section-body">
-          Meeting stringent international customer specifications with complete batch-to-batch repeatability. Our in-house analytical laboratory supports over 80% global exports.
-        </p>
-
-        <ul class="m-points-list">
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>HPLC &amp; Gas Chromatography (GC) for purity profiling</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Atomic Absorption (AAS) heavy metal trace analysis</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>UV/VIS Spectrophotometry &amp; Color Matching</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Rheology, Viscometry &amp; Hegman dispersion testing</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============================================
-         8. RESEARCH & DEVELOPMENT (PERFECT STYLIZED POINTS)
-         ============================================ -->
-    <section class="m-section m-capability" id="m-rnd">
-      <div class="m-capability__media">
-        <picture>
-          <source media="(max-width: 768px)" srcset="/assets/images/infrastructure/infrastructure02_small.webp" type="image/webp" />
-          <img src="/assets/images/infrastructure/infrastructure02.webp" alt="Custom Chemical Product Development" width="1200" height="1800" loading="lazy" />
-        </picture>
-      </div>
-      <div class="m-container m-capability__body">
-        <span class="m-eyebrow">Research &amp; Development</span>
-        <h2 class="m-section-title">Custom Product Development</h2>
-        <p class="m-section-body">
-          Customer requirements are at the heart of our innovation process. Our technical team collaborates closely with customers to develop customized formulations.
-        </p>
-
-        <ul class="m-points-list">
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Customer-specific product development</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Tailored formulations for unique applications</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Process innovation through advanced chemistry</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Continuous product improvement</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Quality assurance backed by international standards</span>
-          </li>
-          <li class="m-point-item">
-            <span class="m-point-bullet">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </span>
-            <span>Scalable manufacturing from development to production</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============================================
-         9. COMPANY LEGACY & CORPORATE TIMELINE GRAPHIC
-         ============================================ -->
-    <section class="m-section m-legacy" id="m-legacy">
-      <div class="m-container">
-        <span class="m-eyebrow">Since 1974</span>
-        <h2 class="m-section-title">A Legacy of Entrepreneurial Vision</h2>
-        <p class="m-section-body">
-          From Mr. M. K. Patel's foundational enterprise in 1956 to our chemical manufacturing incorporation in 1974, the K. Patel Group has built a multi-decade legacy across dyestuffs, chemicals, and pharmaceuticals.
-        </p>
-
-        <!-- Horizontal Multicolor Infographic Timeline Component -->
-        <div class="journey-timeline" style="margin-top: 24px;">
-          <div class="journey-timeline__wrapper">
-            <div class="journey-timeline__track">
-              <div class="journey-timeline__v-rail" aria-hidden="true"></div>
-              
-              <!-- Milestone 1: 1956 -->
-              <div class="journey-timeline__col journey-timeline__col--1" data-year="1956">
-                <div class="journey-timeline__node" aria-hidden="true">
-                  <span class="journey-timeline__node-dot"></span>
-                </div>
-                <div class="journey-timeline__connector" aria-hidden="true"></div>
-                <div class="journey-timeline__card">
-                  <div class="journey-timeline__year-box">
-                    <span class="journey-timeline__year">1956</span>
-                  </div>
-                  <div class="journey-timeline__media">
-                    <img src="/assets/images/timeline/photos/timeline-01.webp" alt="1956 - K. Patel &amp; Co. Pvt. Ltd." class="journey-timeline__img" loading="lazy">
-                  </div>
-                  <div class="journey-timeline__content">
-                    <h3 class="journey-timeline__company">K. Patel &amp; Co. Pvt. Ltd.</h3>
-                    <p class="journey-timeline__desc">Established foundational manufacturing operations in chemical synthesis and industrial dye intermediates.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Milestone 2: 1974 -->
-              <div class="journey-timeline__col journey-timeline__col--2" data-year="1974">
-                <div class="journey-timeline__node" aria-hidden="true">
-                  <span class="journey-timeline__node-dot"></span>
-                </div>
-                <div class="journey-timeline__connector" aria-hidden="true"></div>
-                <div class="journey-timeline__card">
-                  <div class="journey-timeline__year-box">
-                    <span class="journey-timeline__year">1974</span>
-                  </div>
-                  <div class="journey-timeline__media">
-                    <img src="/assets/images/timeline/photos/timeline-02.webp" alt="1974 - K. Patel Chempharma Pvt. Ltd." class="journey-timeline__img" loading="lazy">
-                  </div>
-                  <div class="journey-timeline__content">
-                    <h3 class="journey-timeline__company">K. Patel Chempharma Pvt. Ltd.</h3>
-                    <p class="journey-timeline__desc">Expanded production capabilities into specialized active pharmaceutical ingredients and fine chemicals.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Milestone 3: 1991 -->
-              <div class="journey-timeline__col journey-timeline__col--3" data-year="1991">
-                <div class="journey-timeline__node" aria-hidden="true">
-                  <span class="journey-timeline__node-dot"></span>
-                </div>
-                <div class="journey-timeline__connector" aria-hidden="true"></div>
-                <div class="journey-timeline__card">
-                  <div class="journey-timeline__year-box">
-                    <span class="journey-timeline__year">1991</span>
-                  </div>
-                  <div class="journey-timeline__media">
-                    <img src="/assets/images/timeline/photos/timeline-03.webp" alt="1991 - K. Patel Dyechem Industries" class="journey-timeline__img" loading="lazy">
-                  </div>
-                  <div class="journey-timeline__content">
-                    <h3 class="journey-timeline__company">K. Patel Dyechem Industries</h3>
-                    <p class="journey-timeline__desc">Pioneered advanced dyestuff manufacturing formulations with dedicated commercial synthetic production lines.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Milestone 4: 1994 -->
-              <div class="journey-timeline__col journey-timeline__col--4" data-year="1994">
-                <div class="journey-timeline__node" aria-hidden="true">
-                  <span class="journey-timeline__node-dot"></span>
-                </div>
-                <div class="journey-timeline__connector" aria-hidden="true"></div>
-                <div class="journey-timeline__card">
-                  <div class="journey-timeline__year-box">
-                    <span class="journey-timeline__year">1994</span>
-                  </div>
-                  <div class="journey-timeline__media">
-                    <img src="/assets/images/timeline/photos/timeline-04.webp" alt="1994 - Devanshi Dyestuff" class="journey-timeline__img" loading="lazy">
-                  </div>
-                  <div class="journey-timeline__content">
-                    <h3 class="journey-timeline__company">Devanshi Dyestuff</h3>
-                    <p class="journey-timeline__desc">Strengthened global distribution through high-grade reactive dyes and custom dispersion solutions.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Milestone 5: 1995 -->
-              <div class="journey-timeline__col journey-timeline__col--5" data-year="1995">
-                <div class="journey-timeline__node" aria-hidden="true">
-                  <span class="journey-timeline__node-dot"></span>
-                </div>
-                <div class="journey-timeline__connector" aria-hidden="true"></div>
-                <div class="journey-timeline__card">
-                  <div class="journey-timeline__year-box">
-                    <span class="journey-timeline__year">1995</span>
-                  </div>
-                  <div class="journey-timeline__media">
-                    <img src="/assets/images/timeline/photos/timeline-05.webp" alt="1995 - K. Patel International" class="journey-timeline__img" loading="lazy">
-                  </div>
-                  <div class="journey-timeline__content">
-                    <h3 class="journey-timeline__company">K. Patel International</h3>
-                    <p class="journey-timeline__desc">Scaled international export trade network supplying premium industrial colorants across world markets.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Milestone 6: 2005 -->
-              <div class="journey-timeline__col journey-timeline__col--6" data-year="2005">
-                <div class="journey-timeline__node" aria-hidden="true">
-                  <span class="journey-timeline__node-dot"></span>
-                </div>
-                <div class="journey-timeline__connector" aria-hidden="true"></div>
-                <div class="journey-timeline__card">
-                  <div class="journey-timeline__year-box">
-                    <span class="journey-timeline__year">2005</span>
-                  </div>
-                  <div class="journey-timeline__media">
-                    <img src="/assets/images/timeline/photos/timeline-06.webp" alt="2005 - K. Patel Phyto Extractions Pvt. Ltd." class="journey-timeline__img" loading="lazy">
-                  </div>
-                  <div class="journey-timeline__content">
-                    <h3 class="journey-timeline__company">K. Patel Phyto Extractions Pvt. Ltd.</h3>
-                    <p class="journey-timeline__desc">Ventured into botanical phyto-extractions and standardized natural herbal extracts for global healthcare.</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================
          10. CERTIFICATIONS & STANDARDS (COMPACT 2-COL GRID)
          ============================================ -->
     <section class="m-section" id="m-certifications">
@@ -747,25 +508,72 @@
         <p class="m-section-body">
           We maintain rigorous manufacturing and testing standards to fulfill quality and compliance requirements across global markets.
         </p>
+      </div>
 
-        <div class="m-cert-grid">
-          <div class="m-cert-tile">
-            <img src="/assets/images/certification/9001-2015.webp" alt="ISO 9001:2015 Quality Management" width="600" height="600" loading="lazy" />
+      <!-- Full-bleed mobile marquee box with edge vignettes -->
+      <div class="m-cert-marquee-box">
+        <!-- Row 1: Sliding Left -->
+        <div class="m-cert-marquee-row">
+          <div class="m-cert-marquee-track m-cert-marquee-track--left">
+            <!-- First Set (5 Badges) -->
+            <div class="m-cert-card" title="ISO 9001:2015 — Quality Management">
+              <img src="/assets/images/certification/9001-2015.webp" alt="ISO 9001:2015 Quality Management" width="600" height="600" loading="lazy" />
+            </div>
+            <div class="m-cert-card" title="ISO 14001:2015 — Environmental Management">
+              <img src="/assets/images/certification/14001-2015.webp" alt="ISO 14001:2015 Environmental Management" width="600" height="600" loading="lazy" />
+            </div>
+            <div class="m-cert-card" title="ISO 27001:2013 — Information Security">
+              <img src="/assets/images/certification/27001-2013.webp" alt="ISO 27001:2013 Information Security" width="600" height="600" loading="lazy" />
+            </div>
+            <div class="m-cert-card" title="ISO 45001:2018 — Occupational Health &amp; Safety">
+              <img src="/assets/images/certification/iso-45001-2018-occcupational-health-safety-management-system.webp" alt="ISO 45001:2018 Health &amp; Safety" width="600" height="600" loading="lazy" />
+            </div>
+            <div class="m-cert-card" title="EcoVadis — Sustainability Rating">
+              <img src="/assets/images/certification/ecovadis.webp" alt="EcoVadis Sustainability Rating" width="600" height="236" loading="lazy" />
+            </div>
+
+            <!-- Duplicate Set for Seamless Loop -->
+            <div class="m-cert-card" aria-hidden="true">
+              <img src="/assets/images/certification/9001-2015.webp" alt="" loading="lazy" />
+            </div>
+            <div class="m-cert-card" aria-hidden="true">
+              <img src="/assets/images/certification/14001-2015.webp" alt="" loading="lazy" />
+            </div>
+            <div class="m-cert-card" aria-hidden="true">
+              <img src="/assets/images/certification/27001-2013.webp" alt="" loading="lazy" />
+            </div>
+            <div class="m-cert-card" aria-hidden="true">
+              <img src="/assets/images/certification/iso-45001-2018-occcupational-health-safety-management-system.webp" alt="" loading="lazy" />
+            </div>
+            <div class="m-cert-card" aria-hidden="true">
+              <img src="/assets/images/certification/ecovadis.webp" alt="" loading="lazy" />
+            </div>
           </div>
-          <div class="m-cert-tile">
-            <img src="/assets/images/certification/14001-2015.webp" alt="ISO 14001:2015 Environmental Management" width="600" height="600" loading="lazy" />
-          </div>
-          <div class="m-cert-tile">
-            <img src="/assets/images/certification/together-for-sustainability.webp" alt="Together for Sustainability (TfS)" width="600" height="254" loading="lazy" />
-          </div>
-          <div class="m-cert-tile">
-            <img src="/assets/images/certification/zed-msme-certification.webp" alt="ZED MSME Certification" width="600" height="576" loading="lazy" />
-          </div>
-          <div class="m-cert-tile">
-            <img src="/assets/images/certification/ethically-correct-certified-sa-8000.webp" alt="SA8000 Social Accountability" width="600" height="600" loading="lazy" />
-          </div>
-          <div class="m-cert-tile">
-            <img src="/assets/images/certification/iso-45001-2018-occcupational-health-safety-management-system.webp" alt="ISO 45001:2018 Occupational Health & Safety" width="600" height="600" loading="lazy" />
+        </div>
+
+        <!-- Row 2: Sliding Right (3 sets for uninterrupted negative-space feed) -->
+        <div class="m-cert-marquee-row">
+          <div class="m-cert-marquee-track m-cert-marquee-track--right">
+            <!-- Set 1 (Pre-feed buffer for negative space) -->
+            <div class="m-cert-card" aria-hidden="true"><img src="/assets/images/certification/together-for-sustainability.webp" alt="" loading="lazy" /></div>
+            <div class="m-cert-card" aria-hidden="true"><img src="/assets/images/certification/zed-msme-certification.webp" alt="" loading="lazy" /></div>
+            <div class="m-cert-card" aria-hidden="true"><img src="/assets/images/certification/ethically-correct-certified-sa-8000.webp" alt="" loading="lazy" /></div>
+            <div class="m-cert-card" aria-hidden="true"><img src="/assets/images/certification/iso-37001-anti-bribery.webp" alt="" loading="lazy" /></div>
+            <div class="m-cert-card" aria-hidden="true"><img src="/assets/images/certification/iso-20400-sustainable-procurement.webp" alt="" loading="lazy" /></div>
+
+            <!-- Set 2 (Primary visible set) -->
+            <div class="m-cert-card" title="TfS — Together for Sustainability"><img src="/assets/images/certification/together-for-sustainability.webp" alt="Together for Sustainability (TfS)" width="600" height="254" loading="lazy" /></div>
+            <div class="m-cert-card" title="ZED MSME Certification"><img src="/assets/images/certification/zed-msme-certification.webp" alt="ZED MSME Certification" width="600" height="576" loading="lazy" /></div>
+            <div class="m-cert-card" title="SA8000 — Social Accountability"><img src="/assets/images/certification/ethically-correct-certified-sa-8000.webp" alt="SA8000 Social Accountability" width="600" height="600" loading="lazy" /></div>
+            <div class="m-cert-card" title="ISO 37001 — Anti-Bribery Management"><img src="/assets/images/certification/iso-37001-anti-bribery.webp" alt="ISO 37001 Anti-Bribery Management" width="600" height="600" loading="lazy" /></div>
+            <div class="m-cert-card" title="ISO 20400 — Sustainable Procurement"><img src="/assets/images/certification/iso-20400-sustainable-procurement.webp" alt="ISO 20400 Sustainable Procurement" width="600" height="600" loading="lazy" /></div>
+
+            <!-- Set 3 (Tail buffer) -->
+            <div class="m-cert-card" aria-hidden="true"><img src="/assets/images/certification/together-for-sustainability.webp" alt="" loading="lazy" /></div>
+            <div class="m-cert-card" aria-hidden="true"><img src="/assets/images/certification/zed-msme-certification.webp" alt="" loading="lazy" /></div>
+            <div class="m-cert-card" aria-hidden="true"><img src="/assets/images/certification/ethically-correct-certified-sa-8000.webp" alt="" loading="lazy" /></div>
+            <div class="m-cert-card" aria-hidden="true"><img src="/assets/images/certification/iso-37001-anti-bribery.webp" alt="" loading="lazy" /></div>
+            <div class="m-cert-card" aria-hidden="true"><img src="/assets/images/certification/iso-20400-sustainable-procurement.webp" alt="" loading="lazy" /></div>
           </div>
         </div>
       </div>
@@ -779,7 +587,7 @@
         <span class="m-eyebrow">Sustainability</span>
         <h2 class="m-section-title">Coloring Industry. More Responsible.</h2>
         <p class="m-section-body">
-          Preservation of natural ecosystems is integral to our 50-year manufacturing heritage through state-of-the-art effluent treatment, closed-loop water recovery, solar power, and responsible formulation.
+          Preserving ecosystems through closed-loop water recovery, solar energy, and responsible color chemistry.
         </p>
 
         <div class="m-sustain-card">
@@ -788,7 +596,7 @@
           </div>
           <div class="m-sustain-card__text">
             <h3 class="m-sustain-card__heading">4R Environmental Framework</h3>
-            <p>Recover, Reduce, Reuse &amp; Recycle doctrine governing daily operations at our Ankleshwar complex alongside in-house ETP water recycling and reverse osmosis used-water purification.</p>
+            <p>Recover, Reduce, Reuse &amp; Recycle doctrine with in-house ETP water recycling and reverse osmosis purification.</p>
           </div>
         </div>
 
@@ -837,7 +645,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/mobile.js?v=20261031"></script>
+  <script src="/assets/js/mobile.js?v=20261121"></script>
   <script src="/assets/js/analytics.js?v=20261031" defer></script>
 </body>
 </html>

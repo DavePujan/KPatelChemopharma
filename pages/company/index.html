@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>window.location.replace("/pages/about/#timeline");</script>
+  <meta http-equiv="refresh" content="0;url=/pages/about/#timeline" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>K. Patel Chemopharma — Company Legacy</title>
+  <title>Company Legacy & Leadership Vision — K. Patel Chemopharma</title>
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
   <meta name="description" content="Explore the corporate legacy, leadership vision, core values, and five decades of chemical manufacturing excellence at K. Patel Chemopharma Private Limited." />
@@ -36,9 +38,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/components/navbar.css?v=20261031" />
   <link rel="stylesheet" href="/assets/css/components/footer.css?v=20261031" />
-  <link rel="stylesheet" href="/assets/css/main.css?v=20261102" />
-  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261031" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261121" />
+  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261121" />
   
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://www.kpateldyes.com/company#webpage",
+        "url": "https://www.kpateldyes.com/company",
+        "name": "Company Legacy & Leadership Vision — K. Patel Chemopharma",
+        "description": "Explore the corporate legacy, leadership vision, core values, and five decades of chemical manufacturing excellence at K. Patel Chemopharma Private Limited.",
+        "publisher": { "@id": "https://www.kpateldyes.com/#organization" },
+        "breadcrumb": { "@id": "https://www.kpateldyes.com/company#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.kpateldyes.com/company#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.kpateldyes.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Company Legacy", "item": "https://www.kpateldyes.com/company" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <nav class="nav nav--hero is-scrolled" id="nav">
@@ -70,7 +97,7 @@
       <a href="/pages/about/" class="m-menu__link">About Us <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/pages/home/#m-products" class="m-menu__link">Products <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/pages/home/#m-applications" class="m-menu__link">Applications <span class="m-menu__arrow">&rarr;</span></a>
-      <a href="/pages/home/#m-infrastructure" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
+      <a href="/pages/infrastructure/" class="m-menu__link">Infrastructure <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/sustainability" class="m-menu__link">Sustainability <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/csr" class="m-menu__link">CSR <span class="m-menu__arrow">&rarr;</span></a>
       <a href="/pages/contact/" class="m-menu__link">Contact <span class="m-menu__arrow">&rarr;</span></a>
@@ -159,7 +186,7 @@
       <div class="legacy__layout">
         <div class="legacy__content">
           <span class="eyebrow eyebrow--light reveal">Since 1974</span>
-          <h2 class="legacy__title reveal reveal-delay-1">A Legacy Of Entrepreneurial Vision</h2>
+          <h1 class="legacy__title reveal reveal-delay-1">A Legacy Of Entrepreneurial Vision</h1>
           <p class="legacy__text reveal reveal-delay-2">
             From Mr. M. K. Patel's early vision in 1956, K. Patel Chemopharma was established as our chemical
             manufacturing division in 1974. Today, we are built on process excellence, high ethical standards, and
@@ -323,7 +350,7 @@
         <div>
           <p class="footer__links-title">Group Companies</p>
           <div style="font-size: 13px; color: var(--color-body); line-height: 1.8;">
-            <a href="/pages/company/" style="color: inherit; text-decoration: none; font-weight: 500;">View Group Companies &rarr;</a>
+            <a href="/pages/about/#timeline" style="color: inherit; text-decoration: none; font-weight: 500;">View Group Companies &rarr;</a>
           </div>
         </div>
         <div>
@@ -351,7 +378,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/mobile.js?v=20261031"></script>
+  <script src="/assets/js/mobile.js?v=20261121"></script>
   <script src="/assets/js/analytics.js?v=20261031" defer></script>
 </body>
 </html>

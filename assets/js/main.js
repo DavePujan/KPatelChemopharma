@@ -143,12 +143,60 @@ function initMobileNav() {
   const overlay = document.querySelector('.nav__mobile');
   const closeBtn = document.querySelector('.nav__mobile-close');
   if (!toggle || !overlay) return;
+  if (toggle.dataset.navInitialized) return;
+  toggle.dataset.navInitialized = 'true';
 
-  toggle.addEventListener('click', () => overlay.classList.toggle('is-open'));
-  if (closeBtn) closeBtn.addEventListener('click', () => overlay.classList.remove('is-open'));
+  function openMenu() {
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.documentElement.classList.add('is-menu-open');
+    document.body.classList.add('is-menu-open');
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    if (document.activeElement && typeof document.activeElement.blur === 'function') {
+      document.activeElement.blur();
+    }
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.documentElement.classList.remove('is-menu-open');
+    document.body.classList.remove('is-menu-open');
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (overlay.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeMenu();
+    });
+  }
 
   overlay.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => overlay.classList.remove('is-open'));
+    link.addEventListener('click', closeMenu);
+  });
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeMenu();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+      closeMenu();
+    }
   });
 }
 
@@ -165,9 +213,11 @@ function initSmoothScroll() {
       const hash = href.substring(hashIndex);
       if (hash === '#' || hash === '') return;
 
-      // Only handle in-page anchors if on the same page or starting with # or /#
-      const isCurrentPage = !href.startsWith('http') && (!href.includes('.html') || href.startsWith('/#') || href.startsWith('#'));
-      if (!isCurrentPage && href.split('#')[0] !== window.location.pathname) return;
+      const linkPath = href.substring(0, hashIndex);
+      const currentPath = window.location.pathname;
+      const normalize = (p) => p.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
+      const isCurrentPage = !linkPath || normalize(linkPath) === normalize(currentPath);
+      if (!isCurrentPage) return;
 
       const target = document.querySelector(hash);
       if (!target) return;
@@ -176,20 +226,41 @@ function initSmoothScroll() {
       const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
       let offset = 0;
       if (hash === '#solutions' || hash === '#products') {
-        // Option A: Scroll 150px further on laptops/desktops so Row 1 and Row 2 of product cards sit fully above fold
-        offset = window.innerWidth >= 1024 ? 150 : 0;
+        // Natural alignment below fixed navbar without clipping section header or eyebrow
+        offset = 0;
       } else if (hash === '#industries' || hash === '#applications') {
         // Align flush below fixed navbar so eyebrow and header are completely visible
         offset = 0;
       } else if (hash === '#operations' || hash === '#infrastructure') {
         // Scroll slightly lower so that infrastructure content & image fit inside viewport
         offset = 75;
+      } else if (hash === '#timeline' || hash === '#our-journey') {
+        offset = 0;
       }
 
       const top = target.getBoundingClientRect().top + window.scrollY - navHeight + offset;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+
+  // Handle initial page load with hash in URL
+  if (window.location.hash) {
+    const hash = window.location.hash;
+    const target = document.querySelector(hash);
+    if (target) {
+      setTimeout(() => {
+        const navHeight = document.querySelector('.nav')?.offsetHeight || 77;
+        let offset = 0;
+        if (hash === '#solutions' || hash === '#products' || hash === '#timeline' || hash === '#our-journey') {
+          offset = 0;
+        } else if (hash === '#operations' || hash === '#infrastructure') {
+          offset = 75;
+        }
+        const top = target.getBoundingClientRect().top + window.scrollY - navHeight + offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }, 150);
+    }
+  }
 }
 
 /* ============================================

@@ -41,15 +41,131 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "K. Patel Chemopharma Private Limited",
-    "url": "https://www.kpateldyes.com/",
-    "logo": "https://www.kpateldyes.com/img/logo-no-bg.webp",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-22-48822900",
-      "contactType": "customer service"
-    }
+    "@graph": [
+      {
+        "@type": "Corporation",
+        "@id": "https://www.kpateldyes.com/#organization",
+        "name": "K. Patel Chemopharma Private Limited",
+        "alternateName": ["K. Patel Chemopharma", "K. Patel Dyes"],
+        "url": "https://www.kpateldyes.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.kpateldyes.com/assets/images/logo/logo-no-bg.png",
+          "caption": "K. Patel Chemopharma Logo"
+        },
+        "image": "https://www.kpateldyes.com/assets/images/og-kpatel.jpg",
+        "foundingDate": "1974",
+        "description": "Premier Indian manufacturer and global exporter of Basic Dyes, Solvent Dyes, Rinsable Dyes, Acid Dyes, Direct Dyes, and Pigment Dispersions conforming to international quality and environmental standards.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "504, Eureka Tower, Mindspace, Off Link Road, Malad (West)",
+          "addressLocality": "Mumbai",
+          "addressRegion": "Maharashtra",
+          "postalCode": "400064",
+          "addressCountry": "IN"
+        },
+        "location": {
+          "@type": "Place",
+          "name": "K. Patel Chemopharma Manufacturing Facility",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Plot No. 4701/1, GIDC Industrial Estate",
+            "addressLocality": "Ankleshwar",
+            "addressRegion": "Gujarat",
+            "postalCode": "393002",
+            "addressCountry": "IN"
+          }
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-22-48822900",
+            "contactType": "sales",
+            "email": "sales@kpateldyes.com",
+            "areaServed": "Global",
+            "availableLanguage": ["English", "Hindi", "Gujarati"]
+          }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/k-patel-chemopharma/"
+        ],
+        "knowsAbout": [
+          "Basic Dyes",
+          "Solvent Dyes",
+          "Rinsable Dyes",
+          "Acid Dyes",
+          "Direct Dyes",
+          "Pigments",
+          "Pigment Dispersions",
+          "Spectra Rinse",
+          "Industrial Dyestuffs",
+          "Zero Liquid Discharge Chemical Manufacturing"
+        ],
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "name": "ISO 9001:2015 Quality Management System" },
+          { "@type": "EducationalOccupationalCredential", "name": "ISO 14001:2015 Environmental Management System" },
+          { "@type": "EducationalOccupationalCredential", "name": "ISO 45001:2018 Occupational Health and Safety" },
+          { "@type": "EducationalOccupationalCredential", "name": "SA 8000 Social Accountability" },
+          { "@type": "EducationalOccupationalCredential", "name": "ZED MSME Gold Certification" },
+          { "@type": "EducationalOccupationalCredential", "name": "Together for Sustainability (TfS) Accredited" },
+          { "@type": "EducationalOccupationalCredential", "name": "EcoVadis Sustainability Rating" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.kpateldyes.com/#website",
+        "url": "https://www.kpateldyes.com/",
+        "name": "K. Patel Chemopharma",
+        "description": "Manufacturer of Dyes, Pigments & Dispersions",
+        "publisher": { "@id": "https://www.kpateldyes.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.kpateldyes.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What product lines does K. Patel Chemopharma manufacture?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "K. Patel Chemopharma manufactures high-purity Basic Dyes, Solvent Dyes, Rinsable Colorants (Spectra Rinse), Acid Dyes, Direct Dyes, Organic/Inorganic Pigment Toners, and Aqueous Pigment Dispersions (KP Sperse) for global industrial applications."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is K. Patel Chemopharma's manufacturing capacity and facility size?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our state-of-the-art facility located in Ankleshwar GIDC (Gujarat, India) spans 25,000 square meters with an installed annual production capacity of 6,000 metric tons (MT), featuring automated glass-lined and SS reactors with Zero Liquid Discharge (ZLD) effluent treatment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which quality and environmental certifications does K. Patel Chemopharma hold?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "K. Patel Chemopharma holds ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, SA 8000 (Social Accountability), ZED MSME Gold, Together for Sustainability (TfS), and EcoVadis sustainability ratings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does K. Patel Chemopharma support custom shade matching and salt-free dye synthesis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our on-site R&D and analytical laboratory is equipped with HPLC, GC, UV-Vis spectrophotometers, and computerized color matching to provide custom synthesis, high-exhaustion salt-free dyes, and specialized pH/viscosity tailored formulations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are your export destinations and shipping capabilities?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We export directly to over 65 countries across North America, Europe, Latin America, the Middle East, and Asia-Pacific. We provide global export packaging including 25 kg multi-wall bags, HDPE drums, fiber drums, and 500 kg palletized bulk bags."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -81,6 +197,7 @@
   <!-- Scroll Progress -->
   <div class="scroll-progress" aria-hidden="true"></div>
 
+  <header role="banner">
   <!-- ========== NAVIGATION ========== -->
   <nav class="nav nav--hero is-scrolled" id="nav">
     <div class="nav__inner">
@@ -111,6 +228,9 @@
     <a href="/csr">CSR</a>
     <a href="#contact-section">Contact</a>
   </div>
+  </header>
+
+  <main id="main-content" role="main">
 
   <!-- ========== HERO — Full-screen background image ========== -->
   <section class="hero" id="hero">
@@ -150,7 +270,7 @@
             <div class="hero__rail-title">Reduce, Reuse, Recycle, Recover</div>
           </div>
           <div class="hero__rail-cta-visual">
-            <img src="/assets/images/4r-mainpage.webp" alt="4R Environmental Framework" class="hero__rail-cta-img" />
+            <!-- <img src="/assets/images/4r-mainpage.webp" alt="4R Environmental Framework" class="hero__rail-cta-img" /> -->
             <span class="hero__rail-arrow">
               <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
                 <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -452,9 +572,9 @@
         </div>
         <div class="operations__image-wrap reveal">
           <picture class="operations__picture">
-            <source media="(max-width: 768px)" srcset="/assets/images/infrastructure/infra01-small.webp" type="image/webp" />
-            <img src="/assets/images/infrastructure/infra01.webp"
-              alt="State-of-the-Art Manufacturing Facilities at Ankleshwar GIDC" loading="lazy" />
+            <source media="(max-width: 768px)" srcset="/assets/images/infrastructure/manufacturing-facility-small.webp" type="image/webp" />
+            <img src="/assets/images/infrastructure/manufacturing-facility.webp"
+              alt="State-of-the-Art Manufacturing Facilities at Ankleshwar GIDC" width="576" height="1024" loading="lazy" />
           </picture>
         </div>
       </div>
@@ -879,7 +999,7 @@
 
   <!-- ========== CONTACT GLOBAL SALES & LABS ========== -->
   <section class="contact-section" id="contact-section"
-    style="background: linear-gradient(rgba(250, 248, 243, 0.35), rgba(243, 237, 226, 0.5)), url('/assets/images/Contact-Us-BG.webp') center center/cover no-repeat; position: relative;">
+    style="position: relative;">
     <div class="container" style="position: relative; z-index: 2;">
       <div class="contact-header reveal">
         <span class="eyebrow">Contact Us</span>
@@ -1039,7 +1159,7 @@
             </button>
 
             <p class="b2b-footer-notice">
-              Our team responds to all inquiries promptly (typically within 12 hours).
+              Our team responds to all inquiries promptly.
             </p>
           </form>
         </div>
@@ -1048,8 +1168,10 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ========== FOOTER ========== -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__main">
         <!-- Brand -->
@@ -1093,7 +1215,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=20261031"></script>
+  <script src="/assets/js/main.js?v=20261121d"></script>
   <script src="/assets/js/form.js?v=20261031"></script>
   <script src="/assets/js/analytics.js?v=20261031" defer></script>
 </body>
